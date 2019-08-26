@@ -1,0 +1,12 @@
+name: Andrej Bauer
+date: '2007-07-23 00:57:19'
+url: 'http://andrej.com/'
+message: >-
+  Primality is diophantine, but as far as I am aware the equation(s) expressing
+  it involve many variables, which gives us many existential quantifiers, not
+  just one. And even if somehow we could express "`n` is prime" with a single
+  existential "`EE m. p(n,m)=0`", would that not still give us a `AA EE EE`
+  sentence "for all `a` there exists `b` and exists `m` such that `p((a+b)^2 -
+  2, m)=0`"? So I am afraid your comment does not convince me. (Note that Tung's
+  result is about a single universal followed by a single existential.)
+email: 59d57d95bc7c45ced5f1969279cec06b

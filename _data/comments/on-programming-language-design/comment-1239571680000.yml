@@ -1,0 +1,25 @@
+name: Fj
+date: '2009-04-12 23:28:00'
+url: ''
+message: >-
+  The problem with the <code>def f(n): return i + n</code> is not as
+  straightforward as you might think, even if this function is the only thing in
+  a module, because you can do <code>import mymodule; mymodule.i = 10; print
+  mymodule.f(1)</code>. Obviously, doing exactly that is silly, but it hints at
+  the fundamental property of Python objects (be that classes or modules) that
+  is extremely useful. Of course, it is most useful with classes because of the
+  existence of standard interception vectors such as <code>getattr</code>, so
+  one may argue that modules could be made different, at least requiring all
+  attributes of a module to be explicitly declared (but allowing redefinition,
+  as it is widely used way of providing custom handlers, and just plain easy way
+  of quickly tweaking module behaviour), yet there might be legitimate uses for
+  the whole functionality (some kind of metaprogramming maybe). Actually I'm
+  aware of one real case when it is used in the core library:
+  sys.setdefaultencoding is deleted by site.py during startup, undoubtedly there
+  are more. So, basically, changing the way it works would complicate the
+  language (making modules really different from all other kinds of objects) and
+  violate Python ideology of not restricting users to do what they want because
+  they could come up with some wonderful unexpected ways of doing things. And
+  the price is not so high, considering Python's primary area of application,
+  that is not eye surgery.
+email: 7832cdae94496965197dd863318bf547

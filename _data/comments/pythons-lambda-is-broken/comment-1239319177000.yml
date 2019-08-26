@@ -1,0 +1,5 @@
+name: Paolo Donadeo
+date: '2009-04-10 01:19:37'
+url: 'http://www.donadeo.net/blog'
+message: "Reply to Andrej: no, it's not because of Python is dynamic. For example in Lua, a dynamic tiny language, but actually a pearl, this is what happens:\r\n\r\n~ $ lua\r\nLua 5.1.3  Copyright (C) 1994-2008 Lua.org, PUC-Rio\r\n&gt; print(foo)\r\nnil\r\n&gt; for foo = 1,3 do print(foo) end\r\n1\r\n2\r\n3\r\n&gt; print(foo)\r\nnil\r\n\r\nAs you can see, the first time you try to print the foo variable you obtain a nil value, because in Lua any name is binded to nil. In the for loop the 'foo' name is binded to the correct integer value. After the loop, foo returns to it's non-value, nil. And our souls can rest :-)"
+email: 0c3974bc85f10203e5102df1474a9801

@@ -1,0 +1,13 @@
+name: >-
+  In languages which create a new scope each time in a loop block, a new local
+  copy of the local loop variable is created each time in that new scope? |
+  Ngoding
+date: '2014-11-24 04:28:10'
+url: >-
+  http://ngoding.co/code/in-languages-which-create-a-new-scope-each-time-in-a-loop-block-a-new-local-copy-of-the-local-loop-variable-is-created-each-time-in-that-new-scope/
+message: >-
+  [&#8230;] is similar to the topic discussed here:
+  http://math.andrej.com/2009/04/09/pythons-lambda-is-broken/ . In some
+  programming languages, when you loop over a variable, the body of the loop
+  construct is [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2012-10-04 03:37:50'
+url: 'http://andrej.com/'
+message: >-
+  @Russell: because many programs compute the same real yor argument only shows
+  that the (computable) reals form a subquotient of the natural numbers. To get
+  an actual subset you need to pick canonical codes for reals, in a computable
+  way, and that is not possible. So, if we are playing the computable game, you
+  lose: there is no computable embedding of computable reals into the natural
+  numbers.
+email: 59d57d95bc7c45ced5f1969279cec06b

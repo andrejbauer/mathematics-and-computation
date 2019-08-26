@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2017-06-14 11:22:20'
+url: 'http://andrej.com/'
+message: >-
+  I am not sure I understand you. Are you saying that you expect $\prod_A B
+  \equiv \prod_C D$ to imply $A \equiv C$ and $B \equiv D$? To be honest, I just
+  started typing it up in Coq and then Coq wanted me to invent a more general
+  induction hypothesis, and I did. The usual stuff. Let me put some comments
+  into the relevant file and come back to you.
+email: 59d57d95bc7c45ced5f1969279cec06b

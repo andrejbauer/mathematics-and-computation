@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2005-10-16 02:27:13'
+url: 'http://andrej.com/'
+message: "<p>\r\nA sequence `(a_n)` is computable if there exists a Turing machine, which on input `n` produces output `a_n`. In Type II computability, a real number `x` is said to be computable if there exists a computable sequence of rapidly converging approximations to `x`. More precisely, there must exist a Turing machine such that, on input `n` it outputs a rational number `a_n/b_n` such that `|x - a_n/b_n| < 2^(-n)`.</p>\r\n<p> \r\nPlease <b>beware</b> that there is an error in Theorem 2.2 in the version of the notes from August 23, 2005. Actually, I am going to fix this right away, since it is a really gross error on my part. I will post another comment when a new version is available. Hopefully it will also clarify your question.</p>"
+email: 59d57d95bc7c45ced5f1969279cec06b

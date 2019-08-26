@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2009-04-21 08:12:04'
+url: 'http://andrej.com/'
+message: "I am not \"against\" anything because this is not politics. I think it is a design mistake to adjoint to a type a value None which signifies \"error\" or \"missing\" or \"invalid\" and then not to provide mechanisms which help the programmer catch all the places where the None must be considered as an option. It is a design mistake to think that programmers \"can be a bit careful\". Practice shows that they are just human beings.\r\n\r\nIf someone can tell me how this is to be achieved in a dynamic language, I'd like to hear it. I have an idea, but I need some time to implement it."
+email: 59d57d95bc7c45ced5f1969279cec06b

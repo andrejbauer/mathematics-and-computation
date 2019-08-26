@@ -1,0 +1,30 @@
+name: Andrej Bauer
+date: '2016-08-22 15:13:30'
+url: 'http://andrej.com/'
+message: >-
+  People have devised formats for "stored" proofs (compiled .vo files and
+  compiled Agda files etc.) but nobody ever uses them to communicate proofs.
+  They are used as an optimization technique for faster loading. Everybody
+  communicates <em>the original scripts</em> which also search for proofs.
+  Everyone, except in the case that there was an extraordinary amount of search
+  involved, in which case people take additional care to store the results of
+  the search. Flyspeck has a huge proof, so there they also optimized somewhat.
+  But in the vast majority of cases people just communicate the original
+  scripts, with proof search an all.
+
+
+  I am advocating that <em>we look at what is actually going on</em>. I think it
+  is too easy to be blided by philosophy and logic. It is too easy to assume
+  that the proof scripts which search for a proof are inefficient. They are not
+  for a simple reason: their authors could not work with inefficient proof
+  scripts because they had to rerun them many times, and modify them slightly,
+  etc., before they took a final form. So by design they must be modular,
+  efficient, and manageable. In contrast, the compiled versions of the same
+  scripts are unmodifiable, impossible to inspect by humans, and yes, they are
+  more efficient, but that does not matter so much.
+
+
+  So, as far as I am concerned, the original proof scripts written by humans are
+  as good a certificate as the "stored" communication. At least practice shows
+  that is the norm.
+email: 59d57d95bc7c45ced5f1969279cec06b

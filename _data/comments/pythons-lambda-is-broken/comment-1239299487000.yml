@@ -1,0 +1,5 @@
+name: roberto
+date: '2009-04-09 19:51:27'
+url: ''
+message: "This works:\r\n\r\nfs = [(lambda n, i=i: i + n) for i in range(10)]"
+email: 58b573d3eac03131faee739dfc7b360a

@@ -1,0 +1,25 @@
+name: Andrej Bauer
+date: '2016-05-20 11:20:39'
+url: 'http://andrej.com/'
+message: >-
+  @Ben: if I understand you correctly your argument is: if we pick a particular
+  representation (everything is represented by Gödel codes) then higher-order
+  functions like $m$ and <code>timeout</code> are computable by Turing machines.
+  I am guessing that you think (although you did not say so explicitly) that
+  this is a general phenomenon, i.e., that the model you suggest is somehow "the
+  most computable". This however is not the case!
+
+
+  It just so happens that $m$ and <code>timeout</code> are computable in the
+  Turing machine model, but other slightly different functionals are not! For
+  instance, I could ask a very similar question: <em>"Are all functions from
+  Cantor space $2^\mathbb{N}$ to natural numbers $\mathbb{N}$ uniformly
+  continuous?"</em> The answer again depends on the model of computation, and
+  for the Turing machine model it is <b>negative</b>. In fact, there is a
+  Turing-computable function from $2^\mathbb{N}$ to  $\mathbb{N}$ which is
+  <i>computably</i> not uniformly continuous. But if we use some other
+  representation, for instance Type II computability or domain theory, then the
+  answer is positive. The various representations give <b>incomparable</b>
+  models of computation at higher types. None of them is "the best", they are
+  just different.
+email: 59d57d95bc7c45ced5f1969279cec06b

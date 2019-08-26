@@ -1,0 +1,5 @@
+name: Ben R.
+date: '2016-05-19 23:32:20'
+url: ''
+message: "\"All reasonable models of computation are equivalent to Turing machines\" is the Church-Turing thesis. What it means in this context is that functions like m and timeout are computable by Turing machines if the higher-order functional arguments are supplied as a Turing machine number (rather than as a black box). That doesn't mean that there aren't interesting things to say about black boxes that do and don't support mutable state, call/cc, quantum gates, etc.; it just isn't what the Church-Turing thesis happens to be about.\r\n\r\nI think you should rewrite or delete your last paragraph, because as it stands it's like accusing the \"experts\" who \"know\" that 1+1=2 of not realizing that it isn't true of water and ethanol."
+email: b01753e0c78849bd34045ed730d59db6

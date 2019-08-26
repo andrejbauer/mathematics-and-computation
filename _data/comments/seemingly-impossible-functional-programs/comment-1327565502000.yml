@@ -1,0 +1,9 @@
+name: Andrej Bauer
+date: '2012-01-26 09:11:42'
+url: 'http://andrej.com/'
+message: >-
+  @Ralph: This post is written in the context of purely functional programs,
+  i.e., no state, and all functionals are presumed to be (hereditarily) total.
+  With state things are more complicated (global state, local state, what does
+  it mean for an extensional functional to use state?).
+email: 59d57d95bc7c45ced5f1969279cec06b

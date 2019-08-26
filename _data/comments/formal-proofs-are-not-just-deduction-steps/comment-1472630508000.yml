@@ -1,0 +1,15 @@
+name: Dan Ghica
+date: '2016-08-31 10:01:48'
+url: 'http://www.cs.bham.ac.uk/~drg/'
+message: >-
+  Computation, generally construed, can be non-deterministic. In the case of
+  non-deterministic computation, if someone gives you the input and the output
+  you also need the trace in order to reproduce the computation. Otherwise,
+  reproducing the computation may require an exponential search. There is
+  (almost) nothing wrong to look at computation as a trace of equations. What is
+  missing is the direction: computation rules are equations plus a direction of
+  evaluation. So in general a computation can (and should) be presented as a
+  sequence of inequations. If the computation is a mix of deterministic and
+  non-deterministic rules then the only inequations that cannot be easily
+  recovered are the non-deterministic ones.
+email: 610d9cbfd6db5b3ca4559151ca3af83b

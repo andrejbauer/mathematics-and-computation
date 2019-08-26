@@ -1,0 +1,5 @@
+name: Günter Rote
+date: '2016-08-26 11:56:42'
+url: ''
+message: "When browsing around about the Dedukti system, I found the following info about the mysterious .vo-Files of Coq:\r\n\"A Coq compiled  file contains a copy of the Coq kernel's in-memory representation of a module marshalled to disk.  Since the marshalling facility is provided by the\r\nOCaml compiler, the format of the content in a .vo file is dependent both on the version of the compiler that compiled Coq, and also the version of Coq itself.\"\r\nSee http://www.ensiie.fr/~guillaume.burel/download/boespflug12coqine.pdf\r\nabout the CoqInE project, which translates .vo files into the format for the Dedukti proof checker, at least as far as the logic behind Dedukti allows it.\r\n\r\nI draw from this two conclusions.\r\n(a) Coq DOES maintain in memory a representation of a proof object. (This is what Mike originally wanted.)\r\n\r\n(b) This proof object is in a form that it could be independently checked. (Dedukti does not have any proof-search facilities.)"
+email: b54b65b0004307f1314ad51c2f408045

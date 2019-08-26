@@ -1,0 +1,11 @@
+name: Seth Fogarty
+date: '2010-02-09 16:09:40'
+url: ''
+message: >-
+  Reply to Andrej: I certainly wouldn't argue too much, as I find inductive
+  types the most natural thing in the world. But for an object-oriented
+  language, full sum types are probably a bit of overkill: you start overlapping
+  ways to do things, and then there is more for the programmer to get confused
+  about. A possibly empty tree is a Maybe Tree, and you keep it to the one
+  instance of sum typing.
+email: 885f0d954ac7d5a5a00a58102896d3c1

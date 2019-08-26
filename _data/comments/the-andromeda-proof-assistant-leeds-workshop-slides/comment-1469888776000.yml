@@ -1,0 +1,5 @@
+name: Matt Oliveri
+date: '2016-07-30 16:26:16'
+url: ''
+message: "Hi Mike, it looks like you're right. The Twelf tutorial calls LF the meta-language. I find that weird. LF gets extended to correspond to the object language, so I wouldn't have thought it counts as \"meta\" personally.\r\n\r\nRegardless of terminology, I think Andrej is comparing Twelf's LF to Andromeda's extensional dependent type system, and Twelf's inductive metatheorem system to AML. (The metatheorem system and AML are completely different, and they have very different purposes.)\r\n\r\nIsabelle has (a restriction of?) HOL at the LF level, and an ML flavor above that."
+email: 66cbd251bde282eb2e1584080e3604ea

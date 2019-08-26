@@ -1,0 +1,5 @@
+name: p.l.lumsdaine
+date: '2009-01-24 05:26:30'
+url: ''
+message: "Very nice paper!\r\n\r\nI think there may be a typo in the first paragraph of Sect. 2, by the way: you define that X is discrete if the diagonal map X --&gt; X^{\\nabla 2} is _constant_.  But if internally this is the condition that every map fron \\nabla 2 to X is constant, i.e. in the image of the diagonal map, should the original condition be that the diagonal map is _epimorphic_?"
+email: aa7788c6e710db4ca184114e527a9c54

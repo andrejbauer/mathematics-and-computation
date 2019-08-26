@@ -1,0 +1,8 @@
+name: Ali Assaf
+date: '2012-11-29 19:23:40'
+url: ''
+message: >-
+  Thanks again for sharing this. I just want to signal a small bug in the
+  example code: for the power function, shouldn't it be [n (A -&gt; A) (m A)]
+  instead of [m (A -&gt; A) (n A)]?
+email: 11950590b9af4a33865842c819bda014

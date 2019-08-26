@@ -1,0 +1,5 @@
+name: DriveByComment
+date: '2009-04-10 04:39:32'
+url: ''
+message: "I am trying to respond in an honest constructive manner here and having a bit of a time phrasing things politely. I will just try to be succinct, please accept that my goal is not to offend.\r\n\r\nPlease stop your sensationalism. \"Python's Lambda is broken!\" and in your comment #20, \"this really is a design error.\" are really just indications of your lack of programming knowledge.  It seems like you are familiar with math and think that programing languages should behave by the same rules. This is not the case.\r\n\r\nThe examples you have given show Python operating exactly as designed, as you would know if you understood the language. If you are just trying to use python as a functional calculator then this is probably not what you want, but keep in mind that Python handles problems from a much larger domain. Python also has clearly defined scoping rules, which you can look up if you are interested in actually understanding the behavior that \"you\" think is incorrect."
+email: 8f8ff21a67437febebc70afd19364e95

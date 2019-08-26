@@ -1,0 +1,5 @@
+name: Pascal Bourguignon
+date: '2009-04-28 08:19:01'
+url: ''
+message: "Re: the NULL, the problem is in the languages where it is not an object.\r\n\r\nIn Objective-C, nil behaves like an object: you can send it any method (the result is always nil).\r\n\r\nEven better, in Common Lisp, NIL is an object like any other Lisp value, of class NULL, and on which you can define any method you want.  So you can use NIL to represent the end of list and define:\r\n\r\n(defgeneric len (object)\r\n  (:method ((x null)) 0) ; (len nil) -&gt; 0\r\n  (:method ((x cons)) (1+ (len (cdr x))))) ; (len '(a b c . nil)) --&gt; 3\r\n\r\nand then if you want to use nil to represent an empty tree node, you can define:\r\n\r\n(defgeneric height (object)\r\n  (:method ((x null)) 0) \r\n  (:method ((x node)) (max (height (left x)) (height (right x)))))\r\n\r\nand so on."
+email: 9e2504e0b74e5384af09ce8a660afac4

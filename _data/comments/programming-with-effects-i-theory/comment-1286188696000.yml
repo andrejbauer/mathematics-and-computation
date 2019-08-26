@@ -1,0 +1,5 @@
+name: beroal
+date: '2010-10-04 12:38:16'
+url: 'http://beroal.livejournal.com/'
+message: "\"the unique homomorphism from  $F_{(f,g)}(X) \\to F_{(g)}(Y)$\"\r\nI think this is not correct, if $F$ means \"free algebra\". The domain and the codomain of $h$ have different signatures. The codomain should be some $Z$ with the carrier the same as in $F_{(g)}(Y)$."
+email: 610014f51d5007450153ec25a790ab0b

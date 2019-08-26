@@ -1,0 +1,14 @@
+name: Andrej Bauer
+date: '2016-01-13 20:15:13'
+url: 'http://andrej.com/'
+message: >-
+  @PeterSelinger: I am mostly ranting about the fact that it is an empty
+  buzzword for a large chunk of computer science community. Of course there will
+  be cases where it is appropriate to use "provably". I disagree a little bit
+  with your examples because you say "provable" (implying it could be proved but
+  maybe it was not) and "proved". For instance: "If we proved our algorithm to
+  be correct then we'd reach our goal" seems better than "If there existed a
+  proof of correctness of our algorithm then we'd reach our goal", and the
+  latter is equivalent to "If we had a provably correct algorithm then we'd
+  reach our goal".
+email: 59d57d95bc7c45ced5f1969279cec06b

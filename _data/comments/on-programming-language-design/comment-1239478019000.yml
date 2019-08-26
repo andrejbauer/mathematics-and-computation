@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2009-04-11 21:26:59'
+url: 'http://andrej.com/'
+message: "Jason, I intended that piece of code defining f to be a complete module. Isn't that obvious? Otherwise everything I wrote about it does not make any sense.\r\n\r\nSecondly, the claims you and I make are verifiable. There must be research out there measuring whether \"simple\" languages have fewer bugs, and whether static typing reduces programming errors. It would seem tricky however to measure such things reliably."
+email: 59d57d95bc7c45ced5f1969279cec06b

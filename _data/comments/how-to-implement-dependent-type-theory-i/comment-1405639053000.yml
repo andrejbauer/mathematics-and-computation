@@ -1,0 +1,5 @@
+name: MHD
+date: '2014-07-18 01:17:33'
+url: ''
+message: "You have a mistake in your first \"wrong\" definition of infer universe:\r\n<code>\r\n(** Why is this infer_universe wrong? *)\r\nand bad_infer_universe ctx t =\r\n    match infer_type ctx t with\r\n      | Universe k -&gt; u\r\n      | App _ | Var _ | Pi _ | Lambda _ -&gt; Error.typing \"type expected\"\r\n</code>\r\nIt should have a little let-statement a la\r\n<code>\r\n(** Why is this infer_universe wrong? *)\r\nand bad_infer_universe ctx t =\r\n  let u = infer_type ctx t in\r\n    match u with\r\n      | Universe k -&gt; u\r\n      | App _ | Var _ | Pi _ | Lambda _ -&gt; Error.typing \"type expected\"\r\n</code>"
+email: 408796ea83ad5330b23f3ef0654df864

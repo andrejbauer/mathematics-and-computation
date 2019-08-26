@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2011-07-27 08:02:32'
+url: 'http://andrej.com/'
+message: >-
+  @Bo: I think it's ok. The head itself gets a 0, but because it is growing out
+  of a lower node, we turn that into $\omega^0 = 1$. So, the only way to get $0$
+  is to have just one head without any necks, in other words the root. For
+  example, if we had one head growing out of the root we would assign $0$ to the
+  head, and then $\omega^0 = 1$ to the whole thing.
+email: 59d57d95bc7c45ced5f1969279cec06b

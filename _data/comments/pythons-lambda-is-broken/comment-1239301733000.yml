@@ -1,0 +1,9 @@
+name: jaked
+date: '2009-04-09 20:28:53'
+url: ''
+message: >-
+  Javascript is the same way (and Perl iirc). The brokenness is more to do with
+  the for loop than with lambda: i points to the same location at each
+  iteration, and the location is mutated. That makes perfect sense if you're
+  coming from C, but interacts badly with lambda as you point out.
+email: ebb54fbd2c78a5a371f4f02cbe6a3c81

@@ -1,0 +1,5 @@
+name: Günter Rote
+date: '2016-08-18 19:28:15'
+url: ''
+message: "I wrote my reply of 19:16 before seeing this. The flyspeck experience I mention seems to contradict what you say about being faster. And it makes sense: The more powerful and sophisticated proof assistants and tactics libraries become, the more time it takes them to (re-)construct the proof, compared to simply replaying basic commands from a file.\r\n\r\nAnother practical issue: For an independent implementation of the kernel, I would be bound to using, say, OCAML. And compile the thing together with the whole proof assistant and libraries."
+email: b54b65b0004307f1314ad51c2f408045

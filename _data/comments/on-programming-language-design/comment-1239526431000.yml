@@ -1,0 +1,11 @@
+name: Simon Hawkin
+date: '2009-04-12 10:53:51'
+url: ''
+message: >-
+  Another way to represent empty, say, trees in Java would be to define an
+  interface CanBeEmpty and derive trees from it. Method IsEmpty() is obvious and
+  method Empty() would create an empty object (yes, a cast to the tree would be
+  required; an inconvenience, but resolved at compile time). This does nor solve
+  the fundamental problem of the value of an unitialized tree, but will help the
+  programmer to build trees properly.
+email: bb3389c133828d59b49c3a07b73d3d5d

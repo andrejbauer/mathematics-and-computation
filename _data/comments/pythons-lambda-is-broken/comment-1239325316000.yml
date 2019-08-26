@@ -1,0 +1,5 @@
+name: tim finin
+date: '2009-04-10 03:01:56'
+url: ''
+message: "How about this variation\r\n\r\n&gt;&gt;&gt; def def_f(i):\r\n    return lambda n: i + n\r\n&gt;&gt;&gt; fs = [def_f(i) for i in range(10)]\r\n&gt;&gt;&gt; fs[3](4)\r\n7"
+email: 5c66c37bbfa0db67626261e281e60742

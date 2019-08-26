@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2014-04-18 00:02:50'
+url: 'http://andrej.com/'
+message: "@Luke: we have $1/(1 + dx) = 1 - dx$ because $(1 + dx) (1 - dx) = 1 - dx^2 = 1$. Thus, your calculation can be continued: $h(1 + dx) - h(1) = -dx / (1 + dx) = -dx (1 - dx) = -dx + dx^2 = -dx$ and so clearly $k = -1$.\r\n\r\nNote that from $k \\, dx = -dx / (1 + dx)$ you *cannot* conclude $k = -1/(1 + dx)$ because the law of cancelation does not apply. Recall the law of cancelation: \"if $a, b \\in R$ such that $a \\, dx = b \\, dx$ for all $dx \\in \\Delta$ then $a = b$.\" In our case we have a problem: we can take $a = k$, but $b$ cannot be $-1/(1 + dx)$ because it is supposed to be a fixed real, independent of $dx$.\r\n\r\nDoes this dispell the mystery?"
+email: 59d57d95bc7c45ced5f1969279cec06b

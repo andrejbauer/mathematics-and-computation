@@ -1,0 +1,12 @@
+name: Andrej Bauer
+date: '2016-09-06 15:34:33'
+url: 'http://andrej.com/'
+message: >-
+  There are many things you can state as a criterion for a non-deterministic
+  computation: there exists a value such that $\phi$, all values satisfy $\phi$,
+  and so on (you know this better than I do). Your example is "it is possible
+  that the value will be $Y$" if I understand you correctly. I am not making any
+  assumptions about what is or should be possible to state about computations. I
+  am just saying that computations should be there. Even computations for which
+  no correctness criterion is stated can still be very useful.
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,5 @@
+name: anonymous
+date: '2010-09-29 16:13:49'
+url: ''
+message: "Look into:\r\n\r\n\"Interval Constraint Plotting for Interactive Visual Exploration of Implicitly Defined Relations\" \r\nT. Hickey, Z. Qiu, and M.H. van Emden Reliable Computing Vol. 6, No. 1, 2000,  as part of a special issue on Reliable Geometric Computations, <a href=\"http://interval.sourceforge.net/interval/index.html\" rel=\"nofollow\">http://interval.sourceforge.net/interval/index.html</a>. Van Emden did a bunch of interval constraint stuff on floats. Basically interval arithmetic explodes into large intervals too quickly so they used constraint solvers to turn the answers into sets of intervals."
+email: fd678deae93668bf741dd0606a7f00b4

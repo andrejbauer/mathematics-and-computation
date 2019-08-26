@@ -1,0 +1,12 @@
+name: Jesse C. McKeown
+date: '2013-10-28 17:48:10'
+url: 'http://jessecmckeown.tumblr.com'
+message: >-
+  I think Andrej did make clear that a big part of the work he did was to verify
+  the correspondence between the human-language description of the problem, and
+  the formalized problem.  It's all very well to have a program that compiles
+  and runs without crashing, but we also want to be sure that the way we first
+  construed its purpose is reliably what it actually does.  That part of the
+  review cannot be machine-verifiable, because it is dependent upon what is not
+  mechanical.
+email: 936ecd1de14d4152ed21bd813b9dc2b0

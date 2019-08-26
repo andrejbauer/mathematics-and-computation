@@ -1,0 +1,12 @@
+name: NotQuiteFunctional
+date: '2008-02-21 00:00:12'
+url: 'http://'
+message: >-
+  Hopefully last update (sorry slow on the B uptake)... not if 'number stream
+  contains a 1, but f only sees a 1 only after a very large number of other
+  values' (understanding B as sets of sets of N). If the Type II proof orders
+  the values on the tape, I think that's cheating, if they don't, then it seems
+  like there needs to be some number of 'timeouts' above which the machine says
+  'not a function'. If so, they should have the same problem as non-type II
+  machines on random input-value tapes.
+email: aa3cea5db35213e30fcec2e7a7968309

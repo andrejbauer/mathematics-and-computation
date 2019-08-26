@@ -1,0 +1,9 @@
+name: NotQuiteFunctional
+date: '2008-02-20 23:26:50'
+url: 'http://'
+message: >-
+  I'm struggling with 'All functions Bâ†’{0,1} are continuous', yet it seems I
+  can make a function over B, such as: 'if the number stream contains a 1,
+  return 1, otherwise return 0', which should be rejected for the same reason
+  'sgn' is rejected.
+email: aa3cea5db35213e30fcec2e7a7968309

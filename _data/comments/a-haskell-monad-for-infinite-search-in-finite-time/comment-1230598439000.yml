@@ -1,0 +1,8 @@
+name: Martin Escardo
+date: '2008-12-30 01:53:59'
+url: 'http://www.cs.bham.ac.uk/~mhe/'
+message: >-
+  And, of course, you define &gt;&gt;= recursively, in a way that is unlikely to
+  produce a total function. Hence it is hard to see this as a generalization of
+  the search monad.
+email: f744e9626423ff7587e25a41c2f682de

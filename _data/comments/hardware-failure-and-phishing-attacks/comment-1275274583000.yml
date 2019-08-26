@@ -1,0 +1,5 @@
+name: Jason
+date: '2010-05-31 04:56:23'
+url: ''
+message: "I was quite reluctant to go with a virtual server.  Finally I was faced with hardware failure and I was in a pinch.  Linode had deal where you could try it for X days for free.  I haven't looked back.  The only drawback I see with linode is that the amount of ram is small and the swap memory is so slow that a 5 minute CPU job could take an hour if it's thrashing.  It hasn't been a show stopper though.\r\n\r\nAs for bandwidth, that 225GB/month is more than 1/2 a gig / day, right?  That's actually quite a bit of traffic for most sites.  Most likely that'd be more than enough.\r\n\r\nAs for cost, I think it's been cheaper overall and I have greater peace of mind.  I spend less time working on or worrying about my server now.  To me that's worth it.\r\n\r\nAnd last but not least, Wordpress, where to begin...  It's useful, but it appears to be quite exploitable due to the nature of php.  I've stopped using but I haven't looked for a replacement yet.  I'm considering moving to one of the blog sites."
+email: a6ef9f7bfccd43bc5f22bfbc2eb41855

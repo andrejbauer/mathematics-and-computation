@@ -1,0 +1,12 @@
+name: Ben R.
+date: '2016-05-21 07:32:37'
+url: ''
+message: >-
+  Looking for more information about type II computability, I found your lecture
+  notes "Realizability as the Connection between Computable and Constructive
+  Mathematics", where theorem 2.1 is that there exists a computably unbounded
+  type I computable function from $[0,1]_c$ to $\mathbb{R}_c$. Is there a proof
+  of this anywhere? I can't find any other mention of this theorem (no other
+  Google Scholar hits for "computably unbounded", for example), and it seems
+  inconsistent with the result that all such functions are continuous.
+email: b01753e0c78849bd34045ed730d59db6

@@ -1,0 +1,10 @@
+name: Eduardo León
+date: '2013-01-08 02:02:59'
+url: ''
+message: >-
+  I am a math/CS nub, so please forgive me if what I am about to say is really
+  stupid, BUT... Is it not easier to simply declare free variables evil, and
+  force every variable to be bound to either a definition (an existential proof)
+  or an universal quantifier? Would this not make the language simpler to
+  understand?
+email: 79eede5b02caa81db17f34026b24a734

@@ -1,0 +1,5 @@
+name: Mathnerd314
+date: '2010-10-04 06:00:21'
+url: ''
+message: "MathJax has two math renderers, HTML-CSS and MathML. The current default renderer is HTML-CSS; I was hoping you could change it to MathML (with fallback to HTML-CSS). In Firefox (my browser), the MathML renderer is much faster.\r\nThe necessary configuration is detailed <a>here</a>."
+email: a45975b050304c416d0e3a736c8d44ff

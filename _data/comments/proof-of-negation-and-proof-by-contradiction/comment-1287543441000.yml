@@ -1,0 +1,14 @@
+name: Zach Norwood
+date: '2010-10-20 04:57:21'
+url: ''
+message: >-
+  @Andrej: Is a proof by negation valid for the intuitionist because it can
+  easily be turned into a proof by contraposition? (For example, if, in trying
+  to prove $\lnot\phi$, I prove $\phi\Rightarrow b$, where $\lnot b$ is known to
+  be true, then I've established the contrapositive $\lnot
+  b\Rightarrow\lnot\phi$, which establishes $\lnot\phi$.) In fact, is the
+  formalization of such a proof actually a proof of the contrapositive, at least
+  as the intuitionist requires the proof to be formalized? Playing the same game
+  with proofs by contradiction (as opposed to proofs by negation) requires
+  excluded middle, of course (as you say).
+email: 35b56ef08e4b1334a8230408d3de6977

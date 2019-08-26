@@ -1,0 +1,11 @@
+name: Mike Shulman
+date: '2016-08-18 21:54:54'
+url: ''
+message: >-
+  Okay, now I'm confused again.  Matt, presumably the process that you're
+  calling "proof checking" is not decidable, otherwise you wouldn't be making a
+  big deal out of how we don't need decidability.  But I don't see a qualitative
+  difference between "non-decidable checking" and "searching".  Is your "proof
+  checking" really just a kind of "proof search" whose input contains hints to
+  make it faster?
+email: c72e8ff1dfaaaacdbe9844d0202f378a

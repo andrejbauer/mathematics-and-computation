@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2009-09-10 00:29:41'
+url: 'http://andrej.com/'
+message: "Chris, that's a good point. In fact, there is a problem with disjoint sums, too. In Haskell not every element of $A + B$, or <code>Either A B</code> as it is written in Haskell, is of the form <code>Left x</code> or <code>Right y</code>, because the diverging value is from neither. Haskell does not really have disjoint sums in the sense of category theory.\r\n\r\nThere are several options. The cleanest one is to switch from Haskell to Agda, which has the empty type.\r\n\r\nAnother one is to limit attention just to the <em>total</em> elements of types, and just ignore the diverging programs. And I thought there was a way to declare an empty type using the \"-XEmptyDataDecls\". Of course, the empty type will not be empty, as it will still contain the diverging program, but that's ok since we'll just ignore it."
+email: 59d57d95bc7c45ced5f1969279cec06b

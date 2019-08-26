@@ -1,0 +1,5 @@
+name: Dan Doel
+date: '2010-07-30 01:32:19'
+url: ''
+message: "Not only that. Given the type, I expect that if you have the Monad instance defined, ox is one line:\r\n\r\n    ox = sequence :: [S r x] -&gt; S r [x]"
+email: af6ee853a79ce70a9ce68ae1e1fc852c

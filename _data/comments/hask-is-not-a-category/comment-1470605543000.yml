@@ -1,0 +1,5 @@
+name: Edward Kmett
+date: '2016-08-07 23:32:23'
+url: 'http://comonad.com/'
+message: "(.) can be patched into correctness,\r\n\r\n(#) :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c\r\n(#) f g = f `seq` g `seq` \\x -&gt; f (g x)\r\n\r\nbut, sadly, GHC doesn't do well at optimizing it:\r\n\r\nhttps://ghc.haskell.org/trac/ghc/ticket/7542\r\n\r\nIn `lens`, I'm often just putting on or taking off a newtype, so I use special cases for composing in a coercible argument to avoid the spurious costs of eta-expansion wrappers without triggering bad behavior.\r\n\r\nAs an example to show that the concerns you raise here aren't entirely academic, we've even seen accumulation of asymptotically significant numbers of eta-expansion wrappers in the past:\r\n\r\nhttps://ghc.haskell.org/trac/ghc/ticket/7436"
+email: 9c51a8b8afa2366a2ef4650c411f187a

@@ -1,0 +1,5 @@
+name: Andrea Vezzosi
+date: '2012-12-26 11:59:52'
+url: ''
+message: "That \"a function is an expression in a context\" from point 2 makes me wonder why lambda calculus has lambdas at all rather than reinterpret function applications as suspended substitutions.\r\n\r\nThe representations of LC with explicit substitutions that I remember still have lambdas though, I guess for higher-order cases it's more convenient to have proper function types, especially when polymorphism is involved."
+email: 08000b9f8b263fa903b99fc645e5e924

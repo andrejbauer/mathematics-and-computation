@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2014-01-15 20:31:27'
+url: 'http://andrej.com/'
+message: "@Alexander: yes, those are definitely interesting questions, especially the point about structurally-relevant constructions. But I agree with François that we should be careful about formulation of some of the concepts. I don't have anything intelligent to say at this moment.\r\n\r\n@François: It ought to be possible to fiddle with the universes. We assume a chain of universes $U_0 \\subseteq U_1 \\subseteq U_2 \\subset \\cdots$ out of convenience. We might have $U_\\omega$ on top of that. But I suppose then we'd still fall short of the correspondence with $ZFC$ equipped with some inaccessibles. In a way the ZFC $V$ acts like a \"top universe\", so the right comparison might require a \"top universe\" on the HoTT side, too."
+email: 59d57d95bc7c45ced5f1969279cec06b

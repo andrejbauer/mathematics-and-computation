@@ -1,0 +1,9 @@
+name: Andrej Bauer
+date: '2008-11-27 18:25:29'
+url: 'http://andrej.com/'
+message: >-
+  We have made some changes to levy to make look much more like Paul Levy's
+  original call-by-push-value language. (The first version was rather confused
+  because we were a bit confused about what is what. We thank Paul for
+  straightening us out.)
+email: 59d57d95bc7c45ced5f1969279cec06b

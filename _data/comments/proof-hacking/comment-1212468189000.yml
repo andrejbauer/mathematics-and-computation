@@ -1,0 +1,5 @@
+name: luchia
+date: '2008-06-03 06:43:09'
+url: 'http://'
+message: "Hallo,\r\n\r\nThe nice idea of Andrej presented in this post, was of great inspiration in writing:\r\nhttp://www.mathematik.uni-muenchen.de/~chiarabi/research/Papers/Articolo%20Bauer/versione_articolo.pdf\r\n(next CIE08). The application of such proof transformation to inductive proofs on naturals\r\npermit to extract \"tail\" recursive code. Other authors investigated such\r\npossibility, like Penny Anderson(1994), but their method were extremely much more complicated.\r\nHere the proposed proof transformation is clear and simple. There is a point that is not yet\r\nfully investigated: how to link such transformation to CPS? CPS is the canonical program-transformation to obtain tail recursion in programming. I think is possible to write\r\na CPS on proofs, that take into account also proof by inductions, acting extractly as the\r\nproof transformation presented here. Ciao,  Luca"
+email: d630a863fa83d9663c9283cf0b796e23

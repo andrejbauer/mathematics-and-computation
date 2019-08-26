@@ -1,0 +1,5 @@
+name: Peter
+date: '2010-05-31 06:20:36'
+url: ''
+message: "The ordinals you provide for the two pictures have lost all the formatting for exponentiation, and thus are very confusing. Also, there's a small error:\r\n\r\nfirst pic: Ï‰^(Ï‰^3 + 1) + 1\r\n2nd pic:   Ï‰^((Ï‰^2)*4 + 1) + 1\r\n\r\nYour error was that the four was on the wrong side of the Ï‰^2."
+email: d145ae6ae536fdc1c820d8abc7b4b3d6

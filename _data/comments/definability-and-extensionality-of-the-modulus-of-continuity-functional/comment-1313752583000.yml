@@ -1,0 +1,15 @@
+name: Martin Escardo
+date: '2011-08-19 13:16:23'
+url: ''
+message: >-
+  Nice post, Andrej. Of course, you know that the extensional modulus of uniform
+  continuity of a function $(\mathbb{N} \to 2) \to \mathbb{N}$ exists and can be
+  defined in PCF as shown by Berger in 1990, and depends on the function rather
+  than the algorithm, where $2 = \lbrace 0,1 \rbrace$. This has been vastly
+  generalized in recent years, with a complete answer of when the modulus of
+  uniform continuity exists and can be defined in PCF (even without parallel
+  features). I like to see what you explain in your post as simply saying that
+  the modulus of continuity is not continuous. Or, more precisely, no
+  extensional modulus of continuity functional can be continuous. I am looking
+  forward to the second part of the post.
+email: f744e9626423ff7587e25a41c2f682de

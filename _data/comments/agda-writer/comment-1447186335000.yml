@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2015-11-10 21:12:15'
+url: 'http://andrej.com/'
+message: >-
+  Emacs is in fact a highly exotic piece of software simply because it is a text
+  editor. More importantly, consider the fact that Python, Java, C/C++, LaTeX,
+  Ruby, etc. are never ever tied to a single text editor, whereas Agda is tied
+  to Emacs. That is a huge hinderance to adoption of Agda. It has nothing to do
+  with how good or bad Emacs is. Having to use a specific editor just to write
+  code for Agda is a ridiculous requirement.
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,5 @@
+name: Jules
+date: '2009-04-12 13:37:03'
+url: ''
+message: "Or this version:\r\n\r\nclass Maybe\r\ndef nothing?\r\nend\r\n\r\ndef just?\r\n  not nothing?\r\nend\r\nend\r\n\r\nclass Nothing &lt; Maybe\r\n  def nothing?\r\n    true\r\n  end\r\nend\r\n\r\nclass Just &lt; Maybe\r\nattr_accessor :value\r\ndef initialize(x)\r\n@value = x\r\nend\r\ndef nothing?\r\n  false\r\nend\r\nend"
+email: 71f1b6b2c3fd9af2e8c52618fb91caa6

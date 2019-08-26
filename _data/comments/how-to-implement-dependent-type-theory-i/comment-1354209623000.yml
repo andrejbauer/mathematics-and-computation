@@ -1,0 +1,5 @@
+name: Ali Assaf
+date: '2012-11-29 18:20:23'
+url: ''
+message: "Thank you for sharing this! I personally had to implement an interpreter for a language with dependent types last summer, and I came up with a very similar architecture.\r\n\r\nI really like the feature of beautifying the variable renaming. I came up with something similar myself. I see that you did avoid the pitfall of variable capture that can occur with user variables named x1, x2, etc. by splitting such names in the first place.\r\n\r\nI have one concern though: in the code that compares the equality between abstractions, can't you have captures if you blindly replace y by x? For example, \\x. x and \\y.x will be considered equal, even though they are not! It is not clear to me if this can happen at run-time due to all the preliminary variable renaming."
+email: 11950590b9af4a33865842c819bda014

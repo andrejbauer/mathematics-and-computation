@@ -1,0 +1,5 @@
+name: pa97001569
+date: '2007-07-16 08:56:47'
+url: 'http://'
+message: "Hi Andrej.\r\n\r\nI once told you that my brain can handle only classical \r\nlogic (to which you of course disagreed). But now I have \r\ncome across a real-life phenomenon that I simply cannot \r\ngrasp; so maybe you can make non-classical sense of it.\r\n\r\nIn the old days I often used to go cycling but now, with\r\nfamily and kids, find it difficult to get around to it.\r\nSpecificially each time I want to go, my wife says: \r\nyou can cycle whenever you like, just not now.\r\n\r\nI tried to formalize this as the statement \r\n  forall t:   forall s:    ( st  P(s) ) \r\non the predicate P(t) := \"I can go cycling at instant t\"\r\nand found it (at least classically) paradoxical.\r\n\r\nSo can NON-classical logic help understanding women ?\r\n(Notice that, if so, this would make an ultimate selling point!)"
+email: 1562823fff46cd65bbfa9e04f607d837

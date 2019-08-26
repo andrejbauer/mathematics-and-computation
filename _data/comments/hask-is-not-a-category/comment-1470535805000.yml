@@ -1,0 +1,9 @@
+name: Eduardo León
+date: '2016-08-07 04:10:05'
+url: ''
+message: >-
+  It seems to me that the real problem is that Haskellers take for granted that
+  they can work in a terminating/productive/whatever subset of the language,
+  rather than the whole of it. Of course, the assumption is false, but, if it
+  were true, Hask would be a bona fide category.
+email: 79eede5b02caa81db17f34026b24a734

@@ -1,0 +1,5 @@
+name: Evan
+date: '2010-05-23 02:59:13'
+url: ''
+message: "If a lambda function can be converted to work as a non-lambda function with little effort, why add the unnecessary complexity.\r\n\r\nIt's pretty obvious, that from a practical standpoint, most people can't inherently grasp the idiosyncrasies of lambda expressions. Otherwise, you wouldn't have so many comments on this thread explaining what it tries to accomplish.\r\n\r\nI think, GvR has a pretty good understanding that his language is used extensively in production environments (not just academic); and, adding features for features sake is a mistake.\r\n\r\nIf you want a dynamically-typed, light-weight, functional programming language that supports useless constructs like lambda expressions why don't you write your own. Wait, there are already 11 different dialects of Lisp.\r\n\r\nDon't forget, some of us actually use python to produce code to make money."
+email: 9798931483c6fe5af55ec68698ffd0a0

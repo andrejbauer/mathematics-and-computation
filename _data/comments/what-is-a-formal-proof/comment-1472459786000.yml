@@ -1,0 +1,5 @@
+name: Günter Rote
+date: '2016-08-29 10:36:26'
+url: ''
+message: "Aha, I was really underestimating what Dedukti can do in terms of proof checking. The propositions-as-types proofs are really quite a different style of proof, and my focus on HOL-type systems made me narrow-minded.\r\nCould one say that the (term : type) judgment is the proof object? It is what counts as a proof in the underlying theory. But, from the preceding discussion,  I guess that type checking is not straightforward enough that I would be comfortable to accept it, with my \"stringent requirements\" on proof checkability."
+email: b54b65b0004307f1314ad51c2f408045

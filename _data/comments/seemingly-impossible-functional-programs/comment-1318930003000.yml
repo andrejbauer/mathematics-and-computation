@@ -1,0 +1,12 @@
+name: >-
+  A Haskell monad for infinite search in finite time &laquo; Mathematics and
+  Computation
+date: '2011-10-18 11:26:43'
+url: >-
+  http://math.andrej.com/2008/11/21/a-haskell-monad-for-infinite-search-in-finite-time/
+message: >-
+  [...] infinite search algorithms, and indeed get them for free. This is a
+  follow-up to my blog post Seemingly impossible functional programs. In the two
+  papers Infinite sets that admit fast exhaustive search (LICS07) and
+  Exhaustible sets in [...]
+email: d41d8cd98f00b204e9800998ecf8427e

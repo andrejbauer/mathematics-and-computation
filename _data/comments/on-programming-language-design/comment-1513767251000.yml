@@ -1,0 +1,21 @@
+name: Saeed Baig
+date: '2017-12-20 11:54:11'
+url: ''
+message: >-
+  "We should design the language so that the default case is an immutable value.
+  If the programmer wants a mutable value, he should say so explicitly. "
+
+
+  Just wanted to say that another language that does exactly this is Rust.
+  Example of variable declaration and initialisation:
+
+
+  let x = 5;
+
+
+  x there is immutable. If you want to make it mutable, you have to add the
+  "mut" qualifier like so:
+
+
+  let mut x = 5;
+email: 10e91d18f87f281ca0c728aa873dc093

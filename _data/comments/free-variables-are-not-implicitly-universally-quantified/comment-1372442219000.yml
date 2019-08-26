@@ -1,0 +1,10 @@
+name: Günter Rote
+date: '2013-06-28 19:56:59'
+url: ''
+message: >-
+  What is wrong with $2^{O(n)}$? It is used not just by complexity theorists but
+  all sorts of ordinary mathematicians and computer scientists who are
+  describing the asymptotic growth of something. If $F$ is a function whose
+  growth we want to study, should we really apply your suggested replacement
+  instead of writing $F(n)\le 3n^2+7n+1=O(n^2)$?
+email: b54b65b0004307f1314ad51c2f408045

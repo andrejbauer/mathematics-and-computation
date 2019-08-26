@@ -1,0 +1,14 @@
+name: Andrej Bauer
+date: '2016-08-07 22:32:47'
+url: 'http://andrej.com/'
+message: >-
+  I think we're in agreement then.
+
+
+  Can I please ask everyone to refrain from politics and real life (because it's
+  my blog). I'd like to steer the discussion towards getting an actual syntactic
+  category out of Haskell (without <code>seq</code> if need be), just to see if
+  it has any use that $\omega$CPO does not. Alan Jeffrey's and John Launchbury's
+  papers seem handy. Launchbury proves adequacy so that should give a good
+  relationship between the allgeed syntactic category and the $\omega$CPOs.
+email: 59d57d95bc7c45ced5f1969279cec06b

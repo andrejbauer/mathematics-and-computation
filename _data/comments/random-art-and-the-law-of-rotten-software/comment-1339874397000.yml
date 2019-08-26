@@ -1,0 +1,5 @@
+name: Hugh
+date: '2012-06-16 21:19:57'
+url: ''
+message: "You probably either know this by now or don't care, but Unicode characters outside 7-bit ASCII produce different results on the Javascript version from the server version.\r\n\r\nIf my experiments and calculations are correct, you can fix this by calling unescape(encodeURIComponent(...)) on the input string before running the Javascript version.  This converts the string to an explicitly UTF-8 coded sequence of bytes, which is the same format that's being used by your OCaml version on the server."
+email: ecc58232254785582161a52cb9b43354

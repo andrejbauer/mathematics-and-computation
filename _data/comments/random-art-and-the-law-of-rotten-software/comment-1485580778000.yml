@@ -1,0 +1,18 @@
+name: Jesse C. McKeown
+date: '2017-01-28 06:19:38'
+url: 'http://jessecmckeown.tumblr.com'
+message: >-
+  In a curious twist (which some might call "ironic", but I'm not sure that
+  means what such folk think it means...) my browser can't quite guess what
+  character encoding this page means to use.  Specifically, I am seeing rogue
+  "Â" characters in odd places, such as:
+
+
+  "There must be a software equivalent of theÂ second law of thermodynamics,
+  let’s call it the Law of Rotting Software:
+
+
+  <code>“All software eventually fails, even if it you leave it alone.”"
+
+  </code>
+email: 101b809ddcb69eda44b7144fd42d12fb

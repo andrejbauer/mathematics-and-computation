@@ -1,0 +1,5 @@
+name: Dan Ghica
+date: '2016-09-03 11:09:04'
+url: 'http://www.cs.bham.ac.uk/~drg/'
+message: "From your reply I think we may be talking about different things. \r\n\r\nIn a non-deterministic computation I can assert that some value Y can be produced by the program X but just by running X you cannot check the truth of my assertion. The only way you can check it is if I tell you what the choices whenever nondeterminism kicked in. \r\n\r\nDo you really dispute this?"
+email: 610d9cbfd6db5b3ca4559151ca3af83b

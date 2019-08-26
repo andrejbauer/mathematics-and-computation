@@ -1,0 +1,5 @@
+name: Chris
+date: '2016-08-13 04:07:38'
+url: ''
+message: "A definition for x=y is easy. It just means for every g::T-&gt;(), g x and g y either both yield () or both diverge. I leave it as an exercise to the reader to show that this is an equivalence relation.\r\n\r\nAlso, technically only GHCs implementation of seq breaks Hack. seq (undefined . id) 7 should be undefined, but GHC can't prove undefined . id = undefined."
+email: 8de3c277733fbf0510f76bbcccc13f5b

@@ -1,0 +1,5 @@
+name: Robert Harper
+date: '2010-03-29 18:57:31'
+url: 'http://www.cs.cmu.edu/~rwh'
+message: "Good post, Andrej.  I was thinking of responding to Gowers myself, but I could not have done it as well as you've just done.  Thanks!\r\n\r\nA related point, which is implicit in your discussion, is that constructively there are more distinctions to be made than classically, so that one can often \"constructivize\" a classical theorem in many different ways.  I think it was Bishop who said, heuristically, that one can either use the same premises and derive a constructively weaker conclusion, or strengthen the premises and derive the same conclusion.  I think it's not so simple as all that, but it's a helpful guide.  An example that arises in basic algorithms is what it means for a finite graph to be non-planar: it could be that it is not planar or it could  be that one can embed K_5 or K_{3,3} in it.  Classically it's the same thing, but constructively they have content.  Richer examples abound."
+email: 58dfeb7db21bb8a5c6aa108b804078fd

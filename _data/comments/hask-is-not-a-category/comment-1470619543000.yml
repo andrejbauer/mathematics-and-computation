@@ -1,0 +1,9 @@
+name: Eduardo León
+date: '2016-08-08 03:25:43'
+url: ''
+message: >-
+  Or I could switch to Standard ML, which I've already done. General recursion
+  makes computations somewhat ill-behaved. As far as I can tell, the best thing
+  one can do is “cordon off” this misbehavior so that it doesn't infect values,
+  which is exactly what call-by-value languages do. :-)
+email: 79eede5b02caa81db17f34026b24a734

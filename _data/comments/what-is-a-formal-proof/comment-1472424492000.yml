@@ -1,0 +1,5 @@
+name: Günter Rote
+date: '2016-08-29 00:48:12'
+url: ''
+message: "Coqine produces from the .vo file a Dedukti file of a proof that Dedukti can check. It follows that this file must be a proof object and not a proof script. (Dedukti certainly does not have Coq' proof searching techniques built in, and such techniques can also not be described to Dedukti as part of the logic specification, I suppose.)\r\n\r\nNow the question is: How much does Coqine do? I was under the assumption that Coqine reads the .vo file into memory (using the code from Coq) and then simply translates the proof steps into Dedukti format.\r\n\r\nThe other option (which I did not think about) is that the .vo file is really (some internal form of) a proof script, and Coqine has to search for the proofs just as Coq does, additionally recording and translating the deduction steps as they are passed through the kernel."
+email: b54b65b0004307f1314ad51c2f408045

@@ -1,0 +1,9 @@
+name: Jon Sterling
+date: '2016-08-07 17:59:50'
+url: 'http://www.jonmsterling.com/'
+message: >-
+  Hmm, re-reading my comment above, I would like to make one qualification that
+  laziness is not the entire source of the problem; it interacts with it though.
+  The presence of 'seq' (which is not even properly accounted for in Haskell's
+  supposed denotational semantics) is what really gums up the works, I think.
+email: 7472e119fb9da9e90e84247da2c605bf

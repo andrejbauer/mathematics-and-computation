@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2008-11-18 02:29:22'
+url: 'http://andrej.com/'
+message: >-
+  Catch definitely breaks Haskell's purity, I am well aware of that since it
+  obviously breaks beta reduction, a corner-stone of Haskell's evaluation
+  strategy. Isn't the the whole point of computational effects to break purity?
+  I am interested to see if you can simulate catch in terms of a monad. Is it a
+  monad?
+email: 59d57d95bc7c45ced5f1969279cec06b

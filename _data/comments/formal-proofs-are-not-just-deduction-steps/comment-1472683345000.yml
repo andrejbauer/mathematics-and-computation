@@ -1,0 +1,5 @@
+name: Matt Oliveri
+date: '2016-09-01 00:42:25'
+url: ''
+message: "<blockquote>However, I think it is a bad idea to implement these features by LCF style elaboration on top of a Nuprl-style core.</blockquote>\r\n\r\nFirst of all, I think you got Andrej all confused by mentioning Nuprl. We're talking about choice of proof system technology, not choice of theories or models. Nuprl is hardly ever brought up for being LCF-style, since it really kind of isn't (it builds proof trees), and since the HOLs are the famous, modern LCF-style systems.\r\n\r\n\"LCF style elaboration\" technically makes no sense, since \"LCF-style\" describes the style of trusted kernel, and has nothing to do with elaboration. Perhaps you meant elaboration like with Ltac-style tactics, which build some other proof format. Andrej's not talking about that."
+email: 66cbd251bde282eb2e1584080e3604ea

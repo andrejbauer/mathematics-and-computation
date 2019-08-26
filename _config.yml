@@ -1,0 +1,15 @@
+kramdown:
+  hard_wrap: false
+  input: Markdown
+  math_engine: nil
+
+exclude:
+  - publish.sh
+  - Gemfile
+  - Gemfile.lock
+  - README.markdown
+  - archive
+
+url: http://math.andrej.com
+name: Mathematics and Computation
+description: Mathematics for computers

@@ -1,0 +1,8 @@
+name: Substructural Types in ABC | Awelon Blue
+date: '2014-01-30 22:12:06'
+url: 'http://awelonblue.wordpress.com/2014/01/30/substructural-types-in-abc/'
+message: >-
+  [&#8230;] some variation of the StateT or ReaderT monad transformer should
+  work well enough. Leveraging algebraic effects (or heterogeneous lists, or
+  dependent types) we might effectively mix operations on multiple [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

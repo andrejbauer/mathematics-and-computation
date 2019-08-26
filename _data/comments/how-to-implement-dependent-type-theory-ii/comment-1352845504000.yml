@@ -1,0 +1,9 @@
+name: Mike Shulman
+date: '2012-11-13 23:25:04'
+url: 'http://www.math.ias.edu/~mshulman'
+message: >-
+  This "normalization by evaluation" reminds me of the HOAS representation of
+  substitutions by functions that you were trying out when you gave your
+  tutorial, before settling on ordinary textual substitution.  What is the
+  difference here that makes this work where that failed?
+email: da032543a57a8175224648ba640be71c

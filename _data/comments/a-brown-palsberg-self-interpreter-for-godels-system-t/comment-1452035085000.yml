@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2016-01-06 00:04:45'
+url: 'http://andrej.com/'
+message: |-
+  I am using
+
+  [source]
+  \documentclass{amsart}
+  \usepackage{times}
+  [/source]
+email: 59d57d95bc7c45ced5f1969279cec06b

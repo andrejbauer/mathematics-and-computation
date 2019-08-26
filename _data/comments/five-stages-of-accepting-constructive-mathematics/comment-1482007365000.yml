@@ -1,0 +1,18 @@
+name: Andrej Bauer
+date: '2016-12-17 21:42:45'
+url: 'http://andrej.com/'
+message: >-
+  The subsets are not presumed to be decidable. And you can't just say things
+  like "what if I represent the subset input as a computation from {0,1} ->
+  {TRUE, FALSE} and test if 0 and/or 1 are present in the subset" without first
+  properly setting up an interpretation of logic and set theory (or whatever
+  formalism you have in mind) under which it is even possible to represent
+  subsets as computations. You would probably need to use something like
+  realizaiblity. However, note that <strong>general</strong> subsets cannot be
+  represented by binary functions because not all subsets are decidable.
+  Regarding your third option: that is just describing countable sets, possibly
+  with decidable equality. And as soon as you say "realized" that means you're
+  at stage three and you're thinking of a particular model. Whatever you
+  discover a particular model may not be applicable to constructive mathematics
+  in general.
+email: 59d57d95bc7c45ced5f1969279cec06b

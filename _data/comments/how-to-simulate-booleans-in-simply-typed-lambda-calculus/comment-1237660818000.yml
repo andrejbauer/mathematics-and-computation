@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2009-03-21 19:40:18'
+url: 'http://andrej.com/'
+message: "Excellent, thanks. This looks good to me and provides some ideas on how to attack the more general question, whether every typed PCA has booleans. A typed PCA is like lambda-calculus except the types are not necessarily generated inductively (there may be a single type so that one particular example is the untyped lambda calculus), and application is potentially partial. Now I know that if there is a typed PCA without sums, its types must not be inductively generated.\r\n\r\nP.S. I took the liberty of reformatting your posts so that the code is readable."
+email: 59d57d95bc7c45ced5f1969279cec06b

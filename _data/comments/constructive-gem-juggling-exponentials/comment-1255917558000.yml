@@ -1,0 +1,14 @@
+name: Sridhar Ramesh
+date: '2009-10-19 03:59:18'
+url: ''
+message: >-
+  In response to Pseudonym, the Cantor-Schroeder-Bernstein theorem cannot be
+  constructive in the relevant sense (e.g., provable in impredicative
+  higher-order intuitionistic logic, the internal logic of topoi): it's possible
+  to construct topoi in which all functions from reals (suitably constructed) to
+  reals are continuous, but clearly the intervals (0, 1) and [0, 1] both admit
+  injections into each other, while there can be no continuous bijection between
+  them. [A similar argument could be made using a suitable subset of N and the
+  intuitionistic consistency of the principle that all functions from N to N are
+  computable].
+email: 907acf351068fa10a76224b7d19bf48e

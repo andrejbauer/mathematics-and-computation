@@ -1,0 +1,5 @@
+name: Jonathan Allen
+date: '2009-04-12 06:17:21'
+url: ''
+message: "&gt; But then we go back to the dichotomy: do you encourage reliable code through simplicity or do you create reliability through better compiler checks?\r\n\r\nWhy not both?\r\n\r\nVisual Basic will give you a compiler warning if you try to use a loop variable in a lambda. If you still want to do it you can, but at least you are warned."
+email: 71c1027d2483fe242b0affc5e59df647

@@ -1,0 +1,5 @@
+name: Tom Holroyd
+date: '2015-08-08 17:02:11'
+url: ''
+message: "Since we're working with constructive maths, it's worth pointing out that you can construct $dx$ such that $dx \\cdot dx = 0$ quite easily. Consider the $2 \\times 2$ matrix\r\n$$\\begin{matrix}\r\n0 & 1 \\\\\r\n0 & 0\r\n\\end{matrix}$$\r\nIts square is zero. Now an ordinary number $a$ is\r\n$$\\begin{matrix}\r\na & 0 \\\\\r\n0 & a\r\n\\end{matrix}$$\r\nand $a + dx$ is\r\n$$\\begin{matrix}\r\na & 1 \\\\\r\n0 & a\r\n\\end{matrix}$$\r\nNow simply carry out $(a + dx)^2$ using ordinary linear algebra. You will get\r\n$$\\begin{matrix}\r\na^2 & 2 a \\\\\r\n0 & a^2\r\n\\end{matrix}$$\r\nwhich shows that $2 a dx$ is correct. This'll work for $x^n$ as well as everything else. You just need to expand the definition of 'number' to $2 \\times 2$ matrices. Also look at nilpotent Lie groups for the multivariate case."
+email: ebbd7d97302e9834d368156aaea7f940

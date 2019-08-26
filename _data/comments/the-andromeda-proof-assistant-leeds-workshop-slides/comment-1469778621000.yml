@@ -1,0 +1,15 @@
+name: Andrej Bauer
+date: '2016-07-29 09:50:21'
+url: 'http://andrej.com/'
+message: >-
+  @Mike: Peter Aczel asked a similar question, and I think it's a very good one.
+  As far as I can tell, once we remove the "Type in Type" hackery, we'll get
+  something like "LF with equality". Your comparison is not quite right.
+  Andromeda's object-level is strictly more expressive than LF. You can
+  represent essentially any object theory in it, together with desired
+  judgmental equalities, which is not doable in LF. The meta-level of Twelf is
+  very rudimentary (it's the stuff you write with the % sign in front), whereas
+  Andromeda's is a general-purpose programming language. So perhaps one way to
+  characterize Andromeda would be "LF with object-level judgmental equalities +
+  general-purpose ML"
+email: 59d57d95bc7c45ced5f1969279cec06b

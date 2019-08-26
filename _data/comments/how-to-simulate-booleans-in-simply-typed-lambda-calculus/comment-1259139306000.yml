@@ -1,0 +1,13 @@
+name: Sridhar Ramesh
+date: '2009-11-25 09:55:06'
+url: ''
+message: >-
+  You mention looking for a cartesian closed category in which the coproduct 1 +
+  1 does not exist. Examples of this are easy enough; e.g., let FinSet be the
+  CCC of sets of natural number cardinality, and consider the full subcategory
+  containing all such sets except those of cardinality 2. This is readily
+  observed to be a sub-CCC [by the primality of 2]; however, it cannot contain a
+  contain a coproduct 1 + 1. For, if a set of cardinality n were this coproduct,
+  then the number of maps from n to, say, the three element set would have to be
+  both 3^n and 3^2, but from this it would follow that n = 2.
+email: 907acf351068fa10a76224b7d19bf48e

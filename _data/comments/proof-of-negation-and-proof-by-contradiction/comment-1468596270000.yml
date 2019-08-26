@@ -1,0 +1,10 @@
+name: Arik
+date: '2016-07-15 17:24:30'
+url: ''
+message: >-
+  I encounter the following problem: students call proof by negation (meaning
+  reduction to contradiction) when in order to prove "if p then q" they prove
+  that "if not q then not p". The latter uses clearly the tautology that " 'if p
+  then q' iff 'if not q then not p' ". This type of proof is called
+  contrapositive but students are not aware to the distinction.
+email: 628b2e2e3551f7631132ec2607cf9986

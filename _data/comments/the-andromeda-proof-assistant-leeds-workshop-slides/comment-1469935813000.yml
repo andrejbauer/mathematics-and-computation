@@ -1,0 +1,9 @@
+name: Mike Shulman
+date: '2016-07-31 05:30:13'
+url: ''
+message: >-
+  I'm not sure what you mean by "LF gets extended to correspond to the object
+  language".   The types of LF generally represent <i>judgments</i> in the
+  object language, so I can't think of any sense in which LF itself
+  "corresponds" to the object language.
+email: c72e8ff1dfaaaacdbe9844d0202f378a

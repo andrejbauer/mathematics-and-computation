@@ -1,0 +1,9 @@
+name: Andrej Bauer
+date: '2016-08-06 10:01:26'
+url: 'http://andrej.com/'
+message: >-
+  But it is not. You are confusing the ML with the object theory. If we did that
+  with ML functions then it would be crazy. With lambda expressions we're just
+  fiddling with syntax trees. Lambda expressions are *not* functions or
+  closures.
+email: 59d57d95bc7c45ced5f1969279cec06b

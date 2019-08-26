@@ -1,0 +1,5 @@
+name: guest
+date: '2010-04-20 08:18:27'
+url: ''
+message: "<i>Please consult a textbook on logic because what you are saying is wrong.</i>\r\n\r\nIt is very possibly 'wrong' from a proof-theoretical point of view, but most classical mathematicians do not reason like this; they take a denotational and model-theoretic perspective where a proposition stands for either truth or falsity, so identifying equivalent propositions is entirely justified.  And even proof-theoretically, any proposition can be replaced by an equivalent statement plus a proof that the latter implies the former; and if the implication is obvious enough it will be elided in an informal proof.\r\n\r\nThe moral: minimizing proof by contradiction is a good policy, and this extends to searching for positive refutations of 'negative' statements.  But sometimes avoiding proof by contradiction is impossible or there's no compelling case for a direct proof, and here constructive mathematicians must either use negation signs, or (implicitly) punt to classical mathematicians and translate classical math to the negative fragment of constructive logic."
+email: ca81acbea9f97c2afa9be651b2d91632

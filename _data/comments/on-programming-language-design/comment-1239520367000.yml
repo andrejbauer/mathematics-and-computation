@@ -1,0 +1,9 @@
+name: smallpaul
+date: '2009-04-12 09:12:47'
+url: ''
+message: >-
+  Jonathan Allen: what do the "left" and "right" methods return for a Java
+  EmptyCollection instance? By default they will return NULL with Java
+  inheritance, right? So what do you prefer? To have them return? an exception?
+  Another EmptyCollection? An infinite tree of EmptyCollections?
+email: 6ed7188a723fde4eb7917874e7672352

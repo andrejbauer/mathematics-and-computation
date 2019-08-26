@@ -1,0 +1,39 @@
+name: Mike Shulman
+date: '2018-08-20 06:00:23'
+url: 'http://www.sandiego.edu/~shulman'
+message: >-
+  I just looked at the associated notes https://arxiv.org/abs/1807.05923, which
+  are very nice.  I feel like I am starting to finally understand algebraic
+  effects.  I have heard about them before but didn't really understand what
+  benefit you get from observing that many of the "computational" monads (e.g.
+  as used in Haskell) happen to be algebraic.  After reading your notes I think
+  I see (at least) three such benefits: (1) an algebraic presentation of a monad
+  specifies it in terms of what operations can be invoked in it and what laws
+  they satisfy, which is what you want in practice for the syntax of a
+  programming language, as opposed to Haskell-style monads which are specified
+  more "semantically" and one then has to extract relevant "operations" in an ad
+  hoc manner; (2) algebraic monads can be combined in a universal way, namely
+  the monad coproduct, which has a sensible syntactic counterpart (put together
+  the operations and axioms with no interaction); (3) one obtains the useful
+  general notion of handler.  Is that correct?  Are there other benefits too?
+
+
+  Regarding (2), in Haskell one often has the problem of "combining" monads,
+  which has no general solution; algebraic effects seem to solve this.  Is the
+  algebraic "monad coproduct" approach at all related to Haskell's "monad
+  transformers" that allow certain monads to be combined with any other monad?
+
+
+  Regarding (3), I am a little puzzled by the notion of handler from a
+  mathematical perspective.  It seems to me that the mathematically natural way
+  to talk about a homomorphism from F_T(X) to F_{T'}(X') would be to ask for a
+  monad morphism from T to T', thereby making <em>every</em> T'-model into a
+  T-model functorially, and then a T-homomorphism from F_T(X) to F_{T'}(X')
+  (hence a set-map from X to F_{T'}(X')).  Syntactically, I think this means
+  that the operation handlers would not be allowed to know or use the "return
+  type" of the with-handle expression, instead being forced to return a value
+  constructed in a generic way from the supplied continuation.  Of course this
+  would rule out basic things like exception handlers (Example 3.1), so it's not
+  as useful.  But can you give any more mathematical intuition for the notion of
+  handler?
+email: c72e8ff1dfaaaacdbe9844d0202f378a

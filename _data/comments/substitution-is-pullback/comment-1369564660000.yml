@@ -1,0 +1,5 @@
+name: Uday Reddy
+date: '2013-05-26 12:37:40'
+url: 'http://www.cs.bham.ac.uk/~udr'
+message: "Intuitively, composition is also a pullback.  $f;g$ is the \"pullback\" of a morphism $g : B \\to C$ along $f : A \\to B$ to obtain a morphism of type $A \\to C$.\r\n\r\nOne way of formalizing the intuition is to work in subsumptive reflexive graph categories (Dunphy &amp; Reddy, Parametric Limits, LICS 2004), where we have \"logical relations\" in addition to morphisms.  Perhaps there are other ways as well."
+email: 8bd78f469c15c519bd607bfd45130f40

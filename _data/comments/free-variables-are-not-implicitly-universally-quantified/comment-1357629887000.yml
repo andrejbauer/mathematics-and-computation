@@ -1,0 +1,18 @@
+name: Andrej Bauer
+date: '2013-01-08 08:24:47'
+url: 'http://andrej.com/'
+message: >-
+  @Eduardo: it is possible to do away with <em>all</em> variables (look up
+  "combinatory alegbra"), but humans are not good at using that sort of thing.
+  As I said in the post, once you decide to have bound variables, you are more
+  or less forced to have free variables as well. This is so because
+  <em>inside</em> a universal quantifier $\forall x . \phi$ the variable $x$ is
+  free. Or to put it in terms of computer science: a local variable is not
+  visible outside of its scope, but inside its scope it acts as a free variable
+  (one that is not "obsucred" and is "available"). You seem to think that free
+  variables somehow complicate matters. They do not, bad math education and
+  ignorance create confusion, and that complicates matters. Free variables are a
+  completely natural concept. They reflect how humans speak and think. When you
+  say "suppose $x$ is a real number", and then you proceed to argue about it,
+  you have used a free variable. Mathematicians do that all the time.
+email: 59d57d95bc7c45ced5f1969279cec06b

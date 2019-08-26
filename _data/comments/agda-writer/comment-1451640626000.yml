@@ -1,0 +1,5 @@
+name: Siddhartha Gadgil
+date: '2016-01-01 10:30:26'
+url: 'http://math.iisc.ernet.in/~gadgil'
+message: "There is a second editor - atom, now. Even better, the write of that (Ting-Yan Lai) has actually documented the interaction between agda and an editor at \r\n\r\nhttps://github.com/banacorn/agda-mode/wiki/Conversations-between-Agda-&amp;-agda-mode\r\n\r\nI have never managed to find this in the Agda wiki (or any details of the .agdai format)"
+email: a699a5f2856f21b724f6fb5b5905db95

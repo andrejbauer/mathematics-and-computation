@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2009-10-23 10:49:53'
+url: 'http://andrej.com/'
+message: >-
+  I took the liberty to edit your post and fixed the broken math. Yes, I agree
+  that ultimately we can show that [0,1] and (0,1) are not homeomorphic,
+  constructively, but for our purposes it is easier to just take your example
+  (0,1) vs `(0,1) union (2,3)`. By the way, it is interesting to think about
+  what "connected" means constructively, and which of the several notions of
+  connectedness (0,1) satisfies.
+email: 59d57d95bc7c45ced5f1969279cec06b

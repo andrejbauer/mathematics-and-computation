@@ -1,0 +1,16 @@
+name: Andrej Bauer
+date: '2014-01-14 18:20:35'
+url: 'http://andrej.com/'
+message: >-
+  @Alexander: Theorem 10.5.11 of the <a
+  href="http://homotopytypetheory.org/book/" rel="nofollow">HoTT book</a> is
+  what you are looking for. It states that there is a 0-type $V$ in HoTT and a
+  relation $\in$ on $V$ such that $(V, {\in})$ is a model of ZFC (assuming
+  choice for $0$-types). One thing I have not mentioned is that there is another
+  "dimension" in HoTT, namely that we postulate a sequence of universes $U_0
+  \subseteq U_1 \subseteq U_2 \subseteq \cdots$. The $0$-type $V$ that models
+  ZFC can then be constructuted relative to any $U_i$. (It is actually not
+  important whether we get a cummulative sequence of universes or some other
+  variant, but the Univalence axiom is <em>about</em> a universe so we need at
+  least one to express the axiom.)
+email: 59d57d95bc7c45ced5f1969279cec06b

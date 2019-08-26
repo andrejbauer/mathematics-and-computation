@@ -1,0 +1,23 @@
+name: Andrej Bauer
+date: '2016-11-21 08:51:56'
+url: 'http://andrej.com/'
+message: >-
+  It is traditional (and in my opinion misleading) to refer to the object of all
+  truth values as "the object of propositions". I do not know why that is. In
+  Coq the object is called <code>Prop</code>, for instance. In a topos it is
+  $\Omega$, and it is isomorphic to $\mathcal{P}(\lbrace * \rbrace)$.
+
+
+  You are mistaken about excluded middle. It is not expressed as $\forall S \in
+  \mathcal{P}(\lbrace * \rbrace) . S \lor \lnot S$ but rather as
+  \mathcal{P}(\lbrace * \rbrace) . \star in S \lor \lnot (\star in S)$. In any
+  case, this is a technicality which can be dealt with in many ways. For
+  instance, one can observe that $\mathcal{P}(\lbrace * \rbrace)$ is a complete
+  Heyting algebra under the $\subseteq$ ordering, and that logical formulas
+  denote elements of this Heyting algebra. Then, once can really write $S \lor
+  \lnot S$, and this would mean the same thing as $S \cup (\lbrace{\star\rbrace
+  \setminus S)$. I recommend that you consult a textbook such as Scott &amp;
+  Lambek's "Introduction to Higher-Order Categorical Logic". They explain these
+  things there. You will also learn from that textbook about internal languages,
+  which allow us to mix syntactic forms with semantic objects.
+email: 59d57d95bc7c45ced5f1969279cec06b

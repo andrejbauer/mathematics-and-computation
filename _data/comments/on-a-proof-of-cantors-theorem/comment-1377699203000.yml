@@ -1,0 +1,8 @@
+name: The elements of an inductive type | Mathematics and Computation
+date: '2013-08-28 16:13:23'
+url: 'http://math.andrej.com/2013/08/28/the-elements-of-an-inductive-type/'
+message: >-
+  [&#8230;] of functions $mathtt{nat} to mathtt{nat}$ is countable? How would
+  that reconcile with the usual diagonalization proof that $mathtt{nat} to
+  mathtt{nat}$ is [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

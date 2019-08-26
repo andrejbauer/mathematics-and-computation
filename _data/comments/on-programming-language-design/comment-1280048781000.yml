@@ -1,0 +1,5 @@
+name: masklinn
+date: '2010-07-25 11:06:21'
+url: ''
+message: "<blockquote>Seth, but a Maybe Tree is not a tree, itâ€™s a Maybe. How do you expect to call tree methods on it?</blockquote>\r\nGive them to the maybe, which will forward it or not and wrap the return itself in a <code>Maybe</code>? (essentially implementing method-level lifting natively in the language) Might want a different operator for lifted method calls in order to discriminate between calls on <code>Maybe</code> and lifted calls on whatever is within <code>Maybe</code>."
+email: d89d81f673dac06b16cade5b4bf19954

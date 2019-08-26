@@ -1,0 +1,21 @@
+name: Andrej Bauer
+date: '2013-06-27 11:07:11'
+url: 'http://andrej.com/'
+message: >-
+  Essentially, I disagree with Günter. There is absolutely no need to quantify
+  variables in axioms. They can be left free. Why would we want to quantify them
+  universally? To artificially increase their logical complexity in the name of
+  general confusion pervading treatment of free variables?
+
+
+  The "big O" notation is an abomination that is just as bad as the broken
+  notation in analysis. We should in fact write $O(\lambda n . n^2)$ instead of
+  $O(n^2)$. Complexity theorists write nonsense such as $2^{O(n)}$ out of
+  laziness which then they claim to be convenience.
+
+
+  Likewise, I do think we should write $\lambda n . 2n+ k$ when we think of a
+  monotone map. And no, you did not "catch" me because there is no need to
+  quantify $k$ in this expression. That is the whole point of what I am saying,
+  namely, that variables are not always quantified, and for good reasons.
+email: 59d57d95bc7c45ced5f1969279cec06b

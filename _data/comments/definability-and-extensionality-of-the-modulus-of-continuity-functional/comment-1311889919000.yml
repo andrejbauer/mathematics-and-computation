@@ -1,0 +1,5 @@
+name: Dawid Toton
+date: '2011-07-28 23:51:59'
+url: ''
+message: "The definition of (hereditarily) total functionals doesn't typecheck. I believe it should have $f \\in N_{k+1}$.\r\nAlso, the definition of $\\approx_k$ should probably have $g(y)$ at the end."
+email: f1e912841aea1e32cf638024cacceb17

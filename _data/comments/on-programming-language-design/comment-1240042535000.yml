@@ -1,0 +1,15 @@
+name: Frank
+date: '2009-04-18 10:15:35'
+url: ''
+message: >-
+  Haskell and ML have some really nice features the Maybe type is one of my
+  favorite constructs too, but these languages will never be very useful until
+  they have a real tool chain.  Anyone who has ever tried to find a bug in a
+  large unfamiliar Haskell code base will know what I mean.  It is shockingly
+  time consuming because the debugging tool chain is so primitive and things
+  like dynamic linking only have experimental support.  The reality is that as
+  fun and beautiful as it is to write in Haskell and as good as the language
+  itself is, it is just not a terribly useful platform for everyday software
+  development.  The ecosystem around it is not filled with people that are
+  interested in getting things done.
+email: a120501990e8acf35b2f244a2c1d1230

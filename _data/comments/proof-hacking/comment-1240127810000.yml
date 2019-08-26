@@ -1,0 +1,5 @@
+name: Giuseppe Maggiore
+date: '2009-04-19 09:56:50'
+url: 'http://N/A'
+message: "Hi! Just a quick note (no matter the article being relatively old):\r\nlet x = e1 in e2 transforms into (.\\ x -&gt; e2) e1, not (as written in the addendum) (.\\ x -&gt; e1) e2.\r\n\r\nThat's it, otherwise its all very nice!"
+email: 7b936e1e1199c6e3f52dc12484e6322c

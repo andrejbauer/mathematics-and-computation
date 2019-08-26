@@ -1,0 +1,12 @@
+name: Freek
+date: '2009-04-12 19:05:41'
+url: 'http://www.cs.ru.nl/~freek/'
+message: >-
+  I don't know Haskell at all, but I've always heard that it's not trivial to
+  control the memory consumption of a Haskell program.  If this is true, and if
+  I apply your theory that programmer's are "forgetful, lazy, and make every
+  mistake imaginable", isn't that then a strong reason not to use Haskell?  Of
+  course, if you know what you're doing, you probably can write Haskell programs
+  that behave reasonably, memory-wise.  But then, if you know what you're doing,
+  you can write very nice programs in C too.
+email: 4e741c596ecb8f1c23ad9abace805d91

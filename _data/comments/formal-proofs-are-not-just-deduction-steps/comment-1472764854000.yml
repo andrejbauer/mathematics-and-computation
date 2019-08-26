@@ -1,0 +1,24 @@
+name: Andrej Bauer
+date: '2016-09-01 23:20:54'
+url: 'http://andrej.com/'
+message: >-
+  You still misunderstand what I am saying. All of what I am saying is
+  completely agnostic about what particular formalism you want to use. Perhaps
+  this will help: I am saying, among other things, that the user should be
+  allowed to write programs that generate (missing parts of) terms which then
+  get type-checked by the kernel. Perhaps that’ll help clear up the confusion.
+
+
+  The requirement that the kernel runs a terminating algorithm on its input
+  (whatever it is) is bogus. There might be some advantage to knowing that the
+  kernel's object type theory has decidable type checking, but that is
+  orthogonal to termination properties of the kernel, because the kernel is much
+  more than just a decision procedure for type checking.
+
+
+  Look, this is all very practical. People "invent" techniques for Agda and Coq
+  where they proudly present some trickery that makes Agda normalize less stuff
+  and therefore it works faster (various forms of reflection, for instance). It
+  may all be very clever, but it begs the question: are they not just fighting
+  the built-in normalization procedure?
+email: 59d57d95bc7c45ced5f1969279cec06b

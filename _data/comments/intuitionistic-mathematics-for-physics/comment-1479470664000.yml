@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2016-11-18 13:04:24'
+url: 'http://andrej.com/'
+message: >-
+  Wherever did you get the idea that logic is outside mathematics? Anyhow, you
+  should read $\mathsf{Prop}$ as the set of all truth values, not the set of all
+  formulas. In other words $\mathsf{Prop}$ is isomorphic to the powerset of a
+  singleton $\mathcal{P}(\lbrace\star\rbrace)$. For instance, you can express
+  excluded middle as $\forall S \in \mathcal{P}(\lbrace\star\rbrace) . \star \in
+  S \lor \lnot (\star \in S)$. Does that make you happier?
+email: 59d57d95bc7c45ced5f1969279cec06b

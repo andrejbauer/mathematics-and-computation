@@ -1,0 +1,13 @@
+name: Matt Oliveri
+date: '2016-07-29 17:16:48'
+url: ''
+message: >-
+  Sometimes people draw a distinction between logical frameworks and metalogical
+  frameworks. I don't get the terminology, but the idea is that logical
+  frameworks are for specifying then *using* logics, whereas metalogical
+  frameworks are for specifying then *studying* logics. Twelf is primarily
+  intended as a metalogical framework. Isabelle seems to be the main logical
+  framework. Andromeda seems more like a logical framework than a metalogical
+  framework, so it might make more sense to compare it to Isabelle. (I need to
+  learn Isabelle.)
+email: 66cbd251bde282eb2e1584080e3604ea

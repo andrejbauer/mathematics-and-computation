@@ -1,0 +1,5 @@
+name: Mike Shulman
+date: '2015-05-21 21:31:53'
+url: ''
+message: "Nice!  A few comments/questions:\r\n\r\n1. Some of the notes on the RHS of the slides are cut off at the end.\r\n2. Doesn't the eta-rule together with the reflection rule give you function extensionality?\r\n3. Are you saying that the reflection rule is <i>never</i> applied (and, thus, an Eq-term in the context is never used) unless a hint explicitly instructs us to?"
+email: c72e8ff1dfaaaacdbe9844d0202f378a

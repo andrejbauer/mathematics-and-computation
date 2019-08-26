@@ -1,0 +1,5 @@
+name: Heinrich Apfelmus
+date: '2011-12-01 15:26:17'
+url: 'http://apfelmus.nfshost.com'
+message: "Awesome!\r\n\r\nI've <a href=\"http://apfelmus.nfshost.com/blog/2010/07/02-fixed-points-video.html\" rel=\"nofollow\">experimented</a> with something similar, too. (For some reason, the slideshow player doesn't show anything at the moment; I need to fix this).\r\n\r\nI even started writing my own note-taking application in Haskell. While this prompted me to develop a library for functional reactive programming, I soon lost interest in the original goal. Here <a href=\"https://github.com/HeinrichApfelmus/reactive-banana/tree/db0129ce15148e09b12ee1535a12e7dbfa5e959e\" rel=\"nofollow\">an early commit</a> that should display something."
+email: bcf3c21ce05cfb6788e25dcc3821b3c7

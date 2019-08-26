@@ -1,0 +1,9 @@
+name: 'How to: Python Lambda &#8211; why? | SevenNet'
+date: '2014-11-25 18:27:32'
+url: 'http://sevennet.org/2014/11/25/how-to-python-lambda-why/'
+message: >-
+  [&#8230;] You just have to think a little bit different. I&#8217;m sure soon
+  you will love it. But be careful if you deal only with python. Because the
+  lambda is not a real closure, it is &#8220;broken&#8221; somehow: pythons
+  lambda is broken [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

@@ -1,0 +1,5 @@
+name: Sebastian Hanowski
+date: '2008-11-25 22:18:56'
+url: 'http://www.informatik.uni-kiel.de/~seha'
+message: "Hi MartÃ­n!\r\n\r\nThis is a first try of a simple lift of Delay to functions spaces.\r\n\r\ntimedRecursion :: ((a -&gt; T b) -&gt; (a -&gt; T b)) -&gt; (a -&gt; T b)\r\ntimedRecursion f = \\ a -&gt; Delay (f (timedRecursion f) a)\r\n\r\nrfac :: (Int -&gt; T Int) -&gt; (Int -&gt; T Int)\r\nrfac f 0 = Stop 1\r\nrfac f n = t (n*) (f (n-1))\r\n\r\nfac :: Int -&gt; T Int\r\nfac = timedRecursion rfac"
+email: 07140d9492a84cf1ebdbff0884be2146

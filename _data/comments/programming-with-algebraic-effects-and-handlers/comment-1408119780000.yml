@@ -1,0 +1,5 @@
+name: Two views of programming language design | The Lab Lunch
+date: '2014-08-15 18:23:00'
+url: 'http://researchblogs.cs.bham.ac.uk/thelablunch/?p=410'
+message: "[&#8230;] possible, using the rather well known monads\_or the funkier\_lenses or the more sophisticated algebraic effects. However, it is very difficult in general to make types match whatever arbitrary interface your [&#8230;]"
+email: d41d8cd98f00b204e9800998ecf8427e

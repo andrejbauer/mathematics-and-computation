@@ -1,0 +1,5 @@
+name: Neel Krishnaswami
+date: '2012-12-30 12:27:28'
+url: 'http://semantic-domain.blogspot.com'
+message: "Dear Paul, \r\n\r\nSpeaking as a type theorist who occasionally uses a little category theory, I do something pretty close to what you suggest. When I use categories, I tend to give the types of morphisms with the single-arrow $A \\to B$, and use the double-arrow $A \\Rightarrow B$ to write the exponential. This is mainly because the superscript notation $B^A$ gets unwieldy when $A$ is a syntactically large expression.\r\n\r\nI do agree that axioms are typically better given in the form: \r\n$$x, y: A \\vdash P(x,y)$$\r\nwhere $P(x,y)$ is an atomic proposition. There are good proof-theoretic reasons for this, in that cut-elimination fails if you give the axiom as: \r\n$$\\cdot \\vdash \\forall x,y:A.\\; P(x,y)$$\r\nsince this introduces a forall without using the forall-introduction rule. I don't quite know how to render this fact categorically, since it seems to lead to modelling contexts with multicategories, and I've never had the stamina for dealing with them."
+email: 2d7c6d4c76fd60dbad0ea6828c1524bd

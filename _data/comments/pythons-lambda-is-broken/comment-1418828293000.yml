@@ -1,0 +1,9 @@
+name: 'Fixed Python Lambda &#8211; why? #dev #it #asnwer | Good Answer'
+date: '2014-12-17 15:58:13'
+url: 'http://goodanswer.biz/2014/12/17/fixed-python-lambda-why-dev-it-asnwer/'
+message: >-
+  [&#8230;] You just have to think a little bit different. I&#8217;m sure soon
+  you will love it. But be careful if you deal only with python. Because the
+  lambda is not a real closure, it is &#8220;broken&#8221; somehow: pythons
+  lambda is broken [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

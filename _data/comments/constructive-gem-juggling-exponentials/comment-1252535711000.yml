@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2009-09-10 00:35:11'
+url: 'http://andrej.com/'
+message: >-
+  Bob (2): Thanks for the idea. I suppose computer scientists really do
+  understand "all propositions are decidable" better than "the law of excluded
+  middle". On the other hand, this really is just terminology, since the law of
+  excluded middle states <em>exactly</em> that all propositions are decidable:
+  $\forall p \in \Omega, p \lor \lnot p$.
+email: 59d57d95bc7c45ced5f1969279cec06b

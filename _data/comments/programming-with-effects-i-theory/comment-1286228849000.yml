@@ -1,0 +1,13 @@
+name: Andrej Bauer
+date: '2010-10-04 23:47:29'
+url: 'http://andrej.com/'
+message: >-
+  @beroal (regarding generic effects and sequencing): let me be precise about
+  $f_\mathrm{gen}$. Suppose $f$ is a <b>function symbol</b> of type $(P, N)$.
+  (In particular, we are <b>not</b> assuming that there is a carrier $A$ or an
+  operation $f : P \times A^N \to A$.) Then $f_\mathrm{gen}$ is a map $P \to
+  F_\Sigma(N)$ defined by $$f_\mathrm{gen}(p) = f(p, \lambda x .
+  \mathtt{return}(x)).$$ The thing on the right-hand side of this equation is
+  <b>not</b> a function applied to arguments, but rather a tree seen as an
+  element of the free algebra $F_\Sigma(N)$.
+email: 59d57d95bc7c45ced5f1969279cec06b

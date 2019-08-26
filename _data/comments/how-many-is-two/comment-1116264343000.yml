@@ -1,0 +1,8 @@
+name: lukeb
+date: '2005-05-16 19:25:43'
+url: ''
+message: >-
+  But can you write a program that takes as input a boolean function `f : NN ->
+  2` and outputs the truth value `forall n in NN. f(n)` for some `Omega` where
+  `2 != Omega`?
+email: be8ab9c98803e0143e4754824fc8bc37

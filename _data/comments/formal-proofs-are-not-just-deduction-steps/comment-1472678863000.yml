@@ -1,0 +1,5 @@
+name: Matt Oliveri
+date: '2016-08-31 23:27:43'
+url: ''
+message: "I think Neel was arguing against a Nuprl-style formal system, based on his example of injectivity of (-&gt;) not being admissible. (Computational type theory is a semantic approach, but Nuprl still has a formal system for the intended semantics.) Is that rule admissible in ETT? I would guess not, in which case his argument is not completely off the mark. I guess he's assuming that an LCF-style proof assistant is only desirable for certain formal systems, which means that you may want to avoid certain formal systems in order to avoid an LCF-style assistant.\r\n\r\n(I wouldn't agree with this assumption.)"
+email: 66cbd251bde282eb2e1584080e3604ea

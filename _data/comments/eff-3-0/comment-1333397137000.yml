@@ -1,0 +1,5 @@
+name: Dan Doel
+date: '2012-04-02 22:05:37'
+url: ''
+message: "A question asked in #haskell a few days back sparked some thinking about Eff for me. The question was:\r\n\r\nWhy can't we use a free monad over <code>F X = Get (S -&gt; X) | Put S X</code> for state?\r\n\r\nThe answer is that this isn't specifying the algebra of a mutable cell precisely, whereas <code>S -&gt; S * X</code> does. We want Get and Put to interact in certain ways, and the proper algebraic theory is a quotient of the free algebraic theory over the two operations.\r\n\r\nBut, it occurred to me that the free monad is exactly what Eff does. You specify that get and put exist, but there is no relation between them, unless I'm missing something. And presumably the handlers would be able to observe various sequences of gets and puts that would be indistinguishable under the quotient?\r\n\r\nSo, are there plans to add equations (or some equivalent) to the algebraic theories in Eff. Or is my recollection of what all is possible in Eff just fuzzy, and there is already a way to handle this properly?"
+email: af6ee853a79ce70a9ce68ae1e1fc852c

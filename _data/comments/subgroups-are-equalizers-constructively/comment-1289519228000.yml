@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2010-11-12 00:47:08'
+url: 'http://andrej.com/'
+message: >-
+  @Peter: That's a very good question. Paul Taylor also pointed out that there
+  is a gap in my proof. We can describe $N$ explicitly, I think, as $N = \lbrace
+  w \, \iota_1(x) \iota_2(x)^{-1} \, w^{-1} \mid x \in H, w \in G * G \rbrace$.
+  So the missing lemma is this: suppose for $x \in G$, $y \in H$ and $w \in G *
+  G$ we have $\iota_1(x) \iota_2(x)^{-1} = w \, \iota_1(y) \iota_2(y)^{-1} \,
+  w^{-1}$. Does it follow that $x \in H$?
+email: 59d57d95bc7c45ced5f1969279cec06b

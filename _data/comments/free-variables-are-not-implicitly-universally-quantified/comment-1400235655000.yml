@@ -1,0 +1,5 @@
+name: Eduardo León
+date: '2014-05-16 12:20:55'
+url: ''
+message: "It has been quite a long time (more than a year!) since I made an extremely uniformed comment. In my defense, back then I did not know about the distinction between judgments and propositions, between an assumption in a proof and an argument for a function, or even between a metalanguage and an object language. I did briefly stumble upon the concept of a metalanguage, but I quickly dimissed as \"Who would like to reason outside the object language?\"\r\n\r\nIt is only after trying to implement a programming language that I actually understood what all of this is about: context management. When a variable is free, it can be used - for performing actual computation. You bind a variable when you need to abstract over it. And you need to abstract over a variable if you do not want it in the environment. The environment is a very real thing - the contents of memory.\r\n\r\nSo, even if it is a little bit too late, thanks for the explanation!"
+email: 79eede5b02caa81db17f34026b24a734

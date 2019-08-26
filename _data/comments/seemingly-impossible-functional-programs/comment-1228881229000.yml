@@ -1,0 +1,14 @@
+name: >-
+  A Rant A Day - The Power of The Functional or: I&#8217;ll bet you can&#8217;t
+  do this in Java
+date: '2008-12-10 04:53:49'
+url: 'http://arantaday.com/blog/the-power-of-the-functional/'
+message: >-
+  [...] With Lazy Evaluation, an expression isn&#8217;t evaluated as soon as it
+  is created; instead it is delayed until that expression&#8217;s value is
+  needed. One of the neat tricks provided by lazy evaluation is the ability to
+  work with infinite sets - for example, you can literally have a variable which
+  holds all the natural numbers, all the primes, or all the Fibonacci numbers.
+  This sometimes provides rather surprising results - such as the ability to
+  exhaustively search over infinite spaces. [...]
+email: d41d8cd98f00b204e9800998ecf8427e

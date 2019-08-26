@@ -1,0 +1,22 @@
+name: Andrej Bauer
+date: '2016-09-06 15:42:08'
+url: 'http://andrej.com/'
+message: >-
+  Well, as I stated already, this is a rant. People who are close to logic
+  should know better. People who work in algorithmics have a real need for a
+  word that says "I actually proved that this thing does what it does". It's
+  unfortunate that they picked "provably" because that makes it sound as "it's
+  possible to prove that this thing does what it does", but I of course
+  understand that they'll keep using it. If I had it my way, I would require all
+  those heuristics to be qualified as "heuristically" or "experimentally" or
+  some such, and then I would not need any words for the case with proofs. So,
+  instead of "Optimal sorting aglorithm" and "Provably optimal sorting
+  algorithm" we would have "Heuristically optimal sorting algorithm" and
+  "Optimal sorting algorithm", respectively. After all, if the title of a paper
+  makes a claim, say "Bananas are yellow" people expect the paper to demonstrate
+  that bananas are yellow. In computer science, to demonstrate a property of an
+  algorithm is to prove that property, because algorithms are mathematical
+  objects. If the property is not actually proved, but rather experimentally
+  verified, then the title should say so. But I realize that this is the point
+  of view of a mad mathematician.
+email: 59d57d95bc7c45ced5f1969279cec06b

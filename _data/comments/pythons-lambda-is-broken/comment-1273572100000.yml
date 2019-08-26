@@ -1,0 +1,10 @@
+name: >-
+  VaporWarning&raquo; Blog Archive &raquo; Notes from the JS pit: closure
+  optimization
+date: '2010-05-11 12:01:40'
+url: 'http://blog.cdleary.com/2010/05/notes-from-the-js-pit-closure-optimization/'
+message: >-
+  [...] closure-by-reference can produce side effects that surprise developers,
+  such as: def surprise&#40;&#41;: funs = &#91;lambda: x ** 2 for x in
+  range&#40;6&#41;&#93; assert [...]
+email: d41d8cd98f00b204e9800998ecf8427e

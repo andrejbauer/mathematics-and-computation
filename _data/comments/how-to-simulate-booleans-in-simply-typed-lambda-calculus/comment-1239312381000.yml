@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2009-04-09 23:26:21'
+url: 'http://andrej.com/'
+message: "I saw how to get booleans for two basic types after I asked the question. Your proof looks good to me, thanks. So the new candidate for a lambda calculus with products and no booelans is lambda calculus with infinitely many base types, but I don't see at the moment how to prove that it does not have booleans. Actually, I should just find a cartesian closed category in which the coproduct 1+1 does not exist, that would do it, as well.\r\n\r\nP.S. I am not worried about the type of booleans containing garbage. Most types contain garbage anyway (such as the undefined element)."
+email: 59d57d95bc7c45ced5f1969279cec06b

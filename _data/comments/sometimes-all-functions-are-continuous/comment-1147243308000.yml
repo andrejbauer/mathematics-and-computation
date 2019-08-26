@@ -1,0 +1,5 @@
+name: roconnor
+date: '2006-05-10 08:41:48'
+url: 'http://www.livejournal.com/users/r6/'
+message: "I ported the code to Haskell, and now I clearly see what is going on.  Although it is essentially written in the pure lambda calculus one is still forced inside the continuation monad (of course).  This means the type of m becomes\r\n<pre>((a -&gt; Cont a b) -&gt; Cont a t) -&gt; (a -&gt; Cont a b) -&gt; a</pre>\r\nwhere a is something like Integer.\r\n\r\nSo the input are functions and functionals that are Kleisli arrows rather than pure function arrows.\r\nThis type is basically a nice way of writing\r\n<pre>((a -&gt; (b-&gt;a)-&gt;a) -&gt; (t-&gt;a)-&gt;a) -&gt; (a -&gt; (b-&gt;a)-&gt;a) -&gt; a</pre>\r\nContinuations are a nice way of bumping up the order of the type. ;)\r\n\r\nFor those interested, here is the code:\r\n\r\n<pre>\r\nimport Control.Monad.Cont\r\nm f x = runCont (search 0) id\r\n  where\r\n   search n =\r\n    callCC (\\\\k -&gt; do {f (\\\\j -&gt; if j < n then x j else k=&lt;&lt;(search (n+1)));\r\n                      return n})\r\n</pre></pre>"
+email: fab61c13db29a1c73460ab0a9cb47565

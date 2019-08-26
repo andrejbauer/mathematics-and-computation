@@ -1,0 +1,5 @@
+name: Alecco
+date: '2009-04-10 03:07:52'
+url: ''
+message: "http://www.python.org/doc/2.5.2/ref/naming.html\r\n\r\n  4.1 Naming and binding\r\n\r\n  Names refer to objects. Names are introduced by name binding operations.\r\n  Each occurrence of a name in the program text refers to the binding of that\r\n  name established in the innermost function block containing the use.\r\n\r\n  A block is a piece of Python program text that is executed as a unit.\r\n  The following are blocks: a module, a function body, and a class definition. \r\n  A script file [...] is a code block. A script command [...] is a code\r\n  block. The file read by the built-in function execfile() is a code block.\r\n  The string argument passed to the built-in function eval() and to the\r\n  exec statement is a code block. The expression read and evaluated by the\r\n  built-in function input() is a code block."
+email: 64435d1fc92bf9594b4a2a7c705c3441

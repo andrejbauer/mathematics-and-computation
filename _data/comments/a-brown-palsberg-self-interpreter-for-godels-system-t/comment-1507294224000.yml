@@ -1,0 +1,17 @@
+name: Jacques Carette
+date: '2017-10-06 14:50:24'
+url: 'http://www.cas.mcmaster.ca/~carette'
+message: >-
+  The definition you give of an interpreter in your linked note would disqualify
+  anything written in "finally tagless" style as actual interpreters. [Neil
+  Jones had the same issue with us calling our interpreters/partial evaluators
+  by those names, for the same reason.]
+
+
+  But what we call an 'interpreter' in finally tagless works exactly as an
+  interpreter does, observationally.
+
+
+  In other words, I think your definition of what an interpreter is, is too
+  narrow.
+email: ebe95855ff886dc20ac7314e54e7fa34

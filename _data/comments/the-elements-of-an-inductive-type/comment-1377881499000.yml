@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2013-08-30 18:51:39'
+url: 'http://andrej.com/'
+message: >-
+  @David: the $\mathtt{nat}$ with an exotic constant is inductive in the sense
+  that it still satisfies Peano's induction axiom. But we have to be a bit
+  careful about it, because the axioms we add are <em>not</em> so innocent.
+  There are infinitely many of them, they are negated equations rather than
+  equations, etc. So it gets harder to interpret the theory.
+email: 59d57d95bc7c45ced5f1969279cec06b

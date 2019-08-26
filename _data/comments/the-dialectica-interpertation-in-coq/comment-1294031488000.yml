@@ -1,0 +1,10 @@
+name: Matija Pretnar
+date: '2011-01-03 06:11:28'
+url: 'http://matija.pretnar.info'
+message: >-
+  I think what Andrej meant was PHOAS (parametric higher-order abstract syntax).
+  It is a clever way of simulating HOAS by universally quantifying the type of
+  variables. See a <a href="http://adam.chlipala.net/papers/PhoasICFP08/"
+  rel="nofollow">paper by Adam Chlipala</a> for its introduction. HOAS is, of
+  course, not possible in Coq.
+email: 81edd40c675051c393c53f72b7c1428a

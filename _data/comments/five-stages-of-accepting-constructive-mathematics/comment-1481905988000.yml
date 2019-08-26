@@ -1,0 +1,17 @@
+name: Ron
+date: '2016-12-16 17:33:08'
+url: 'https://pressron.wordpress.com/'
+message: >-
+  The paper is very readable and very interesting. But I didn't understand the
+  example on p. 8, of the non-finiteness of subsets of {0, 1}. Are the subsets
+  decidable in your constructive world? If so, what if I represent the subset
+  input as a computation from {0,1} -&gt; {TRUE, FALSE} and test if 0 and/or 1
+  are present in the subset? If the input programs -- even those denoting
+  decidable sets -- are allowed not to terminate and yet the realizing program
+  must always terminate, then how are any "for all" propositions realized? You
+  write, “In computable mathematics a finite set is represented by a finite list
+  of its elements, and a countable set by a program which enumerates its
+  elements, possibly with repetitions.” Shouldn’t there be a third option:
+  decidable countable subsets of a countable (or finite) set S, are realized by
+  a program S -&gt; {TRUE, FALSE} ?
+email: c69557151e2f8331f6b1865469b694dd

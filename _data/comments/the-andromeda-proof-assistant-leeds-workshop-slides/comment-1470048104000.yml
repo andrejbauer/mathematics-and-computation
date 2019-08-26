@@ -1,0 +1,17 @@
+name: Mike Shulman
+date: '2016-08-01 12:41:44'
+url: ''
+message: >-
+  LF totally does work with the syntax of the object language.  When we define
+  STLC inside Twelf like <a
+  href="http://twelf.org/wiki/Proving_metatheorems:Representing_the_syntax_of_the_STLC"
+  rel="nofollow">here</a>, we are describing the syntax of STLC, with things
+  like application and abstraction, using LF as the metalanguage.  We could do
+  the same thing in Coq.  It's true that we don't state theorems <i>about</i>
+  the object language inside LF, and that the meta-meta-language of % commands
+  proves things about the object language <i>by</i> proving things about the
+  metalanguage LF, but LF is still the metalanguage used to define the object
+  language; the point is just when we write "arrow : tp -&gt; tp -&gt; tp", the
+  arrow "-&gt;" of LF is one level higher than (and, in particular, different
+  from) the "arrow" of STLC.
+email: c72e8ff1dfaaaacdbe9844d0202f378a

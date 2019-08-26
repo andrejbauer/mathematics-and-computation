@@ -1,0 +1,9 @@
+name: Andreas Abel
+date: '2012-11-14 14:26:58'
+url: ''
+message: >-
+  Your type of values is what we had in Agdalight.  Having function spaces in
+  your data type became awkward when working with meta-variables or a monadic
+  evaluator.  I do not remember the exact reason why, but HOAS-values were
+  abandoned; Agda 2 is back to de Bruijn indices (with a new set of drawbacks).
+email: 6c08a91c8041e44815b34bdce56a4135

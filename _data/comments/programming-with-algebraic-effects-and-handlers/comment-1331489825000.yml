@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2012-03-11 19:17:05'
+url: 'http://andrej.com/'
+message: "Well, ML has handlers just for exceptions and those cannot be used to get general handlers. I suppose you could emulate eff in ML with delimited continuations, but I think you would end up with a \"deep\" embedding of eff.\r\n\r\nPeople have tried to get something in Haskell, e.g.,  <a href=\"http://hackage.haskell.org/package/effects-0.2.1\" rel=\"nofollow\">effects</a> on Hackage. Judge for yourself."
+email: 59d57d95bc7c45ced5f1969279cec06b

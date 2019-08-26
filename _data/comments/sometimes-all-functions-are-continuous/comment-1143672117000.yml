@@ -1,0 +1,5 @@
+name: stiber
+date: '2006-03-30 00:41:57'
+url: 'http://expert-opinion.blogspot.com/'
+message: "\"In order to compute sgn(x), we must for any given real number x discover whether it is negative, zero, or positive. So suppose we inspect the digits of x for a while and discover, say, that the first billion of them are all zero. Then sgn(x) is either 0 or 1, but we cannot tell which. In fact, no finite amount of computation will guarantee that we will be able to tell whether x=0 or x&gt;0. Since infinite amount of computation is impossible in finite time (please do not drag in quantum computing, it does not help) the sign function cannot be computed. It is not a function!\"\r\n\r\nBy this logic, wouldn't all functions be non-computable? For all functions, we need to know what x is to determine what the function output should be."
+email: a14b69753fff556e0bba75ebf4da1de3

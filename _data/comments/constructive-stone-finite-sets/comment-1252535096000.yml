@@ -1,0 +1,11 @@
+name: Bob Harper
+date: '2009-09-10 00:24:56'
+url: 'http://www.cs.cmu.edu/~rwh'
+message: >-
+  It might be nice to compare various notions of "finite set" from a
+  constructive viewpoint, ie with respect to their computational content. 
+  There's a huge (computational) difference between saying "here's a set and a
+  natural number n such that i can map the set injectively into 0..n-1", and
+  "... i can map 0..n-1 onto the set", and "no proper subset of this set can be
+  mapped bijectively to this set".
+email: 58dfeb7db21bb8a5c6aa108b804078fd

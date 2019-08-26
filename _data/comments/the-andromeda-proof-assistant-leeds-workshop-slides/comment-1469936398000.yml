@@ -1,0 +1,5 @@
+name: Mike Shulman
+date: '2016-07-31 05:39:58'
+url: ''
+message: "Are you saying that the way one actually codes in Andromeda is to use the extensional dependent type system as a meta-theory to describe some other object theory, the way one uses LF in Twelf?\r\n\r\n(By the way, as I'm sure you know, the relative weakness of LF vis-a-vis something like MLTT is intentional; in particular it enables the use of higher-order abstract syntax to describe variable binding in object theories.  If Andromeda's extensional dependent type system is too powerful, then that trick wouldn't be available therein, making encoding object theories inside it more cumbersome.)"
+email: c72e8ff1dfaaaacdbe9844d0202f378a

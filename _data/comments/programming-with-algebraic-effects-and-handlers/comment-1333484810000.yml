@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2012-04-03 22:26:50'
+url: 'http://andrej.com/'
+message: >-
+  @Sean: Thanks for the comments. Regarding constants, yes of course, that is an
+  unecessary slip up on our part. Regarding your second point: you are right, so
+  the typical way of getting a <code>e#op</code> is to write something like
+  <code>let x = new E in .... x#op ..</code>. What did you expect? You could
+  write <code>(new E)#op</code> in concrete syntax, but that would be useless
+  and also it would be desugared into <code>let x = new E in x#op</code>.
+email: 59d57d95bc7c45ced5f1969279cec06b

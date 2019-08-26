@@ -1,0 +1,5 @@
+name: Jake Donham
+date: '2009-09-09 00:00:46'
+url: ''
+message: "Andrej (5): no, I don't expect equality to be classical; I am coming at this with a syntactic prejudice, so whether some proposition `p` (to me, some syntax tree) is equal to `T` must be decided.\r\n\r\nIn the argument \"if `c(S) != 1` then `S` is not a singleton, therefore `T != p` and `not p` holds\", I find it troubling that `S` not a singleton implies `T != p`. Can we not have a set `S = {T, p}` where we don't know whether `T = p`? Or, does it even make sense to call the set a singleton or not when we don't know whether `T = p`?"
+email: ebb54fbd2c78a5a371f4f02cbe6a3c81

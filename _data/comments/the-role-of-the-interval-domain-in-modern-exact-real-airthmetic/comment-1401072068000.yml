@@ -1,0 +1,5 @@
+name: Edward Kmett
+date: '2014-05-26 04:41:08'
+url: 'http://comonad.com/'
+message: "@Andrej: Sorry for the rather belated reply. \r\n\r\nWith GHC 7.8 we've finally been able to get working bindings for MPFR!\r\n\r\nhttp://github.com/ekmett/rounded\r\n\r\nWe wound up bundling a patched version of MPFR with the package and abusing the new dynamic linker support."
+email: 9c51a8b8afa2366a2ef4650c411f187a

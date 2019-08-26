@@ -1,0 +1,22 @@
+name: Cody Roux
+date: '2010-07-05 13:56:01'
+url: ''
+message: >-
+  I see the proof of the above theorem in a somewhat different way than "a
+  useless example of non-constructive proof". Let me make my point using a Car
+  Analogy. You go to a car dealer, and he supplies a car to you, along with a
+  guarantee: He must supply a -working- car to you, if needed. If you never use
+  the car, the contract is implicitly satisfied, otherwise, if you do try to
+  start the car, then two cases may occur: The car starts, and everything is
+  fine, or the car does not start. In this case, you make use of your guarantee,
+  and the dealer supplies a new, working car (or some other car with another
+  guarantee). You do the same for your classical proof of existence of 2
+  irrational numbers $a$ and $b$ such that $a^b$ is rational: act as if
+  $a=\sqrt{2}$ and $b=\sqrt{2}$ satisfy your theorem. If anyone calls you out on
+  it, by supplying a proof that $\sqrt{2}^\sqrt{2}$ is irrational, you can
+  "backtrack" by supplying new witnesses to your theorem: $a=\sqrt{2}^\sqrt{2}$
+  and $b=\sqrt{2}$. In a sense, the non-constructive proof does contain "less
+  information" than the constructive proof. However it does supply a "guarantee"
+  as in the above sense, that is you may use your witnesses with the caveat of
+  perhaps needing to substitute them for "correct" witnesses at a further point.
+email: 58433c35bbb30844c92ce94aed55526b

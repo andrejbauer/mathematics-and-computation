@@ -1,0 +1,12 @@
+name: Sridhar Ramesh
+date: '2008-09-19 07:15:04'
+url: 'http://'
+message: >-
+  Is it fair to say "non-zero infinitesimals potentially exist" (which I would
+  parse as Â¬Â¬âˆƒdxâˆˆR [Â¬(dx = 0) âˆ§ dx^2 = 0])? I would actually take this
+  to be provably false (as an intuitionistic field, non-zeros should be the same
+  as invertibles, and thus be closed under squaring). It seems the more accurate
+  statement would be "not all infinitesimals are zero" (which I would parse as
+  Â¬âˆ€dxâˆˆR [dx^2 = 0 =&gt; dx = 0]). But perhaps I should just use a
+  different translation from ordinary language to formal intuitionistic logic...
+email: 907acf351068fa10a76224b7d19bf48e

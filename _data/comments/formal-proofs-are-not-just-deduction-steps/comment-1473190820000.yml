@@ -1,0 +1,5 @@
+name: Matt Oliveri
+date: '2016-09-06 21:40:20'
+url: ''
+message: "<blockquote>We are therefore either doomed to have many proof assistants, or to have extensible proof assistants. If the latter, what [form] do such extensions take? Building internal models inside some logic is just one way of providing such flexibility.</blockquote>\r\n\r\nHow do internal models extend the proof assistant? It seems like you can always do this--modulo size issues--and it doesn't affect proof assistant functionality.\r\n\r\nIndeed, it seems that with non-extensible proof assistants, working internally to some defined logic is a prime example of something that's harder than it ought to be. For example, setioid hell is working internally to the setoid model the hard way."
+email: 66cbd251bde282eb2e1584080e3604ea

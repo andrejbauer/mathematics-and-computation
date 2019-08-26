@@ -1,0 +1,20 @@
+name: Andrej Bauer
+date: '2016-08-10 08:49:36'
+url: 'http://andrej.com/'
+message: >-
+  Well, first of all, thanks for writing the page! If I could suggest an
+  improvement, it would be that you should be clear as to whether Hask is
+  supposed to be syntactic (made of types) or semantic (made of domains). You
+  probably do not want to get into explanations of what "domains" and
+  "$\omega$CPOs" are, so perhaps you can just be a bit vague, but warn the
+  reader that there are technicalities which need to be resolved for a
+  water-tight definition.
+
+
+  What I dislike is that on the wiki page it says explicitly "Hask is a
+  category" but then in the comments here I read "for most Haskell programmers,
+  whether Hask is a mere category or not seems rather less important: it doesn’t
+  matter so much if one can come up with a category Hask". Well then, since you
+  do not have a category and it does not matter whether you have a category, say
+  out loud that you are <em>pretending</em> to have one.
+email: 59d57d95bc7c45ced5f1969279cec06b

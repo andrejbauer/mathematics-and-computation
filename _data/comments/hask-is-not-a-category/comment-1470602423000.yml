@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2016-08-07 22:40:23'
+url: 'http://andrej.com/'
+message: "@Mike Shulman: I turned on threading but perhaps it won't kick in on an existing post. I can't see threading. I hope this discussion will die out soon, anyhow.\r\n\r\nRegarding the excellent question \"what is Hask if not a category?\", I think the supposed equations for a category are actually inequalities in some partial order (induced by a notion of \"observation\"). For instance, it seems like $f \\leq f \\circ \\mathrm{id}$, meaning roughly that \"$f \\circ \\mathrm{id}$ is at least as defined as $f$\" (I hope I got the direction right)."
+email: 59d57d95bc7c45ced5f1969279cec06b

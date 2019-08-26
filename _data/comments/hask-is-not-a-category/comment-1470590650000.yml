@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2016-08-07 19:24:10'
+url: 'http://andrej.com/'
+message: >-
+  I already commented on the Fast & Loose paper in my blog post, but perhaps I
+  was not explicit enough. Haskell people offer that paper as the universal
+  solution to any mathematical objection. The paper does <emph>not</emph> define
+  a syntactic category out of Haskell. It uses PER models on domains as a
+  semantic model. It does not address the question I am asking here.
+email: 59d57d95bc7c45ced5f1969279cec06b

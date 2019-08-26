@@ -1,0 +1,211 @@
+body {
+  margin: auto;
+  padding: 0;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  width: 90%;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* General & 'Reset' Stuff */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section {
+  display: block;
+  margin: 0 0 20px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0 20px 0;
+}
+
+/* code { */
+/*     font-size: 125%; */
+/* } */
+
+pre code {
+    padding: 0px;
+}
+
+/* Header, <header>
+   header   - container
+   h1       - project name
+   h2       - project description
+*/
+
+header {
+  width: 100%;
+  border-bottom: 2px dashed #a0a0a0;
+  padding: 0px 0 5px 0px;
+  margin: 0 0 0 0;
+}
+
+header h1 {
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin: 0 0 0 0;
+  font-weight: bold;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #000000;
+  text-shadow: 0 0 10px rgba(40, 40, 90, 0.3);
+  -webkit-font-smoothing: antialiased;
+}
+
+header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #404040;
+  margin: 0px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: #000000;
+  text-decoration: underline;
+}
+
+
+
+/* Main Content
+*/
+
+#main_content {
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+section img {
+  max-width: 100%
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #404040;
+}
+
+dt {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+dd {
+  margin-left: 30px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li:before {
+  content: ">>";
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+}
+
+ul li p {
+  margin: 0;
+}
+
+blockquote {
+  padding-left: 10px;
+  border-left: 1px dotted #666;
+}
+
+pre {
+  text-wrap: normal;
+}
+
+table {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+th {
+  text-align: left;
+  border: 1px dashed #b5e853;
+  padding: 5px 10px;
+}
+
+td {
+  padding: 5px 10px;
+  border: 1px dashed #b5e853;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px dashed #a0a0a0;
+  color: #b5e853;
+}
+
+/* Links
+   a, a:hover, a:visited
+*/
+
+a {
+  color: #0000ff;
+}
+
+/* Navigation (written by an amateur) */
+
+nav {
+  margin: 5px 0px 40px 0px;
+  padding: 0px 0px 10px 0px;
+}
+
+nav a {
+  display: block;
+  color: #606060;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #0000ff;
+}
+
+nav a.active {
+  color: #000000;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav li {
+  float: left;
+  margin: 0;
+}
+
+nav ul li:before {
+  content: "";
+  margin: 0;
+}

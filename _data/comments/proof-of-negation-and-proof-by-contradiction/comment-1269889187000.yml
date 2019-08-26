@@ -1,0 +1,5 @@
+name: Peter LeFanu Lumsdaine
+date: '2010-03-29 20:59:47'
+url: 'http://www.math.cmu.edu/~plumsdai'
+message: "The classical theorem, as I remember, is &ldquo;<em>non</em>-planarity is equivalent to embedding `K_5` or `K_{3,3}`&rdquo; &mdash; an equivalence between a negative and a positive condition.\r\n\r\nThe most natural ways to think of this classically are surely as `(not P) => E`, `P &lt;=&gt; not E`, or the conjunction of the two.  But each of these implies that at least one of `P`, `E` is (equivalent to) a negation, and hence equivalent to its own double negation.  But I don't think we should be able to get either of those here.\r\n\r\nIf the property `E`, &ldquo;embeddability of `K_5` or `K_{3,3}`&rdquo; is equivalent to its double negation, then I think excluded middle follows, by constructing (given a statement `p`) a graph which has a `K_5` if `p` holds and a `K_{3,3}` if `p` fails.  (More concretely, one can give a counterexample graph in presheaves on the poset &ldquo;V&rdquo;.)    And I suspect something similar should be do-able for planarity, though I don't immediately see it..."
+email: aa7788c6e710db4ca184114e527a9c54

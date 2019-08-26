@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    {% include meta.html %}
+    <title>{{page.title}}</title>
+    {% include mathjax.html %}
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+    {% include header.html %}
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <!-- NAVIGATION -->
+    <nav>{% include navigation.html %}</nav>
+
+    <section id="main_content" class="inner">
+      {{ content }}
+    </section>
+
+    <h4>Comments</h4>
+
+    {% include comments.html %}
+
+    {% include analytics.html %}
+  </body>
+</html>

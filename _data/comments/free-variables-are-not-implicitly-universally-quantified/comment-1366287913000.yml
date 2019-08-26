@@ -1,0 +1,15 @@
+name: Andrej Bauer
+date: '2013-04-18 14:25:13'
+url: 'http://andrej.com/'
+message: >-
+  @Michael: it is precisely the missing context, or to be more precise, the
+  missing abstraction, which is the problem. The expressions $x + \sin x$
+  denotes a <b>number</b>. This number depends on another number $x$, but so
+  what? To get a function out of this you have to write something like $x
+  \mapsto x + \sin x$ or $(x,y) \mapsto x + \sin x$, at which point it becomes
+  clear what this function maps from (in the first case from $\mathbb{R}$ and in
+  the second $\mathbb{R^2}$). Mahtematicians are doing themselves a great
+  disservice by saying things like "$n + 3 k$ is an odd number" at one point,
+  and then "$n + 3 k$ is a monotone function" at another. They should say "$n +
+  3 k$ is an odd number$" but $n \mapsto n + 3 k$" is a monotone function".
+email: 59d57d95bc7c45ced5f1969279cec06b

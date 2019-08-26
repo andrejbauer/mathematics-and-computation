@@ -1,0 +1,12 @@
+name: Andrej Bauer
+date: '2012-01-30 09:14:48'
+url: 'http://andrej.com/'
+message: >-
+  You're not toally off the mark, though. It is relevant to ask whether
+  $\epsilon$ is extensional. Of course, if $\epsilon$ always finds the first
+  witness in the lexicographic (or some other) order, then it is extensional.
+  And, as you observe, given any $\epsilon$ we can always construct an
+  extensioonal one. But still Martin's $\epsilon$ is extensional (because it is
+  total and written in PCF), while mine is not (try applying it to XOR written
+  in different orders).
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,11 @@
+name: Mike Shulman
+date: '2012-11-10 17:15:29'
+url: 'http://www.math.ias.edu/~mshulman'
+message: >-
+  This is very helpful to see; thank you for doing it!  Of the additional
+  enhancements on your list, I think one for which it is least clear to me how
+  to go about it is adding a tactic language and/or interactive proof mode. Do
+  you have any plans to try that, and/or any hints on how one would go about it?
+  Do you have to implement a separate datatype for terms with holes of specified
+  types?
+email: da032543a57a8175224648ba640be71c

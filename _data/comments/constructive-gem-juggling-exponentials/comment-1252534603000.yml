@@ -1,0 +1,16 @@
+name: Bob Harper
+date: '2009-09-10 00:16:43'
+url: 'http://www.cs.cmu.edu/~rwh'
+message: >-
+  Here's a little presentational suggestion.  It sounds rather technical and
+  boring to phrase things as "whatever implies law of the excluded middle",
+  because few of those you're trying to reach know or care what the "law of the
+  excluded middle" is, or maybe even think it's trivially valid (because of the
+  usual truth table interpretation).  It might be more informative to re-state
+  this ever so slightly as "whatever implies that all propositions are
+  decidable", which is more self-evidently meaningful, because it avoids jargon,
+  and is more self-evidently absurd, because obviously not all propositions are
+  decidable.  The point is that LEM involves both disjunction and negation,
+  which have decidedly different meaning constructively than classically, so the
+  formula itself is misleading.  Instead, express the semantics of it directly.
+email: 58dfeb7db21bb8a5c6aa108b804078fd

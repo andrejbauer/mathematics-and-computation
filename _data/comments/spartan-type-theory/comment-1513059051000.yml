@@ -1,0 +1,10 @@
+name: Anonymous
+date: '2017-12-12 07:10:51'
+url: ''
+message: |-
+  Hello, thank you for posting these interesting slides.
+
+  Is there a typo on page 30? Should the last equation read:
+
+  ind_nat P e f (S n) = f n (ind_nat P e f n)
+email: a2c4bccde5df2ff7e54dbcc033844f3c

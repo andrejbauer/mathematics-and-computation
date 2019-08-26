@@ -1,0 +1,5 @@
+name: Brendan Long
+date: '2014-01-09 23:40:03'
+url: ''
+message: "The .jar file seems to be missing a manifest. I had to run it like this:\r\n\r\n    java -cp ~/Downloads/hydra.jar hydra.HydraWindow\r\n\r\nThe META-INF/MANIFEST.MF should have a line like:\r\n\r\n    Main-Class: hydra.HydraWindow"
+email: b7bbc26a53917230eb17d1f8cd4b3dda

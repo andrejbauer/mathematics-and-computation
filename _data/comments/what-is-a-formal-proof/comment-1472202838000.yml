@@ -1,0 +1,16 @@
+name: Günter Rote
+date: '2016-08-26 11:13:58'
+url: ''
+message: >-
+  I realize that what I said about "stringent runtime bounds" and even
+  "linear-time proof checking" is nonsense. It was a poorly thought-out metaphor
+  for having a proof object that consists of a list of deduction steps,
+  following a simple specification of deduction rules. For example: when forming
+  a term that applies a function to an argument, or when performing a
+  substitution, this is a single command in OpenTheory, but of course it
+  requires some type checking or processing that may be linear in the size of
+  the involved expressions if implemented naively. I believe one can construct
+  OpenTheory files that would take even exponential time to check, in terms of
+  their length (but never longer than the kernel took to run originally when the
+  proof was produced).
+email: b54b65b0004307f1314ad51c2f408045

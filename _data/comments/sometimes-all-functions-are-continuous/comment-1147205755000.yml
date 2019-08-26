@@ -1,0 +1,5 @@
+name: roconnor
+date: '2006-05-09 22:15:55'
+url: 'http://www.livejournal.com/users/r6/'
+message: "Well, I think it is obviously true, but probably hard to prove. ;) In the following, newf transforms f into an extensionally equivalent function that accesses at least the 100th element.\r\n\r\nnewf f b = (f b)+(b 100)-(b 100)\r\n\r\nor even worse newf' accesses some element greater than f does.\r\n\r\nnewf' f b = (f b)+(b ((m f b)+1))-(b ((m f b)+1))\r\n\r\nOf course to prove it requires one to actually define the semantics of evaluation to determine what the elements accessed are.  Then proving all this works is probably not trivial.  For instance, I suppose it possible to have some strange semantics that replaces e-e directly with 0.  Then my example doesn't work."
+email: fab61c13db29a1c73460ab0a9cb47565

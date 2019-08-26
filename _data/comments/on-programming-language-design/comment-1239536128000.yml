@@ -1,0 +1,5 @@
+name: Jules
+date: '2009-04-12 13:35:28'
+url: ''
+message: "Here's a direct translation to Ruby:\r\n\r\nclass Maybe\r\n  def nothing?\r\n    self.class == Nothing\r\n  end\r\n\r\n  def just?\r\n    not nothing?\r\n  end\r\nend\r\n\r\nclass Nothing &lt; Maybe\r\nend\r\n\r\nclass Just &lt; Maybe\r\n   attr_accessor :value\r\n   def initialize(x)\r\n     @value = x\r\n   end\r\nend\r\n\r\nOne of the problems with static typing is that there is no clear choice for language designers. If you choose dynamic typing you're done, and you're at a local maximum in the design space. If you choose static typing you have to design the type system very carefully. There is a whole spectrum between most safety and most flexibility.\r\n\r\nDynamic typing also allows you to solve problems like pickling/distribution in a more straightforward way."
+email: 71f1b6b2c3fd9af2e8c52618fb91caa6

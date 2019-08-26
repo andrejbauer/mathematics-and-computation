@@ -1,0 +1,21 @@
+name: Neel Krishnaswami
+date: '2017-06-20 16:16:24'
+url: 'http://semantic-domain.blogspot.com'
+message: >-
+  Hi Andrej,
+
+
+  You have indeed understood what I meant.
+
+
+  If you try to prove that typing is unique up to judgmental equality for the
+  usual syntax, you run into a problem in the application case. Induction tells
+  you that  ?AB??CD, but you can't conclude that  A?C and  B?D from that, which
+  is what you need to get the proof to go through.
+
+
+  Adding annotations to applications and lambdas should fix this problem (and
+  since you did it in Coq, it obviously does fix it). I didn't read your Coq
+  development closely enough to realize that this is what you were doing, but
+  your explanation makes things make sense to me now.
+email: 092b7830019ff042b16d4d74643d4e83

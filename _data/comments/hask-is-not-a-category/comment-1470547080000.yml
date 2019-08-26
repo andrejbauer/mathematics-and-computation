@@ -1,0 +1,11 @@
+name: Gershom
+date: '2016-08-07 07:18:00'
+url: ''
+message: >-
+  As I understand it, you don't even need to work in a terminating subset to
+  have a category (albeit without all the niceities like straightforward
+  categorical products that one might like). You just need to be in "the subset
+  that doesn't include seq". And that's what we all pretend, since we all know
+  that seq absent a typeclass constraint is bad and wrong and should never have
+  been added since it generally breaks eta and messes up everything.
+email: 77e717fd4ebe57b1184e0d8559d6d00c

@@ -1,0 +1,5 @@
+name: András Kovács
+date: '2016-04-22 16:18:09'
+url: ''
+message: "I think another problem with the abusive interpreter is that there no internal evidence that it actually returns the Gödel number of the term. We don't really know if a ? × ? was created through quoting or just a random piece of data. \r\n\r\nBy the way, the same abusive interpreter was proposed [here](https://www.reddit.com/r/haskell/comments/3s93w1/a_selfinterpreter_for_fomega/cwwhn0d?context=3) before."
+email: 2a0a145ce58c20013969fe3f203531da

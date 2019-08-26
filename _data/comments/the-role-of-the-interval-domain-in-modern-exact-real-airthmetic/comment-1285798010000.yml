@@ -1,0 +1,7 @@
+name: Andrej Bauer
+date: '2010-09-30 00:06:50'
+url: 'http://andrej.com/'
+message: >-
+  @Edward: I have not looked at Taylor models. I know about problems with MPFR
+  and GMP allocator. Has anyone got an idea how we could fix that?
+email: 59d57d95bc7c45ced5f1969279cec06b

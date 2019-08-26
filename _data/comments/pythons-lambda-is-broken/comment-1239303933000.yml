@@ -1,0 +1,5 @@
+name: goodger
+date: '2009-04-09 21:05:33'
+url: ''
+message: "Before making such a sensational claim, you should do your homework. What's broken is your understanding of Python. \r\n\r\nPython looks up names at run-time. Your lambdas functions reference the non-local name \"i\" (i.e., the name \"i\" is not defined in the local scope), so Python has to look outside the local scope. It finds that the current value of \"i\" is 9. In order to retain the value of \"i\" at lambda definition time, you need to declare local names:\r\n\r\n&gt;&gt;&gt; fs = [(lambda n, j=i: j + n) for i in range(10)]\r\n&gt;&gt;&gt; fs[3](4)\r\n7\r\n\r\nHint: default values are calculated at definition time, not run time. So \"j=i\" effectively curries the value of \"i\" at definition time. I used \"j\" inside the lambda to make it easier to understand; you should avoid using the same name in multiple scopes."
+email: 21887ee4ecf409f978ba4c392c8ec08a

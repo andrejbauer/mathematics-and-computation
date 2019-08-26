@@ -1,0 +1,17 @@
+name: Luke Sciarappa
+date: '2014-04-17 23:33:45'
+url: ''
+message: >-
+  This is a very awesome, friendly, short paper; I'm using it to get some of my
+  curious friends introduced to higher math. However, one thing worries me. Let
+  $h(x) = 1/x$. This should certainly be definable for $x > 0$. Then
+  micro-affinity implies the existence of a unique $k$ such that for all
+  infinitesimal $dx$, $h(1+dx)-h(1) = k \, dx$. Now, $h(1+dx) - h(1) = 1/(1+dx)
+  - 1 = - dx/(1+dx) = k \, dx$. This worries me. I'm not quite sure I can get a
+  contradiction from it, because not every infinitesimal is invertible, but it
+  still makes me feel uncomfortable. This probably stems from me not knowing
+  synthetic differential geometry and making a logic error somewhere. The paper
+  is (mercifully!) not explicit about how the reals are constructed, maybe the
+  problem is hiding in there somewhere? Or maybe this is all correct and it's my
+  intuition that's wrong? Anyways, thanks for the clear exposition.
+email: 28711b0a8716719954417edf36542fc7

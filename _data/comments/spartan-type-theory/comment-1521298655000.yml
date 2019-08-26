@@ -1,0 +1,21 @@
+name: Kram1032
+date: '2018-03-17 15:57:35'
+url: ''
+message: >-
+  Nice. Are any of the other talks available? Either in PDF form like here, or
+  as a video or something? Just bare slides work too but I love that you
+  included what you actually said along with the slides. Makes them far more
+  penetrable.
+
+
+  Also, I tried out Lean in the past and at least roughly got the hang of it.
+  Its tutorial really helped with that. Is there anything similar for Coq? - It
+  looks somewhat similar but not quite similar enough to jump right in from just
+  knowing (very basic) Lean.
+
+  Lean's tutorial was basically learning by doing style, walking you through
+  super simple basic logical constructions, giving you various simple things to
+  prove while introducing new syntax as it becomes necessary, first showing a
+  few examples for each, which you could also modify interactively and quickly
+  see how the type system responds to each change.
+email: 02b8f7ed2c25ec237e56603cd2669b4e

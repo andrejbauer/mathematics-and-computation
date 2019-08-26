@@ -1,0 +1,5 @@
+name: gentzen
+date: '2015-08-22 21:29:37'
+url: 'http://gentzen.wordpress.com'
+message: "You are on the programme committee of <a href=\"http://www.cs.swan.ac.uk/ccc2015/\" rel=\"nofollow\">CCC 2015</a>, whose advertisement contains the following sentence: <blockquote>The overall aim is to apply logical methods in these disciplines to provide a sound foundation for obtaining exact and provably correct algorithms for computations with real numbers and related analytical data, which are of increasing importance in safety critical applications and scientific computation.</blockquote> None of your four proposed reasons for using the word \"provably\" seems to apply to this text.\r\n\r\nI also disagree that \"provably\" has always to be interpreted in the sense of mathematical logic with respect to a given formal system. My only requirement would be that if you use the word \"provably\" in the title, then already the abstract should make it clear why you use it, and what it means in your context. It could mean that the proof relies on some assumptions which are widely believed to be true, for example."
+email: 8454d433dac50477c0f30c2dd2912721

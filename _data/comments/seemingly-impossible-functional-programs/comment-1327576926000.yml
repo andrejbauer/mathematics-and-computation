@@ -1,0 +1,9 @@
+name: Martin Escardo
+date: '2012-01-26 12:22:06'
+url: 'http://www.cs.bham.ac.uk/~mhe/'
+message: >-
+  Yes, everything here is extensional and total, as Andrej says, and there are
+  no effects. But Andrej gave a nice talk in MAP'2011 in the Lorentz Center
+  showing how to do it faster with effects. But in this case, as you say, it is
+  difficult to treat extensionality rigorously.
+email: f744e9626423ff7587e25a41c2f682de

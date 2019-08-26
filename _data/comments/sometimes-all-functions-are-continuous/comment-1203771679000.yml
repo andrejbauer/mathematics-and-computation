@@ -1,0 +1,15 @@
+name: Andrej Bauer
+date: '2008-02-23 14:01:19'
+url: 'http://andrej.com/'
+message: >-
+  Reply to comment 15 by jn: First, I did not make an argument "for continuity"
+  of sgn, but rather "against continuity". Whether your sg is continuous
+  (computable) depends on <a
+  href="/2008/02/06/representations-of-uncomputable-and-uncountable-sets/"
+  rel="nofollow">how you represent real numbers</a>. Assuming a standard
+  representation of reals (one in which addition is computable, for example),
+  your sg is not computable and is not continuous as a map between
+  representations. I do not know what "two's complement representation" is for
+  real numbers (including negative ones). Please provide more detail about your
+  representation. Is addition computable in your representation?
+email: 59d57d95bc7c45ced5f1969279cec06b

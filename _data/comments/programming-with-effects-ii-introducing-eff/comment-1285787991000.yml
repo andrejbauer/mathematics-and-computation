@@ -1,0 +1,8 @@
+name: Andrej Bauer
+date: '2010-09-29 21:19:51'
+url: 'http://andrej.com/'
+message: >-
+  Yes, I think there was a change from Ocaml 3.10 to 3.11 in the Lexer module.
+  Please use Ocaml 3.11 or later. If there is sufficient interest, I can try
+  making it Ocaml 3.10 compatible.
+email: 59d57d95bc7c45ced5f1969279cec06b

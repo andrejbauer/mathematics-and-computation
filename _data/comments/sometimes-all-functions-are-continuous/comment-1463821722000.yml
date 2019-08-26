@@ -1,0 +1,19 @@
+name: Andrej Bauer
+date: '2016-05-21 11:08:42'
+url: 'http://andrej.com/'
+message: >-
+  The theorem that there is a type I computable unbounded function on $[0,1]$
+  ought to be proved in at least one of these: "Varietis of Constructive
+  Mathematics" by Bridges and Richman, "Constructivism in Mathematics" by
+  Troelstra and van Dalen (probably volume 1). I don't have them with me right
+  now to look them up and tell you exactly where. You can also do it yourself
+  once you learn about Specker sequences. Section 3.2 of <a
+  href="http://plato.stanford.edu/entries/mathematics-constructive/#RecConMat"
+  rel="nofollow">Constructive mathematics</a> at the Stanford Encyclopedia of
+  Philosophy also discusses the theorem briefly, but does not give a reference.
+  The original theorem would have been due to someone from the Russian
+  constrictivism school.
+
+
+  Surprisingly, the result is not inconsistent with pointwise continuity.
+email: 59d57d95bc7c45ced5f1969279cec06b

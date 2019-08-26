@@ -1,0 +1,7 @@
+name: svat
+date: '2009-04-09 19:40:05'
+url: ''
+message: >-
+  Oops, those 110s should be 105s. (I had a loop running until 10 originally,
+  then I changed it in the comment...)
+email: 6ca82d17e7496d3c20b9c8038f87ae49

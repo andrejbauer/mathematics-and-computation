@@ -1,0 +1,22 @@
+name: Andrej Bauer
+date: '2018-08-26 21:04:22'
+url: 'http://andrej.com/'
+message: >-
+  Regarding (2): yes, the fact that algebraic effects can be combined more
+  easily is often considered to be an advantage over monads.
+
+
+  Regarding (3): you're right, with your notion of handler the handlers would
+  have to be generic in the return values. Man handlers are like that (sate,
+  I/O), but some important ones are not, for instance, a handler which handles
+  non-deterministic choice and computes the maximum possible return value relies
+  on the fact that return values can be compared. I think handlers arise as a
+  combination of two requirements: we want to use free algebras to model
+  computations, and we want handlers to be algebra homomorphisms. Assuming these
+  requirements, we have several options. Of these, the one presented is the one
+  that programmers seem to be most happy with. This is an empirical observation.
+  (In fact, some programers want "shallow" handlers which correspond to maps
+  between carriers, ignoring algebra structures). I know this is not much of a
+  mathematical explanation, but you are threading into computer science
+  territory :)
+email: 59d57d95bc7c45ced5f1969279cec06b

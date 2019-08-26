@@ -1,0 +1,5 @@
+name: Paolo G. Giarrusso
+date: '2016-08-08 10:49:13'
+url: ''
+message: "Q1: Can you explain why you want a syntactic category for Haskell, or why do you think Hask is one? Hask is used as a layman's version of proper CPO semantics, not as a syntactic category. And Haskellers aren't taught to reason with operational semantics.\r\n\r\nI know the Wiki says \"Haskell function\", but it does not even distinguish syntax from semantics, and it talks about \"unique function\" in a way that makes no sense unless it's using denotational semantics.\r\nWhile the notation looks sloppy for a PLer, it is comparable to writing 1 + 1 = 2 instead of [[1 + 1]] = [[2]].\r\n\r\nQ2:  the bigger issue, IMHO, is when people treat the category of CPOs as bicartesian closed, and publish papers doing that without any caveat that I can find—though I still hope I missed some. I even mentioned one example in a question: http://cstheory.stackexchange.com/q/33812/989"
+email: a3a676c96a88feb813010e67af012ca0

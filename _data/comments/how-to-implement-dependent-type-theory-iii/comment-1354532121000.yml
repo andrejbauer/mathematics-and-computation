@@ -1,0 +1,12 @@
+name: Ali Assaf
+date: '2012-12-03 11:55:21'
+url: ''
+message: >-
+  As far as I know, it doesn't matter if you use de Bruijn levels or de Bruijn
+  indices. When you use indices, you have to shift the indices of unbound
+  variables. When you use levels, you have to shift the levels of bound
+  variables. So the two are completely dual. However, if you write an
+  interpreter without full normalization (as in you don't normalize under
+  abstractions), then you never see unbound variables. Therefore you never need
+  to shift, which is why de Bruijn indices are preferable in that situation.
+email: 11950590b9af4a33865842c819bda014

@@ -1,0 +1,20 @@
+name: Andrej Bauer
+date: '2016-08-25 15:09:06'
+url: 'http://andrej.com/'
+message: >-
+  This discussion is similar to the one I had with Mike. Yes, proof scripts are
+  not proof objects, but they are a good way of creating, managing, and
+  communicating proof objects. The proof objects need not exist in computer
+  memory because nobody needs them in that form. Nobody ever produces them in
+  that form (not Dedukti, not Coq, not Agda, not Lean – they all make shortcuts
+  and omit large chunks of proof objects). What we need to know is that the
+  proof objects are there, somewhere. and that we can trust our proof assistant
+  that the object <em>could</em> be had in explicit form.
+
+
+  Mike Shulman proposed a good criterion. Rather than prescribing a particular
+  representation ("I must have a proof object in memory!") he wants the
+  universal property of proof objects, namely, he wants to be able to perfrom
+  inductive constructions on them. There are many ways of providing such
+  functionalty, only one of which is to "give proof objects".
+email: 59d57d95bc7c45ced5f1969279cec06b

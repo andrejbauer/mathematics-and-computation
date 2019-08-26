@@ -1,0 +1,8 @@
+name: Andrej Bauer
+date: '2010-02-09 16:30:15'
+url: 'http://andrej.com/'
+message: >-
+  Seth, but a <code>Maybe Tree</code> is not a tree, it's a Maybe. How do you
+  expect to call tree methods on it? And I disagree strongly. I believe object
+  oriented languages can benefit greatly from sum types.
+email: 59d57d95bc7c45ced5f1969279cec06b

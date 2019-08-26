@@ -1,0 +1,5 @@
+name: Martin Escardo
+date: '2008-12-30 01:39:32'
+url: 'http://www.cs.bham.ac.uk/~mhe/'
+message: "This looks like an interesting idea. I have some questions. Have you checked that this is indeed a monad? Does \"sequence\" converge for an infinite lazy list? (When? Always?) In what sense is your invariant an invariant? What does the monad multiplication (=join) do? There is a candidate of a morphism from the search monad to your \"inversion\" monad, but not the other way round. And there is a morphism from the search monad to the continuation monad. But there aren't maps connecting the monads in the other directions (according to djinn).\r\n"
+email: f744e9626423ff7587e25a41c2f682de

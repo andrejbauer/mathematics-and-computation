@@ -1,0 +1,9 @@
+name: Wojowu
+date: '2015-08-30 22:31:39'
+url: ''
+message: >-
+  We can shorten this to $\exists a . \forall b . \exists  c,d . S((a+b) \cdot
+  (a+b))=S(S(c)) \cdot S(S(d))$ which says that all sufficiently large numbers
+  of the form $n^2+1$ are composite. We don't know whether this is true or not
+  yet.
+email: 1f682c85997b0a84616331b95bb15527

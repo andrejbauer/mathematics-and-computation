@@ -1,0 +1,15 @@
+name: Mike Shulman
+date: '2014-01-13 19:30:07'
+url: 'http://www.sandiego.edu/~shulman'
+message: >-
+  It's worth mentioning that the situation with "the axiom of choice for all
+  types" is a bit more complicated than that.  It's true that one obvious
+  statement which might go by that name, namely "every surjection has a
+  section", is inconsistent with univalence.  However, there are other versions
+  of AC that say something about types of arbitrary level but are consistent
+  with univalence.  For instance, there is the traditional propositions-as-types
+  AC, which far from being inconsistent is just <i>true</i> (as famously
+  observed by Martin-Lof).  There are also the statements considered in Exercise
+  7.8 of the HoTT Book, which are (apparently) stronger than AC-for-sets but at
+  least some of which are consistent with univalence.
+email: c72e8ff1dfaaaacdbe9844d0202f378a

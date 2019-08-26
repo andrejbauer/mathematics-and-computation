@@ -1,0 +1,21 @@
+name: Andrej Bauer
+date: '2016-08-18 00:31:07'
+url: 'http://andrej.com/'
+message: >-
+  A small point first: it's Andrej (Slovenians are obsessed with J's: all my
+  parents, grand-parents and children's names start with J.)
+
+
+  The LCF-style evaluator (which only implicitly construct the proofs) are
+  <em>simpler</em> than kernels of proof assistants that rely on checking proof
+  objects. For instance, computing the result of a $\beta$-reduction is
+  precisely as complicated as verifying that someone else gave you the correct
+  $\beta$-reduction. There is no complicated system behind an LCF-style proof
+  assistant. The complicated systems exist it proof assistants like Coq and
+  Lean, and for those it makes sense to have an independent proof checker (which
+  is then still more complicated than the core of HOL or Andromeda). So I do not
+  actually believe that there is anything to be gained by producing complete
+  derivation trees. It does not increase confidence in anythign. What
+  <em>does</em> increase confidence is an independent implementation of the
+  nucleus.
+email: 59d57d95bc7c45ced5f1969279cec06b

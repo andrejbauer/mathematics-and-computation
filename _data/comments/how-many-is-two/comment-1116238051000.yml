@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2005-05-16 12:07:31'
+url: 'http://andrej.com/'
+message: "What easwaran is referring to is this. Let `1` be a one-element set. If the powerset `P(1)` exists then all powersets `P(X)` exist. Actually, this statement depends a bit on the details of the other axioms that you might have. I suspect Michael Rathjen taught CZF or something similar, which had the (strong) collection axiom and enough separatation to prove \"for every sets `X` and `Y` the set of functions `X -&gt; Y` exists\". From this yoou get arbitrary powersets by noticing that `P(X)` is in bijective correspondence with `X -&gt; P(1)`.\r\n"
+email: 59d57d95bc7c45ced5f1969279cec06b

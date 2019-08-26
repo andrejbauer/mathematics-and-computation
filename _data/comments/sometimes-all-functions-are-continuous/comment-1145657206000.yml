@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2006-04-22 00:06:46'
+url: 'http://andrej.com/'
+message: "It's not naive but it does not work because it destroys computability of basic operations. Suppose we did that. Then every operation on reals, e.g. addition and subtractions, would have to compute not only the magnitude of the result, but also its sign. In particular, we would have to compute the sign of `x - y`, given `x`, `y` and their signs. But this is impossible, as it would allow us to compare real numbers (compute `x - y` and look at the sign to see whether `x = y`), from which we could solve the Halting Problem.\r\n\r\nSo, if you're willing to sacrifice computability of addition and subtraction, you can do a thing like that. But then you are not representing \"real\" real numbers anymore."
+email: 59d57d95bc7c45ced5f1969279cec06b

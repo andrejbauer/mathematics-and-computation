@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    {% include meta.html %}
+    <title>{{page.title}}</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+    {% include header.html %}
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <!-- NAVIGATION -->
+    <nav>{% include navigation.html %}</nav>
+
+    <section id="main_content" class="inner">
+      {{ content }}
+    </section>
+    {% include analytics.html %}
+  </body>
+</html>

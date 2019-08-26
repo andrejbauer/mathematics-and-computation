@@ -1,0 +1,12 @@
+name: Andrej Bauer
+date: '2010-11-10 22:07:09'
+url: 'http://andrej.com/'
+message: >-
+  @Arnaud: Ah yes. In a topos the internal statement "$f$ is surjective"
+  corresponds to $f$ being epi. But in a topos all epis are regular. In numbered
+  sets the internal statement "$f$ is surjective" corresponds to $f$ being
+  <strong>regular</strong> epi. Indeed, a morphism which is both mono and
+  regular epi is iso. In any case, you need to be a bit careful here since the
+  usual interpretation of first-order logic in a category validates unique
+  choice.
+email: 59d57d95bc7c45ced5f1969279cec06b

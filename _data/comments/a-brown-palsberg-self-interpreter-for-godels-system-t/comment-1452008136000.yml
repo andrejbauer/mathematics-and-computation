@@ -1,0 +1,5 @@
+name: Dan Christensen
+date: '2016-01-05 16:35:36'
+url: 'http://jdc.math.uwo.ca'
+message: "The unfortunate thing about this common knowledge is that the assumptions usually aren't made clear.  For example,\r\n\r\n  https://existentialtype.wordpress.com/2014/03/20/old-neglected-theorems-are-still-theorems/\r\n\r\nsays:\r\n\r\n\"One limitation of total programming languages is that they are not universal: you cannot write an interpreter for T within T (see Chapter 9 of PFPL for a proof).  More importantly, this limitation extends to any total language whatever.\"\r\n\r\nAndrej's note and the paper of Brown and Palsberg make it clear that there are implicit assumptions in such statements.  Nice work!\r\n\r\nI'm curious about the relationship to similar statements.  For example, this\r\n\r\n  https://mail.haskell.org/pipermail/haskell-cafe/2003-May/004343.html\r\n\r\nvery nice message by Conor McBride says \"any total language misses some total programs\", and gives a diagonalization argument that \"eval\" can't be implemented, assuming that programs are coded using the type Nat."
+email: 1ba6c3c8fb1d49b02429595851495529

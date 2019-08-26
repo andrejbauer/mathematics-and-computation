@@ -1,0 +1,9 @@
+name: Peter LeFanu Lumsdaine
+date: '2010-11-11 20:57:41'
+url: 'http://www.mathstat.dal.ca/~p.l.lumsdaine'
+message: >-
+  I like the counterexample!  But I must be missing something obvious in the
+  last step of the main proof, I think.  You conclude that $\iota_1(x)
+  \iota_2(x)^{-1} \in N$, and I'm fine with that.  But how does it follow from
+  this that $x \in H$?
+email: aaf9ed61cccaec0fcc7c15b395a31583

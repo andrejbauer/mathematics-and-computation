@@ -1,0 +1,5 @@
+name: joseanpg
+date: '2009-06-09 21:25:49'
+url: 'http://joseanpg.net'
+message: "En Scheme la semÃ¡ntica bÃ¡sica de las capturas es la misma que en Python y JavaScript\r\n\r\n(define (ruma) \r\n   (let ((k 10)(fs '()))\r\n     (define (r) \r\n         (if (= k 1)\r\n            fs\r\n           ((lambda () \r\n              (set! k (- k 1 ))\r\n              (set! fs (cons (lambda () write k) fs))\r\n              (r)\r\n            )) \r\n         )\r\n      )\r\n      (r)\r\n   )\r\n)\r\n\r\n\r\nTodas las funciones de la lista devuelta por esta funciÃ³n nos dan el valor 1, el Ãºltimo valor que toma k. Esto implica que las clausuras de la lista capturan la referencia a k, no su valor."
+email: efb2415f773b0a945ff2b15f48401c0b

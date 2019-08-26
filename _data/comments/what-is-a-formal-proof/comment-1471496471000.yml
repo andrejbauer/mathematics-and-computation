@@ -1,0 +1,12 @@
+name: Mike Shulman
+date: '2016-08-18 07:01:11'
+url: ''
+message: >-
+  For what it's worth, let me emphasize my own (current) perspective that the
+  purpose of producing derivation trees is not to increase confidence, but to
+  <i>have</i> derivation trees, which you then might want to do something else
+  with.  I'm more or less content with Andrej's proposal to beta-reduce away the
+  derivation trees in the middle and instead do the "something else" directly as
+  we are checking the proof that would have produced the derivation tree, but
+  the point is that there's more going on than "increasing confidence".
+email: c72e8ff1dfaaaacdbe9844d0202f378a

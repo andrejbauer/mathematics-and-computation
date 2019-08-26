@@ -1,0 +1,7 @@
+name: jrschulz
+date: '2009-04-09 19:49:55'
+url: ''
+message: >-
+  The problem is not the lambda expression but the fact that list/
+  comprehensions leak variables. AFAIK this is fixed in Python 3.0.
+email: 7c90c04daa0201319bf25348ec0abe2b

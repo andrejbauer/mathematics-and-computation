@@ -1,0 +1,24 @@
+name: Peter LeFanu Lumsdaine
+date: '2013-09-17 19:07:43'
+url: ''
+message: >-
+  By the way, @Andrej — may I disagree with you on the lead statement of this
+  post?  It seems to me analogous to saying that countable models of set theory
+  debunk the fact “$\mathbb{R}$ is uncountable”.
+
+
+  Exotic models, and the surprising interpretations of inductive types in them,
+  are certainly important for understanding type theory; but what they show is
+  surely just the <em>non-absoluteness</em> of the notions of inductive type,
+  element, and reachability.  The external “all elements” is not the internal
+  one; the $\mathbb{N}$ of the model is not the $\mathbb{N}$ of the
+  meta-theory.  The only way to read “all elements of $\mathbb{N}$ are reachable
+  by constructor application” as false is to interpret it half-in and half-out
+  of the model — “all elements [in some external sense] of $\mathbb{N}$ [in the
+  model’s sense] are reachable [in the external sense]” — which seems rather
+  cruel and usual treatment for a poor proposition!
+   
+  (I don’t disagree though with the slightly different points made in the linked
+  section of the Book, about the importance of recognising that e.g. identity
+  types are not freely generated types, but freely generated <em>families</em>.)
+email: aa7788c6e710db4ca184114e527a9c54

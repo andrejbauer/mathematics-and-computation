@@ -1,0 +1,12 @@
+name: Gleb
+date: '2008-11-17 17:03:39'
+url: ''
+message: >-
+  Maybe I'm missing some deep theoretical aspect of your post, but practically I
+  see no reason why 'timeout' cannot be implemented in monad. It suffices to
+  replace the definition 'data Timeout a = Ticks (Integer, a)' with 'data
+  Timeout a = Ticks (Nat, a)' assuming we have some well-behaved lazy Nat
+  datatype, after this change evaluation of 'c' no longer diverges. The other
+  possible way to go would be analogous to Maybe or Error monads: we could check
+  the number of steps performed so far in the definition of 'bind'.
+email: c5fe12983d070298c79d3cbb239b06f4

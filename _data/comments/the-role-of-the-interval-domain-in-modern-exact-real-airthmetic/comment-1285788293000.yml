@@ -1,0 +1,9 @@
+name: Andrej Bauer
+date: '2010-09-29 21:24:53'
+url: 'http://andrej.com/'
+message: >-
+  Thanks for the link. Let me just point out that what we are talking about here
+  builds on top of the usual interval arithmetic. That is to say, an
+  implementation of real numbers, as envisaged in the paper, is a kind of
+  self-adapting interval arithmetic with arbitrary-precision floats.
+email: 59d57d95bc7c45ced5f1969279cec06b

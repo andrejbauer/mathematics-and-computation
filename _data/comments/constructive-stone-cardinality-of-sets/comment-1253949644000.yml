@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2009-09-26 09:20:44'
+url: 'http://andrej.com/'
+message: >-
+  Rok: there is no circularity. Here `c` is a function which maps into the
+  natural numbers `N`. For the natural numbers we can prove by induction that
+  `forall n : NN, n = 1 or n != 1` (try it). So what you call "presupposition",
+  namely that "either `c(S) = 1` or `c(S) != 1`" is something that we can
+  actually prove separately.
+email: 59d57d95bc7c45ced5f1969279cec06b

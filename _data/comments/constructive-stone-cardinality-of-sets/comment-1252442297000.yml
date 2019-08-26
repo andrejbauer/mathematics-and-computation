@@ -1,0 +1,5 @@
+name: Samuel
+date: '2009-09-08 22:38:17'
+url: 'http://gelisam.blogspot.com'
+message: "Iâ€™m starting to doubt that sets are the proper abstraction to study. Wouldnâ€™t lists be more appropriate?\r\n\r\nIf you do insist on using sets, Iâ€™d at least like to know what the word means to you. Is it something I can define in Agda, or do I need to postulate (âŸ¨SetâŸ© : Set) as well as all the ZFC axioms?"
+email: a141681120ffb0004d8d60bb191f89b8

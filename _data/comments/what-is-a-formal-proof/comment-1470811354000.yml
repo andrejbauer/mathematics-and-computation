@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2016-08-10 08:42:34'
+url: 'http://andrej.com/'
+message: >-
+  In an adverserial situation you have to worry about denial-of-service attacks,
+  so it is likely you'll restrict the form of the proofs that you accept, i.e.,
+  they wouldn't be arbitrary programs but rather something more restrictive, for
+  instance you could require an explicitly given low time complexity.
+  Consequently, the other party will have to do more work to find suitable
+  proofs (and that's not something you want to do to a <em>partner</em>).
+email: 59d57d95bc7c45ced5f1969279cec06b

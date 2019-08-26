@@ -1,0 +1,20 @@
+name: Andrej Bauer
+date: '2016-11-21 09:05:54'
+url: 'http://andrej.com/'
+message: >-
+  Use the fact that a predicate $P$ on a set $A$ can be viewed as a subset
+  inclusion $P \subseteq A$. That is, you should switch between "$P$ is a
+  predicate on $A$", "$P$ is a subset of $A$" and "subset inclusion $i_P : P \to
+  A$", as the occasion requires.
+
+
+  For instance, if someone says "substutution of a term into a predicate is
+  pullback", then we clearly need a pullback square, so four arrows. The two
+  arrows we start with are $t : B \to A$ (the substituted term) and the subset
+  inclusion $i_P : P \to A$ (and you can figure this out because of the three
+  forms of understanding "$P$ is a predicate on $A$" only this one is an arrow).
+  The other two arrows are a subset inclusion $i_Q : Q \to B$ where $Q = \lbrace
+  y \in B \mid t(y) \in P\rbrace$ and the arrow $Q \to P$ which is the
+  restriction of $t$ to $Q$, i.e., it takes $y \in Q$ to $t(y) \in P$. Does that
+  help?
+email: 59d57d95bc7c45ced5f1969279cec06b

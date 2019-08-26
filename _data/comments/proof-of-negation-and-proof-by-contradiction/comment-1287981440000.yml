@@ -1,0 +1,15 @@
+name: Andrej Bauer
+date: '2010-10-25 06:37:20'
+url: 'http://andrej.com/'
+message: >-
+  @Zach: you have to be careful there. Intuitionistically $a \Rightarrow b$
+  implies $\lnot b \Rightarrow \lnot a$, but in general the other direction does
+  not hold (and in fact, if it does then we get classical logic). However, if I
+  remember correctly, as soon as either $a$ or $b$ is $\lnot\lnot$-stable
+  (equivalent to its double negation) then we do get $(a \Rightarrow b) \iff
+  (\lnot b \Rightarrow \lnot a)$. In the case of $\lnot \phi$, which is just an
+  abbreviation for $\phi \Rightarrow \bot$, we do have $\lnot\lnot$-stability of
+  $\bot$, so indeed we could prove the contrapositive if we wished. But the
+  contrapositive is $\lnot \bot \Rightarrow \lnot \phi$, which is just $\lnot
+  \phi$ again, so we end up where we started.
+email: 59d57d95bc7c45ced5f1969279cec06b

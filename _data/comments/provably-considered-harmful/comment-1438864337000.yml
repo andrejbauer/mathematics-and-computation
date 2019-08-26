@@ -1,0 +1,5 @@
+name: dasuxullebt
+date: '2015-08-06 14:32:17'
+url: 'http://uxul.de/'
+message: "I usually refer to \"informal\" proofs as proofs which are written in words, and \"formal\" proofs as proofs which are written in a proofchecker (Coq, Minlog, Isabelle, etc.). But this only makes sense when this difference is in the scope of a paper.\r\nOn the other hand, there are many papers out there about data structures which are claimed to be \"optimal\" because of benchmarks or vague handwaving."
+email: 797086e89467c5ce0666a14b3a720d1e

@@ -1,0 +1,9 @@
+name: Flavio
+date: '2012-11-30 18:48:17'
+url: ''
+message: >-
+  When i implemented a dependent type checker the best test i found was to take
+  old Coq modules (old versions that didn't have inductive types) and run then
+  thru the checker... Really awesome feeling when you get it to work out some
+  complicated examples...
+email: b447fbb575f4822572b24563e438939b

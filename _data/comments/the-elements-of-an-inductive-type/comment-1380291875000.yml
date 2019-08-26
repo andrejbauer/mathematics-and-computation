@@ -1,0 +1,83 @@
+name: Jason Gross
+date: '2013-09-27 16:24:35'
+url: ''
+message: >-
+  @Mike, @Jesse: I was talking with @Peter at the Conference on Type Theory,
+  Homotopy Theory and Univalent Foundations, and he pointed me at the comments
+  on this post.   I have a proposal for "consider[ing] other layers of
+  structure" (which I'd been mentally calling "generalized higher inductive
+  types"), though I don't have anything to say about polynomial functors or
+  adjoints or free structures.  The basic idea that I have is that you are
+  allowed to add constructors of any type, but, unless you end in the type you
+  are writing a constructor for, you must specify an inhabitant of the type
+  family you wish to construct, with any explicitly mentioned constructors
+  generalized over.  I will give some examples, because I don't think that was a
+  very good description.
+
+
+  [sourcecode gutter="false"]
+
+  Inductive Ghostly :=
+    | spectre : unit + Ghostly
+  exhibiting
+    | spectre := inl tt  : unit + Ghostly.
+  [/sourcecode]
+
+
+  This defines an inductive type <code>Ghostly</code> which is empty, and
+  provides a definition <code>spectre := inl tt</code>.
+
+
+  [sourcecode gutter="false"]
+
+  Inductive A :=
+    | a : bool
+  exhibiting
+    | a := true : bool.
+  [/sourcecode]
+
+
+  This again defines an empty inductive type <code>A</code> and furnishes a
+  definition <code>a := true</code>.
+
+
+  [sourcecode gutter="false"]
+
+  Inductive Interval :=
+    | zero : Interval
+    | one : Interval
+    | seg : zero = one
+  exhibiting
+    | seg := eq_refl : @eq Interval zero _.
+  [/sourcecode]
+
+
+  (The <code>_</code> will get filled in with <code>zero</code>.)  The rule that
+  I have in mind for the constructors which get exhibited is that you generalize
+  any constructors which appear as indices (but not those which appear as
+  parameters) in the type (so, in this case, <code>one</code>), and then, in
+  some sense, existentially quantify them (that is, you give an inhabitant of
+  some type which results to specializing that generalized type family, so, in
+  this case, I need an inhabitant of <code>@eq Interval zero x</code> for some
+  <code>x</code>).  I have also considered universally quantifying the
+  parameters, in addition to existentially quantifying the indices, so that
+  you'd have to give an inhabitant of the type <code>forall y, exists x, @eq
+  Interval y x</code>.  But then I realized that I could probably be more
+  general.
+
+
+  Note that this does not allow you to build an inhabitant of, e.g.,
+  <code>False</code>, because you'd have to exhibit an inhabitant of False to
+  get started.
+
+
+  I haven't (yet) tried to write down a general explicit recursor, though the
+  idea for the computation rule of the recursor is that when you try to follow a
+  match on one of the generalized/higher constructors, you pick the branch
+  corresponding to the inhabitant you exhibited in the definition, and fill in
+  the free variables with the ones you chose for that inhabitant.  I suspect
+  that by imposing the appropriate positivity/non-circularity constraints on the
+  inhabitants you're permitted to specify, you can avoid problems.  (But, again,
+  I haven't tried to write this all out explicitly yet, so I'm not sure that you
+  don't run into problems somewhere.)
+email: c11c7cc23517cf5f043b51fc7914049a

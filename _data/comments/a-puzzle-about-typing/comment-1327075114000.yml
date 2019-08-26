@@ -1,0 +1,12 @@
+name: Brent Yorgey
+date: '2012-01-20 16:58:34'
+url: 'http://www.cis.upenn.edu/~byorgey/'
+message: >-
+  I think I have an answer to the first part of the puzzle: two simple types
+  with disjoint type variables will always unify: thinking of types as binary
+  trees, just superimpose the two trees and read off the substitutions from the
+  places where one tree terminates earlier than the other.  When typing a term,
+  we must do a unification for each application; if term variables are only used
+  once then the left- and right-hand terms of any application can be given types
+  with disjoint type variables.
+email: d3e0f9e2848d3632eae1d44dd5b24f24

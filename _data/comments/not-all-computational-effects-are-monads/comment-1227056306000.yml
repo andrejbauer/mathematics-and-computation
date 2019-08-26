@@ -1,0 +1,10 @@
+name: ccshan
+date: '2008-11-19 01:58:26'
+url: ''
+message: >-
+  What more precisely is the "challenge" you have in mind?  If it is to "break
+  purity" or "breaks beta reduction", then state and non-determinism are just as
+  hard as your two examples.  If it is to "express" effects as is typically done
+  in Haskell, then your two examples are just as easy as state and
+  non-determinism.
+email: c012543e91a66868731733d1ca8633b9

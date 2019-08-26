@@ -1,0 +1,24 @@
+name: Robert Harper
+date: '2009-04-11 19:36:12'
+url: 'http://www.cs.cmu.edu/~rwh'
+message: >-
+  This is a nice summary of many popular fallacies in language design, which
+  many defend to the death against all reason.  I would point out that a
+  commonality here is the absence of sum types in popular languages.  Another is
+  over-emphasis of mutation and state, ranging from the mutable variables
+  problems you point out up through piles and piles of object nonsense that
+  makes matters worse and worse and worse.  Just try to implement "delete" from
+  a binary search tree represented in the contorted "object-oriented style". 
+  It's appalling because the class of a node can change from non-empty to empty,
+  but with everything being a reference the effect is only felt further up the
+  tree, and then you have to worry about aliasing.  It's a disaster.  Finally, I
+  would suggest heading off the usual nonsensical argument about static vs
+  dynamic typing by pointing out that dynamic typing is a mode of use of static
+  typing (so-called dynamic languages pick a single recursive type and obsess
+  over it for no useful purpose), so it can hardly be opposed to static typing,
+  much less an alternative to it.  Moreover, every single thing you can do in a
+  so-called dynamic language can be done directly and easily in a static
+  language---but as soon as you do, you realize that you really don't want to do
+  this after all (but you can, if you're obsessive about that one true type that
+  everything must have).
+email: 58dfeb7db21bb8a5c6aa108b804078fd

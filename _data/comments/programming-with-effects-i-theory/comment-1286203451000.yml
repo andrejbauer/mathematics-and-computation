@@ -1,0 +1,11 @@
+name: beroal
+date: '2010-10-04 16:44:11'
+url: 'http://beroal.livejournal.com/'
+message: >-
+  I have a question regarding sequencing. In the definition $f_\mathrm{gen}(p) =
+  f(p, \lambda x . \mathtt{return}(x))$ you assume that $f : P \times A^N \to A$
+  is polymorphic in $A$, the carrier. How this can be? Usually an algebra
+  includes interpretations of operations <strong>as well as a carrier</strong>.
+  "Polymorphism" is mentioned only once, "lookup and update are polymorphic in
+  the type T of the result", not this case.
+email: 610014f51d5007450153ec25a790ab0b

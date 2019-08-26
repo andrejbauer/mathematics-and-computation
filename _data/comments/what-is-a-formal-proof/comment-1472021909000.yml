@@ -1,0 +1,5 @@
+name: Günter Rote
+date: '2016-08-24 08:58:29'
+url: ''
+message: "This is a side issue, but here are some empirical data, from Mark Adams, Proof Auditing Formalized Mathematics, Journal of Formalized Reasoning 9, No.1 (2016), 3-32, Section 5.1.2 on p.24, about the \"main text\" formalization of the flyspeck project:\r\n\r\nRunning the scripts in HOL-Light with the export facility turned on took 7 hours (about twice the time as without export facility). On disk, it occupied 159 MByte compressed .tgz files.\r\nReimporting the files took just over 30 minutes in HOL-Light.\r\nReimporting the files took around 6 gours in HOL-Zero, a \"stripped-down\" HOL version that emphasizes correctness.\r\n\r\nAnd actually it makes sense to me. The OpenHOL format is really very much like assembly language, human-readable in principle but with numeric addressing (similarly for OpenTheory). So there isn't much \"parsing\" done when reading the files."
+email: b54b65b0004307f1314ad51c2f408045

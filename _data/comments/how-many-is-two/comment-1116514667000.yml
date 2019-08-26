@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2005-05-19 16:57:47'
+url: 'http://andrej.com/'
+message: "\r\nLet me first answer to lukeb. Can we write a program that takes `f:NN-&gt;2` as input and outputs the truth value of `forall n in N. f(n)`, but we do not require that the output value is in `2`, but rather in `Omega`? The problem with this is that it is far from clear in what way `Omega` is a datatype in a programming language. In Martin-L&ouml;f type theory, which is a kind of super programming language, `Omega` is not a datatype but rather the kind of all datatypes! In a \"real\" programming language, `Omega` does not exist.\r\n\r\n\r\nHowever, lukeb's question still stands, and is a good one. Can we write `forall` if we change the underlying type of booleans? The answer is interesting and requires an entire post to the blog :-)\r\n"
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,5 @@
+name: Neel Krishnaswami
+date: '2014-01-14 13:07:35'
+url: 'http://www.cs.bham.ac.uk/~krishnan/'
+message: "I'm not a particularly well-educated in all the variations of constructivism, so I was very surprised to see you write that there are constructivists who expect choice to hold for all types.\r\n\r\n1. As Mike noted, the props-as-types/pi-sigma version  is simply a theorem of type theory, so I figured you didn't mean that. \r\n\r\n2. The set-theoretic version implies classical logic, so I figured you didn't mean that, either. \r\n\r\n3. But if you mean a forall/exists version, then it's easy to give models which don't validate it (eg, realizability models for constructive analysis). So it seems like you have to be  explicit about what you are assuming and what your intended models are. \r\n\r\nBut this exhausts the possibilities I know! What kinds of constructivists expect choice to hold in general, and what kind of formulation of choice do they expect?"
+email: 2cdf13ddb0d6b66e761490b63247d543

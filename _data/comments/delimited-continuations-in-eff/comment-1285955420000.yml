@@ -1,0 +1,5 @@
+name: Dan Doel
+date: '2010-10-01 19:50:20'
+url: ''
+message: "I decided to install and do some testing, and my first result wasn't what I expected:\r\n<code>\r\n&gt;&gt;&gt; with reset:\r\n...   shift (lambda k: k 5 + 1) + shift (lambda l: 0)\r\n... \r\nWarning: Implicit sequencing between L2, 3-30 and L2, 31-49\r\n1\r\n</code>\r\n\r\nSo this is indeed shift/reset. That makes the rest of my queries moot, because shift is the so-called static control operator, effectively not letting control effects escape their static scope. That means (I think) that I can't construct any examples that will show an issue with multiple resets, because the inner reset shadows the outer reset in just the right scope to produce correct behavior.\r\n\r\nWhat I don't exactly understand is how this works. :) I guess yield sort of interprets the continuation into a pure function, working out all the control effects. I was actually fiddling with a term algebra for this in Agda yesterday in response to this, so I guess it probably works similarly. For some reason, I wasn't expecting it to."
+email: af6ee853a79ce70a9ce68ae1e1fc852c

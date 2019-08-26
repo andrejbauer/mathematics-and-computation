@@ -1,0 +1,9 @@
+name: Andrej Bauer
+date: '2016-08-12 09:35:27'
+url: 'http://andrej.com/'
+message: >-
+  I think there's an Atom plugin for Agda that works on Windows and Linux. I am
+  afraid there is close to zero chance that the original author of Agda Writer
+  (or me) would port it to Windows and Linux. It uses all the OSX technology,
+  and is implemented in Objective C.
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,29 @@
+<div class="entry-comments">
+    {% if site.data.comments[page.slug] %}
+      <!-- Start static comments -->
+      <div id="comments" class="js-comments">
+        <header class="section-title">
+          <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
+        </header>
+
+        {% assign count = 0 %}
+
+        {% assign comments = site.data.comments[page.slug] %}
+        {% assign comments = (comments | sort) %}
+        {% for comment in comments %}
+            {% assign index       = (forloop.index | minus: count) %}
+            {% assign r           = comment[1].replying_to %}
+            {% assign replying_to = r | to_integer %}
+            {% assign avatar      = comment[1].avatar %}
+            {% assign email       = comment[1].email %}
+            {% assign name        = comment[1].name %}
+            {% assign url         = comment[1].url %}
+            {% assign date        = comment[1].date %}
+            {% assign message     = comment[1].message %}
+            {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+            {% assign count = count | plus: 1 %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+</div>

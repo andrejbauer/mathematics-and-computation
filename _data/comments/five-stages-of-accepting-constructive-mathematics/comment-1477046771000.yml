@@ -1,0 +1,16 @@
+name: Andrej Bauer
+date: '2016-10-21 12:46:11'
+url: 'http://andrej.com/'
+message: >-
+  You are mistaken about the form of AC needed in the proof of Theorem 1.3. The
+  proof is constructive, of course! And it is <i>not</i> the case that we have
+  "precisely one or two distinct inhabited subsets of $\{0,1\}$" because for
+  that to be true you would need to know "$A = B$ or $A \neq B$", which would
+  immediately decide $P$. The set $\{A, B\}$ is one of those funny sets which
+  cannot be shown to be finite.
+
+
+  And what is this idea that a set can be "defined" but not "constructively
+  defined"? The language of set theory and first-order logic is <i>identical</i>
+  in classical and constructive mathematics.
+email: 59d57d95bc7c45ced5f1969279cec06b

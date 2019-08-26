@@ -1,0 +1,20 @@
+---
+title: Mathematics and computation
+navigation: about
+layout: page
+---
+
+{% for post in site.posts %}
+<h3>{{post.title}}</h3>
+
+<p>Date: {{post.date | date_to_long_string}}</p>
+
+<div class="excerpt">
+{{post.excerpt}} <a href="{{site.url}}{{post.url}}">(continue reading)</a>
+</div>
+
+<span class="categories">
+Filed under: {{ post.categories | join: ", " }}
+</span>
+
+{% endfor %}

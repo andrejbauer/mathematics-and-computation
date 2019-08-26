@@ -1,0 +1,11 @@
+name: Mike Shulman
+date: '2016-07-28 19:19:23'
+url: ''
+message: >-
+  Nice, thanks!  I wonder if you could say anything about how Andromeda compares
+  to a system like Twelf, which also has both a meta-level and an object-level? 
+  I guess Andromeda's meta-level is general-recursive and simply typed whereas
+  Twelf's is terminating and dependently typed, and Andromeda's object-level has
+  certain primitives built-in whereas Twelf has the flexibility to represent
+  essentially any object theory.  Are there other similarities or differences?
+email: c72e8ff1dfaaaacdbe9844d0202f378a

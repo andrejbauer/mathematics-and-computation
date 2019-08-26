@@ -1,0 +1,5 @@
+name: luqui
+date: '2008-11-22 13:57:01'
+url: 'http://lukepalmer.wordpress.com'
+message: "Hi Martin, great article!\r\n\r\nI put (approximately) your code up on Hackage, under the name \"infinite-search\".  However, I'm having trouble characterizing when search is total.  How would you characterize the fact that:\r\n\r\nsequence (repeat (doubleton True False))\r\n\r\nIs searchable, but:\r\n\r\nfoldr union (singleton 0) (map singleton [1..])\r\n\r\nIs not?  How can we be sure if an expression denotes a totally searchable set?\r\n\r\nIncidentally, I am quite pleased that the above expression, while not exhaustively searchable, does as well as it can (i.e. it will find the least element which satisfies the predicate)."
+email: 08727b23ba62e634b32988cdff082663

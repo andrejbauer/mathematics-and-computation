@@ -1,0 +1,13 @@
+name: Andrej Bauer
+date: '2009-10-21 15:10:15'
+url: 'http://andrej.com/'
+message: >-
+  I gave a talk about this at the local <a
+  href="http://www.fmf.uni-lj.si/en/news/agregator/seminar-osnove/"
+  rel="nofollow">Seminar for foundations (of mathematics and theoretical
+  computer science)</a>. <a href="http://www.fmf.uni-lj.si/~petkovsek/"
+  rel="nofollow">Marko PetkovÅ¡ek</a> pointed out that classically
+  $2^{2^\mathbb{N}} = \mathbb{N}$ if we interpret exponentiation as ordinal
+  arithmetic. That is, for ordinals we have $2^{2^\omega} = \omega$. Thank you
+  for a nice observation, Marko!
+email: 59d57d95bc7c45ced5f1969279cec06b

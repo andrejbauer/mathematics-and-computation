@@ -1,0 +1,5 @@
+name: Jesse C. McKeown
+date: '2016-10-12 05:56:37'
+url: 'http://jessecmckeown.tumblr.com'
+message: "On the one hand, the algebraics are dense (even the algebraic integers are dense) in the complex plane... so one of your pictures would fill in closer around easy roots and have its outer edges much further away, and have a lot more stuff in the middle...  I'm expecting it'd be fuzzier, too; there are reasonable algorithms taking two polynomials and returning a polynomial whose roots are sums of the given polynomials' roots: trying to enumerate all polynomials means you're eventually asking for your root-set to be an approximate-group in the sense that (e.g.) Terry Tao writes about... \r\n\r\nAND it would take a LOT longer to list all the polynomials you're aksing for roots of!  Even for just the polynomials of degree n with coefficients in [-n,...,n], there are well more than n^n of them!"
+email: 101b809ddcb69eda44b7144fd42d12fb

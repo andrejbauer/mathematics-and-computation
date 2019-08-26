@@ -1,0 +1,9 @@
+name: '&raquo; Python:Python: Why is functools.partial necessary?'
+date: '2015-08-29 07:46:21'
+url: 'http://www.itsprite.com/pythonpython-why-is-functools-partial-necessary/'
+message: >-
+  [&#8230;] Alex is right, it&#039;s not a bug. But it&#039;s a
+  &quot;gotcha&quot; that traps many lambda enthusiasts. For the &quot;bug&quot;
+  side of the argument from a haskel/functional type, see Andrej Bauer&#039;s
+  post: math.andrej.com/2009/04/09/pythons-lambda-is-broken [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

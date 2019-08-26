@@ -1,0 +1,5 @@
+name: w-g
+date: '2009-04-11 20:59:45'
+url: ''
+message: "\"Lisp and scheme programmers proudly represent all sorts of data with conses and lists\"\r\n\r\nThat is not true. Both Common Lisp and Scheme have arrays; and Common Lisp even has bit vectors! Depending on your system, is compiled as efficiently as it would if you used an int or char array in C -- with the advantage that in Common Lisp you declare it as a bit vector and use bit operators on its elements (in C you have to use bitwise operations on chars/ints, create masks to select specific bits, etc). \r\n\r\nAlso, Common Lisp has structs (see defstruct), which (in SBCL/CMUCL) is compiled as \"contiguous memory location\", just as a C struct."
+email: c325f2c35f80f489495a35111702b365

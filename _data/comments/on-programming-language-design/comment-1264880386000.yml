@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2010-01-30 20:39:46'
+url: 'http://andrej.com/'
+message: "Reply to Pascal: Having a NULL object which accepts all methods and always returns NULL is even worse than getting an exception when a method is invoked on null. That's a terrific way of creating all sorts of well hidden bugs.\r\n\r\nReply to Seth: Optional type (Maybe) is just a special case of a sum type. So we might as well have sum types then. And once we have sum types and (recursive) objects, we have the usual recursive data structures etc. Also, how would you treat the empty tree? It really is easiest to have a sum type so that a tree can be either Empty or a Node. That's awfully close to having inductive types, isn't it?\r\n\r\nI am not saying that a language <em>must</em> have inductive types, but if you're going to work with inductive mathematical structures, inductive (or recursive) types will surely make your life easier."
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,11 @@
+name: >-
+  [Solved]: Turing Completeness + Dataflow Unification = Arbitrarily invertible
+  (pure, nonrecursive) functions? &#8211; Ignou Group
+date: '2017-03-03 17:16:28'
+url: 'https://www.ignougroup.com/2017/02/solved-turing-completeness-dataflow/'
+message: >-
+  [&#8230;] can also invert functions on infinite lazy data structures. And as a
+  special case of this, we have Seemingly impossible functional programs. As you
+  can see, in some sense, it is easier to invert a function on a domain
+  containing infinitely [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

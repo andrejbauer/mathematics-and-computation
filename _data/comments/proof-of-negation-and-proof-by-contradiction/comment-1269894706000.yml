@@ -1,0 +1,10 @@
+name: Andrej Bauer
+date: '2010-03-29 22:31:46'
+url: 'http://andrej.com/'
+message: >-
+  I can believe that allowing "fuzzy" graphs gets you into trouble. But I would
+  say that the correct constructive definition of finite structures from
+  discrete mathematics should require decidability all around (decidable
+  equality, decidable relations, decidable subsets, etc). So, essentially
+  discrete math can be coded into arithmetic.
+email: 59d57d95bc7c45ced5f1969279cec06b

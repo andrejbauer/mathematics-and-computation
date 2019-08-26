@@ -1,0 +1,5 @@
+name: Matt Oliveri
+date: '2016-07-31 06:18:19'
+url: ''
+message: "On another Adromeda-related topic:\r\n\r\nI am curious how it was decided to use rules based on context joining. It seems to be the right choice *provided* you're computing contexts \"on the way up\" starting at the leaves of the expression tree. But it's typical to compute contexts \"on the way down\", passing *the same* context (but with new bindings when appropriate) to each subexpression when it's checked. Tactic systems are also usually made to work this way, or so it seems, with the context already known for any given hole that is to be filled.\r\n\r\nThe standard typing rules need to be adapted for this top-down context checking, but I had assumed there would be no problem making this adaptation, since it seems standard. Does it somehow go wrong for ETT? (Works fine for Computational TT.) Or is there some other reason to go bottom-up? Please explain. Thanks!"
+email: 66cbd251bde282eb2e1584080e3604ea

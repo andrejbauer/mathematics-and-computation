@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2009-09-10 14:54:33'
+url: 'http://andrej.com/'
+message: "The motivation for not allowing recursive definitions is that a proof which only uses the exponential laws and the laws for products and disjoint sums holds in any bicartesian closed category.\r\n\r\nThere is the option to use coalgebras, since the exponentials are also final coalgebras. That would probably get us further."
+email: 59d57d95bc7c45ced5f1969279cec06b

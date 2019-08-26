@@ -1,0 +1,24 @@
+name: Andrej Bauer
+date: '2016-08-07 19:22:39'
+url: 'http://andrej.com/'
+message: >-
+  This is precisely what I am arguing against. Hand-waving and referring to the
+  "fast & loose" paper as a solution to every mathematical hole. It is
+  dangerous, it is dishonest, and it is doing a huge disservice to the
+  community. People walk away from Haskell thinking they know some category
+  theory where in fact they have not even seen a category yet.
+
+
+  There <emph>is</emph> a perfectly good categorical treatment of Haskell in
+  terms of denotational semantics. It uses (a suitable version of)
+  $\omega$-CPOs. It explains exactly what's going on. It clears up
+  misunderstanding about products and monads, and all the other stuff, by
+  showing how we need to argue with <emph>inequalities</emph> instead of
+  equalities, etc. But this is not Hask. There is no Hask and people should not
+  be told there is one. It is not that hard to learn a bit of domain theory.
+
+
+  By the way, I am quite happy to ignore <code>seq</code>, but I am not willing
+  to ignore general recursion because you cannot write any program in Haskell
+  without it.
+email: 59d57d95bc7c45ced5f1969279cec06b

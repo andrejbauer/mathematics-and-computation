@@ -1,0 +1,13 @@
+name: Ron Pressler
+date: '2016-09-06 10:11:00'
+url: 'https://pressron.wordpress.com/'
+message: >-
+  TLA+ lets you to logically assert that a computation (written in TLA+, as a
+  temporal-logic-of-actions formula, the model of which is a set of traces)
+  behaves in a certain way (computes a certain result, terminates within so many
+  steps, deadlocks etc.). Computation as such -- not just as a means to reduce
+  to an equality -- is part of the core logic. Instead of proving the result
+  deductively, you can compute it in the model checker. The process isn't fully
+  automatic -- i.e., you still need to write: "PROOF OMITTED" and add a comment
+  saying "check in the model checker", but that's a UI issue.
+email: c69557151e2f8331f6b1865469b694dd

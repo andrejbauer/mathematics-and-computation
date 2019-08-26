@@ -1,0 +1,5 @@
+name: mfp
+date: '2009-04-12 00:37:37'
+url: 'http://eigenclass.org/R2/'
+message: "Jules: I've realized that dummy \"can't happen\" matching (with assert false) is\r\nbecoming rare in my OCaml code, as I tend to construct the data types in ways\r\nthat allow exhaustive matching without impossible branches, for instance by\r\nusing polymorphic variants instead of regular sum types or encodings like ['a\r\n* 'a list] for non-empty lists.\r\n\r\nAt any rate, even if you do end up using \"impossible\" matches, at least the\r\ntype system forces you to be explicit and to take a minute to think about\r\nwhether the branch can be reached or not."
+email: dd76a12d66f843de5c5f8782668e7127

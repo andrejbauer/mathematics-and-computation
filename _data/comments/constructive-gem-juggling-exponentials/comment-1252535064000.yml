@@ -1,0 +1,8 @@
+name: augustss
+date: '2009-09-10 00:24:24'
+url: ''
+message: >-
+  You can define an empty type in Haskell.  Of course, it's not really empty
+  since there's always bottom.  But, e.g., the () type also has an extra bottom
+  element.  For this kind of reasoning it's convenient to ignore bottom.
+email: 7c0ea0055b84020bf860c05f53ba53d5

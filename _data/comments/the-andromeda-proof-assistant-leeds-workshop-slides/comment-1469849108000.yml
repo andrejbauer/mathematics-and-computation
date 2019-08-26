@@ -1,0 +1,5 @@
+name: Mike Shulman
+date: '2016-07-30 05:25:08'
+url: ''
+message: "Ok, I'm confused now.  At what level do Andromeda's dependent Pi types live?  I thought you were saying they were part of the object theory; if the meta-theory is ML (which is simply typed) then they can't be there, can they?  But there are plenty of theories one might want to represent that don't have Pi types.  Or did you switch at the point of introducing Pi types to describing just one *particular* object theory that could be represented in Andromeda?\r\n\r\nAlso, I would not say that the metatheory of Twelf is only the % commands; there is a whole dependently typed language with Pi types and one universe.  I feel like its % commands are almost like a \"meta-meta-language\" for automatically proving things about representations of some object language in the metalanguage."
+email: c72e8ff1dfaaaacdbe9844d0202f378a

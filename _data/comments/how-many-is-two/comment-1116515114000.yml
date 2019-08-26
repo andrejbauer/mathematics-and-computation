@@ -1,0 +1,13 @@
+name: Andrej Bauer
+date: '2005-05-19 17:05:14'
+url: 'http://andrej.com/'
+message: >-
+  Thad suggests that maybe we can have three-valued logic and get `forall n in
+  NN` that way. An important point I wanted to make was that it is a bad idea to
+  think of constructive logic as being "three"-valued, since `Omega` has two
+  elements in the weak sense (i.e., has no more than two elements). A better way
+  of doing what Thad is suggesting would be not to try to get a third
+  truth-value in, but to find a suitable subset `S sube Omega` which does the
+  job. Such a subset, which will have to be larger than `2`, will have two
+  elements in the weak sense.
+email: 59d57d95bc7c45ced5f1969279cec06b

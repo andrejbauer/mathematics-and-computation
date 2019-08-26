@@ -1,0 +1,5 @@
+name: hal
+date: '2005-05-17 19:18:52'
+url: ''
+message: "Hi Andrej (long time no see)...being a \"classically trained\" (sort of) mathematician who is living in a two dimensional world, here is how I have interpreted (over time) constructive logic, especially as relates to this very insightful discussion of 2, as well as PeterMcB's comments on LEM.  I'm going to intentionally state this to be difficult, but I'm truly curious what a constructivist would say:\r\n\r\n\"Constructive logic is classical logic + decidability.  Basically, take good old classical logic, and throw out any part that, if implemented on a computer, might be undecidable.\"\r\n\r\nIf this is true, then I don't really see the point....why mess with logic when we can just discuss things in terms of TMs.  If this is false, then please explain the difference.  And if this is something other than true or false, then I'm totally lost :).\r\n"
+email: 486ec23a7d64f836828c964609644f43

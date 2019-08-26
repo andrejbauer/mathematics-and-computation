@@ -1,0 +1,5 @@
+name: Wadler
+date: '2008-11-22 13:05:28'
+url: ''
+message: "Very nice!\r\n\r\nThe function 'sequence' arose from a desire to combine the list monad with other monads.  Bar and Wells show that you can combine monads S and T into a monad ST if you have a natural transformation from TS to ST, and 'sequence' fills the bill when T is the list monad.  See <a href=\"http://homepages.inf.ed.ac.uk/wadler/topics/monads.html#combining-monads\" rel=\"nofollow\">Combining Monads</a> by myself and David King.  We did have streams in mind as well as lists, although I can't recall whether we considered infinite streams.\r\n\r\nBut we certainly hadn't thought of using 'sequence' this way.  Lovely!"
+email: 554a25ca803a80f18c178487296b94f2

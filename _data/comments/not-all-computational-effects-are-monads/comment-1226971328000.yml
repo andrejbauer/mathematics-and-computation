@@ -1,0 +1,15 @@
+name: roconnor
+date: '2008-11-18 02:22:08'
+url: 'http://www.livejournal.com/users/r6/'
+message: >-
+  I conjecture that Haskell semantics are invariant under permutation of case
+  statements in some sense, meaning that if all branches of a case statement A
+  have the same case statement B in them then this B case statement can be
+  pulled outside (and putting the same case statement A inside each branch of B)
+  without changing the semantics (under some suitable set of hypotheses that
+  include the assumption that the expressions being cased are not diverging). 
+  Adding catch to Haskell would violate this property that I'm conjecturing (as
+  your example using (+) illustrates), and hence catch cannot be defined in
+  Haskell.  Therefore catch must be modelled in some way, such as with monads as
+  you do.
+email: fab61c13db29a1c73460ab0a9cb47565

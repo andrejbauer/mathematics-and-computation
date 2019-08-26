@@ -1,0 +1,5 @@
+name: disturbyte
+date: '2009-04-09 21:47:55'
+url: ''
+message: "Actually, a better way of doing it is to use lambdas the way Church made them:\r\n    \r\n    fs = [(lambda i: lambda n: n + i)(j) for j in range(10)]\r\n    fs[3](4) == 7"
+email: 6e336eb9604793775e88cf5d9852e4e5

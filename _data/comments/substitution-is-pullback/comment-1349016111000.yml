@@ -1,0 +1,37 @@
+name: Paul Taylor
+date: '2012-09-30 16:41:51'
+url: 'http://www.paultaylor.eu'
+message: >-
+  Let me try to write some mathematics to explain why substitution is sometimes
+  composition and sometimes pullback.
+
+
+  The <b>Subsititution Lemma</b> in type theory says how substitutions commute:
+  $$ [a/x]^* ([b/y]^* t) = [a/x]^* ([[a/x]^*b/y]^*t),$$ where $[a/x]^*t$ is the
+  result of substituting $a$ for $x$ in $t$. The superscript star comes from
+  inverse images and pullbacks in category theory.
+
+
+  All of this is an <b>action</b> on $t$, which we can omit. This leaves
+  composition of abstract morphisms, in fact in the classifying category. So, as
+  Andrej says, <b>substitution of terms is composition</b>.
+
+
+  However, this commutative square of morphisms is a pullback.
+
+
+  The morphism $[b/y]$ that arises from the term $\Gamma,x:X\vdash b:Y$ splits
+  the product projection or display map $\hat y:\Gamma\times X\times
+  Y\to\Gamma\times X$. Just as the action of the term is by substitution, that
+  of this display map is  weakening by the variable $y$.
+
+
+  The pullback of the composition $[b/y];\hat y=id$ along $[a/x]$ is shown on
+  page 449 of my book:
+
+  <center><img src="http://www.paultaylor.eu/prafm/png/page449001.png"></center>
+
+  It is an example of the easy "pullback lemma" of which Andrej for some reason
+  recently <a href=http://math.andrej.com/2012/05/30/the-pullback-lemma/
+  rel="nofollow">gave a proof</a>. 
+email: 24674efd7c9de6dad323b394fbdf2ebd

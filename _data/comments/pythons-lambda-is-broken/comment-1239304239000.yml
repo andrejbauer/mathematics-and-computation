@@ -1,0 +1,5 @@
+name: luqui
+date: '2009-04-09 21:10:39'
+url: 'http://lukepalmer.wordpress.com'
+message: "This is the very same lambda as is in Perl, Ruby, C#, (probably lisp and scheme, too).  The brokenness here is more about list comprehensions/iterators using a single mutable variable instead of a new binding.  In python it is particularly hard to get it right, because variables are def-scoped, rather than block scoped.  \"Obvious\" optimizations for imperative programmers = hell for functional programmers.\r\n\r\nLambdas closing over mutable variables get hard to think about really fast."
+email: 08727b23ba62e634b32988cdff082663

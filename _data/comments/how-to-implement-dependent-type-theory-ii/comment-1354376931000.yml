@@ -1,0 +1,11 @@
+name: gasche
+date: '2012-12-01 16:48:51'
+url: ''
+message: >-
+  Your side remark on the Stack Overflow got me inspired a few weeks ago.
+  Valentin Robert kindly wrote <a
+  href="http://gallium.inria.fr/~scherer/gagallium/stack-overflow-continuations/"
+  rel="nofollow">a blog post</a> describing our translation to a partial CPS
+  form, just on the right side of application nodes. Problem solved! (for this
+  particular input)
+email: 3ae3ade27668864968c471f1d1bc592c

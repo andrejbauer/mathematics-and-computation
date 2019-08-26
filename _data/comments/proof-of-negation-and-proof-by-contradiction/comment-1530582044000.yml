@@ -1,0 +1,12 @@
+name: Jan
+date: '2018-07-03 03:40:44'
+url: ''
+message: >-
+  @Rafael just prove a generic LEM instance without using LEM. This should be
+  easy enough, since it doesn’t distract with irrelevant specifics. A
+  translation of arbitrary proofs that use LEM should then be mechanic. Also,
+  since we know that generic LEM instances aren‘t provable intuitionistically
+  (by a perhaps not entirely trivial semantic argument), you would have a kind
+  of example that is in a sense „really only provable using proof by
+  contradiction“.
+email: dcee25629413b273bfc4252cc600fc08

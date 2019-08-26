@@ -1,0 +1,8 @@
+name: yaroslavvb
+date: '2006-04-21 21:01:21'
+url: 'http://yaroslavvb.blogspot.com'
+message: >-
+  This might sound naive...but why not use an encoding for x that allows
+  computing sign in finite time? (use first two bits to encode whether the
+  number is positive, negative, or zero)
+email: 838fe4f0c962d69777611eed07281bd2

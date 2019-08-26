@@ -1,0 +1,16 @@
+name: Andrej Bauer
+date: '2013-08-20 23:16:37'
+url: 'http://andrej.com/'
+message: >-
+  I did not discuss at all how to make sure that the mechanized proofs can still
+  be checked a couple of decades from now. I think that is a separate (and
+  important) issue that must be solved as well. Putting things on arxiv.org is
+  of course a good idea, but I focused on the review process, so that is kind of
+  irrelevant for this post.
+
+
+  But I do insist that a reviewer cannot simply trust the authors that they
+  mechanized the proofs correctly. Are you saying that at conferences such as
+  POPL people review papers and just blindly trust the authors when they claim
+  the proofs have been formalized?
+email: 59d57d95bc7c45ced5f1969279cec06b

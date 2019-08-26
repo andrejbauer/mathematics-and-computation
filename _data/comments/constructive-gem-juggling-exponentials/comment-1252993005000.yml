@@ -1,0 +1,12 @@
+name: Andrej Bauer
+date: '2009-09-15 07:36:45'
+url: 'http://andrej.com/'
+message: >-
+  Pseudonym, I am pretty sure this is not the case, please provide a reference.
+  For example, the <a
+  href="http://en.wikipedia.org/wiki/Cantor%E2%80%93Bernstein%E2%80%93Schroeder_theorem"
+  rel="nofollow">proof on Wikipedia</a> is not constructive because it tacitly
+  assumes that `A = C \cup (A \\ C)`, see the proof for details. Beware,
+  classical mathematicians sometimes use the phrase "constructive" when they
+  mean "no use of the axiom of choice".
+email: 59d57d95bc7c45ced5f1969279cec06b

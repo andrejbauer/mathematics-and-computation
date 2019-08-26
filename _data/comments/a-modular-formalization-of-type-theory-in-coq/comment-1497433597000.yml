@@ -1,0 +1,14 @@
+name: Andrej Bauer
+date: '2017-06-14 11:46:37'
+url: 'http://andrej.com/'
+message: >-
+  Oh, perhaps it's worth mentioning that the syntax is fully annotated. In
+  particular, abstractions are written as $\lambda A . B . e$ and applications
+  as $e_1 @^{A.B} e_2$, indicating both the domain and the codomain. Is that
+  what worries you?
+
+
+  We're currently in the process of modifying syntax so that it becomes
+  configurable. Then it should be clearer what assumptions precisely are needed
+  for uniqueness.
+email: 59d57d95bc7c45ced5f1969279cec06b

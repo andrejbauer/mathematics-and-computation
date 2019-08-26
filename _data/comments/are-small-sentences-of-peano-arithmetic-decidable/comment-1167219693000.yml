@@ -1,0 +1,9 @@
+name: Andrej Bauer
+date: '2006-12-27 12:41:33'
+url: 'http://andrej.com/'
+message: >-
+  I have to make a small correction. The sentence $\forall b \; c, \lnot (a =
+  (S(S b))\cdot(S(S c)))$ does not mean "$a$ is a prime" but rather "$a$ is 0, 1
+  or a prime". Luckily, the short sentence with unknown status is not affected
+  by this mistake.
+email: 59d57d95bc7c45ced5f1969279cec06b

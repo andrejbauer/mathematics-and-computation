@@ -1,0 +1,29 @@
+name: Andrej Bauer
+date: '2016-08-08 15:08:51'
+url: 'http://andrej.com/'
+message: >-
+  I have been told more than once, and the Haskell wiki says this explicitly,
+  that "the objects of Hask are Haskell types". It does not say that the object
+  are $\omega$CPOs, and the various redditors and other Haskellers certainly
+  speak of it in terms of syntax. So, by my reading, this means it is syntax. I
+  already stated explicitly that I am all in favor of $\omega$CPOs. If that's
+  what people think they are using, then they should call the category
+  "$\omega$CPO" and not "Hask". But I very much doubt that the average Haskell
+  programmer knows anything about $\omega$CPOs.
+
+
+  You ask why I want a syntactic category. I do not really care about Haskell,
+  but syntactic models are generally useful because they capture operational
+  aspects in a setting which is directly comparable to the denotational
+  semantics. That is, if I have a syntactic category $S$ and I want to consider
+  denotational semantics in category $C$ I may hope that $S$ is the universal
+  model in $C$. This has beautiful consequences, and it's just one possible use
+  of syntactic categories.
+
+
+  Hask really is not a category, it is something else. In practice people use it
+  to get ideas from category theory and implement them in Haskell in cool ways.
+  Edward Kmett explained to me once (at about three times the speed I could
+  follow) how lenses are just a bunch of category theory. That's the sort of
+  thing that this broken Hask non-category is good for.
+email: 59d57d95bc7c45ced5f1969279cec06b

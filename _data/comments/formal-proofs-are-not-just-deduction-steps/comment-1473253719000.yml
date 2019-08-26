@@ -1,0 +1,35 @@
+name: Andrej Bauer
+date: '2016-09-07 15:08:39'
+url: 'http://andrej.com/'
+message: >-
+  I think you're right. I should have said: "An independent
+  <strong>performance</strong> of a computation involves indepndently re-running
+  the computation – not verifying someone else's trace of it encoded as a
+  derivation." My point is that computation just is, without any
+  verification/condition/correctness/guarantee attached to it. And in this pure
+  form, computation is useful. Let me give you an example. I will give you an
+  example.
+
+
+  I am thinking of a number. I will tell you which number it is. It's the one
+  that is printed by the program:
+
+  [sourcecode]
+
+  k = 0
+
+  n = 1000000000000
+
+  while n &lt;&gt; 1:
+      if n % 2 == 0: n = n / 2
+      else: n = 3 * n + 1
+      k = k + 1
+  print(k)
+
+  [/sourcecode]
+
+  Now we are both thinking of the same number. Now, in this particular case
+  there are other, more efficient ways of communicating the same number, but
+  that is not going to be the case in general. The most efficient way to
+  communicate numbers (or any kind of information) is to send programs.
+email: 59d57d95bc7c45ced5f1969279cec06b

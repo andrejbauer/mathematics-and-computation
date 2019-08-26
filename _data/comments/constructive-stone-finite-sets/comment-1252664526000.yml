@@ -1,0 +1,15 @@
+name: Andrej Bauer
+date: '2009-09-11 12:22:06'
+url: 'http://andrej.com/'
+message: >-
+  Peter (2): There are several notions of constructive finiteness. The one I
+  wrote about is Kuratowski's notion, and it may be characterized as the free
+  join-semilattice completion. The one you suggest ammounts to subsets of finite
+  sets, and that is called <em>subfinite</em> (what is the categorical
+  characterization?). You could restrict subfinite subsets to get a smaller (and
+  more reasonable) class, for example the subsets of finite sets defined by
+  `Pi_1^0` predicates are a possibility. Or you could take the intersection of
+  the Kuratowski finite subsets with the compact subsets (with respect to a
+  chosen dominance). There are indeed many possibilites, but the Kuratowski
+  finite sets are the generally accepted "default" notion.
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,5 @@
+name: Neel Krishnaswami
+date: '2012-10-04 09:48:39'
+url: ''
+message: "Urs wrote:\r\n<blockquote>Maybe the principles of “natural deduction” themselves? Before we specify any _particular_ formation/introduction/elimination rules, but after we agree on what a valid set of formation rules should be?</blockquote>\r\n\r\nGiovanni Sambin has developed something like this idea in his program of <a href=\"http://www.math.unipd.it/~sambin/logic.html\" rel=\"nofollow\">basic logic</a>. \r\n\r\nFor my own part, linear logic and modal logics make me think this approach is likely to be very difficult. Since they do radical things to the context and the notion of hypothesis, I think any structural invariants capable of encompassing the variety of proof systems we know will be either very weak or very abstract. Noam Zeilberger (who will be at IAS for the homotopy year) has worked with Paul-Andre Mellies on this problem, so he can probably tell you many interesting things about this. (He has mentioned to me that there are connections between cut elimination and Isbell duality.)"
+email: 2d7c6d4c76fd60dbad0ea6828c1524bd

@@ -1,0 +1,11 @@
+name: Andrej Bauer
+date: '2016-09-06 15:43:48'
+url: 'http://andrej.com/'
+message: >-
+  There is no logic which matches every possible natural mode of reasoning. We
+  are therefore either doomed to have many proof assistants, or to have
+  extensible proof assistants. If the latter, what for do such extensions take?
+  Building internal models inside some logic is just one way of providing such
+  flexibility. Another is to let the user describe to the proof assistant how to
+  do things. That's computation.
+email: 59d57d95bc7c45ced5f1969279cec06b

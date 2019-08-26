@@ -1,0 +1,8 @@
+name: Peter LeFanu Lumsdaine
+date: '2010-11-12 03:01:44'
+url: 'http://www.mathstat.dal.ca/~p.l.lumsdaine'
+message: >-
+  Hmm… clearly the set $\{\, w \iota_1(x) \iota_2(x)^{-1} w^{-1}\ |\ x \in H,\,w
+  \in G * G\,\}$ generates $N$, but is it obvious that it's closed under
+  multiplication and hence is the whole of $N$?
+email: aaf9ed61cccaec0fcc7c15b395a31583

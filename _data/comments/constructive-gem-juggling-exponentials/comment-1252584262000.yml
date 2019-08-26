@@ -1,0 +1,5 @@
+name: Colin McQuillan
+date: '2009-09-10 14:04:22'
+url: ''
+message: "Perhaps your construction provides the only relations (and any other homeomorphisms that can be derived, for example $7^\\mathbb{N} = 55^\\mathbb{N} = 5^\\mathbb{N} \\times 11^\\mathbb{N} = 3^\\mathbb{N} \\times 3^\\mathbb{N} = 3^\\mathbb{N}$. None of the allowed operations seem to provide a way to get from $2^\\mathbb{N}$ to an odd number.\r\n\r\nWhat is the abstract motivation for not allowing recursive definitions? If you just want to show that $2^\\mathbb{N}$ is computationally isomorphic to $3^\\mathbb{N}$, you could use Huffman encoding. It is interesting as a puzzle, and computationally the homeomorphisms could provide a base-3 infinite array given infinite binary random-access memory with $O(1)$ reads and writes."
+email: 78e584afde824e3494784a5144a05d53

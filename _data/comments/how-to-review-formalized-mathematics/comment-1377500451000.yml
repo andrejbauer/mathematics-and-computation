@@ -1,0 +1,20 @@
+name: Andrej Bauer
+date: '2013-08-26 09:00:51'
+url: 'http://andrej.com/'
+message: >-
+  Well, I understand that things are different at conferences, where computer
+  scientists have to review too many papers in too short a time, and
+  mathematicians seem to accept everybody and their mother because conferences
+  are devoted more to "current work". But I am still troubled by what you
+  (@Vilhelm) describe, namely a systematic deterioration of importance of
+  proofs. If proofs are hidden in code and technical reports and people do not
+  check them, in what sense is it still mathematics? There is no math without
+  proofs. Proofs are sacred!
+
+
+  Am I asking for too much, say for POPL? At least the authors shoudl enclose
+  the code, and at least the reviewer should make sure it compiles, and have a
+  glance at what the code is doing. With current behavior we deseve our own <a
+  href="http://en.wikipedia.org/wiki/Sokal_affair" rel="nofollow">Sokal</a>
+  fiasco.
+email: 59d57d95bc7c45ced5f1969279cec06b

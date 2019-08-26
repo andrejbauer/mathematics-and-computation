@@ -1,0 +1,9 @@
+name: babelfish007
+date: '2009-01-19 20:38:49'
+url: ''
+message: >-
+  What do you think about adapting miniprolog to work within Ocaml? It would be
+  nice to be able to integrate functional and logic programming, while
+  maintaining the basic infrastructure (i.e., arithmetic, graphics, iteration)
+  of the Ocaml language.
+email: 8eafa2611194295d0c392dab5d8b7c51

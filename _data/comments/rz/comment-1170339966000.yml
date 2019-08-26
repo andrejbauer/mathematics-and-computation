@@ -1,0 +1,5 @@
+name: JacquesC
+date: '2007-02-01 15:26:06'
+url: ''
+message: "There is something I don't understand here: a mathematical theory <b>is</b> a specification.\r\n\r\nSo I gather this is an automated translation step from one very rich formalism (mathematical theories) to a simpler one (signatures in this case).  Very useful indeed, since this is a rather boring thing to do by hand, basically <i>because</i> it can be automated!\r\n\r\nIs the back-end generator easily replaceable?  It might make sense to be able to target other languages than just ocaml, in the long run."
+email: ebe95855ff886dc20ac7314e54e7fa34

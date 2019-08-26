@@ -1,0 +1,14 @@
+name: Andrej Bauer
+date: '2008-06-06 07:44:47'
+url: 'http://andrej.com/'
+message: >-
+  You are absolutely correct. This is a good constructive proof that there
+  exists a non-r.e. subset of N. I have no idea what I was thinking when I wrote
+  my comment. As you noticed, we need to make the statement stronger: "Prove
+  that there is a function `NN -> {0,1}` (defined <em>everywhere</em> on `NN`!)
+  which is not computed by any Turing machine". In your proof, pinpoint the use
+  of classical logic. (Note: it is possible to avoid classical logic in this
+  case by using non-classical Brouwerian axioms. But you cannot prove the
+  statement straight in constructive mathematics because constructive
+  mathematics is consistent with Formalized Church's Thesis.)
+email: 59d57d95bc7c45ced5f1969279cec06b

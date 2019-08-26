@@ -1,0 +1,13 @@
+name: Andrej Bauer
+date: '2010-04-19 22:17:51'
+url: 'http://andrej.com/'
+message: >-
+  @NovaDenizen: you misunderstand what it means to inspect the digits of a
+  number, or what it means to have a real number given as a sequence of digits.
+  Namely, the real number is not given by an infinite sequence that is actually
+  written down anywhere, but rather as an algorithm, or a black box, which
+  accepts a number `n` and outputs the `n`-th digit. At no point do I manipulate
+  an infinite amount of information, yet I can look at any digit I want. Of
+  course, I cannot look at <em>all</em> digits in a finite time, which is sort
+  of the point of the post.
+email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,0 +1,22 @@
+name: dieter
+date: '2016-11-18 19:34:24'
+url: ''
+message: >-
+  You say that Prop is in fact not the set of all propositions (= formulas).
+  Why, then, do you denote the set of truth values "Prop"? "Prop" immediately
+  suggests that it is the set of all propositions.
+
+
+  You say that I can imagine $\mathsf {Prop}$ to be the set $\mathcal
+  P(&#123;\star&#125;)$. But then the law of excluded middle
+
+  $\forall\phi\in\mathsf{Prop}. \, \phi\lor\neg\phi$.
+
+  becomes
+
+  $\forall S\in \mathcal P(&#123;\star&#125;).\, S\lor\neg S$.
+
+  But this latter statement does not make sense, since $S$ is a mathematical
+  object and not a statement. Thus one can't use $S$ to express a statement like
+  "$S\lor\neg S$". That's where my confusion comes from. I hope you can clarify.
+email: f3a83f6d0cf526185ab2e8d7f4c4cbfc

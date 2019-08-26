@@ -1,0 +1,5 @@
+name: Anonymous
+date: '2012-07-26 22:15:14'
+url: ''
+message: "Janno: For computing the derivative of $x^n$, Andrej uses the <a href=\"http://en.wikipedia.org/wiki/Binomial_theorem\" rel=\"nofollow\">binomial theorem</a> to expand $(x + dx)^n$.\r\n\r\nHere's how to compute the derivative of $e^x$: $e^{x + dx} - e^x = e^x e^{dx} - e^x = e^x (1 + dx + (dx)^2/2 + \\cdots - 1) = e^x (1 + dx - 1) = e^x dx$. The infinite series is actually finite, as all terms of order 2 and greater are identically zero."
+email: 23bb691051f80c80770236e02715ebf0

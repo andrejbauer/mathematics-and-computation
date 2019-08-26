@@ -1,0 +1,5 @@
+name: Dan Doel
+date: '2012-04-03 00:37:27'
+url: ''
+message: "There are plenty of languages that allow you to state and enforce equations. Most dependently typed languages, for instance. Also Maude, I believe. And Neel Krishnaswami has a paper on adding equations to System F. I don't know that any of that would be suitable for Eff, though.\r\n\r\nIn the specific example, state algebras are characterized by the typical state monad, and the free state algebra over a type A is S -&gt; S * A. So if handlers are homomorphisms from a free algebra to another algebra, then that should be their source for the equation-incorporating state case. However I don't know how to determine this from the operations + equations; it doesn't seems like a tractable problem. And even were that solved, ensuring that the target is an algebra and that the definition is a proper homomorphism probably isn't automatic.\r\n\r\nThe fuzziness sentence was just hedging against my having forgotten some feature of Eff that let you specify equations somehow. It's been a while since I read about it."
+email: af6ee853a79ce70a9ce68ae1e1fc852c

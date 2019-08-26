@@ -1,0 +1,12 @@
+name: Andrej Bauer
+date: '2009-06-20 09:10:38'
+url: 'http://andrej.com/'
+message: >-
+  Yes, you misunderstand <a
+  href="http://en.wikipedia.org/wiki/G%C3%B6del%27s_completeness_theorem"
+  rel="nofollow">G&ouml;del's Completeness Theorem</a>. The theorem guarantees
+  that <b>valid</b> formulae are provable, not <b>true</b> ones. The difference
+  is perhaps a bit subtle: a formula is valid when it holds in every model. A
+  formula is considered true when it holds in a preferred model (referred to as
+  the standard model).
+email: 59d57d95bc7c45ced5f1969279cec06b

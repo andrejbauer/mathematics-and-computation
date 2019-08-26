@@ -1,0 +1,13 @@
+name: Timothy Swan
+date: '2015-12-14 16:31:44'
+url: ''
+message: >-
+  Hi, I like how you are interested in intuitionistic and univalent
+  constructions. I am wondering, however, how you constructed root 2 = a/b as
+  part of your proof. There is no proof that it is correct, so you cannot use it
+  as a statement, even for assumption, right? At least in univalent type theory,
+  your proof could not provide the value of root 2 since there is a law of
+  excluded middle used to define the irrational. At some point in evaluation you
+  state that the negation of the rationals within the reals is the irrationals,
+  which is not intuitionistic.
+email: f627a8a4a024dd760c2fbcc442948a1c

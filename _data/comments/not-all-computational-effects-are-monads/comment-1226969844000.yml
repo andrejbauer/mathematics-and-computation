@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2008-11-18 01:57:24'
+url: 'http://andrej.com/'
+message: "Answers to Gleb: the lazy natural numbers idea is neat. I need to see if we can make the monad laws hold, and at the same time make sure that diverging computations consume infinitely many ticks. I think it can be done.\r\n\r\nAnswer to luqui: thanks for your comment. I am a bit worried about your first suggestion which uses state, but feel free to prove me wrong. I like the idea with lazy natural numbers. \r\n\r\nAnswer to speleologic: thank you for the reference, that is useful to know. In the context of computational effects there are other, more powerful theorems. There is in fact \"the mother of all effects\", namely the quote/unqoute computational effect. Every other (computable) effect can be simulated by it."
+email: 59d57d95bc7c45ced5f1969279cec06b

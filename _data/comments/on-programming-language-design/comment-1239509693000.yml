@@ -1,0 +1,5 @@
+name: Jonathan Allen
+date: '2009-04-12 06:14:53'
+url: ''
+message: "Reply to Radu:\r\n\r\nYou are dead-wrong about using nulls for empty trees, or any other collection for that matter. You can't even call myTree.count() safely if you have a null. That's why most guidelines say to always return empty collections instead."
+email: 71c1027d2483fe242b0affc5e59df647

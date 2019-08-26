@@ -1,0 +1,5 @@
+name: Andrej Bauer
+date: '2006-05-09 14:55:49'
+url: 'http://andrej.com/'
+message: "Indeed, the proof that you cannot write modulus of continuity in pure `lambda`-calculus has to do with the fact that modulus seems to be non-extensional. But do you really think it is just a matter of \"observation\" that the functional `m` is necessarily non-extensional?\r\n\r\nAnd here is functional `m` with continuations. I used SML/NJ continuations. If there is a nice person who is proficient in Haskell, please rewrite it in Haskell for roconnor.\r\n<pre>\r\nopen SMLofNJ.Cont ;\r\nfun m f x =\r\n  let\r\n    fun search n =\r\n      callcc (fn k => (f (fn j => if j < n then x j else throw k (search (n+1))) ; n))\r\n  in\r\n    search 0\r\n  end\r\n</pre></pre>"
+email: 59d57d95bc7c45ced5f1969279cec06b

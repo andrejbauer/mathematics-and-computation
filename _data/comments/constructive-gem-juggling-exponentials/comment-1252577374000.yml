@@ -1,0 +1,5 @@
+name: Martijn
+date: '2009-09-10 12:09:34'
+url: 'http://martijn.van.steenbergen.nl'
+message: "Here's another way to represent the empty datatype:\r\n\r\ndata Zero = Zero (forall a. a)\r\n\r\nIn this way it is still not possible to construct values but at least you can use Zero's field as absurd pattern when pattern matching on it:\r\n\r\nzero_elim :: Zero -&gt; a\r\nzero_elim (Zero x) = x\r\n\r\nI like this one better, partly because you don't need to use undefined (or error)."
+email: b7d9f8b11abdaa81756982ab541d6c7c

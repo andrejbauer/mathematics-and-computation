@@ -1,0 +1,13 @@
+name: Andrej Bauer
+date: '2014-06-17 12:05:04'
+url: 'http://andrej.com/'
+message: >-
+  Resources are slightly more general. You can implemented references using
+  resources, but you can also use resources for other "state-like" things. You
+  can impement lazy values using resources, as well as persistent data
+  structures and self-modifying structures, such as splay trees. Of course, you
+  can do all of this if you have references, too. So in some sense resources and
+  references are equally expressive. Note that there can also be
+  <em>primitive</em> (builtin) resources that actually interact with the
+  environment, such as streams of randomness, or communication channels.
+email: 59d57d95bc7c45ced5f1969279cec06b

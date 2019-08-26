@@ -1,0 +1,17 @@
+name: Andrej Bauer
+date: '2016-08-31 18:04:05'
+url: 'http://andrej.com/'
+message: >-
+  You misunderstand me. Which bit of what I wrote made you think I am asking for
+  NuPrl-style approach? So all of what you say about not wanting NuPrl-style is
+  misdirected. In fact, I am <em>for</em> the axiomatic approach, as you call
+  it. When I say that the trusted kernel must be able to run code that does
+  <em>not</em> imply that the formalism is somehow tied to the code. Perhaps the
+  code is there for other purposes, for instance to implement special-purpose
+  decision procedures and such.
+
+
+  Regarding fragility of formal developements and non-portability of proof
+  scripts: when we know how to solve that problem we'll also know how to solve
+  many, many other problems in software engineering.
+email: 59d57d95bc7c45ced5f1969279cec06b

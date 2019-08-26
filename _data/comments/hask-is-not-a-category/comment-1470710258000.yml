@@ -1,0 +1,14 @@
+name: Robert Harper
+date: '2016-08-09 04:37:38'
+url: ''
+message: >-
+  There seems to be a supposition here that a denotational semantics, which is
+  not extant but never mind, constitutes a language definition.  It does not. 
+  One needs to show that the semantics is adequate, for which one must have an
+  operational semantics, also not in evidence.  Furthermore, equational
+  reasoning is in now way sufficient for understanding programs.  The complexity
+  matters as much as putative extensional correctness, and this is inherently an
+  operational matter.  It is of course famous that Haskell programs have absurd
+  space usage, for example, and very difficult to predict performance
+  characteristics.  This is not a feature, but a bug.
+email: 0e17f478e3738b67aa384c13c6a564e1

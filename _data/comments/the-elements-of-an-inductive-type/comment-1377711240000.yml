@@ -1,0 +1,15 @@
+name: Heinrich
+date: '2013-08-28 19:34:00'
+url: ''
+message: >-
+  The ultrapower construction is a completion in the following sense: adjoin all
+  elements whose first-order properties are contradiction-free.
+
+
+  For instance, the family of inequalities $\lbrace x > n \mid  n = 1, 2, 3,
+  \ldots \rbrace$ is contradiction-free, because any finite subset of them
+  certainly has a solution $x$. (In particular, take $x = m+1$ where $m$ is the
+  size of the subset of inequalities considered.) Hence, you can adjoin an
+  element $X$ which fulfills all of these inequalities. It's very similar to
+  Gödel's compactness theorem.
+email: 8df4dc2b08adc86f59a0c6b1d12f6f22

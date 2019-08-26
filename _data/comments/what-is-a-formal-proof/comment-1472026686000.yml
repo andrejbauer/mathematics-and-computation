@@ -1,0 +1,24 @@
+name: Andrej Bauer
+date: '2016-08-24 10:18:06'
+url: 'http://andrej.com/'
+message: >-
+  The run-time bounds are a matter of available computational power and
+  therefore it makes no sense prescribe them. We're talking about
+  <em>cooperation</em> between parties, so again it makes no sense to prescribe
+  run-time bounds. What does make sense is that we must give the communicating
+  parties the freedom to express proof scripts in the most efficient way they
+  can. If we start limiting the language they are supposed to use in the name of
+  efficiency, run-time guarnatees, philosophy, or whatever, we will limit the
+  expressive power. There is no reason to do that. I think we agree on this
+  point?
+
+
+  Your requirement that "reconstructing a proof from the script should not be an
+  algorithmic issue at all (besides “trivial” book-keeping tasks perhaps)" is
+  precisely what I am advocating. In combination with the previous paragraph,
+  the result it: a proof checker should simply be an interpreter or a compiler
+  for a specialized programming language. Executing a programming language
+  <em>is</em> "just book-keeping" and it gives complete control over algorithmic
+  issues to the author of the source code (assuming it is a sanely implemented
+  language).
+email: 59d57d95bc7c45ced5f1969279cec06b

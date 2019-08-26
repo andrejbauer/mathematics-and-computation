@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'jekyll'
+gem 'jekyll-import'
+gem 'hpricot'
+gem 'open_uri_redirections'

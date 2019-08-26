@@ -1,0 +1,5 @@
+name: Mike Shulman
+date: '2013-08-28 20:46:22'
+url: 'http://www.sandiego.edu/~shulman'
+message: "Well said; thanks!!\r\n\r\nI do have two quibbles.  First, it's true that in general one wants to think about generalized elements when interpreting type theory in a category.  However, when you say things like \"the elements of nat in sheaves on $X$ are the continuous maps $X \\to \\mathbb{N}$\" I think you have to be referring to the <i>global</i> elements, i.e. maps from the terminal object to the sheaf interpreting nat.\r\n\r\nSecond, probably you just didn't want to get into this, but in case anyone reading is confused, the statement that \"in order to establish a disjunction it is sufficent to establish it locally on the elements of a cover\" is really only true for <i>mere</i> disjunctions (i.e. (-1)-truncated), while the disjunction \"every natural number is either zero or a successor of something\" is provable even purely (i.e. without truncation).  To prove a pure disjunction locally, the elements of the cover have to be disjoint &mdash; which is, of course, true for the two points of the 2-element space."
+email: c72e8ff1dfaaaacdbe9844d0202f378a

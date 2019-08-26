@@ -1,0 +1,10 @@
+name: BMeph
+date: '2009-01-08 22:21:05'
+url: ''
+message: >-
+  Sorry for commenting so late in the game, but I also noticed: aren't forevery
+  and forsome just folds, with the arguments reversed? In particular, using the
+  "S is a Monad" trait, then forevery and forsome are like disjunctive and
+  conjunctive monoid versions of MonadPlus, except that MonadPlus isn't exactly
+  a monoid (and thus, isn't a Monoid, either).
+email: 29610e29af62d73918d3e6adcae1fe00
