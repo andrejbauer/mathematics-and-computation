@@ -20,6 +20,8 @@ agree, the post will be written in [Markdown](https://www.markdownguide.org)
 with full LaTeX math support by [MathJax](https://www.mathjax.org), and
 submitted as a pull request.
 
+I do **not** accept sponsored posts, paid links, or any form of marketing and branding.
+
 ### Help updating old posts
 
 Ther 141 posts prior to August 2019 were ported from the old Wordpress server by

@@ -1,3 +1,7 @@
+url: http://math.andrej.com
+name: Mathematics and Computation
+description: Mathematics for computers
+
 kramdown:
   hard_wrap: false
   input: Markdown
@@ -8,8 +12,19 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.markdown
-  - archive
+  - etc/
 
-url: http://math.andrej.com
-name: Mathematics and Computation
-description: Mathematics for computers
+plugins:
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - year
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'

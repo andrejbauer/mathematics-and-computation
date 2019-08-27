@@ -1,0 +1,7 @@
+<ul class="post-info">
+<li class="post-date" class="meta">{{include.date | date_to_long_string}}</li>
+<li class="post-author">{{include.author}}</li>
+<li class="post-category">
+ {% for category in include.categories %}<a href="/category/{{category | slugify }}/" class="meta">{{category}}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+</li>
+</ul>

@@ -4,7 +4,6 @@
   <head>
     {% include meta.html %}
     <title>{{page.title}}</title>
-    {% include mathjax.html %}
   </head>
 
   <body>
@@ -18,8 +17,11 @@
     <nav>{% include navigation.html %}</nav>
 
     <section id="main_content" class="inner">
-      {{ content }}
+      <h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
+
+      {% for post in page.posts %}
+      {% include excerpt.html post=post %}
+      {% endfor %}
     </section>
-    {% include analytics.html %}
   </body>
 </html>

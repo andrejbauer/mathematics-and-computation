@@ -1,0 +1,9 @@
+<div class="excerpt">
+<div class="excerpt-header">
+<h3><a href="{{site.url}}{{post.url}}">{{post.title}}</a></h3>
+{% include post_info.html date=post.date author=post.author categories=post.categories %}
+</div>
+
+{{post.excerpt}}
+<a href="{{site.url}}{{post.url}}" class="meta">→ continue reading</a>
+</div>

@@ -3,7 +3,7 @@
 
   <head>
     {% include meta.html %}
-    <title>{{page.title}}</title>
+    <title>{{site.name}} | {{page.title}}</title>
   </head>
 
   <body>
@@ -19,6 +19,5 @@
     <section id="main_content" class="inner">
       {{ content }}
     </section>
-    {% include analytics.html %}
   </body>
 </html>
