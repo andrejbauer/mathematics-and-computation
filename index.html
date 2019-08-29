@@ -1,10 +1,21 @@
 ---
 title: Latest posts
 layout: page
+navigation: post
 ---
 
-Talks by <a href="./category">category</a>.
+{% include browse-menu.html %}
 
-{% for post in site.posts %}
+{% if paginator.previous_page != nil %}
+← <a href="{{ paginator.previous_page_path }}" class="meta" class="earlier-posts">earlier posts</a>
+{% endif %}
+
+{% for post in paginator.posts %}
   {% include excerpt.html post=post %}
 {% endfor %}
+
+{% if paginator.next_page != nil %}
+→ <a href="{{ paginator.next_page_path }}" class="meta" class="later-posts">later posts</a>
+{% endif %}
+
+{% include browse-menu.html %}

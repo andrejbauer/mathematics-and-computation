@@ -8,20 +8,20 @@
 
   <body>
     <!-- HEADER -->
-    <header>
     {% include header.html %}
-    </header>
 
     <!-- MAIN CONTENT -->
     <!-- NAVIGATION -->
     <nav>{% include navigation.html %}</nav>
 
-    <section id="main_content" class="inner">
+    <section id="content">
       <h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
 
       {% for post in page.posts %}
       {% include excerpt.html post=post %}
       {% endfor %}
     </section>
+
+    {% include footer.html %}
   </body>
 </html>

@@ -1,10 +1,6 @@
-<div class="entry-comments">
+<div class="comments">
     {% if site.data.comments[page.slug] %}
-      <!-- Start static comments -->
-      <div id="comments" class="js-comments">
-        <header class="section-title">
-          <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
-        </header>
+      <h3>Comments</h3>
 
         {% assign count = 0 %}
 
@@ -12,18 +8,39 @@
         {% assign comments = (comments | sort) %}
         {% for comment in comments %}
             {% assign index       = (forloop.index | minus: count) %}
-            {% assign r           = comment[1].replying_to %}
-            {% assign replying_to = r | to_integer %}
             {% assign avatar      = comment[1].avatar %}
             {% assign email       = comment[1].email %}
             {% assign name        = comment[1].name %}
             {% assign url         = comment[1].url %}
             {% assign date        = comment[1].date %}
             {% assign message     = comment[1].message %}
-            {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+            {% include comment.html index=index avatar=avatar email=email name=name url=url date=date message=message %}
             {% assign count = count | plus: 1 %}
         {% endfor %}
-      </div>
     {% endif %}
+</div>
 
+<div class="comment-submit">
+<h4>Post a comment:</h4>
+<form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
+  <input name="options[redirect]" type="hidden" value="https://idiologos.netlify.com">
+  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <div>
+    <legend>Name</legend>
+    <input name="fields[name]" type="text">
+  </div>
+  <div>
+    <legend>E-mail (optional)</legend>
+    <input name="fields[email]" type="email">
+  </div>
+  <div>
+    <legend>Message (<a href="https://kramdown.gettalong.org/syntax.html">kramdown</a> markup allowed)</legend>
+    <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
+  </div>
+
+  <div>
+    <legend><em>Comments are moderated.</em></legend>
+    <button type="submit">Submit Comment</button>
+  </div>
+</form>
 </div>

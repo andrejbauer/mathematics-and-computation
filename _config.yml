@@ -1,6 +1,6 @@
 url: http://math.andrej.com
 name: Mathematics and Computation
-description: Mathematics for computers
+description: A blog about mathematics for computers
 
 kramdown:
   hard_wrap: false
@@ -16,12 +16,20 @@ exclude:
 
 plugins:
   - jekyll-archives
+  - jekyll-redirect-from
+  - jekyll-paginate
+
+paginate: 10
+
+paginate_path: "page-:num/"
 
 jekyll-archives:
   enabled:
     - categories
     - year
-  layout: archive
+  layouts:
+    year: archive-year
+    category: archive-category
   permalinks:
     year: '/:year/'
     month: '/:year/:month/'

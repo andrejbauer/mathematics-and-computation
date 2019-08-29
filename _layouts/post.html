@@ -9,21 +9,36 @@
 
   <body>
     <!-- HEADER -->
-    <header>
     {% include header.html %}
-    </header>
     <!-- NAVIGATION -->
     <nav>{% include navigation.html %}</nav>
 
     <!-- MAIN CONTENT -->
-    <section id="main_content">
+    <section id="content">
+      <div class="previous-next-post">
+      {% if page.next.url %}
+      <div class="next-post">
+      ← <a class="meta" href="{{page.next.url}}">{{page.next.title | truncate: 40 }}</a>
+      </div>
+      {% endif %}
+
+      {% if page.previous.url %}
+      <div class="previous-post">
+      <a class="meta" href="{{page.previous.url}}">{{page.previous.title | truncate: 40}}</a> →
+      </div>
+      {% endif %}
+      </div>
+
       <h1 class="post-title">{{ page.title}}</h1>
       {% include post_info.html date=page.date author=page.author categories=page.categories %}
       {{ content }}
+
+      <!-- COMMENTS -->
+      {% include comments.html %}
+
     </section>
 
-    <h4>Comments</h4>
-
-    {% include comments.html %}
+    <!-- FOOTER -->
+    {% include footer.html %}
   </body>
 </html>

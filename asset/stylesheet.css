@@ -4,7 +4,7 @@ body {
   background: #ffffff;
   color: #000000;
   font-size: 16px;
-  width: 75%;
+  width: 100%;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   line-height: 1.25;
 }
@@ -33,29 +33,27 @@ pre code {
 
 header {
   width: 100%;
-  border-bottom: 2px dashed #000000;
-  padding: 0px 0 5px 0px;
-  margin: 0 0 20px 0;
+  padding: 0px 0 40px 0px;
+  margin: 0;
+  background: url(/asset/imast-mej-orange.jpg) no-repeat scroll top;
 }
 
 header h1 {
-  font-size: 45px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  margin: 0 0 0 0;
+  font-size: 60px;
+  margin: 0px;
   font-weight: bold;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #800000;
-  text-shadow: 0 0 10px rgba(90, 40, 40, 0.3);
-  -webkit-font-smoothing: antialiased;
+  font-family: Bitter, Georgia, serif;
+  color: #000000;
+  padding: 60px 0px 0px 60px;
 }
 
 header h2 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 24px;
   letter-spacing: 3px;
-  color: #404040;
+  color: #303030;
   margin: 0px;
+  padding-left: 60px;
 }
 
 header a {
@@ -63,17 +61,32 @@ header a {
   color: inherit;
 }
 
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px 0px 20px 60px;
+  background: url(/asset/imast-mej-orange.jpg) no-repeat scroll bottom;
+}
+
+footer a {
+  text-decoration: none;
+}
 
 /* Main Content
 */
 
-#main_content {
-  width: 100%;
+#content {
+  margin: 0px 60px 0px 60px;
   -webkit-font-smoothing: antialiased;
 }
 
 section img {
   max-width: 100%
+}
+
+div.browse-posts {
+  text-align: right;
+  padding-right: 120px;
 }
 
 h1.post-title {
@@ -85,10 +98,19 @@ h1.post-title {
   margin: 0px 0px 10px 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #202020;
+h1 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 200%;
+  color: #404040;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px 0px 10px 0px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 200%;
 }
 
 /* h1, h2, h3, h4, h5, h6 { */
@@ -154,11 +176,12 @@ hr {
 
 nav {
   margin: 0px 0px 60px 0px;
-  padding: 0px 0px 10px 0px;
+  padding: 20px 0px 40px 60px;
+  background: #e6e0c3;
 }
 
 nav a {
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: Helvetica, sans-serif;
   display: block;
   color: #000000;
   font-size: 18px;
@@ -169,6 +192,7 @@ nav a {
 
 nav a:hover {
   color: #800000;
+  text-decoration: underline;
 }
 
 nav ul {
@@ -188,14 +212,26 @@ nav ul li:before {
   margin: 0;
 }
 
+div.previous-next-post {
+  overflow: auto;
+  margin: 40px 0px 40px 0px;
+}
+
+div.next-post {
+  float: left;
+}
+
+div.previous-post {
+  float: right;
+}
+
 a.active {
-    color: #800000;
+  color: #800000;
 }
 
 /* Excerpt */
 
 div.excerpt {
-  border-bottom: 2px dashed #a0a0a0;
   padding: 25px 0px 25px 0px;
 }
 
@@ -231,6 +267,11 @@ ul.post-info {
   margin: 0px 0px 50px 0px;
 }
 
+.excerpt-header ul.post-info {
+  padding: 0px;
+  margin: 0px 0px 25px 0px;
+}
+
 ul.post-info li {
   display: inline;
   list-style: none;
@@ -257,4 +298,36 @@ li.post-category {
   background-size: contain;
   padding-left: 20px;
   margin-left: 35px;
+}
+
+/* Comments */
+div.comments {
+  margin: 60px 0px 0px 0px;
+}
+
+div.comment {
+  overflow: auto;
+  margin: 10px 0px 0px 10px;
+}
+
+div.comment-avatar {
+  float: left;
+  padding: 0px 5px 5px 0px;
+}
+
+div.comment-author {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+div.comment-author a {
+  text-decoration: none;
+}
+
+div.comment-timestamp {
+  margin: 15px 0px 5px 0px;
+  color: #404040;
+}
+
+div.comment-content {
 }

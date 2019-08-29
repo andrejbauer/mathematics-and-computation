@@ -8,16 +8,17 @@
 
   <body>
     <!-- HEADER -->
-    <header>
     {% include header.html %}
-    </header>
 
     <!-- MAIN CONTENT -->
     <!-- NAVIGATION -->
     <nav>{% include navigation.html %}</nav>
 
-    <section id="main_content" class="inner">
+    <section id="content">
       {{ content }}
     </section>
+
+    <!-- FOOTER -->
+    {% include footer.html %}
   </body>
 </html>
