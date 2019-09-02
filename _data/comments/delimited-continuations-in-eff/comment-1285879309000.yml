@@ -1,5 +1,5 @@
 name: Andrej Bauer
 date: '2010-09-30 22:41:49'
 url: 'http://andrej.com/'
-message: "@Dan: There are definitely many possibilites regarding delimited control. Regarding resetting anywhere, is this what is supposed to happen:\r\n[sourcecode gutter=\"false\" higlight=\"4,5\"]\r\n&gt;&gt;&gt; with reset:\r\n...     shift (lambda k: (with reset: shift (lambda l: 0)) + (k 5)) + 1\r\n... \r\nWarning: Implicit sequencing between L2, 22-57 and L2, 58-62\r\n6\r\n[/sourcecode]\r\nAnd yes, a continuation can definitely have its own control effects in eff."
+message: "@Dan: There are definitely many possibilites regarding delimited control. Regarding resetting anywhere, is this what is supposed to happen:\n[sourcecode gutter=\"false\" higlight=\"4,5\"]\n&gt;&gt;&gt; with reset:\n...     shift (lambda k: (with reset: shift (lambda l: 0)) + (k 5)) + 1\n... \nWarning: Implicit sequencing between L2, 22-57 and L2, 58-62\n6\n[/sourcecode]\nAnd yes, a continuation can definitely have its own control effects in eff."
 email: 59d57d95bc7c45ced5f1969279cec06b

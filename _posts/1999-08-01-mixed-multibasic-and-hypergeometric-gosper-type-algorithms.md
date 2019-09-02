@@ -9,7 +9,7 @@ permalink: /1999/08/01/mixed-multibasic-and-hypergeometric-gosper-type-algorithm
 categories:
   - Publications
 ---
-with [Marko PetkovÅ¡ek](http://www.fmf.uni-lj.si/~petkovsek/).
+with [Marko Petkovšek](http://www.fmf.uni-lj.si/~petkovsek/).
 
 **Abstract:** Gosper&#8217;s summation algorithm finds a hypergeometric closed form of an indefinite sum of hypergeometric terms, if such a closed form exists. We extend the algorithm to the case when the terms are simultaneously hypergeometric and multibasic hypergeometric. We also provide algorithms for finding polynomial as well as hypergeometric solutions to recurrences in the mixed case. We do not require the based to be transcedental, but only that \`q\_1^(k\_1) . . . q\_m^(k\_m) != 1\` unless \`k\_1 = &#8230; = k\_m = 0\`. Finally, we generalize the concept of greatest factorial factorization to the mixed hypergeometric case.
 

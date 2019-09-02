@@ -1,5 +1,5 @@
 name: Seth Fogarty
 date: '2010-01-30 16:42:54'
 url: ''
-message: "I disagree with your second point, that you need inductive data types in an object oriented language. Now, I LOVE inductive data types. But they are not necessary, once you have option types/maybe objects, (his first point).\r\n\r\nQuite clearly, a tree is an object with a root, left, and right: where left is an option type (Maybe Tree) and right is an option type (Maybe Tree).\r\n\r\nA full binary tree is an object with a root, and maybe children (Maybe Tree * Tree)"
+message: "I disagree with your second point, that you need inductive data types in an object oriented language. Now, I LOVE inductive data types. But they are not necessary, once you have option types/maybe objects, (his first point).\n\nQuite clearly, a tree is an object with a root, left, and right: where left is an option type (Maybe Tree) and right is an option type (Maybe Tree).\n\nA full binary tree is an object with a root, and maybe children (Maybe Tree * Tree)"
 email: 885f0d954ac7d5a5a00a58102896d3c1

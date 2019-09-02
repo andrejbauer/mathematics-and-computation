@@ -1,5 +1,5 @@
 name: Andrej Bauer
 date: '2008-11-19 03:29:17'
 url: 'http://andrej.com/'
-message: "Reply to ccshan: the challenge here is to express catch and timeout in Haskell as is typically done in Haskell. I have failed to do so for catch (because simulating catch with the exception monad is an overkill). I disagree that catch is as easy as state and non-determinism. Show me how easy it is to directly express catch (and only catch) in Haskell as a monad, comonad, or whatever.\r\n\r\nTimeout can be presented as a monad, which follows from the general theory of effect that Matija has referred to, but I would still like to see a concrete Haskell implementation that results from Matija's theory."
+message: "Reply to ccshan: the challenge here is to express catch and timeout in Haskell as is typically done in Haskell. I have failed to do so for catch (because simulating catch with the exception monad is an overkill). I disagree that catch is as easy as state and non-determinism. Show me how easy it is to directly express catch (and only catch) in Haskell as a monad, comonad, or whatever.\n\nTimeout can be presented as a monad, which follows from the general theory of effect that Matija has referred to, but I would still like to see a concrete Haskell implementation that results from Matija's theory."
 email: 59d57d95bc7c45ced5f1969279cec06b

@@ -1,5 +1,5 @@
 name: Bob Harper
 date: '2011-07-28 12:59:30'
 url: 'http://www.cs.cmu.edu/~rwh'
-message: "Hi Andrej,\r\n\r\nIt seems that the modulus of continuity is a property of the algorithm, not the function, so why would one even expect that there is a extensional modulus of continuity functional?  Your proof shows that it doesn't exist, but it doesn't even seem plausible on the face of it that it would exist.  Or else I am confused or wrong about something."
+message: "Hi Andrej,\n\nIt seems that the modulus of continuity is a property of the algorithm, not the function, so why would one even expect that there is a extensional modulus of continuity functional?  Your proof shows that it doesn't exist, but it doesn't even seem plausible on the face of it that it would exist.  Or else I am confused or wrong about something."
 email: 58dfeb7db21bb8a5c6aa108b804078fd

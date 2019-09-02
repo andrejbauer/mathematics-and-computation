@@ -1,5 +1,5 @@
 name: Zemyla
 date: '2016-10-02 06:28:44'
 url: ''
-message: "S is also a Comonad. The extract function is simple: extract xs = find xs (const True). duplicate is a little bit more difficult: duplicate xs = S $ \\p -&gt; S $ \\q -&gt; find xs (\\a -&gt; p (S $ const a) &amp;&amp; q a)\r\n\r\nIntuitively, what duplicate does, given a predicate p, is produce another S. When that S is given a predicate q, it checks every value a in the original to see if it satisfies both p (singleton a) and q a.\r\n\r\nThis Comonad is not unique: It could also use False and (||) instead of True and (&amp;&amp;), or even False and xor."
+message: "S is also a Comonad. The extract function is simple: extract xs = find xs (const True). duplicate is a little bit more difficult: duplicate xs = S $ \\p -&gt; S $ \\q -&gt; find xs (\\a -&gt; p (S $ const a) &amp;&amp; q a)\n\nIntuitively, what duplicate does, given a predicate p, is produce another S. When that S is given a predicate q, it checks every value a in the original to see if it satisfies both p (singleton a) and q a.\n\nThis Comonad is not unique: It could also use False and (||) instead of True and (&amp;&amp;), or even False and xor."
 email: f7cf8ae00f59228e81c03a142fd702de

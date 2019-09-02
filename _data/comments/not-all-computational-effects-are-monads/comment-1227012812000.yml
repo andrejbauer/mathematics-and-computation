@@ -1,5 +1,5 @@
 name: matija
 date: '2008-11-18 13:53:32'
 url: ''
-message: "Timeout is an instance of an effect handler, a generalisation of exception handlers to effects that can be represented by algebraic theories (single-sorted equational theories). Time has such a representation if one takes a single unary operation 'tick' and no equations. Each such theory gives rise to a monad, and for time, it is the one that jeremy has suggested.\r\n\r\nYou can take a look at http://matija.pretnar.info/handlers-of-algebraic-effects.pdf for more detail."
+message: "Timeout is an instance of an effect handler, a generalisation of exception handlers to effects that can be represented by algebraic theories (single-sorted equational theories). Time has such a representation if one takes a single unary operation 'tick' and no equations. Each such theory gives rise to a monad, and for time, it is the one that jeremy has suggested.\n\nYou can take a look at http://matija.pretnar.info/handlers-of-algebraic-effects.pdf for more detail."
 email: 81edd40c675051c393c53f72b7c1428a

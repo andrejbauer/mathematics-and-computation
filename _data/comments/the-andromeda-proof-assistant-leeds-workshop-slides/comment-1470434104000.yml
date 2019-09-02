@@ -1,5 +1,5 @@
 name: Matt Oliveri
 date: '2016-08-05 23:55:04'
 url: ''
-message: "&gt; It’s because of handlers. They let us write something like this: ...\r\n\r\nOh wow! That is such a cool way to break everything! It's basically a dangling pointer into a deallocated stack frame!"
+message: "&gt; It’s because of handlers. They let us write something like this: ...\n\nOh wow! That is such a cool way to break everything! It's basically a dangling pointer into a deallocated stack frame!"
 email: 66cbd251bde282eb2e1584080e3604ea

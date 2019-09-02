@@ -1,5 +1,5 @@
 name: bou
 date: '2006-05-03 11:17:06'
 url: ''
-message: "Congratulations for this short summary. I have enjoyed its reading.\r\n\r\nLet me write some misprints (at least in my opinion) I have found in the last page. \r\n\r\n1. The equality stated in Theorem 3.6 si simply an inclusion \\subseteq (by cardinality reasons it is obvious they are different)\r\n\r\n2. In the first case of the definition of f(n) you must use p(n+1) and not p(n)."
+message: "Congratulations for this short summary. I have enjoyed its reading.\n\nLet me write some misprints (at least in my opinion) I have found in the last page. \n\n1. The equality stated in Theorem 3.6 si simply an inclusion \\subseteq (by cardinality reasons it is obvious they are different)\n\n2. In the first case of the definition of f(n) you must use p(n+1) and not p(n)."
 email: 427d59176590be1274ada5d7736d37aa

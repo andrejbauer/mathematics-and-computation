@@ -6,18 +6,6 @@ author: Matija Pretnar
 layout: post
 guid: http://math.andrej.com/?p=706
 permalink: /2010/09/28/how-eff-handles-built-in-effects/
-bfa_ata_body_title:
-  - How eff handles built-in effects
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - How eff handles built-in effects
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Eff
   - Guest post

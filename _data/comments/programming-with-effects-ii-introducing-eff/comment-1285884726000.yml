@@ -1,5 +1,5 @@
 name: Martin Pärtel
 date: '2010-10-01 00:12:06'
 url: ''
-message: "I managed to sort of implement <a href=\"http://pastebin.com/SEsdKFm2\" rel=\"nofollow\">a look-alike language</a> as a pair of Haskell monads.\r\n\r\nThe min_choice example works well - the Haskell version is practically a line-for-line translation. Unfortunately it failed to typecheck when I tried to program with more than one value type, which I guess is unsurprising. It was a fun exercise nevertheless :)\r\n\r\nYou mention a \"precise connection\" between algebras and monads. What do you mean by that? Is there more or less a straightforward mapping between eff and (Haskell) monads?"
+message: "I managed to sort of implement <a href=\"http://pastebin.com/SEsdKFm2\" rel=\"nofollow\">a look-alike language</a> as a pair of Haskell monads.\n\nThe min_choice example works well - the Haskell version is practically a line-for-line translation. Unfortunately it failed to typecheck when I tried to program with more than one value type, which I guess is unsurprising. It was a fun exercise nevertheless :)\n\nYou mention a \"precise connection\" between algebras and monads. What do you mean by that? Is there more or less a straightforward mapping between eff and (Haskell) monads?"
 email: 70065d13c6bd803a871f8d37bd3e9099

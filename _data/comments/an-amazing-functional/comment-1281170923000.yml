@@ -1,5 +1,5 @@
 name: Heinrich Apfelmus
 date: '2010-08-07 10:48:43'
 url: ''
-message: "Awesome!\r\n\r\nA small remark: I think the remark on laziness of <code>p True</code> versus <code>if p True then True else False</code> is nonsense. Both have the same behavior: they are strict in <code>p</code>, because forcing either expression will force <code>p</code> as well.\r\n\r\nMaybe you're thinking of a strict-by-default semantics with suspensions along the lines of <code>Lazy (p True)</code> versus <code>if p True then Lazy True else Lazy False</code>, but that's not how it happens in Haskell."
+message: "Awesome!\n\nA small remark: I think the remark on laziness of <code>p True</code> versus <code>if p True then True else False</code> is nonsense. Both have the same behavior: they are strict in <code>p</code>, because forcing either expression will force <code>p</code> as well.\n\nMaybe you're thinking of a strict-by-default semantics with suspensions along the lines of <code>Lazy (p True)</code> versus <code>if p True then Lazy True else Lazy False</code>, but that's not how it happens in Haskell."
 email: bcf3c21ce05cfb6788e25dcc3821b3c7

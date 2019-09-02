@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=283
 permalink: /2009/09/09/constructive-gem-juggling-exponentials/
-bfa_ata_body_title:
-  - 'Constructive gem: juggling exponentials'
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - 'Constructive gem: juggling exponentials'
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Gems and stones
 ---

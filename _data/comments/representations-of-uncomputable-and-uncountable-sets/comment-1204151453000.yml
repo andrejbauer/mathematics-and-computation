@@ -1,5 +1,5 @@
 name: Kaveh
 date: '2008-02-27 23:30:53'
 url: 'http://'
-message: "&gt; but what operations on the set do you want to compute with?\r\n\r\nI have two questions regarding this condition:\r\n\r\n1. Why is it important from pragmatic point of view? For a computational task all we need is to be able to feed the input and read the output (maybe in a uniform way), we don't need to be able to compute any function on representation.\r\n\r\n2. Is this a sufficient condition for accepting a representation(/coding/numbering/naming)? As I wrote in 1, what is important is that we should be able to communicate with the computing machine. Does the operations grantee this?"
+message: "&gt; but what operations on the set do you want to compute with?\n\nI have two questions regarding this condition:\n\n1. Why is it important from pragmatic point of view? For a computational task all we need is to be able to feed the input and read the output (maybe in a uniform way), we don't need to be able to compute any function on representation.\n\n2. Is this a sufficient condition for accepting a representation(/coding/numbering/naming)? As I wrote in 1, what is important is that we should be able to communicate with the computing machine. Does the operations grantee this?"
 email: 6950a6721b32f1fcf39a47663b3918a1

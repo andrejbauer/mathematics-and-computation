@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/2007/04/12/implementing-real-numbers-with-rz/
 permalink: /2007/04/12/implementing-real-numbers-with-rz/
-bfa_ata_body_title:
-  - Implementing real numbers with RZ
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - Implementing real numbers with RZ
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Computation
   - Constructive math

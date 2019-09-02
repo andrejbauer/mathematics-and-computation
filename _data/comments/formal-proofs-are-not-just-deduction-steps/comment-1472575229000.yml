@@ -1,5 +1,5 @@
 name: Daniel R Grayson
 date: '2016-08-30 18:40:29'
 url: 'http://dangrayson.com/'
-message: "I wonder what meaning to attach to this bit: \"If we really do believe that computation is basic then proof checkers should allow general and explicit computation inside the trusted core. After all, if you do not trust your own computer to compute correctly, why would you trust it to verify proofs?\"\r\n\r\nFor example, I trust my computer to compute, for two 32 binary natural numbers x and y, a third one, z, such that x+y is congruent to z modulo 2^32.   Do you have in mind that we would manually link that computational ability to an appropriate formalization?"
+message: "I wonder what meaning to attach to this bit: \"If we really do believe that computation is basic then proof checkers should allow general and explicit computation inside the trusted core. After all, if you do not trust your own computer to compute correctly, why would you trust it to verify proofs?\"\n\nFor example, I trust my computer to compute, for two 32 binary natural numbers x and y, a third one, z, such that x+y is congruent to z modulo 2^32.   Do you have in mind that we would manually link that computational ability to an appropriate formalization?"
 email: ca4caab58792c69b9f90712f2548010f

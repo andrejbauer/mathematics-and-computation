@@ -1,5 +1,5 @@
 name: Allen Li
 date: '2012-05-16 11:49:22'
 url: ''
-message: "I realize this conversation is long over, but for the sake of the people who may travel the same muddy path of the Python lambda and land on the same page, a little bit of clarification is necessary.\r\n\r\n@Frank\r\nList comprehensions \"leaking\" variables has to do with their implementation in Python 2.X, namely, using Python's for loops, which do not make their own local scope and thus \"leak\" variables by design.  This has been fixed in Python 3.X.  \r\n\r\nThe problem with lambdas in list comprehensions has to do with references and mutation-based loops."
+message: "I realize this conversation is long over, but for the sake of the people who may travel the same muddy path of the Python lambda and land on the same page, a little bit of clarification is necessary.\n\n@Frank\nList comprehensions \"leaking\" variables has to do with their implementation in Python 2.X, namely, using Python's for loops, which do not make their own local scope and thus \"leak\" variables by design.  This has been fixed in Python 3.X.  \n\nThe problem with lambdas in list comprehensions has to do with references and mutation-based loops."
 email: 0b277db04c966dedb36f5c53342f387c

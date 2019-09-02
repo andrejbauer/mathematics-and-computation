@@ -11,7 +11,6 @@ categories:
   - Programming
   - Talks
   - Teaching
-  - Videos
 ---
 I have had the honor to lecture at the [Oregon Programming Language Summer School 2018](https://www.cs.uoregon.edu/research/summerschool/summer18/index.php) on the topic of algebraic effects and handlers. The notes, materials and the lectures are available online:
 

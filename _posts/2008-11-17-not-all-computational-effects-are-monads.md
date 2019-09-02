@@ -8,11 +8,6 @@ guid: http://math.andrej.com/?p=109
 permalink: /2008/11/17/not-all-computational-effects-are-monads/
 categories:
   - Computation
-tags:
-  - catch
-  - computational effect
-  - monad
-  - timeout
 ---
 Lately I&#8217;ve been thinking about computational effects _in general_, i.e., what is the structure of the &#8220;space of all computational effects&#8221;. We know very little about this topic. I am not even sure we know what &#8220;the space of all computational effects&#8221; is. Because Haskell is very popular and in Haskell computational effects are expressed as monads, many people might think that I am talking about the space of all monads. But I am not, and in this post I show two computational effects which are not of the usual Haskell monad kind. They should present a nice programming challenge to Haskell fans.<!--more-->
 

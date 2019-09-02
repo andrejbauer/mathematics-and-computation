@@ -6,18 +6,6 @@ author: Matija Pretnar
 layout: post
 guid: http://math.andrej.com/?p=623
 permalink: /2010/09/27/programming-with-effects-ii-introducing-eff/
-bfa_ata_body_title:
-  - 'Programming with effects II: Introducing eff'
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - 'Programming with effects II: Introducing eff'
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Computation
   - Eff

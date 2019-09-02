@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/2008/02/02/the-hydra-game/
 permalink: /2008/02/02/the-hydra-game/
-bfa_ata_body_title:
-  - The hydra game
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - The hydra game
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - General
   - Logic

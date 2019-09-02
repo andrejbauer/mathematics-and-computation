@@ -1,5 +1,5 @@
 name: roconnor
 date: '2006-05-07 19:03:46'
 url: 'http://www.livejournal.com/users/r6/'
-message: "Can the proof be done by simply observing that this functional m does not preserve extensionality of functions, and hence cannot be definable in the pure lambda calculus?  Anyway, this is a nice example.\r\n\r\nI'm interested in the continuation implementation because I thought that continuations could be implemented in the pure lambda calculus.  At least they seem to be done in such a way in Haskell's Control.Monad.Cont."
+message: "Can the proof be done by simply observing that this functional m does not preserve extensionality of functions, and hence cannot be definable in the pure lambda calculus?  Anyway, this is a nice example.\n\nI'm interested in the continuation implementation because I thought that continuations could be implemented in the pure lambda calculus.  At least they seem to be done in such a way in Haskell's Control.Monad.Cont."
 email: fab61c13db29a1c73460ab0a9cb47565

@@ -1,5 +1,5 @@
 name: Paul Taylor
 date: '2012-12-27 14:44:04'
 url: 'http://www.paultaylor.eu'
-message: "Dan, I'm not saying that Type Theory makes a major error, just that the arrow syntax elides a distinction that is in fact more or less the same one that is the subject of Andrej's original posting,\r\n\r\nIf you want to say that type theorists write $A\\to B$ where categorists have $B^A$ and $x:A\\vdash f(x):B$ where categorist write $f:A\\to B$ then I suppose that settles the question."
+message: "Dan, I'm not saying that Type Theory makes a major error, just that the arrow syntax elides a distinction that is in fact more or less the same one that is the subject of Andrej's original posting,\n\nIf you want to say that type theorists write $A\\to B$ where categorists have $B^A$ and $x:A\\vdash f(x):B$ where categorist write $f:A\\to B$ then I suppose that settles the question."
 email: 24674efd7c9de6dad323b394fbdf2ebd

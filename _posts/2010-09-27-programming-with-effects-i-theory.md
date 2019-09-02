@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=560
 permalink: /2010/09/27/programming-with-effects-i-theory/
-bfa_ata_body_title:
-  - 'Programming with effects I: Theory'
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - 'Programming with effects I: Theory'
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Computation
   - Eff

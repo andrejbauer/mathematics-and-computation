@@ -1,5 +1,5 @@
 name: Jake Donham
 date: '2009-09-08 22:14:27'
 url: ''
-message: "The proofs so far seem all to rely on a \"denotational\" equality between propositions. It seems trivial that `p or not p` with such a coarse equality, since you can always just test whether `p = T`.\r\n\r\n(Maybe I don't understand what you mean by an arbitrary truth value `p in Omega`--is that different from a proposition?)\r\n\r\nThis \"denotational\" equality seems inherently nonconstructive to me. What do we get if we use a finer equality? Is that meaningful in this setting?"
+message: "The proofs so far seem all to rely on a \"denotational\" equality between propositions. It seems trivial that `p or not p` with such a coarse equality, since you can always just test whether `p = T`.\n\n(Maybe I don't understand what you mean by an arbitrary truth value `p in Omega`--is that different from a proposition?)\n\nThis \"denotational\" equality seems inherently nonconstructive to me. What do we get if we use a finer equality? Is that meaningful in this setting?"
 email: ebb54fbd2c78a5a371f4f02cbe6a3c81

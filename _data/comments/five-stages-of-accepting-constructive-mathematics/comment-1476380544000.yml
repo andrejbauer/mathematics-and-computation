@@ -1,5 +1,5 @@
 name: Paul Fabel
 date: '2016-10-13 19:42:24'
 url: ''
-message: "Great paper! Great talk! But I am in stage confusion.  \r\n\r\nI think I understand the proof of Theorem 1.3 using classical reasoning, but am wondering where the proof of Theorem 1.3 fails to establish LEM in constructive mathematics.\r\n\r\nIn particular the proof of Theorem 1.3 ( that AC=&gt;LEM) seems to use only a very weak, (and constructively accepted?) form of AC, namely that if we have precisely one or two distinct inhabited subsets of {0,1}, then we may pick an element from each one.\r\n\r\nAre the sets A and B `constructively well defined'?\r\n\r\nIs the problem that we `have' two sets A and B but don't `know'  if A=B?"
+message: "Great paper! Great talk! But I am in stage confusion.  \n\nI think I understand the proof of Theorem 1.3 using classical reasoning, but am wondering where the proof of Theorem 1.3 fails to establish LEM in constructive mathematics.\n\nIn particular the proof of Theorem 1.3 ( that AC=&gt;LEM) seems to use only a very weak, (and constructively accepted?) form of AC, namely that if we have precisely one or two distinct inhabited subsets of {0,1}, then we may pick an element from each one.\n\nAre the sets A and B `constructively well defined'?\n\nIs the problem that we `have' two sets A and B but don't `know'  if A=B?"
 email: 5a45dfaf3ccf7325bfa00d1348e6cff3

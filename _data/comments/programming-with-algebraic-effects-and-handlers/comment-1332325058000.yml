@@ -1,5 +1,5 @@
 name: Arnaud Spiwack
 date: '2012-03-21 11:17:38'
 url: ''
-message: "Well, you could have continuation that map to the empty type as toplevel continuations, but it still makes sense to consider these not too valuable.\r\n\r\nOn the other hand, I don't see how comodels play in that picture. Am I missing something obvious?"
+message: "Well, you could have continuation that map to the empty type as toplevel continuations, but it still makes sense to consider these not too valuable.\n\nOn the other hand, I don't see how comodels play in that picture. Am I missing something obvious?"
 email: e565d0bdd3a1d7423dececf2932c73e4

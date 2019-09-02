@@ -9,10 +9,6 @@ permalink: /2008/08/13/intuitionistic-mathematics-for-physics/
 categories:
   - Constructive math
   - Tutorial
-tags:
-  - infinitesimal analysis
-  - intuitionistic logic
-  - physics
 ---
 At [MSFP 2008](http://msfp.org.uk/) in Iceland I chatted with [Dan Piponi](http://homepage.mac.com/sigfpe/) about physics and intuitionistic mathematics, and he encouraged me to write down some of the ideas. I have little, if anything, original to say, so this seems like an excellent opportunity for a blog post. So let me explain why I think _intuitionistic mathematics is good for physics_.  
 <!--more-->

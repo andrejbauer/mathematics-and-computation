@@ -1,5 +1,5 @@
 name: Dan Ghica
 date: '2013-11-11 17:48:30'
 url: 'http://www.cs.bham.ac.uk/~drg/'
-message: "Jesse, not necessarily. Using literate programming the distinction between the code and the paper disappears. Agda/Coq code can be rendered nicely (and mechanically) into LaTeX. Here is an example: \r\n\r\nM.H. Escardo. Continuity of Godel's system T functionals via effectful forcing. (MFPS'2013)\r\nhttp://www.cs.bham.ac.uk/~mhe/dialogue/dialogue.pdf"
+message: "Jesse, not necessarily. Using literate programming the distinction between the code and the paper disappears. Agda/Coq code can be rendered nicely (and mechanically) into LaTeX. Here is an example: \n\nM.H. Escardo. Continuity of Godel's system T functionals via effectful forcing. (MFPS'2013)\nhttp://www.cs.bham.ac.uk/~mhe/dialogue/dialogue.pdf"
 email: 610d9cbfd6db5b3ca4559151ca3af83b

@@ -1,5 +1,5 @@
 name: Kay
 date: '2010-09-29 18:28:55'
 url: ''
-message: "Something seems missing ( compiled with Ocaml 3.10.2 ):\r\n<code>\r\nocamlbuild -use-menhir -lib nums eff.byte\r\n+ /usr/bin/ocamlc.opt -c -o lexer.cmo lexer.ml\r\nFile \"lexer.mll\", line 49, characters 26-34:\r\nUnbound value new_line\r\nCommand exited with code 2.\r\nmake: *** [byte] Error 10\r\n</code>"
+message: "Something seems missing ( compiled with Ocaml 3.10.2 ):\n<code>\nocamlbuild -use-menhir -lib nums eff.byte\n+ /usr/bin/ocamlc.opt -c -o lexer.cmo lexer.ml\nFile \"lexer.mll\", line 49, characters 26-34:\nUnbound value new_line\nCommand exited with code 2.\nmake: *** [byte] Error 10\n</code>"
 email: 37043983592a4c019a04f46397e3e122

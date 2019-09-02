@@ -10,7 +10,7 @@ categories:
   - Constructive math
   - Talks
 ---
-With Davorin LeÅ¡nik.
+With Davorin Lešnik.
 
 **Abstract:** We investigate the relationship between constructive theory of metric spaces and synthetic topology. Connections between these are established by requiring a relationship to exist between the intrinsic and the metric topology of a space. We propose a non-classical axiom which has several desirable consequences, e.g., that all maps between separable metric spaces are continuous in the sense of metrics, and that, up to topological equivalence, a set can be equipped with at most one metric which makes it complete and separable.
 

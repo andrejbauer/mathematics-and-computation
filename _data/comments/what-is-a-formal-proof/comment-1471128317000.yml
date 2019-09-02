@@ -1,5 +1,5 @@
 name: UnclePaulie
 date: '2016-08-14 00:45:17'
 url: ''
-message: "Thanks for this thoughtful write up. The preference for decidable over semi-decidable algorithms in the absence of any feasible bound on complexity always confused me a little.\r\nI also enjoyed Mike's post very much, though his conclusion in favor of decidable type checking seems like a philosophical technicality that hinges on the exact status of the various transformation stages.\r\n\"Now that the angry Haskell mob has subsided..\"\r\nThat was fun. Although, the angriest person there was decidedly not in the Haskell camp."
+message: "Thanks for this thoughtful write up. The preference for decidable over semi-decidable algorithms in the absence of any feasible bound on complexity always confused me a little.\nI also enjoyed Mike's post very much, though his conclusion in favor of decidable type checking seems like a philosophical technicality that hinges on the exact status of the various transformation stages.\n\"Now that the angry Haskell mob has subsided..\"\nThat was fun. Although, the angriest person there was decidedly not in the Haskell camp."
 email: 637ff069f3e61bbfdfbfe43f146345e6

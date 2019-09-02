@@ -1,5 +1,5 @@
 name: John A.
 date: '2009-07-25 20:45:34'
 url: ''
-message: "Hi,\r\n\r\nCool game.  But I think it has a bug.  You don't seem to eliminate a head attached to the root when picked, so that those \"root heads\" get replicated when you subsequently pick a non root head to eliminate.\r\n\r\nIf I have this to start:\r\n[sourcecode gutter=\"false\"]\r\nO  Y  X \r\n\\ /  /  \r\n O  /  \r\n | / \r\n O\r\n[/sourcecode]\r\nAnd eliminate the X, and then the Y, it's as if I never eliminated the X at all.\r\n\r\nOr perhaps I don't understand the game...\r\n\r\nJohn."
+message: "Hi,\n\nCool game.  But I think it has a bug.  You don't seem to eliminate a head attached to the root when picked, so that those \"root heads\" get replicated when you subsequently pick a non root head to eliminate.\n\nIf I have this to start:\n[sourcecode gutter=\"false\"]\nO  Y  X \n\\ /  /  \n O  /  \n | / \n O\n[/sourcecode]\nAnd eliminate the X, and then the Y, it's as if I never eliminated the X at all.\n\nOr perhaps I don't understand the game...\n\nJohn."
 email: 753d2c45fb82bf8f1897ab932379645d

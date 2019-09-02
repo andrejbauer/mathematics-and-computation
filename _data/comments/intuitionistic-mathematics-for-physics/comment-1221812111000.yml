@@ -1,5 +1,5 @@
 name: Sridhar Ramesh
 date: '2008-09-19 10:15:11'
 url: 'http://'
-message: "Hm, I see. But it's still not clear to me how to derive the potential existence of non-zero infinitesimals from the principle of microaffinity. Could you expand on that?\r\n\r\nFor example, taking the formalization of this statement as I stated before, `not not exists dx in R, (not (dx = 0) and dx^2 = 0)`, this should be intuitionistically equivalent to `not forall dx in R, not (not (dx = 0) and dx^2 = 0)`, which in turn should be equivalent to `not forall dx in R, (dx^2 = 0 =&gt; not not (dx = 0))`, but this is the <i>negation</i> of what you prove above. Where am I going wrong?"
+message: "Hm, I see. But it's still not clear to me how to derive the potential existence of non-zero infinitesimals from the principle of microaffinity. Could you expand on that?\n\nFor example, taking the formalization of this statement as I stated before, `not not exists dx in R, (not (dx = 0) and dx^2 = 0)`, this should be intuitionistically equivalent to `not forall dx in R, not (not (dx = 0) and dx^2 = 0)`, which in turn should be equivalent to `not forall dx in R, (dx^2 = 0 =&gt; not not (dx = 0))`, but this is the <i>negation</i> of what you prove above. Where am I going wrong?"
 email: 907acf351068fa10a76224b7d19bf48e

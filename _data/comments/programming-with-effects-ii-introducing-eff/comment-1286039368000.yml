@@ -1,5 +1,5 @@
 name: Ohad Kammar
 date: '2010-10-02 19:09:28'
 url: ''
-message: "@Martin Pärtel, if I guessed right how your code looks like:\r\n\r\nWhat interests me is how easy is it to port your code into another monad. That is, if I have a monad that does something and I want to add non-determinism to it, how much scaffolding will I have to build? How much scaffolding will I have to add in Eff (modulo making types check)?"
+message: "@Martin Pärtel, if I guessed right how your code looks like:\n\nWhat interests me is how easy is it to port your code into another monad. That is, if I have a monad that does something and I want to add non-determinism to it, how much scaffolding will I have to build? How much scaffolding will I have to add in Eff (modulo making types check)?"
 email: 32c2468adf089af5cedc95fabc508c55

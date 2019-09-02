@@ -1,5 +1,5 @@
 name: Heinrich Apfelmus
 date: '2009-04-12 09:28:14'
 url: 'http://apfelmus.nfshost.com'
-message: "Perhaps the following analogy is a good response to comment 8 by Radu:\r\n\r\nMathematicians are certainly intelligent enough to calculate 128+395 in their head or on paper. But it will be boring, error-prone and tedious. Fortunately, mathematicians have recognized that this task can be performed by a machine and they can now spend their time with more interesting things.\r\n\r\nSimilarly, programmers are certainly intelligent enough to carefully handle null pointers, but why bother? Let the language and compiler figure it out."
+message: "Perhaps the following analogy is a good response to comment 8 by Radu:\n\nMathematicians are certainly intelligent enough to calculate 128+395 in their head or on paper. But it will be boring, error-prone and tedious. Fortunately, mathematicians have recognized that this task can be performed by a machine and they can now spend their time with more interesting things.\n\nSimilarly, programmers are certainly intelligent enough to carefully handle null pointers, but why bother? Let the language and compiler figure it out."
 email: bcf3c21ce05cfb6788e25dcc3821b3c7

@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/2006/08/15/continuity-begets-continuity-frauenworth-slides/
 permalink: /2006/08/15/continuity-begets-continuity-frauenworth-slides/
-bfa_ata_body_title:
-  - Continuity Begets Continuity (Frauenwörth slides)
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - Continuity Begets Continuity (Frauenwörth slides)
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Constructive math
   - Talks

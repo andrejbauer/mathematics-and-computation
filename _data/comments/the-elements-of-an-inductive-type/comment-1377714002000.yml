@@ -1,5 +1,5 @@
 name: Barak Pearlmutter
 date: '2013-08-28 20:20:02'
 url: 'http://www.bcl.hamilton.ie'
-message: "The word \"successive\" has this issue buried within it, as that notion cannot be formalized. It means \"a finite number of times\" which requires a notion of \"the number of times\"which is done by setting up a mapping from integers below that count to applications. But that count might be a nonstandard integer, and there is no way to formalize that possibility away.\r\n\r\nSo it all comes back to Gödel..."
+message: "The word \"successive\" has this issue buried within it, as that notion cannot be formalized. It means \"a finite number of times\" which requires a notion of \"the number of times\"which is done by setting up a mapping from integers below that count to applications. But that count might be a nonstandard integer, and there is no way to formalize that possibility away.\n\nSo it all comes back to Gödel..."
 email: 5fbfc4239bd1430d49879c3d0b63f3d8

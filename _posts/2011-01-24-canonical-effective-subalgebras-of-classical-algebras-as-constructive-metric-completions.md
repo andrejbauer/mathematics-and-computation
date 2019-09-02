@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=431
 permalink: /2011/01/24/canonical-effective-subalgebras-of-classical-algebras-as-constructive-metric-completions/
-bfa_ata_body_title:
-  - Canonical Effective Subalgebras of Classical Algebras as Constructive Metric Completions
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - Canonical Effective Subalgebras of Classical Algebras as Constructive Metric Completions
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Computation
   - Constructive math

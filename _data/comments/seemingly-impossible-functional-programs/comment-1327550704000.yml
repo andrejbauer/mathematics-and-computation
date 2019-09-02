@@ -1,5 +1,5 @@
 name: Ralph Loader
 date: '2012-01-26 05:05:04'
 url: ''
-message: "Do these work for functions that have state?  To state precisely what's wanted one would have to be careful about extensionality (although you glossed over it, just as you need to be careful about totality in the pure functional setting).\r\n\r\n[Even if the particular programs above don't work with stateful functions, the Kreisel-Lacombe-Shoenfield theorem makes one think that it is possible to do the same thing for stateful functions.]"
+message: "Do these work for functions that have state?  To state precisely what's wanted one would have to be careful about extensionality (although you glossed over it, just as you need to be careful about totality in the pure functional setting).\n\n[Even if the particular programs above don't work with stateful functions, the Kreisel-Lacombe-Shoenfield theorem makes one think that it is possible to do the same thing for stateful functions.]"
 email: 79861556213d53005a28ed2f4570525d

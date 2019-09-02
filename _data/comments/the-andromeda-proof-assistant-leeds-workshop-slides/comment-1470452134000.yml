@@ -1,5 +1,5 @@
 name: Mike Shulman
 date: '2016-08-06 04:55:34'
 url: ''
-message: "<i> It’s basically a dangling pointer into a deallocated stack frame!</i>\r\n\r\nYeah, that was my reaction too.  Are we really still doing type theory?"
+message: "<i> It’s basically a dangling pointer into a deallocated stack frame!</i>\n\nYeah, that was my reaction too.  Are we really still doing type theory?"
 email: c72e8ff1dfaaaacdbe9844d0202f378a

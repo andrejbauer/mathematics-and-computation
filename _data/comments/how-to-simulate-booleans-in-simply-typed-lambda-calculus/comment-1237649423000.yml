@@ -1,5 +1,5 @@
 name: jeremy
 date: '2009-03-21 16:30:23'
 url: ''
-message: "Apologies for the poor formatting!  Here's a version of \"cond\" without type annotations which I hope will come out better:<blockquote><pre>\r\ncond :: Type t -&gt; Boolean -&gt; t -&gt; t -&gt; t\r\ncond Base = \\c -&gt; c\r\ncond (t1 :-&gt; t2) = \\c k1 k2 x -&gt; cond t2 c (k1 x) (k2 x) \r\ncond (t1 :* t2) = \\c k1 k2 -&gt; (cond t1 c (fst k1) (fst k2), cond t2 c (snd k1) (snd k2))\r\n</pre></blockquote>"
+message: "Apologies for the poor formatting!  Here's a version of \"cond\" without type annotations which I hope will come out better:<blockquote><pre>\ncond :: Type t -&gt; Boolean -&gt; t -&gt; t -&gt; t\ncond Base = \\c -&gt; c\ncond (t1 :-&gt; t2) = \\c k1 k2 x -&gt; cond t2 c (k1 x) (k2 x) \ncond (t1 :* t2) = \\c k1 k2 -&gt; (cond t1 c (fst k1) (fst k2), cond t2 c (snd k1) (snd k2))\n</pre></blockquote>"
 email: 1a22832368217941397442baeaec3152

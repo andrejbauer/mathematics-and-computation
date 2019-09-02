@@ -1,5 +1,5 @@
 name: Yoav
 date: '2009-08-22 15:30:08'
 url: ''
-message: "1. You said \"If you are correct in your belief that `2 = Omega`, you should be able to write a program that takes as input a boolean function `f : NN -&gt; 2` and outputs the truth value `forall n in N. f(n)`. Can you do it?\" I can, if the theory is decidable, like 'Presburger Arithmetic' and the 'Tarski's axioms of Euclidian Geometry'\r\n\r\n2. Another option of existing more than two truth values on `Omega` is when there are independent sentences on the theory, like the 'Goodstein's theorem' on 'Peano axioms'"
+message: "1. You said \"If you are correct in your belief that `2 = Omega`, you should be able to write a program that takes as input a boolean function `f : NN -&gt; 2` and outputs the truth value `forall n in N. f(n)`. Can you do it?\" I can, if the theory is decidable, like 'Presburger Arithmetic' and the 'Tarski's axioms of Euclidian Geometry'\n\n2. Another option of existing more than two truth values on `Omega` is when there are independent sentences on the theory, like the 'Goodstein's theorem' on 'Peano axioms'"
 email: 05154cc0b29c9463a7f7521c205d78c0

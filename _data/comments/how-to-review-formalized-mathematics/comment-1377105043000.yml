@@ -1,5 +1,5 @@
 name: Mike Shulman
 date: '2013-08-21 19:10:43'
 url: 'http://www.sandiego.edu/~shulman'
-message: "Well said.  The point that forcing the reviewer to download the code from a web site compromises his or her anonymity is important, and I suspect very under-appreciated.  I do wonder, though, how many academics have access to the server logs for their institutional web sites.\r\n\r\nOne interesting possibility to consider is the use of \"literate programming\", where the same source file(s) can be run through LaTeX to produce the published paper and also through the proof checker to verify the proofs.  Agda has this capability now, although I don't think that Coq does."
+message: "Well said.  The point that forcing the reviewer to download the code from a web site compromises his or her anonymity is important, and I suspect very under-appreciated.  I do wonder, though, how many academics have access to the server logs for their institutional web sites.\n\nOne interesting possibility to consider is the use of \"literate programming\", where the same source file(s) can be run through LaTeX to produce the published paper and also through the proof checker to verify the proofs.  Agda has this capability now, although I don't think that Coq does."
 email: c72e8ff1dfaaaacdbe9844d0202f378a

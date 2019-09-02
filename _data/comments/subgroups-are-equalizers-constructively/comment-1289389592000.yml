@@ -1,5 +1,5 @@
 name: Arnaud Spiwack
 date: '2010-11-10 12:46:32'
 url: ''
-message: "Unless my mind is going very wrong, in a category with enough cokernel pairs, $f$ being an equaliser is equivalent to $f$ being an equaliser of its cokernel pair. So I hardly see the point of non-constructive proofs of such a statement.\r\n\r\nAlso I have a nice cheeky exercise. The statement above (all subgroups are equalisers) requires the principle of unique choice (if $f$ is a group morphism both epi and mono, then it is invertible). The exercise is to find where it was used in the proof above."
+message: "Unless my mind is going very wrong, in a category with enough cokernel pairs, $f$ being an equaliser is equivalent to $f$ being an equaliser of its cokernel pair. So I hardly see the point of non-constructive proofs of such a statement.\n\nAlso I have a nice cheeky exercise. The statement above (all subgroups are equalisers) requires the principle of unique choice (if $f$ is a group morphism both epi and mono, then it is invertible). The exercise is to find where it was used in the proof above."
 email: e565d0bdd3a1d7423dececf2932c73e4

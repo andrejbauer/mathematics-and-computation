@@ -1,5 +1,5 @@
 name: Ryan Ingram
 date: '2010-09-28 09:08:29'
 url: ''
-message: "Right, in the combined effect the sharing is explicit; it lets you distinguish between\r\n\r\n<code>\r\n    print \"0\"\r\n    choose (2,3)\r\n</code>\r\n\r\nand\r\n\r\n\r\n    choose (2,3)\r\n    print \"0\"\r\n\r\n\r\nwhich otherwise commute (or print \"0\" twice to the single output log version)."
+message: "Right, in the combined effect the sharing is explicit; it lets you distinguish between\n\n<code>\n    print \"0\"\n    choose (2,3)\n</code>\n\nand\n\n\n    choose (2,3)\n    print \"0\"\n\n\nwhich otherwise commute (or print \"0\" twice to the single output log version)."
 email: e763e4069d889e9f2084a7af2ad14fd7

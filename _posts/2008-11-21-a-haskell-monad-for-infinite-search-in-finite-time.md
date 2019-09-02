@@ -10,9 +10,6 @@ categories:
   - Computation
   - Constructive math
   - Guest post
-tags:
-  - Haskell
-  - monad
 ---
 I show how monads in Haskell can be used to structure infinite search algorithms, and indeed get them for free. This is a follow-up to my blog post [Seemingly impossible functional programs](http://math.andrej.com/2007/09/28/seemingly-impossible-functional-programs/). In the two papers [Infinite sets that admit fast exhaustive search](http://www.cs.bham.ac.uk/~mhe/papers/exhaustive.pdf) (LICS07) and [Exhaustible sets in higher-type computation](http://www.lmcs-online.org/ojs/viewarticle.php?id=395&layout=abstract) (LMCS08), I discussed what kinds of infinite sets admit exhaustive search in finite time, and how to systematically build such sets. Here I build them using monads, which makes the algorithms more transparent (and economic).<!--more-->
 

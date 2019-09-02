@@ -1,5 +1,5 @@
 name: Andrej Bauer
 date: '2012-03-20 17:32:47'
 url: 'http://andrej.com/'
-message: "Resources do not have access to the continuation, while ordinary handlers do.\r\n\r\nIt makes little sense for a \"top-level handler\" to be able to manipulate the continuation, since the continuation is open-ended in nature, i.e., it is not delimited. But this is not why we defined resources. We defined resources as a direct implementation of the theoretical idea of co-models."
+message: "Resources do not have access to the continuation, while ordinary handlers do.\n\nIt makes little sense for a \"top-level handler\" to be able to manipulate the continuation, since the continuation is open-ended in nature, i.e., it is not delimited. But this is not why we defined resources. We defined resources as a direct implementation of the theoretical idea of co-models."
 email: 59d57d95bc7c45ced5f1969279cec06b

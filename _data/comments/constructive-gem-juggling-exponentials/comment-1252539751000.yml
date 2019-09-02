@@ -1,5 +1,5 @@
 name: Ryan Ingram
 date: '2009-09-10 01:42:31'
 url: ''
-message: "Chris:  I did this:\r\n\r\n\r\n\r\n<blockquote><pre>\r\n{-# LANGAUGE EmptyDataDecls #-}\r\n\r\ndata Zero\r\nzero_elim :: Zero -&gt; a\r\nzero_elim _ = error \"zero_elim\"\r\n\r\nThen use zero_elim where necessary:\r\n\r\nexp_0 :: (a :^ Zero) :=: One\r\nexp_0 = Bi (const ()) (\\() -&gt; zero_elim)\r\n</pre></blockquote>\r\n\r\n"
+message: "Chris:  I did this:\n\n\n\n<blockquote><pre>\n{-# LANGAUGE EmptyDataDecls #-}\n\ndata Zero\nzero_elim :: Zero -&gt; a\nzero_elim _ = error \"zero_elim\"\n\nThen use zero_elim where necessary:\n\nexp_0 :: (a :^ Zero) :=: One\nexp_0 = Bi (const ()) (\\() -&gt; zero_elim)\n</pre></blockquote>\n\n"
 email: 446c3ce6c55d671814ed6c85a52c9005

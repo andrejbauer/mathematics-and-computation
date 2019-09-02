@@ -1,5 +1,5 @@
 name: gasche
 date: '2012-01-21 18:21:58'
 url: ''
-message: "[sourcecode gutter=\"false\"]\r\n# type nat = { iter : 'a . ('a -&gt; 'a) -&gt; 'a -&gt; 'a };;\r\n# let one = { iter = fun f x -&gt; f x };;\r\n# let succ n = { iter = fun f x -&gt; n.iter f (f x) };;\r\n# let ack m = m.iter (fun f n -&gt; n.iter f (f one)) succ;;\r\nval ack : nat -&gt; nat -&gt; nat = &lt;fun&gt;\r\n# let to_int n = n.iter ((+) 1) 0;;\r\n# let rec of_int = function 0 -&gt; { iter = fun f x -&gt; x } | n -&gt; succ (of_int (n - 1));;\r\n# to_int (ack (of_int 2) (of_int 3));;\r\n- : int = 9\r\n[/sourcecode]"
+message: "[sourcecode gutter=\"false\"]\n# type nat = { iter : 'a . ('a -&gt; 'a) -&gt; 'a -&gt; 'a };;\n# let one = { iter = fun f x -&gt; f x };;\n# let succ n = { iter = fun f x -&gt; n.iter f (f x) };;\n# let ack m = m.iter (fun f n -&gt; n.iter f (f one)) succ;;\nval ack : nat -&gt; nat -&gt; nat = &lt;fun&gt;\n# let to_int n = n.iter ((+) 1) 0;;\n# let rec of_int = function 0 -&gt; { iter = fun f x -&gt; x } | n -&gt; succ (of_int (n - 1));;\n# to_int (ack (of_int 2) (of_int 3));;\n- : int = 9\n[/sourcecode]"
 email: 3ae3ade27668864968c471f1d1bc592c

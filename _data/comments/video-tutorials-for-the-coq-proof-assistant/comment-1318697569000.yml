@@ -1,5 +1,5 @@
 name: Dan Ghica
 date: '2011-10-15 18:52:49'
 url: ''
-message: "Andrej, the tutorials are *great*. Can you please add one more that has some structural induction? I would like to see how you prove this:\r\n\r\nTheorem map_id : forall ls, map id ls = ls.\r\n\r\nCheers!\r\nDan"
+message: "Andrej, the tutorials are *great*. Can you please add one more that has some structural induction? I would like to see how you prove this:\n\nTheorem map_id : forall ls, map id ls = ls.\n\nCheers!\nDan"
 email: dcec63f573936afa8b19a74cfa2a793b

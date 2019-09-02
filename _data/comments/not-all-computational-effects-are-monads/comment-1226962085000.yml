@@ -1,5 +1,5 @@
 name: speleologic
 date: '2008-11-17 23:48:05'
 url: 'http://speleologic.livejournal.com/'
-message: "Do we get anything by reducing monads to first-class continuations plus a piece of state? \r\n\r\nI am referring to Filinski's completeness result for monads from POPL 1994: http://www.diku.dk/hjemmesider/ansatte/andrzej/papers/RM-abstract.html"
+message: "Do we get anything by reducing monads to first-class continuations plus a piece of state? \n\nI am referring to Filinski's completeness result for monads from POPL 1994: http://www.diku.dk/hjemmesider/ansatte/andrzej/papers/RM-abstract.html"
 email: 716c19accd0ac4086332a0e13b903533

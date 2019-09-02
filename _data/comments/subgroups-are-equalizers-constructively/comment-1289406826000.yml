@@ -1,5 +1,5 @@
 name: Arnaud Spiwack
 date: '2010-11-10 17:33:46'
 url: ''
-message: "@Andrej: \r\nThe functional-relation definition of unique choice is equivalent to <em>functions both injective and surjective are invertible</em>. When generalising a property of sets to categories, the tension between being epi and surjective is always an issue. I tend to favour epi over surjective because I find it a more elegant property. I've never really had to care until today, I must say.\r\n\r\nSo, I'm guessing that in numbered sets epi and surjective is not synonymous. I don't know what a function between numbered sets is, to be honest."
+message: "@Andrej: \nThe functional-relation definition of unique choice is equivalent to <em>functions both injective and surjective are invertible</em>. When generalising a property of sets to categories, the tension between being epi and surjective is always an issue. I tend to favour epi over surjective because I find it a more elegant property. I've never really had to care until today, I must say.\n\nSo, I'm guessing that in numbered sets epi and surjective is not synonymous. I don't know what a function between numbered sets is, to be honest."
 email: e565d0bdd3a1d7423dececf2932c73e4

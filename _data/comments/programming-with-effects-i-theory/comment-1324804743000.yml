@@ -1,5 +1,5 @@
 name: Tom Ellis
 date: '2011-12-25 10:19:03'
 url: 'http://web.jaguarpaw.co.uk/~tom/contact/'
-message: "Andrej, I just want to check I'm understanding correctly. When you introduce the universal property of the free algebra you say\r\n\r\nGiven a $\\Simga$-algebra $A$ and a map $r : X \\to A$ there is a unique homomorphism such that ...\r\nand for every operation ...\r\n\r\nThe latter is superfluous isn't it?  It's just the definition of being a homomorphism of $A$-algebras."
+message: "Andrej, I just want to check I'm understanding correctly. When you introduce the universal property of the free algebra you say\n\nGiven a $\\Simga$-algebra $A$ and a map $r : X \\to A$ there is a unique homomorphism such that ...\nand for every operation ...\n\nThe latter is superfluous isn't it?  It's just the definition of being a homomorphism of $A$-algebras."
 email: 15f111b4e413a12de6dd05745e674199

@@ -1,5 +1,5 @@
 name: Thad Coons
 date: '2005-05-18 21:37:01'
 url: ''
-message: "Two-valued propositional logic is fairly easy to implement. It seems to me that the logical operations \"forall\" and \"there_exists\" belong to predicate logic. This is more complex but still manageable with well-defined, finite domains. The difficulties seem to lie in infinite domains, such as the natural numbers.\r\nBut if for whatever reason, two logical values aren't enough, it would seem only natural to try the next step...three.\r\n \r\n"
+message: "Two-valued propositional logic is fairly easy to implement. It seems to me that the logical operations \"forall\" and \"there_exists\" belong to predicate logic. This is more complex but still manageable with well-defined, finite domains. The difficulties seem to lie in infinite domains, such as the natural numbers.\nBut if for whatever reason, two logical values aren't enough, it would seem only natural to try the next step...three.\n \n"
 email: da50fe7fb23c0c50d543ff7bdb466adc

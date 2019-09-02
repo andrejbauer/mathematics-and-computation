@@ -1,5 +1,5 @@
 name: Andrej Bauer
 date: '2009-09-09 23:53:37'
 url: 'http://andrej.com/'
-message: "Jake (6): the details are as follows. Suppose `S = {T, p}`. The statement \"`S` is a singleton\" is equivalent to `p`. Indeed: if `p` holds then `T = p` and `S = {T}`, a singleton. Conversely, if `S` is a singleton then `T = p`, which means that `p` holds.\r\n\r\nIn other words, if you do not know whether `p` holds then you do not know whether `S` is a singleton, and vice versa. But if you know that `S` is not a singleton, then you know that `p` does not hold."
+message: "Jake (6): the details are as follows. Suppose `S = {T, p}`. The statement \"`S` is a singleton\" is equivalent to `p`. Indeed: if `p` holds then `T = p` and `S = {T}`, a singleton. Conversely, if `S` is a singleton then `T = p`, which means that `p` holds.\n\nIn other words, if you do not know whether `p` holds then you do not know whether `S` is a singleton, and vice versa. But if you know that `S` is not a singleton, then you know that `p` does not hold."
 email: 59d57d95bc7c45ced5f1969279cec06b

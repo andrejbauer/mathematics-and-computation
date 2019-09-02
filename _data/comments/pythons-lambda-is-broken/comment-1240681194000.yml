@@ -1,5 +1,5 @@
 name: Adam
 date: '2009-04-25 19:39:54'
 url: ''
-message: "isn't map deprecated?  It's dangerous out there, use this:\r\n\r\n&gt;&gt;&gt; fs = [(lambda i: lambda n: i + n)(i) for i in range(10)]\r\n&gt;&gt;&gt; fs[3](4)\r\n7"
+message: "isn't map deprecated?  It's dangerous out there, use this:\n\n&gt;&gt;&gt; fs = [(lambda i: lambda n: i + n)(i) for i in range(10)]\n&gt;&gt;&gt; fs[3](4)\n7"
 email: 5cf854dbb1d31739c9339698ce1effad

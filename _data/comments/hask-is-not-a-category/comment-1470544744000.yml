@@ -1,5 +1,5 @@
 name: Jon Sterling
 date: '2016-08-07 06:39:04'
 url: 'http://www.jonmsterling.com/'
-message: "Marc -- Not sure what you mean by CT being \"broken\" for Turing Complete systems. Decidability of halting doesn't seem important in this context...\r\n\r\nAndrej is observing that \"Hask\" (at least currently) fails to form a category in the sense that naïve Haskellers wished it would... This is not because of turing completeness, but because of laziness."
+message: "Marc -- Not sure what you mean by CT being \"broken\" for Turing Complete systems. Decidability of halting doesn't seem important in this context...\n\nAndrej is observing that \"Hask\" (at least currently) fails to form a category in the sense that naïve Haskellers wished it would... This is not because of turing completeness, but because of laziness."
 email: 7472e119fb9da9e90e84247da2c605bf

@@ -1,5 +1,5 @@
 name: Kamran
 date: '2009-04-20 18:41:21'
 url: 'http://terrajava.blogspot.com'
-message: "It is not an issue i think.. it is just variable scoping... try this, it should work\r\n\r\nfs= map(lambda i:lambda n: i + n, range(10))"
+message: "It is not an issue i think.. it is just variable scoping... try this, it should work\n\nfs= map(lambda i:lambda n: i + n, range(10))"
 email: 47776be4f459744a68c33abc032b307c

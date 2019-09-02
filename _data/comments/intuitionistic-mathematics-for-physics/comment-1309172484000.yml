@@ -1,5 +1,5 @@
 name: Janno
 date: '2011-06-27 13:01:24'
 url: ''
-message: "This is very intriguing. Thank you for this post!\r\n\r\nWhat I don't get is how you compute the derivative of x^n. It seems to me that you make the assumption that the derivative is n*x^(n-1), put that in and arrive at your assumption. I guess I'm missing something here. \r\nI tried to compute the derivative of f(x)=a^x (for some constant a),\r\nstarting with \r\nf'(x) dx = f(x + dx) - f(x) = a^(x + dx) - a^x\r\nNow, I know that I can express a^(x + dx) by a^x + f'(x) dx, but that only leads me back to f'(x) = f'(x). What would be the next step to complete the derivation?"
+message: "This is very intriguing. Thank you for this post!\n\nWhat I don't get is how you compute the derivative of x^n. It seems to me that you make the assumption that the derivative is n*x^(n-1), put that in and arrive at your assumption. I guess I'm missing something here. \nI tried to compute the derivative of f(x)=a^x (for some constant a),\nstarting with \nf'(x) dx = f(x + dx) - f(x) = a^(x + dx) - a^x\nNow, I know that I can express a^(x + dx) by a^x + f'(x) dx, but that only leads me back to f'(x) = f'(x). What would be the next step to complete the derivation?"
 email: 25fde7db7af5e3e2df7dba3c37b0db44

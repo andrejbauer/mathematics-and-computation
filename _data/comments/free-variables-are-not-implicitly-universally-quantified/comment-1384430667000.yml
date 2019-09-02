@@ -1,5 +1,5 @@
 name: nikita
 date: '2013-11-14 13:04:27'
 url: 'http://cofault.com'
-message: "Confusion between $phi$ and $\\forall x.\\phi$ is only possible when the latter is assumed to be true. Clearly, if $\\forall x.\\phi$ is false, then is usage is very different from the usage of $\\phi$.\r\n\r\nI guess the \"implicit universal quantification\" stems from the very ancient idea that all formulas that happen during a proof must be true."
+message: "Confusion between $phi$ and $\\forall x.\\phi$ is only possible when the latter is assumed to be true. Clearly, if $\\forall x.\\phi$ is false, then is usage is very different from the usage of $\\phi$.\n\nI guess the \"implicit universal quantification\" stems from the very ancient idea that all formulas that happen during a proof must be true."
 email: adafa63482b3bb5f7036c640f6ba6b0d

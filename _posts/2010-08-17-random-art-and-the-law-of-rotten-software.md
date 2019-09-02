@@ -6,21 +6,8 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=541
 permalink: /2010/08/17/random-art-and-the-law-of-rotten-software/
-bfa_ata_body_title:
-  - Random Art and the Law of Rotten Software
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - Random Art and the Law of Rotten Software
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Programming
-  - Random art
 ---
 Since the death of my old web server my [Random Art](http://www.random-art.org/) has not worked. Bringing it up to date and installing it on the new server was a nightmare in software management. But it was worth it. The new Random Art runs the random art program inside your browser!
 

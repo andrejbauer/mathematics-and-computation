@@ -1,5 +1,5 @@
 name: jonathan
 date: '2007-07-09 19:05:55'
 url: 'http://'
-message: "I believe that the \"near-square\" conjecture you state above is decidable.  Since primality is diophantine, it can be determined with one existential quantifier.  Therefore, the \"near-square\" conjecture is a universal-existential sentence, which is decidable by the result of Tung referenced here:\r\n\r\nhttp://cs.nyu.edu/pipermail/fom/2006-October/011050.html\r\n\r\nJonathan"
+message: "I believe that the \"near-square\" conjecture you state above is decidable.  Since primality is diophantine, it can be determined with one existential quantifier.  Therefore, the \"near-square\" conjecture is a universal-existential sentence, which is decidable by the result of Tung referenced here:\n\nhttp://cs.nyu.edu/pipermail/fom/2006-October/011050.html\n\nJonathan"
 email: 9dd386efa729717639bdd79db8ce6b89

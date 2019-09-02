@@ -1,5 +1,5 @@
 name: John Beattie
 date: '2009-04-20 17:51:07'
 url: ''
-message: "Is it true that you are against untyped None but are happy with typed None?\r\n\r\nFor some type A, Maybe A provides a typed value of Nothing.  The compiler can use the type information to do some checking.  OTOH, all the constructions you dislike, i.e. NULL, null, None, ... are untyped.\r\n\r\nThis point occurred to me when reading the paper on Adjunctions by Fokkinga and Meertens, 1993.  At the end of that paper there is a discussion of an adjunction between the category of Total functions and of Partial functions."
+message: "Is it true that you are against untyped None but are happy with typed None?\n\nFor some type A, Maybe A provides a typed value of Nothing.  The compiler can use the type information to do some checking.  OTOH, all the constructions you dislike, i.e. NULL, null, None, ... are untyped.\n\nThis point occurred to me when reading the paper on Adjunctions by Fokkinga and Meertens, 1993.  At the end of that paper there is a discussion of an adjunction between the category of Total functions and of Partial functions."
 email: 9d7f5e7bf26f1b30da477b737596d45f

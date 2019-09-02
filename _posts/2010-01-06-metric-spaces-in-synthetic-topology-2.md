@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=414
 permalink: /2010/01/06/metric-spaces-in-synthetic-topology-2/
-bfa_ata_body_title:
-  - Metric Spaces in Synthetic Topology
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - Metric Spaces in Synthetic Topology
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Constructive math
   - Publications

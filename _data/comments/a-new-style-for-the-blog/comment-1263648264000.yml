@@ -1,5 +1,5 @@
 name: gaby
 date: '2010-01-16 14:24:24'
 url: ''
-message: "It appears that now latex can be supressed. \r\n$\\int_a^b f(x) dx$"
+message: "It appears that now latex can be supressed. \n$\\int_a^b f(x) dx$"
 email: 6f685463651943b464a3cf6436c14fcf

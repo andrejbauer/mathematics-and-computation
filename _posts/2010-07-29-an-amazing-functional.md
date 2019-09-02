@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=532
 permalink: /2010/07/29/an-amazing-functional/
-bfa_ata_body_title:
-  - An amazing functional
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - An amazing functional
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Computation
   - News

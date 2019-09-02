@@ -1,5 +1,5 @@
 name: Jacob
 date: '2010-04-20 00:45:01'
 url: ''
-message: "Isn't it very easy to come up with functions that can be computed in finite, neigh constant time that aren't continuous. For instance take the function in base 10:\r\n\r\nFirstDigit(x)= 0 if the first digit of x is 0, \r\n               1 if the first digit of x is 1,\r\netc,\r\n\r\nThis function is obviously not continuous and should be computable for any real number, since it's only needed to look at one digit. \r\n\r\nI can only assume there's something obvious that I'm missing."
+message: "Isn't it very easy to come up with functions that can be computed in finite, neigh constant time that aren't continuous. For instance take the function in base 10:\n\nFirstDigit(x)= 0 if the first digit of x is 0, \n               1 if the first digit of x is 1,\netc,\n\nThis function is obviously not continuous and should be computable for any real number, since it's only needed to look at one digit. \n\nI can only assume there's something obvious that I'm missing."
 email: 0e7edee8306bafebaf1d5a73d76831cc

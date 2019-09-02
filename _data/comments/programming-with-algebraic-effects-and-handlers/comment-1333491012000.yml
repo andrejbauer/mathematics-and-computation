@@ -1,5 +1,5 @@
 name: Sean Leather
 date: '2012-04-04 00:10:12'
 url: 'http://profiles.google.com/sean.leather'
-message: "Ah, okay. So, you're assuming a variable will be used as the expression <code>e</code> in <code>e#op</code>. I was missing where the coercion from computation to expression was taking place. It might be helpful to mention that, since you already mention <code>val</code> for coercing an expression to a computation.\r\n\r\nIt appears that <code>let</code> is the only way to get an expression with an <code>E</code> type. Is it possible to have a non-variable expression in <code>e</code>? If not, perhaps it's a simplification (and clarification) to directly use a variable, as in <code>x#op</code>."
+message: "Ah, okay. So, you're assuming a variable will be used as the expression <code>e</code> in <code>e#op</code>. I was missing where the coercion from computation to expression was taking place. It might be helpful to mention that, since you already mention <code>val</code> for coercing an expression to a computation.\n\nIt appears that <code>let</code> is the only way to get an expression with an <code>E</code> type. Is it possible to have a non-variable expression in <code>e</code>? If not, perhaps it's a simplification (and clarification) to directly use a variable, as in <code>x#op</code>."
 email: 1e5e7054da4e9c4ef0274c4d5409b763

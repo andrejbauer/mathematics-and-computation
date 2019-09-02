@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=745
 permalink: /2010/11/10/subgroups-are-equalizers-constructively/
-bfa_ata_body_title:
-  - Subgroups are equalizers, constructively?
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - Subgroups are equalizers, constructively?
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - General
 ---

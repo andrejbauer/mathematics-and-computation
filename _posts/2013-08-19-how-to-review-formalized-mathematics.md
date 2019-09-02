@@ -7,7 +7,6 @@ layout: post
 guid: http://math.andrej.com/?p=1462
 permalink: /2013/08/19/how-to-review-formalized-mathematics/
 categories:
-  - Coq
   - General
 ---
 Recently I reviewed a paper in which most proofs were done in a proof assistant. Yes, the machine guaranteed that the proofs were correct, but I still had to make sure that the authors correctly formulated their definitions and theorems, that the code did not contain hidden assumptions, that there were no unfinished proofs, and so on.

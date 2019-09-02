@@ -1,5 +1,5 @@
 name: Matteo
 date: '2011-05-18 21:58:01'
 url: 'http://matteo.vaccari.name/blog/'
-message: "Well this is my first try with Ruby:\r\n\r\nfns = (0..9).collect {|i| lambda {|n| i + n}}\r\n  \r\np fns[3].call(4)\r\n\r\nindeed it prints 7 :-)"
+message: "Well this is my first try with Ruby:\n\nfns = (0..9).collect {|i| lambda {|n| i + n}}\n  \np fns[3].call(4)\n\nindeed it prints 7 :-)"
 email: 4c8f1734faea8b7b2db0ea4bf4ebbf66

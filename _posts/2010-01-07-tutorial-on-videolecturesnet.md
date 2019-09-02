@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/?p=417
 permalink: /2010/01/07/tutorial-on-videolecturesnet/
-bfa_ata_body_title:
-  - Tutorial on exact real numbers in Coq
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - Tutorial on exact real numbers in Coq
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Computation
   - Constructive math

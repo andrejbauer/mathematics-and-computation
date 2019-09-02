@@ -11,9 +11,8 @@ categories:
   - Constructive math
   - Guest post
   - Homotopy type theory
-tags:
-  - Agda
 ---
+
 In the post [Seemingly impossible functional programs](http://math.andrej.com/2007/09/28/seemingly-impossible-functional-programs/), I wrote increasingly efficient Haskell programs to [realize](http://en.wikipedia.org/wiki/Realizability) the mathematical statement
 
 > $\forall p : X \to 2. (\exists x:X.p(x)=0) \vee (\forall x:X.p(x)=1)$
@@ -26,15 +25,15 @@ Agda is a dependently typed functional programming language based on Martin-Löf
 
 <!--more-->
 
-## Some (counter)examples</p> 
+## Some (counter)examples
 
-## ### $X=\mathbb{N}$
+#### $X=\mathbb{N}$
 
 The omniscience of $\mathbb{N}$ is not provable in [constructive mathematics](http://www.masfak.ni.ac.rs/cmfp2013/Nis%20lecture%20170113.pdf) and comes under the fancy name LPO, or [limited principle of omniscience](https://en.wikipedia.org/wiki/Limited_principle_of_omniscience). Its negation is not provable either, at least not in [Bishop&#8217;s](https://en.wikipedia.org/wiki/Errett_Bishop) or [Martin-Löf&#8217;s](https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f) schools of constructive mathematics, and so we can&#8217;t say that LPO is false. Following [Peter Aczel](https://en.wikipedia.org/wiki/Peter_Aczel), we call such statements _taboos_. They are also known as [Brouwerian counterexamples](https://en.wikipedia.org/wiki/Constructive_proof#Brouwerian_counterexamples):
 
 > **Taboo (LPO).** $\quad\forall p : \mathbb{N} \to 2. (\exists x:\mathbb{N}.p(x)=0) \vee (\forall x:\mathbb{N}.p(x)=1)$.
 
-### $X=\mathbb{N}_\infty$
+#### $X=\mathbb{N}_\infty$
 
 However, if we enlarge the type of natural numbers with a point at infinity, we get a constructive proof of
 
@@ -54,7 +53,7 @@ Such sequences represent finite and infinite counting processes of the form
 
 This shows that the reason why the omniscience of $\mathbb{N}$ fails is not simply that it is infinite, as the larger set $\mathbb{N}_\infty$ is omniscient.
 
-Using this theorem, we can show that for every $p : \mathbb{N}_\infty \to 2$, the proposition [$\forall n : \mathbb{N}.p(\underline{n})=1$ is decidable](http://www.cs.bham.ac.uk/~mhe/agda/ADecidableQuantificationOverTheNaturals.html#3299). The point is that now the quantification is over the natural numbers without violating (weak )LPO. In turn, using this, it follows that [the non-continuity of a function $f : \mathbb{N}_\infty \to \mathbb{N}$ is decidable](http://www.cs.bham.ac.uk/~mhe/agda/DecidabilityOfNonContinuity.html#2116). It is also a corollary that the function type [$\mathbb{N}_\infty \to \mathbb{N}$ has decidable equality](http://www.cs.bham.ac.uk/~mhe/agda/ConvergentSequenceSearchable.html#2575).
+Using this theorem, we can show that for every $p : \mathbb{N}_\infty \to 2$, the proposition [$\forall n : \mathbb{N}.p(\underline{n})=1$ is decidable](http://www.cs.bham.ac.uk/~mhe/agda/ADecidableQuantificationOverTheNaturals.html#3299). The point is that now the quantification is over the natural numbers without violating (weak) LPO. In turn, using this, it follows that the non-continuity of a function $f : \mathbb{N}_\infty \to \mathbb{N}$ [is decidable](http://www.cs.bham.ac.uk/~mhe/agda/DecidabilityOfNonContinuity.html#2116). It is also a corollary that the function type $\mathbb{N}_\infty \to \mathbb{N}$ [has decidable equality](http://www.cs.bham.ac.uk/~mhe/agda/ConvergentSequenceSearchable.html#2575).
 
 The proof of the above theorem was presented at the [Types&#8217;2011](https://sites.google.com/site/types2011/Home/) meeting and is published in the [Journal of Symbolic Logic (JSL)](http://projecteuclid.org/euclid.jsl/1389032274), Volume 78, Number 3, September 2013, pages 764-784, under the title [Infinite sets that satisfy the principle of omniscience in any variety of constructive mathematics](http://www.cs.bham.ac.uk/~mhe/papers/omniscient-journal-revised.pdf). To save some work in the writing of this post, I offer the [slides](http://www.cs.bham.ac.uk/~mhe/.talks/types2011/omniscient.pdf) of the Types talk as an informal account of the [original formal proof in Agda](http://www.cs.bham.ac.uk/~mhe/papers/omniscient-original/AnInfiniteOmniscientSet.html) or the [current one](http://www.cs.bham.ac.uk/~mhe/agda/ConvergentSequenceSearchable.html#2438).
 

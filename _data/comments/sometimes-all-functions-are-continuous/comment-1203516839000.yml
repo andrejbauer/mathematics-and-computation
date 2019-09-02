@@ -1,5 +1,5 @@
 name: jn
 date: '2008-02-20 15:13:59'
 url: 'http://'
-message: "I just found your site, by way of a link to this post.  Good stuff!\r\n\r\nWRT your example of sgn, here's a simpler version, with a question:\r\n\r\nsg n = if n &lt; 0 then -1 else 1\r\n\r\nFrom your argument for the continuity of sgn above, it appears that you're using a two's complement representation, scanning the bits from the \"left\" (i.e. your statement \"... the first billion of them are all zero. Then sgn(x) is either 0 or 1 ...\").\r\n\r\nI don't see how a similar argument applies to sg.  Isn't the first bit (again, in two's comp. representation) enough to distinguish negative from non-negative?"
+message: "I just found your site, by way of a link to this post.  Good stuff!\n\nWRT your example of sgn, here's a simpler version, with a question:\n\nsg n = if n &lt; 0 then -1 else 1\n\nFrom your argument for the continuity of sgn above, it appears that you're using a two's complement representation, scanning the bits from the \"left\" (i.e. your statement \"... the first billion of them are all zero. Then sgn(x) is either 0 or 1 ...\").\n\nI don't see how a similar argument applies to sg.  Isn't the first bit (again, in two's comp. representation) enough to distinguish negative from non-negative?"
 email: c3ae6a1b8d708b79b6b85ecc365266a4

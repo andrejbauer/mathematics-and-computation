@@ -1,5 +1,5 @@
 name: Jules
 date: '2009-04-11 21:45:35'
 url: ''
-message: "&gt; Make sure the programmer never forgets to consider both possibilitiesâ€“the empty tree and the non-empty tree.\r\n\r\nI'm not sure about this one. I often have to put error \"won't reach this\" in match statements in ML."
+message: "&gt; Make sure the programmer never forgets to consider both possibilitiesâ€“the empty tree and the non-empty tree.\n\nI'm not sure about this one. I often have to put error \"won't reach this\" in match statements in ML."
 email: 71f1b6b2c3fd9af2e8c52618fb91caa6

@@ -1,5 +1,5 @@
 name: Andrej Bauer
 date: '2013-08-29 08:46:43'
 url: 'http://andrej.com/'
-message: "@Jesse: I am not quite sure how you're setting up <code>Plus</code>. Is it just defined as $\\mathtt{Plus}(X) = 1 + X$? If so then your definition reduces to\r\n<blockquote>\r\n<code>pInductive ghostly := spectre : unit + ghostly.\r\n</blockquote>\r\nIs that what you mean?"
+message: "@Jesse: I am not quite sure how you're setting up <code>Plus</code>. Is it just defined as $\\mathtt{Plus}(X) = 1 + X$? If so then your definition reduces to\n<blockquote>\n<code>pInductive ghostly := spectre : unit + ghostly.\n</blockquote>\nIs that what you mean?"
 email: 59d57d95bc7c45ced5f1969279cec06b

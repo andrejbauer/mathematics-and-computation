@@ -1,5 +1,5 @@
 name: Thad Coons
 date: '2005-05-26 21:27:58'
 url: ''
-message: "I have understood the law of the excluded middle as having two classically equivalent formulations: bivalence (p v ~P) and noncontradition ~(p &amp; ~p). It appears to me that you are rejecting bivalence but accepting noncontradiction.\r\nI'm astonished to learn that I cannot have three logical values, since Lukasieiwicz invented his 3-valued logic in 1920, and I've been working with it for some 20 years myself. Could you reference the proof?\r\nIf you're talking about the proof in coq, I believe this is likely to include some implicit assumptions that I might not accept."
+message: "I have understood the law of the excluded middle as having two classically equivalent formulations: bivalence (p v ~P) and noncontradition ~(p &amp; ~p). It appears to me that you are rejecting bivalence but accepting noncontradiction.\nI'm astonished to learn that I cannot have three logical values, since Lukasieiwicz invented his 3-valued logic in 1920, and I've been working with it for some 20 years myself. Could you reference the proof?\nIf you're talking about the proof in coq, I believe this is likely to include some implicit assumptions that I might not accept."
 email: da50fe7fb23c0c50d543ff7bdb466adc

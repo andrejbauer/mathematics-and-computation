@@ -6,18 +6,6 @@ author: Andrej Bauer
 layout: post
 guid: http://math.andrej.com/2006/04/25/konigs-lemma-and-kleene-tree/
 permalink: /2006/04/25/konigs-lemma-and-the-kleene-tree/
-bfa_ata_body_title:
-  - "König's Lemma and the Kleene Tree"
-bfa_ata_display_body_title:
-  - ""
-bfa_ata_body_title_multi:
-  - "König's Lemma and the Kleene Tree"
-bfa_ata_meta_title:
-  - ""
-bfa_ata_meta_keywords:
-  - ""
-bfa_ata_meta_description:
-  - ""
 categories:
   - Computation
   - Constructive math

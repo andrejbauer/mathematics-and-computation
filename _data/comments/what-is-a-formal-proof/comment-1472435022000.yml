@@ -1,5 +1,5 @@
 name: Matt Oliveri
 date: '2016-08-29 03:43:42'
 url: ''
-message: "Ah OK. So the way Dedukti uses shortcuts is by omitting reduction sequences. The input Dedukti proof can use some term M instead of the expected N, for example, and Dedukti will try to find a common reduct for them, to prove that they're equal. These steps are performed by Dedukti on the fly; they're not stored in the input. But the input is only valid if Dedukti finds a common reduct.\r\n\r\nAt least I figured that's how it works; if reductions steps needed to be explicit, what was the point of supporting reduction rules in the signature?"
+message: "Ah OK. So the way Dedukti uses shortcuts is by omitting reduction sequences. The input Dedukti proof can use some term M instead of the expected N, for example, and Dedukti will try to find a common reduct for them, to prove that they're equal. These steps are performed by Dedukti on the fly; they're not stored in the input. But the input is only valid if Dedukti finds a common reduct.\n\nAt least I figured that's how it works; if reductions steps needed to be explicit, what was the point of supporting reduction rules in the signature?"
 email: 66cbd251bde282eb2e1584080e3604ea
