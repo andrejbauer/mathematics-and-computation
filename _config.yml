@@ -22,6 +22,7 @@ plugins:
 
 staticman:
   branch: "master"
+  username: "andrejbauer"
   repository: "mathematics-and-computation"
 
 paginate: 10
