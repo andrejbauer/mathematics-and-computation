@@ -24,6 +24,7 @@ staticman:
   branch: "master"
   username: "andrejbauer"
   repository: "mathematics-and-computation"
+  site: "http://lisa.andrej.com:7777"
 
 paginate: 10
 

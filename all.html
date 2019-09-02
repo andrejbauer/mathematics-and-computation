@@ -1,0 +1,11 @@
+---
+title: All posts
+layout: page
+navigation: post
+---
+
+<h2>All posts</h2>
+
+{% for post in site.posts %}
+  {% include excerpt.html post=post %}
+{% endfor %}
