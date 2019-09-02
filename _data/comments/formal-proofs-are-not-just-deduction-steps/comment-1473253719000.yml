@@ -14,7 +14,7 @@ message: >-
   I am thinking of a number. I will tell you which number it is. It's the one
   that is printed by the program:
 
-  [sourcecode]
+  <pre>
 
   k = 0
 
@@ -26,7 +26,7 @@ message: >-
       k = k + 1
   print(k)
 
-  [/sourcecode]
+  </pre>
 
   Now we are both thinking of the same number. Now, in this particular case
   there are other, more efficient ways of communicating the same number, but

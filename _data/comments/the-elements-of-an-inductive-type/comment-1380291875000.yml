@@ -21,7 +21,7 @@ message: >-
     | spectre : unit + Ghostly
   exhibiting
     | spectre := inl tt  : unit + Ghostly.
-  [/sourcecode]
+  </pre>
 
 
   This defines an inductive type <code>Ghostly</code> which is empty, and
@@ -34,7 +34,7 @@ message: >-
     | a : bool
   exhibiting
     | a := true : bool.
-  [/sourcecode]
+  </pre>
 
 
   This again defines an empty inductive type <code>A</code> and furnishes a
@@ -49,7 +49,7 @@ message: >-
     | seg : zero = one
   exhibiting
     | seg := eq_refl : @eq Interval zero _.
-  [/sourcecode]
+  </pre>
 
 
   (The <code>_</code> will get filled in with <code>zero</code>.)  The rule that

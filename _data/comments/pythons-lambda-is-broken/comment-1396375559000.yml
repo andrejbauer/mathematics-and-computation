@@ -2,9 +2,9 @@ name: Aaron
 date: '2014-04-01 20:05:59'
 url: ''
 message: |-
-  [sourcecode]
+  <pre>
   &gt;&gt;&gt; fs = [(lambda i: lambda n: i + n)(i) for i in range(10)]
   &gt;&gt;&gt; [f(4) for f in fs]
   [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-  [/sourcecode]
+  </pre>
 email: 4c6b20b0ca5935a420755fe53d17ab7c
