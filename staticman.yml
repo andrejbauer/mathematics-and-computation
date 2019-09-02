@@ -18,6 +18,11 @@ comments:
 
   akismet:
     enabled: true
+    type: "comment"
+    author: "name"
+    authorEmail: "email"
+    authorUrl: "url"
+    content: "message"
 
   # (*) REQUIRED
   #
