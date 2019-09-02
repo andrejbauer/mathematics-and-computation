@@ -17,7 +17,7 @@ comments:
   pullRequestBody: "Merge the pull request to accept it, or close it to send it away.\n\n"
 
   akismet:
-    neabled: true
+    enabled: true
 
   # (*) REQUIRED
   #
