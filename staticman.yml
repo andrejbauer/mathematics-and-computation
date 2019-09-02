@@ -14,6 +14,11 @@ comments:
   # Text to use as the commit message or pull request title. Accepts placeholders.
   commitMessage: "Add Staticman data"
 
+  pullRequestBody: "Merge the pull request to accept it, or close it to send it away.\n\n"
+
+  akismet:
+    neabled: true
+
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.

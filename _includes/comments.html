@@ -22,9 +22,9 @@
 
 <div class="comment-form">
 <h5>Post a comment:</h5>
-<code>http://localhost:8080/v2/entry/{{ site.staticman.username }}/{{ site.staticman.repository }}/{{ site.staticman.branch }}/comments</code>
+
 <form method="POST" action="http://localhost:8080/v2/entry/{{ site.staticman.username }}/{{ site.staticman.repository }}/{{ site.staticman.branch }}/comments">
-  <input name="options[redirect]" type="hidden" value="https://idiologos.netlify.com">
+  <input name="options[redirect]" type="hidden" value="{{site.url}}{{page.url}}">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <p class="comment-field">
     <legend for="name">Name</legend>
