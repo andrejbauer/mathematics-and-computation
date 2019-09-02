@@ -8,6 +8,7 @@ kramdown:
   math_engine: nil
 
 exclude:
+  - staticman.yml
   - publish.sh
   - Gemfile
   - Gemfile.lock
@@ -18,6 +19,10 @@ plugins:
   - jekyll-archives
   - jekyll-redirect-from
   - jekyll-paginate
+
+staticman:
+  branch: "master"
+  repository: "mathematics-and-computation"
 
 paginate: 10
 

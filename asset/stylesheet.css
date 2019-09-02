@@ -91,7 +91,7 @@ div.browse-posts {
 
 h1.post-title {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 200%;
+  font-size: 36px;
   color: #000000;
   font-weight: bold;
   padding: 0px;
@@ -100,7 +100,7 @@ h1.post-title {
 
 h1 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 200%;
+  font-size: 36px;
   color: #404040;
   font-weight: bold;
   padding: 0px;
@@ -110,13 +110,23 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 200%;
 }
 
-/* h1, h2, h3, h4, h5, h6 { */
-/*   margin: 10px 0 20px 0; */
-/* } */
+h2 {
+  font-size: 32px;
+}
 
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
 
 dt {
   margin-left: 10px;
@@ -317,7 +327,7 @@ div.comment-avatar {
 
 div.comment-author {
   font-weight: bold;
-  font-size: 125%;
+  font-size: 18px;
 }
 
 div.comment-author a {
@@ -329,5 +339,27 @@ div.comment-timestamp {
   color: #404040;
 }
 
-div.comment-content {
+div.comment-form {
+  width: 75%;
+}
+
+/* Comments submission */
+
+.comment-form legend {
+  float: left;
+  width: 15%;
+}
+
+.comment-form input {
+  font-size: 16px;
+  width: 50%;
+}
+
+.comment-form button {
+  font-size: 16px;
+}
+
+.comment-form textarea {
+  font-size: 16px;
+  width: 50%;
 }

@@ -20,27 +20,31 @@
     {% endif %}
 </div>
 
-<div class="comment-submit">
-<h4>Post a comment:</h4>
-<form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
+<div class="comment-form">
+<h5>Post a comment:</h5>
+<form method="POST" action="http://localhost:8080/v2/entry/{{ site.staticman.repository }}/{{ site.staticman.branch }}/comments">
   <input name="options[redirect]" type="hidden" value="https://idiologos.netlify.com">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-  <div>
-    <legend>Name</legend>
-    <input name="fields[name]" type="text">
-  </div>
-  <div>
-    <legend>E-mail (optional)</legend>
-    <input name="fields[email]" type="email">
-  </div>
-  <div>
-    <legend>Message (<a href="https://kramdown.gettalong.org/syntax.html">kramdown</a> markup allowed)</legend>
-    <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
-  </div>
+  <p class="comment-field">
+    <legend for="name">Name</legend>
+    <input id="name" name="fields[name]" type="text">
+  </p>
+  <p class="comment-field">
+    <legend for="email">E-mail</legend>
+    <input id="email" name="fields[email]" type="email">
+  </p>
+  <p class="comment-field">
+    <legend for="website">Website</legend>
+    <input id="website" name="fields[url]" type="url">
+  </p>
+  <p class="comment-field">
+    <legend for="comment">Comment</legend>
+    <textarea id="comment" name="fields[message]" rows="12"></textarea>
+  </p>
 
   <div>
-    <legend><em>Comments are moderated.</em></legend>
-    <button type="submit">Submit Comment</button>
+    <legend>&nbsp;</legend>
+    <button type="submit">Post comment</button>
   </div>
 </form>
 </div>
