@@ -19,6 +19,7 @@ plugins:
   - jekyll-archives
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-feed
 
 staticman:
   branch: "master"
