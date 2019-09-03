@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/2008/05/07/an-object-oriented-language-boa/
 permalink: /2008/05/07/an-object-oriented-language-boa/
 categories:
-  - PL zoo
+  - Programming languages
   - Software
 ---
 I have added another language, called _Boa_, to the [Programming Languages Zoo](http://www.andrej.com/plzoo/). It is an object-oriented language with the following features:

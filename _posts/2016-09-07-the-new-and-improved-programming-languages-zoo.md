@@ -8,7 +8,7 @@ guid: http://math.andrej.com/?p=1958
 permalink: /2016/09/07/the-new-and-improved-programming-languages-zoo/
 categories:
   - Computation
-  - PL zoo
+  - Programming languages
   - Software
   - Teaching
 ---

@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/2008/05/06/the-programming-languages-zoo/
 permalink: /2008/05/06/the-programming-languages-zoo/
 categories:
-  - PL zoo
+  - Programming languages
   - Software
 ---
 I teach [Theory of Programing Languages](http://ucilnica.fmf.uni-lj.si/course/view.php?id=4) (page in Slovene). For the course I implemented languages which demonstrate basic concepts such as parsing, type checking, type inference, dynamic types, evaluation strategies, and compilation. My teaching assistant [Iztok Kavkler](http://www.fmf.uni-lj.si/~kavkler/) contributed to the source code as well. I decided to publish the source code as a [**Programming Language Zoo**](http://www.andrej.com/plzoo/) for anyone who wants to know more about design and implementation of programming languages.  

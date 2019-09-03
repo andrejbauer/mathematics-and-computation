@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=95
 permalink: /2008/09/14/sub-and-poly-two-new-additions-to-the-pl-zoo/
 categories:
-  - PL zoo
+  - Programming languages
   - Software
 ---
 I have added two new languages to the [Programming Languages Zoo](http://andrej.com/plzoo/) which demonstrate polymorphic type inference and type checking with subtypes.  
