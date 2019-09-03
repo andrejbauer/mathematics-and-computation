@@ -12,7 +12,7 @@ comments:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Add Staticman data"
+  commitMessage: "Blog comment submission"
 
   pullRequestBody: "Merge the pull request to accept it, or close it to send it away.\n\n"
 
