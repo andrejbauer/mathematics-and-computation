@@ -1,0 +1,10 @@
+_id: 8383e400-ce82-11e9-b777-a1f56fd4ee18
+name: Andrej Bauer
+email: 138444703abc61674746ac18cb2e84c7
+url: 'http://www.andrej.com/'
+message: >-
+  There already is a feed. The old Wordpress site had it at
+  [http://math.andrej.com/feed/](http://math.andrej.com/feed/) and the new one
+  has it at [http://math.andrej.com/feed.xml](http://math.andrej.com/feed/), and
+  the HTML pages provide this info. So most RSS aggregators should just work.
+date: 1567539556
