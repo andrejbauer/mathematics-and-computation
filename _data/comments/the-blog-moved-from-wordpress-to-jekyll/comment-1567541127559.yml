@@ -1,0 +1,11 @@
+_id: 2c0eae90-ce86-11e9-b777-a1f56fd4ee18
+name: Andrej
+email: 59d57d95bc7c45ced5f1969279cec06b
+url: 'http://www.andrej.com/'
+message: >-
+  This tests whether the Gravatar hash is computed correctly, i.e., whether the
+  `staticman.mly` filed `transforms` works with a list of transformations. All
+  documentation examples are wrong about hot to compute the Gravatar hash, as
+  they fail to put the email into lowercase. (This comment is submitted under
+  `Andrej.Bauer@andrej.com`.)
+date: 1567541127
