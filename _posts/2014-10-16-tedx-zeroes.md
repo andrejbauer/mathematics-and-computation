@@ -33,8 +33,8 @@ The &#8220;[Zeroes](https://vimeo.com/album/3086303)&#8221; Vimeo album contains
 
 ### The pictures
 
-  * The computed image [zeroes.ppm.gz](/wp-content/uploads/2014/10/zeroes26.ppm.gz) (125 MB) at 20000 by 17500 pixels is stored in the PPM format. The picture is dull gray, and is not meant to be viewed directly.
-  * The official image [zeroes26.png](/wp-content/uploads/2014/10/zeroes26.png) (287 MB) at 20000 by 175000 pixels in orange tones. Beware,  it can bring an image viewing program to its knees.
+  * The computed image [zeroes.ppm.gz](http://www.andrej.com/zeroes/zeroes26.ppm.gz) (125 MB) at 20000 by 17500 pixels is stored in the PPM format. The picture is dull gray, and is not meant to be viewed directly.
+  * The official image [zeroes26.png](http://www.andrej.com/zeroes/zeroes26.png) (287 MB) at 20000 by 175000 pixels in orange tones. Beware,  it can bring an image viewing program to its knees.
   * I computed tons of closeups to generate the movies. Here are the beginnings of each animation available at Vimeo, and measly 1920 by 1080 pixels each (click on them). 
       * The whole image: [<img class="aligncenter size-medium wp-image-1783" alt="zoom" src="http://math.andrej.com/wp-content/uploads/2014/10/zoom1-300x168.png" width="300" height="168" srcset="http://math.andrej.com/wp-content/uploads/2014/10/zoom1-300x168.png 300w, http://math.andrej.com/wp-content/uploads/2014/10/zoom1-1024x576.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />](http://math.andrej.com/wp-content/uploads/2014/10/zoom1.png)
       * Zoom at $i$: [<img class="aligncenter size-medium wp-image-1784" alt="arc" src="http://math.andrej.com/wp-content/uploads/2014/10/arc1-300x168.png" width="300" height="168" srcset="http://math.andrej.com/wp-content/uploads/2014/10/arc1-300x168.png 300w, http://math.andrej.com/wp-content/uploads/2014/10/arc1-1024x576.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />](http://math.andrej.com/wp-content/uploads/2014/10/arc1.png)
