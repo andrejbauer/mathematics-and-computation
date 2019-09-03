@@ -317,6 +317,7 @@ div.comments {
 
 div.comment {
   overflow: auto;
+  width: 65%;
   margin: 10px 0px 0px 10px;
 }
 

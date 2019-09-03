@@ -2,5 +2,5 @@ _id: 3e3774e0-ce53-11e9-b777-a1f56fd4ee18
 name: Andrej Bauer
 email: 59d57d95bc7c45ced5f1969279cec06b
 url: 'http://www.andrej.com/'
-message: "This is a test. We expect inline math $x^2 + \\frac{a}{b}$ to work, as well as $$\\int_0^\\infty e^{-x^2/2} dx$$ to work. For code, one wonders:\r\n```\r\n10 i = 0\r\n20 PRINT i\r\n30 i = i + 1\r\n40 GOTO 20\r\n```"
+message: "This is a test. We expect inline math $x^2 + \\frac{a}{b}$ to work, as well as $$\\int_0^\\infty e^{-x^2/2} dx$$ to work. For code, one wonders:\r\n\r\n<pre>10 i = 0\r\n20 PRINT i\r\n30 i = i + 1\r\n40 GOTO 20\r\n</pre>\r\n\r\n"
 date: 1567519254
