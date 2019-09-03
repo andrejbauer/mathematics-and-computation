@@ -1,0 +1,517 @@
+\g.\f.\x.s g (s f x)
+\g.\f.\x.(\f.\e.\q.f (e (\a.q (f a)))) g (s f x)
+\g.\f.\x.(\e.\q.g (e (\a.q (g a)))) (s f x)
+\g.\f.\x.\q.g (s f x (\a.q (g a)))
+\g.\f.\x.\q.g ((\f.\e.\q.f (e (\a.q (f a)))) f x (\a.q (g a)))
+\g.\f.\x.\q.g ((\e.\q.f (e (\a.q (f a)))) x (\a.q (g a)))
+\g.\f.\x.\q.g ((\q.f (x (\a.q (f a)))) (\a.q (g a)))
+\g.\f.\x.\q.g (f (x (\a.(\a.q (g a)) (f a))))
+\g.\f.\x.\q.g (f (x (\a.q (g (f a)))))
+
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) g
+Beta redex: (\e.\q.g (e (\a.q (g a)))) (s f x)
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) f
+Beta redex: (\e.\q.f (e (\a.q (f a)))) x
+Beta redex: (\q.f (x (\a.q (f a)))) (\a.q (g a))
+Beta redex: (\a.q (g a)) (f a)
+
+
+
+\g.\f.s (\x.g (f x))
+\g.\f.(\f.\e.\q.f (e (\a.q (f a)))) (\x.g (f x))
+\g.\f.\e.\q.(\x.g (f x)) (e (\a.q ((\x.g (f x)) a)))
+\g.\f.\e.\q.g (f (e (\a.q ((\x.g (f x)) a))))
+\g.\f.\e.\q.g (f (e (\a.q (g (f a)))))
+
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) (\x.g (f x))
+Beta redex: (\x.g (f x)) (e (\a.q ((\x.g (f x)) a)))
+Beta redex: (\x.g (f x)) a
+
+
+
+\f.\x.s f (eta x)
+\f.\x.(\f.\e.\q.f (e (\a.q (f a)))) f (eta x)
+\f.\x.(\e.\q.f (e (\a.q (f a)))) (eta x)
+\f.\x.\q.f (eta x (\a.q (f a)))
+\f.\x.\q.f ((\x.\p.x) x (\a.q (f a)))
+\f.\x.\q.f ((\p.x) (\a.q (f a)))
+\f.\x.\q.f x
+
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) f
+Beta redex: (\e.\q.f (e (\a.q (f a)))) (eta x)
+Name redex: eta
+Beta redex: (\x.\p.x) x
+Beta redex: (\p.x) (\a.q (f a))
+
+
+
+\f.\x.eta (f x)
+\f.\x.(\x.\p.x) (f x)
+\f.\x.\p.f x
+
+Name redex: eta
+Beta redex: (\x.\p.x) (f x)
+
+
+
+\f.\x.s f (mu x)
+\f.\x.(\f.\e.\q.f (e (\a.q (f a)))) f (mu x)
+\f.\x.(\e.\q.f (e (\a.q (f a)))) (mu x)
+\f.\x.\q.f (mu x (\a.q (f a)))
+\f.\x.\q.f ((\E.\p.E (\e.p (e p)) p) x (\a.q (f a)))
+\f.\x.\q.f ((\p.x (\e.p (e p)) p) (\a.q (f a)))
+\f.\x.\q.f (x (\e.(\a.q (f a)) (e (\a.q (f a)))) (\a.q (f a)))
+\f.\x.\q.f (x (\e.q (f (e (\a.q (f a))))) (\a.q (f a)))
+
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) f
+Beta redex: (\e.\q.f (e (\a.q (f a)))) (mu x)
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) x
+Beta redex: (\p.x (\e.p (e p)) p) (\a.q (f a))
+Beta redex: (\a.q (f a)) (e (\a.q (f a)))
+
+
+
+\f.\x.mu (s (s f) x)
+\f.\x.(\E.\p.E (\e.p (e p)) p) (s (s f) x)
+\f.\x.\p.s (s f) x (\e.p (e p)) p
+\f.\x.\p.(\f.\e.\q.f (e (\a.q (f a)))) (s f) x (\e.p (e p)) p
+\f.\x.\p.(\e.\q.s f (e (\a.q (s f a)))) x (\e.p (e p)) p
+\f.\x.\p.(\q.s f (x (\a.q (s f a)))) (\e.p (e p)) p
+\f.\x.\p.s f (x (\a.(\e.p (e p)) (s f a))) p
+\f.\x.\p.(\f.\e.\q.f (e (\a.q (f a)))) f (x (\a.(\e.p (e p)) (s f a))) p
+\f.\x.\p.(\e.\q.f (e (\a.q (f a)))) (x (\a.(\e.p (e p)) (s f a))) p
+\f.\x.\p.(\q.f (x (\a.(\e.p (e p)) (s f a)) (\a.q (f a)))) p
+\f.\x.\p.f (x (\a.(\e.p (e p)) (s f a)) (\a.p (f a)))
+\f.\x.\p.f (x (\a.p (s f a p)) (\a.p (f a)))
+\f.\x.\p.f (x (\a.p ((\f.\e.\q.f (e (\a.q (f a)))) f a p)) (\a.p (f a)))
+\f.\x.\p.f (x (\a.p ((\e.\q.f (e (\a.q (f a)))) a p)) (\a.p (f a)))
+\f.\x.\p.f (x (\a.p ((\q.f (a (\a1.q (f a1)))) p)) (\a.p (f a)))
+\f.\x.\p.f (x (\a.p (f (a (\a1.p (f a1))))) (\a.p (f a)))
+
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) (s (s f) x)
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) (s f)
+Beta redex: (\e.\q.s f (e (\a.q (s f a)))) x
+Beta redex: (\q.s f (x (\a.q (s f a)))) (\e.p (e p))
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) f
+Beta redex: (\e.\q.f (e (\a.q (f a)))) (x (\a.(\e.p (e p)) (s f a)))
+Beta redex: (\q.f (x (\a.(\e.p (e p)) (s f a)) (\a.q (f a)))) p
+Beta redex: (\e.p (e p)) (s f a)
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) f
+Beta redex: (\e.\q.f (e (\a.q (f a)))) a
+Beta redex: (\q.f (a (\a1.q (f a1)))) p
+
+
+
+\x.mu (s eta x)
+\x.(\E.\p.E (\e.p (e p)) p) (s eta x)
+\x.\p.s eta x (\e.p (e p)) p
+\x.\p.(\f.\e.\q.f (e (\a.q (f a)))) eta x (\e.p (e p)) p
+\x.\p.(\e.\q.eta (e (\a.q (eta a)))) x (\e.p (e p)) p
+\x.\p.(\q.eta (x (\a.q (eta a)))) (\e.p (e p)) p
+\x.\p.eta (x (\a.(\e.p (e p)) (eta a))) p
+\x.\p.(\x.\p.x) (x (\a.(\e.p (e p)) (eta a))) p
+\x.\p.(\p1.x (\a.(\e.p (e p)) (eta a))) p
+\x.\p.x (\a.(\e.p (e p)) (eta a))
+\x.\p.x (\a.p (eta a p))
+\x.\p.x (\a.p ((\x.\p.x) a p))
+\x.\p.x (\a.p ((\p.a) p))
+\x.\p.x (\a.p a)
+\x.\p.x p
+\x.x
+
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) (s eta x)
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) eta
+Beta redex: (\e.\q.eta (e (\a.q (eta a)))) x
+Beta redex: (\q.eta (x (\a.q (eta a)))) (\e.p (e p))
+Name redex: eta
+Beta redex: (\x.\p.x) (x (\a.(\e.p (e p)) (eta a)))
+Beta redex: (\p1.x (\a.(\e.p (e p)) (eta a))) p
+Beta redex: (\e.p (e p)) (eta a)
+Name redex: eta
+Beta redex: (\x.\p.x) a
+Beta redex: (\p.a) p
+Eta  redex:\a.p a
+Eta  redex:\p.x p
+
+
+
+\x.mu (eta x)
+\x.(\E.\p.E (\e.p (e p)) p) (eta x)
+\x.\p.eta x (\e.p (e p)) p
+\x.\p.(\x.\p.x) x (\e.p (e p)) p
+\x.\p.(\p.x) (\e.p (e p)) p
+\x.\p.x p
+\x.x
+
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) (eta x)
+Name redex: eta
+Beta redex: (\x.\p.x) x
+Beta redex: (\p.x) (\e.p (e p))
+Eta  redex:\p.x p
+
+
+
+\x.mu (s mu x)
+\x.(\E.\p.E (\e.p (e p)) p) (s mu x)
+\x.\p.s mu x (\e.p (e p)) p
+\x.\p.(\f.\e.\q.f (e (\a.q (f a)))) mu x (\e.p (e p)) p
+\x.\p.(\e.\q.mu (e (\a.q (mu a)))) x (\e.p (e p)) p
+\x.\p.(\q.mu (x (\a.q (mu a)))) (\e.p (e p)) p
+\x.\p.mu (x (\a.(\e.p (e p)) (mu a))) p
+\x.\p.(\E.\p.E (\e.p (e p)) p) (x (\a.(\e.p (e p)) (mu a))) p
+\x.\p.(\p1.x (\a.(\e.p (e p)) (mu a)) (\e.p1 (e p1)) p1) p
+\x.\p.x (\a.(\e.p (e p)) (mu a)) (\e.p (e p)) p
+\x.\p.x (\a.p (mu a p)) (\e.p (e p)) p
+\x.\p.x (\a.p ((\E.\p.E (\e.p (e p)) p) a p)) (\e.p (e p)) p
+\x.\p.x (\a.p ((\p.a (\e.p (e p)) p) p)) (\e.p (e p)) p
+\x.\p.x (\a.p (a (\e.p (e p)) p)) (\e.p (e p)) p
+
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) (s mu x)
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) mu
+Beta redex: (\e.\q.mu (e (\a.q (mu a)))) x
+Beta redex: (\q.mu (x (\a.q (mu a)))) (\e.p (e p))
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) (x (\a.(\e.p (e p)) (mu a)))
+Beta redex: (\p1.x (\a.(\e.p (e p)) (mu a)) (\e.p1 (e p1)) p1) p
+Beta redex: (\e.p (e p)) (mu a)
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) a
+Beta redex: (\p.a (\e.p (e p)) p) p
+
+
+
+\x.mu (mu x)
+\x.(\E.\p.E (\e.p (e p)) p) (mu x)
+\x.\p.mu x (\e.p (e p)) p
+\x.\p.(\E.\p.E (\e.p (e p)) p) x (\e.p (e p)) p
+\x.\p.(\p.x (\e.p (e p)) p) (\e.p (e p)) p
+\x.\p.x (\e.(\e.p (e p)) (e (\e.p (e p)))) (\e.p (e p)) p
+\x.\p.x (\e.p (e (\e.p (e p)) p)) (\e.p (e p)) p
+
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) (mu x)
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) x
+Beta redex: (\p.x (\e.p (e p)) p) (\e.p (e p))
+Beta redex: (\e.p (e p)) (e (\e.p (e p)))
+
+
+
+\g.\f.\x.t f (t g x)
+\g.\f.\x.(\f.\phi.\p.phi (\x.p (f x))) f (t g x)
+\g.\f.\x.(\phi.\p.phi (\x.p (f x))) (t g x)
+\g.\f.\x.\p.t g x (\x1.p (f x1))
+\g.\f.\x.\p.(\f.\phi.\p.phi (\x.p (f x))) g x (\x1.p (f x1))
+\g.\f.\x.\p.(\phi.\p.phi (\x.p (g x))) x (\x1.p (f x1))
+\g.\f.\x.\p.(\p.x (\x1.p (g x1))) (\x1.p (f x1))
+\g.\f.\x.\p.x (\x1.(\x1.p (f x1)) (g x1))
+\g.\f.\x.\p.x (\x1.p (f (g x1)))
+
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) f
+Beta redex: (\phi.\p.phi (\x.p (f x))) (t g x)
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) g
+Beta redex: (\phi.\p.phi (\x.p (g x))) x
+Beta redex: (\p.x (\x1.p (g x1))) (\x1.p (f x1))
+Beta redex: (\x1.p (f x1)) (g x1)
+
+
+
+\g.\f.t (\x.f (g x))
+\g.\f.(\f.\phi.\p.phi (\x.p (f x))) (\x.f (g x))
+\g.\f.\phi.\p.phi (\x.p ((\x.f (g x)) x))
+\g.\f.\phi.\p.phi (\x.p (f (g x)))
+
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) (\x.f (g x))
+Beta redex: (\x.f (g x)) x
+
+
+
+\f.\x.t f (qeta x)
+\f.\x.(\f.\phi.\p.phi (\x.p (f x))) f (qeta x)
+\f.\x.(\phi.\p.phi (\x.p (f x))) (qeta x)
+\f.\x.\p.qeta x (\x1.p (f x1))
+\f.\x.\p.(\x.\p.p x) x (\x1.p (f x1))
+\f.\x.\p.(\p.p x) (\x1.p (f x1))
+\f.\x.\p.(\x1.p (f x1)) x
+\f.\x.\p.p (f x)
+
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) f
+Beta redex: (\phi.\p.phi (\x.p (f x))) (qeta x)
+Name redex: qeta
+Beta redex: (\x.\p.p x) x
+Beta redex: (\p.p x) (\x1.p (f x1))
+Beta redex: (\x1.p (f x1)) x
+
+
+
+\f.\x.qeta (f x)
+\f.\x.(\x.\p.p x) (f x)
+\f.\x.\p.p (f x)
+
+Name redex: qeta
+Beta redex: (\x.\p.p x) (f x)
+
+
+
+\f.\x.t f (qmu x)
+\f.\x.(\f.\phi.\p.phi (\x.p (f x))) f (qmu x)
+\f.\x.(\phi.\p.phi (\x.p (f x))) (qmu x)
+\f.\x.\p.qmu x (\x1.p (f x1))
+\f.\x.\p.(\Phi.\U.Phi (\phi.phi U)) x (\x1.p (f x1))
+\f.\x.\p.(\U.x (\phi.phi U)) (\x1.p (f x1))
+\f.\x.\p.x (\phi.phi (\x1.p (f x1)))
+
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) f
+Beta redex: (\phi.\p.phi (\x.p (f x))) (qmu x)
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) x
+Beta redex: (\U.x (\phi.phi U)) (\x1.p (f x1))
+
+
+
+\f.\x.qmu (t (t f) x)
+\f.\x.(\Phi.\U.Phi (\phi.phi U)) (t (t f) x)
+\f.\x.\U.t (t f) x (\phi.phi U)
+\f.\x.\U.(\f.\phi.\p.phi (\x.p (f x))) (t f) x (\phi.phi U)
+\f.\x.\U.(\phi.\p.phi (\x.p (t f x))) x (\phi.phi U)
+\f.\x.\U.(\p.x (\x1.p (t f x1))) (\phi.phi U)
+\f.\x.\U.x (\x1.(\phi.phi U) (t f x1))
+\f.\x.\U.x (\x1.t f x1 U)
+\f.\x.\U.x (\x1.(\f.\phi.\p.phi (\x.p (f x))) f x1 U)
+\f.\x.\U.x (\x1.(\phi.\p.phi (\x.p (f x))) x1 U)
+\f.\x.\U.x (\x1.(\p.x1 (\x.p (f x))) U)
+\f.\x.\U.x (\x1.x1 (\x.U (f x)))
+
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) (t (t f) x)
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) (t f)
+Beta redex: (\phi.\p.phi (\x.p (t f x))) x
+Beta redex: (\p.x (\x1.p (t f x1))) (\phi.phi U)
+Beta redex: (\phi.phi U) (t f x1)
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) f
+Beta redex: (\phi.\p.phi (\x.p (f x))) x1
+Beta redex: (\p.x1 (\x.p (f x))) U
+
+
+
+\x.qmu (t qeta x)
+\x.(\Phi.\U.Phi (\phi.phi U)) (t qeta x)
+\x.\U.t qeta x (\phi.phi U)
+\x.\U.(\f.\phi.\p.phi (\x.p (f x))) qeta x (\phi.phi U)
+\x.\U.(\phi.\p.phi (\x.p (qeta x))) x (\phi.phi U)
+\x.\U.(\p.x (\x1.p (qeta x1))) (\phi.phi U)
+\x.\U.x (\x1.(\phi.phi U) (qeta x1))
+\x.\U.x (\x1.qeta x1 U)
+\x.\U.x (\x1.(\x.\p.p x) x1 U)
+\x.\U.x (\x1.(\p.p x1) U)
+\x.\U.x (\x1.U x1)
+\x.\U.x U
+\x.x
+
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) (t qeta x)
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) qeta
+Beta redex: (\phi.\p.phi (\x.p (qeta x))) x
+Beta redex: (\p.x (\x1.p (qeta x1))) (\phi.phi U)
+Beta redex: (\phi.phi U) (qeta x1)
+Name redex: qeta
+Beta redex: (\x.\p.p x) x1
+Beta redex: (\p.p x1) U
+Eta  redex:\x1.U x1
+Eta  redex:\U.x U
+
+
+
+\x.qmu (qeta x)
+\x.(\Phi.\U.Phi (\phi.phi U)) (qeta x)
+\x.\U.qeta x (\phi.phi U)
+\x.\U.(\x.\p.p x) x (\phi.phi U)
+\x.\U.(\p.p x) (\phi.phi U)
+\x.\U.(\phi.phi U) x
+\x.\U.x U
+\x.x
+
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) (qeta x)
+Name redex: qeta
+Beta redex: (\x.\p.p x) x
+Beta redex: (\p.p x) (\phi.phi U)
+Beta redex: (\phi.phi U) x
+Eta  redex:\U.x U
+
+
+
+\x.qmu (t qmu x)
+\x.(\Phi.\U.Phi (\phi.phi U)) (t qmu x)
+\x.\U.t qmu x (\phi.phi U)
+\x.\U.(\f.\phi.\p.phi (\x.p (f x))) qmu x (\phi.phi U)
+\x.\U.(\phi.\p.phi (\x.p (qmu x))) x (\phi.phi U)
+\x.\U.(\p.x (\x1.p (qmu x1))) (\phi.phi U)
+\x.\U.x (\x1.(\phi.phi U) (qmu x1))
+\x.\U.x (\x1.qmu x1 U)
+\x.\U.x (\x1.(\Phi.\U.Phi (\phi.phi U)) x1 U)
+\x.\U.x (\x1.(\U.x1 (\phi.phi U)) U)
+\x.\U.x (\x1.x1 (\phi.phi U))
+
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) (t qmu x)
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) qmu
+Beta redex: (\phi.\p.phi (\x.p (qmu x))) x
+Beta redex: (\p.x (\x1.p (qmu x1))) (\phi.phi U)
+Beta redex: (\phi.phi U) (qmu x1)
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) x1
+Beta redex: (\U.x1 (\phi.phi U)) U
+
+
+
+\x.qmu (qmu x)
+\x.(\Phi.\U.Phi (\phi.phi U)) (qmu x)
+\x.\U.qmu x (\phi.phi U)
+\x.\U.(\Phi.\U.Phi (\phi.phi U)) x (\phi.phi U)
+\x.\U.(\U.x (\phi.phi U)) (\phi.phi U)
+\x.\U.x (\phi.phi (\phi.phi U))
+
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) (qmu x)
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) x
+Beta redex: (\U.x (\phi.phi U)) (\phi.phi U)
+
+
+
+\f.\x.forsome (s f x)
+\f.\x.(\e.\p.p (e p)) (s f x)
+\f.\x.\p.p (s f x p)
+\f.\x.\p.p ((\f.\e.\q.f (e (\a.q (f a)))) f x p)
+\f.\x.\p.p ((\e.\q.f (e (\a.q (f a)))) x p)
+\f.\x.\p.p ((\q.f (x (\a.q (f a)))) p)
+\f.\x.\p.p (f (x (\a.p (f a))))
+
+Name redex: forsome
+Beta redex: (\e.\p.p (e p)) (s f x)
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) f
+Beta redex: (\e.\q.f (e (\a.q (f a)))) x
+Beta redex: (\q.f (x (\a.q (f a)))) p
+
+
+
+\f.\x.t f (forsome x)
+\f.\x.(\f.\phi.\p.phi (\x.p (f x))) f (forsome x)
+\f.\x.(\phi.\p.phi (\x.p (f x))) (forsome x)
+\f.\x.\p.forsome x (\x1.p (f x1))
+\f.\x.\p.(\e.\p.p (e p)) x (\x1.p (f x1))
+\f.\x.\p.(\p.p (x p)) (\x1.p (f x1))
+\f.\x.\p.(\x1.p (f x1)) (x (\x1.p (f x1)))
+\f.\x.\p.p (f (x (\x1.p (f x1))))
+
+Name redex: t
+Beta redex: (\f.\phi.\p.phi (\x.p (f x))) f
+Beta redex: (\phi.\p.phi (\x.p (f x))) (forsome x)
+Name redex: forsome
+Beta redex: (\e.\p.p (e p)) x
+Beta redex: (\p.p (x p)) (\x1.p (f x1))
+Beta redex: (\x1.p (f x1)) (x (\x1.p (f x1)))
+
+
+
+\x.forsome (eta x)
+\x.(\e.\p.p (e p)) (eta x)
+\x.\p.p (eta x p)
+\x.\p.p ((\x.\p.x) x p)
+\x.\p.p ((\p.x) p)
+\x.\p.p x
+
+Name redex: forsome
+Beta redex: (\e.\p.p (e p)) (eta x)
+Name redex: eta
+Beta redex: (\x.\p.x) x
+Beta redex: (\p.x) p
+
+
+
+qeta
+\x.\p.p x
+
+Name redex: qeta
+
+
+
+\x.qmu ((\x.forsome (s forsome x)) x)
+\x.(\Phi.\U.Phi (\phi.phi U)) ((\x.forsome (s forsome x)) x)
+\x.\U.(\x.forsome (s forsome x)) x (\phi.phi U)
+\x.\U.forsome (s forsome x) (\phi.phi U)
+\x.\U.(\e.\p.p (e p)) (s forsome x) (\phi.phi U)
+\x.\U.(\p.p (s forsome x p)) (\phi.phi U)
+\x.\U.(\phi.phi U) (s forsome x (\phi.phi U))
+\x.\U.s forsome x (\phi.phi U) U
+\x.\U.(\f.\e.\q.f (e (\a.q (f a)))) forsome x (\phi.phi U) U
+\x.\U.(\e.\q.forsome (e (\a.q (forsome a)))) x (\phi.phi U) U
+\x.\U.(\q.forsome (x (\a.q (forsome a)))) (\phi.phi U) U
+\x.\U.forsome (x (\a.(\phi.phi U) (forsome a))) U
+\x.\U.(\e.\p.p (e p)) (x (\a.(\phi.phi U) (forsome a))) U
+\x.\U.(\p.p (x (\a.(\phi.phi U) (forsome a)) p)) U
+\x.\U.U (x (\a.(\phi.phi U) (forsome a)) U)
+\x.\U.U (x (\a.forsome a U) U)
+\x.\U.U (x (\a.(\e.\p.p (e p)) a U) U)
+\x.\U.U (x (\a.(\p.p (a p)) U) U)
+\x.\U.U (x (\a.U (a U)) U)
+
+Name redex: qmu
+Beta redex: (\Phi.\U.Phi (\phi.phi U)) ((\x.forsome (s forsome x)) x)
+Beta redex: (\x.forsome (s forsome x)) x
+Name redex: forsome
+Beta redex: (\e.\p.p (e p)) (s forsome x)
+Beta redex: (\p.p (s forsome x p)) (\phi.phi U)
+Beta redex: (\phi.phi U) (s forsome x (\phi.phi U))
+Name redex: s
+Beta redex: (\f.\e.\q.f (e (\a.q (f a)))) forsome
+Beta redex: (\e.\q.forsome (e (\a.q (forsome a)))) x
+Beta redex: (\q.forsome (x (\a.q (forsome a)))) (\phi.phi U)
+Name redex: forsome
+Beta redex: (\e.\p.p (e p)) (x (\a.(\phi.phi U) (forsome a)))
+Beta redex: (\p.p (x (\a.(\phi.phi U) (forsome a)) p)) U
+Beta redex: (\phi.phi U) (forsome a)
+Name redex: forsome
+Beta redex: (\e.\p.p (e p)) a
+Beta redex: (\p.p (a p)) U
+
+
+
+\x.forsome (mu x)
+\x.(\e.\p.p (e p)) (mu x)
+\x.\p.p (mu x p)
+\x.\p.p ((\E.\p.E (\e.p (e p)) p) x p)
+\x.\p.p ((\p.x (\e.p (e p)) p) p)
+\x.\p.p (x (\e.p (e p)) p)
+
+Name redex: forsome
+Beta redex: (\e.\p.p (e p)) (mu x)
+Name redex: mu
+Beta redex: (\E.\p.E (\e.p (e p)) p) x
+Beta redex: (\p.x (\e.p (e p)) p) p

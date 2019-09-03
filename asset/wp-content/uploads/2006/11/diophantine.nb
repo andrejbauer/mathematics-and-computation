@@ -1,0 +1,2619 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     64349,       2280]*)
+(*NotebookOutlinePosition[     65331,       2310]*)
+(*  CellTagsIndexPosition[     65287,       2306]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Some statistics about Diophantine Equations", "Title"],
+
+Cell["Andrej Bauer", "Subtitle"],
+
+Cell["November 3, 2006", "Subsubtitle"],
+
+Cell[TextData[{
+  "We use ",
+  StyleBox["Mathematica",
+    FontSlant->"Italic"],
+  " to compute statistics about solvability of small Diophantine equations in \
+natural numbers."
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell["Generation of terms", "Section"],
+
+Cell["\<\
+We are going to generate terms in the language of Peano arithmetic \
+with zero, successor, addition and multiplication.  First we define the \
+successor function:\
+\>", "Text"],
+
+Cell[BoxData[{
+    \(ClearAll[s]\), "\[IndentingNewLine]", 
+    \(s[n_] := n + 1\)}], "Input",
+  CellLabel->"In[1]:="],
+
+Cell[TextData[{
+  "Functions ",
+  StyleBox["terms", "Input"],
+  " generates terms of a given complexity with given variables (this will \
+always include all terms of smaller complexity, up to equality). ",
+  "Our notion of complexity is the ",
+  StyleBox["depth",
+    FontSlant->"Italic"],
+  " of the expression tree. At each step of generation we put the terms into \
+canonical form and throw out duplicates."
+}], "Text"],
+
+Cell[BoxData[{
+    \(ClearAll[combine, terms, \ 
+      termsUpTo]\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(combine[f_, lst_] := \[IndentingNewLine]Flatten[
+        Function[t1, 
+            Function[t2, f[t1, t2]] /@ Select[lst, OrderedQ[{t1, #1}] &]] /@ 
+          lst, 1]\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(terms[0, vars_] := \(terms[0, vars] = 
+        Prepend[vars, 0]\)\), "\[IndentingNewLine]", 
+    \(terms[n_, \ 
+        vars_] := \(terms[n, 
+          vars] = \[IndentingNewLine]Union\ [\[IndentingNewLine]Map[
+            Expand@s[#] &, \ terms[n - 1, vars]], \[IndentingNewLine]combine[
+            Expand@Plus[#1, #2] &, \ 
+            terms[n - 1, vars]], \[IndentingNewLine]combine[
+            Expand@Times[#1, #2] &, \ 
+            terms[n - 1, vars]]\[IndentingNewLine]]\)\)}], "Input",
+  CellLabel->"In[125]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Generation of equations", "Section"],
+
+Cell[TextData[{
+  "Given a list of terms ",
+  StyleBox["lst", "Input"],
+  ", we generate all equations ",
+  Cell[BoxData[
+      \(TraditionalForm\`e\_1 = e\_2\)]],
+  ", where we avoid taking both ",
+  Cell[BoxData[
+      \(TraditionalForm\`e\_1 = e\_2\)]],
+  " and ",
+  Cell[BoxData[
+      \(TraditionalForm\`e\_2 = e\_1\)]],
+  "."
+}], "Text"],
+
+Cell[BoxData[{
+    \(ClearAll[equations]\), "\[IndentingNewLine]", 
+    \(equations[n_, 
+        vars_] := \[IndentingNewLine]With[{lst = terms[n, vars]}, \ 
+        Union\ @\ 
+          Flatten[Function[e1, \ 
+                Function[e2, \ e1 \[Equal] e2] /@ \ 
+                  Select[lst, OrderedQ[{e1, #}] &]]\  /@ \ lst, 
+            1]]\)}], "Input",
+  CellLabel->"In[198]:="],
+
+Cell[TextData[{
+  "We can use ",
+  StyleBox["Mathematica",
+    FontSlant->"Italic"],
+  " function ",
+  StyleBox["FullSimplify", "Input"],
+  " to rewrite equations in equivalent form. Many equations are reduced to \
+the same form this way. In the following example the original equations are \
+in the left column and the simplified ones in the right column."
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\({#, 
+            FullSimplify[#, 
+              Assumptions \[Rule] {x \[Element] Integers, 
+                  y \[Element] Integers, x \[GreaterEqual] 0, 
+                  y \[GreaterEqual] 0}]} &\) /@ 
+        Take[equations[2, {x, y}], {1, 4000, 200}] // TableForm\)], "Input",
+  CellLabel->"In[204]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"False", "False"},
+          {\(2 \[Equal] 3\ x\), "False"},
+          {\(2\ x \[Equal] x\^4\), \(2\ x \[Equal] x\^4\)},
+          {\(4\ x \[Equal] 2\ x + 2\ x\^2\), \(x\^2 \[Equal] x\)},
+          {\(2\ x\^2 \[Equal] x\ y\^2\), \(2\ x\^2 \[Equal] x\ y\^2\)},
+          {\(x\^3 \[Equal] 2 + 2\ y\), \(x\^3 \[Equal] 2 + 2\ y\)},
+          {\(x\^4 \[Equal] x\ y + x\^2\ y\), \(x\^4 \[Equal] 
+              x\ \((1 + x)\)\ y\)},
+          {\(1 + 2\ x \[Equal] 1 + 2\ x + x\^2\), \(x \[Equal] 0\)},
+          {\(1 + 3\ x \[Equal] 
+              x + x\^2 + y\), \(\((\(-2\) + x)\)\ x + y \[Equal] 1\)},
+          {\(x + x\^2 \[Equal] x + y + x\ y + y\^2\), \(x\^2 \[Equal] 
+              y\ \((1 + x + y)\)\)},
+          {\(1 + 2\ x + x\^2 \[Equal] x + x\^2 + y\), \(1 + x \[Equal] y\)},
+          {\(y \[Equal] 3\ y\), \(y \[Equal] 0\)},
+          {\(3\ y \[Equal] x\ y + x\^2\ y\), \(3\ y \[Equal] 
+              x\ \((1 + x)\)\ y\)},
+          {\(2\ x\ y \[Equal] 2\ x + x\ y\), \(x\ y \[Equal] 2\ x\)},
+          {\(2\ x\^2\ y \[Equal] x + 3\ y\), \(2\ x\^2\ y \[Equal] 
+              x + 3\ y\)},
+          {\(2\ y\^2 \[Equal] x\^2 + x\ y\), \(2\ y\^2 \[Equal] 
+              x\ \((x + y)\)\)},
+          {\(2\ x\ y\^2 \[Equal] 
+              x + y\^2\), \(\((\(-1\) + 2\ x)\)\ y\^2 \[Equal] x\)},
+          {\(x\ y\^3 \[Equal] 1 + x + y\), \(x\ y\^3 \[Equal] 1 + x + y\)},
+          {\(2 + y \[Equal] 1 + x + y\^2\), \(x + y\^2 \[Equal] 1 + y\)},
+          {\(2\ x + y \[Equal] 2\ y + 2\ x\ y\), \(y + 2\ x\ y \[Equal] 
+              2\ x\)}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[204]//TableForm="]
+}, Open  ]],
+
+Cell[TextData[{
+  "Function ",
+  StyleBox["reducedEquations", "Input"],
+  " generates all reduced equations of given depth in given variables."
+}], "Text"],
+
+Cell[BoxData[{
+    \(ClearAll[reducedEquations]\), "\[IndentingNewLine]", 
+    \(reducedEquations[n_, vars_] := 
+      Union@FullSimplify[equations[n, vars], 
+          Assumptions \[Rule] {And @@ \((\(# \[Element] 
+                          Integers && # \[GreaterEqual] 0 &\) /@ 
+                    vars)\)}]\)}], "Input",
+  CellLabel->"In[195]:="],
+
+Cell["\<\
+The number of equations of depth 2 in two variables is almost \
+halved by this procedure:\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(equations[2, {x, y}] // Length\)], "Input",
+  CellLabel->"In[203]:="],
+
+Cell[BoxData[
+    \(5049\)], "Output",
+  CellLabel->"Out[203]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(reducedEquations[2, {x, y}] // Length\)], "Input",
+  CellLabel->"In[202]:="],
+
+Cell[BoxData[
+    \(2792\)], "Output",
+  CellLabel->"Out[202]="]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Diophantine Equations", "Section"],
+
+Cell[TextData[{
+  StyleBox["Mathematica",
+    FontSlant->"Italic"],
+  " can solve a Diophantine equation in natural numbers with the ",
+  StyleBox["FindInstance", "Input"],
+  " function:"
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(FindInstance[{\((1 + x)\)\^2 + \((1 + y)\)\^2 \[Equal] \((1 + z)\)\^2 && 
+          x \[GreaterEqual] 0 && y \[GreaterEqual] 0 && 
+          z \[GreaterEqual] 0}, {x, y, z}, Integers]\)], "Input",
+  CellLabel->"In[144]:="],
+
+Cell[BoxData[
+    \({{x \[Rule] 3, y \[Rule] 2, z \[Rule] 4}}\)], "Output",
+  CellLabel->"Out[144]="]
+}, Open  ]],
+
+Cell["It returns an empty list when there is no solution:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(FindInstance[{\((2  x + 1)\)\^2 \[Equal] 4  y + 3 && 
+          x \[GreaterEqual] 0 && y \[GreaterEqual] 0}, {x, y}, 
+      Integers]\)], "Input",
+  CellLabel->"In[147]:="],
+
+Cell[BoxData[
+    \({}\)], "Output",
+  CellLabel->"Out[147]="]
+}, Open  ]],
+
+Cell["It cannot deal with arbitrary equations, of course:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(FindInstance[{\((1 + x)\)\^7 + \((1 + y)\)\^7 \[Equal] \((1 + z)\)\^7 && 
+          x \[GreaterEqual] 0 && y \[GreaterEqual] 0 && 
+          z \[GreaterEqual] 0}, {x, y, z}, Integers]\)], "Input",
+  CellLabel->"In[148]:="],
+
+Cell[BoxData[
+    RowBox[{\(FindInstance::"nsmet"\), \(\(:\)\(\ \)\), "\<\"The methods \
+available to FindInstance are insufficient to find the requested instances or \
+prove they do not exist. \\!\\(\\*ButtonBox[\\\"More\[Ellipsis]\\\", \
+ButtonStyle->\\\"RefGuideLinkText\\\", ButtonFrame->None, \
+ButtonData:>\\\"FindInstance::nsmet\\\"]\\)\"\>"}]], "Message",
+  CellLabel->"From In[148]:="],
+
+Cell[BoxData[
+    \(FindInstance[{\((1 + x)\)\^7 + \((1 + y)\)\^7 \[Equal] \((1 + z)\)\^7 && 
+          x \[GreaterEqual] 0 && y \[GreaterEqual] 0 && 
+          z \[GreaterEqual] 0}, {x, y, z}, Integers]\)], "Output",
+  CellLabel->"Out[148]="]
+}, Open  ]],
+
+Cell[TextData[{
+  "We define a function which returns ",
+  StyleBox["True", "Input"],
+  ", ",
+  StyleBox["False", "Input"],
+  " or ",
+  StyleBox["Maybe", "Input"],
+  " depending on whether a given equation has a solution:"
+}], "Text"],
+
+Cell[BoxData[{
+    \(ClearAll[hasSolution]\), "\[IndentingNewLine]", 
+    \(Off[FindInstance::nsmet]\), "\[IndentingNewLine]", 
+    \(hasSolution[eq_, vars_] := 
+      Switch[\[IndentingNewLine]FindInstance[
+          eq && And @@ \((\(# \[GreaterEqual] 0 &\) /@ vars)\), vars, 
+          Integers], \[IndentingNewLine]{}, \ 
+        False, \[IndentingNewLine]_List, \ 
+        True, \[IndentingNewLine]_FindInstance, \ 
+        Print["\<Cannot decide: \>", \ eq]; Maybe]\)}], "Input",
+  CellLabel->"In[260]:="],
+
+Cell["Examples of usage:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(hasSolution[\((1 + x)\)\^2 + \((1 + y)\)\^2 \[Equal] \((1 + z)\)\^2, \
+{x, y, z}]\)], "Input",
+  CellLabel->"In[253]:="],
+
+Cell[BoxData[
+    \(True\)], "Output",
+  CellLabel->"Out[253]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(hasSolution[\((2  x + 1)\)\^2 \[Equal] 4  y + 3, {x, y}]\)], "Input",
+  CellLabel->"In[254]:="],
+
+Cell[BoxData[
+    \(False\)], "Output",
+  CellLabel->"Out[254]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(hasSolution[\((1 + x)\)\^7 + \((1 + y)\)\^7 \[Equal] \((1 + z)\)\^7, \
+{x, y, z}]\)], "Input",
+  CellLabel->"In[263]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(\((1 + x)\)\^7 + \
+\((1 + y)\)\^7 \[Equal] \((1 + z)\)\^7\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ 
+              Plus[ 1, x], 7], 
+            Power[ 
+              Plus[ 1, y], 7]], 
+          Power[ 
+            Plus[ 1, z], 7]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[263]:="],
+
+Cell[BoxData[
+    \(Maybe\)], "Output",
+  CellLabel->"Out[263]="]
+}, Open  ]],
+
+Cell["\<\
+Now we can write a function which collects statistics about a set \
+of equations:\
+\>", "Text"],
+
+Cell[BoxData[{
+    \(ClearAll[stats]\), "\[IndentingNewLine]", 
+    \(stats[eqs_, vars_] := 
+      With[{r = \(hasSolution[#, vars] &\) /@ 
+              eqs}, \[IndentingNewLine]{{True, Count[r, True]}, {False, 
+            Count[r, False]}, {Maybe, Count[r, Maybe]}}]\)}], "Input",
+  CellLabel->"In[162]:="],
+
+Cell["\<\
+As an example, let us look at statistic for equations with term \
+depth 1 in one variable:\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(terms[1, {x}]\)], "Input",
+  CellLabel->"In[224]:="],
+
+Cell[BoxData[
+    \({0, 1, x, 2\ x, x\^2, 1 + x}\)], "Output",
+  CellLabel->"Out[224]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(equations[1, {x}] // ColumnForm\)], "Input",
+  CellLabel->"In[226]:="],
+
+Cell[BoxData[
+    InterpretationBox[GridBox[{
+          {"False"},
+          {"True"},
+          {\(0 \[Equal] x\)},
+          {\(0 \[Equal] 2\ x\)},
+          {\(0 \[Equal] x\^2\)},
+          {\(0 \[Equal] 1 + x\)},
+          {\(1 \[Equal] x\)},
+          {\(1 \[Equal] 2\ x\)},
+          {\(1 \[Equal] x\^2\)},
+          {\(1 \[Equal] 1 + x\)},
+          {\(x \[Equal] 2\ x\)},
+          {\(x \[Equal] x\^2\)},
+          {\(x \[Equal] 1 + x\)},
+          {\(2\ x \[Equal] x\^2\)},
+          {\(2\ x \[Equal] 1 + x\)},
+          {\(x\^2 \[Equal] 1 + x\)}
+          },
+        GridBaseline->{Baseline, {1, 1}},
+        ColumnAlignments->{Left}],
+      ColumnForm[ {False, True, 
+        Equal[ 0, x], 
+        Equal[ 0, 
+          Times[ 2, x]], 
+        Equal[ 0, 
+          Power[ x, 2]], 
+        Equal[ 0, 
+          Plus[ 1, x]], 
+        Equal[ 1, x], 
+        Equal[ 1, 
+          Times[ 2, x]], 
+        Equal[ 1, 
+          Power[ x, 2]], 
+        Equal[ 1, 
+          Plus[ 1, x]], 
+        Equal[ x, 
+          Times[ 2, x]], 
+        Equal[ x, 
+          Power[ x, 2]], 
+        Equal[ x, 
+          Plus[ 1, x]], 
+        Equal[ 
+          Times[ 2, x], 
+          Power[ x, 2]], 
+        Equal[ 
+          Times[ 2, x], 
+          Plus[ 1, x]], 
+        Equal[ 
+          Power[ x, 2], 
+          Plus[ 1, x]]}],
+      Editable->False]], "Output",
+  CellLabel->"Out[226]="]
+}, Open  ]],
+
+Cell["Of the above 16 equations, 11 have a solution and 5 do not:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[1, {x}], {x}] // TableForm\)], "Input",
+  CellLabel->"In[228]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "11"},
+          {"False", "5"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[228]//TableForm="]
+}, Open  ]],
+
+Cell["The same example with reduced equations:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(reducedEquations[1, {x}] // ColumnForm\)], "Input",
+  CellLabel->"In[227]:="],
+
+Cell[BoxData[
+    InterpretationBox[GridBox[{
+          {"False"},
+          {"True"},
+          {\(x \[Equal] 0\)},
+          {\(x \[Equal] 1\)},
+          {\(x \[Equal] x\^2\)},
+          {\(2\ x \[Equal] x\^2\)},
+          {\(x\^2 \[Equal] 1 + x\)}
+          },
+        GridBaseline->{Baseline, {1, 1}},
+        ColumnAlignments->{Left}],
+      ColumnForm[ {False, True, 
+        Equal[ x, 0], 
+        Equal[ x, 1], 
+        Equal[ x, 
+          Power[ x, 2]], 
+        Equal[ 
+          Times[ 2, x], 
+          Power[ x, 2]], 
+        Equal[ 
+          Power[ x, 2], 
+          Plus[ 1, x]]}],
+      Editable->False]], "Output",
+  CellLabel->"Out[227]="]
+}, Open  ]],
+
+Cell["\<\
+Now we have only 7 equations left, two of which do not have a \
+solution:\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[reducedEquations[1, {x}], {x}] // TableForm\)], "Input",
+  CellLabel->"In[230]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "5"},
+          {"False", "2"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[230]//TableForm="]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Statistics", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Depth 1", "Subsection"],
+
+Cell["One variable:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[1, {x}], {x}] // TableForm\)], "Input",
+  CellLabel->"In[232]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "11"},
+          {"False", "5"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[232]//TableForm="]
+}, Open  ]],
+
+Cell["Two variables:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[1, {x, y}], {x, y}] // TableForm\)], "Input",
+  CellLabel->"In[236]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "58"},
+          {"False", "9"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[236]//TableForm="]
+}, Open  ]],
+
+Cell["Three variables:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[1, {x, y, z}], {x, y, z}] // TableForm\)], "Input",
+  CellLabel->"In[237]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "178"},
+          {"False", "13"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[237]//TableForm="]
+}, Open  ]],
+
+Cell["Four variables:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[1, {x, y, z, w}], {x, y, z, w}] // TableForm\)], "Input",\
+
+  CellLabel->"In[238]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "419"},
+          {"False", "17"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[238]//TableForm="]
+}, Open  ]],
+
+Cell["Five variables:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[1, {x, y, z, w, v}], {x, y, z, w, v}] // 
+      TableForm\)], "Input",
+  CellLabel->"In[239]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "841"},
+          {"False", "21"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[239]//TableForm="]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Depth 2", "Subsection"],
+
+Cell["One variable:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[2, {x}], {x}] // TableForm\)], "Input",
+  CellLabel->"In[240]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "175"},
+          {"False", "124"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[240]//TableForm="]
+}, Open  ]],
+
+Cell["Two variables:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[2, {x, y}], {x, y}] // TableForm\)], "Input",
+  CellLabel->"In[264]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^4 \[Equal] 
+          1 + x + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ x, 4], 
+          Plus[ 1, x, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[264]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^4 \[Equal] 
+          1 + x\^2 + y\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ y, 4], 
+          Plus[ 1, 
+            Power[ x, 2], y]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[264]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 + 
+            y \[Equal] y\^2 + x\ y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2], y], 
+          Plus[ 
+            Power[ y, 2], 
+            Times[ x, 
+              Power[ y, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[264]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^2 + 
+            x\^2\ y \[Equal] 1 + x + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ x, 2], 
+            Times[ 
+              Power[ x, 2], y]], 
+          Plus[ 1, x, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[264]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "4308"},
+          {"False", "737"},
+          {"Maybe", "4"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[264]//TableForm="]
+}, Open  ]],
+
+Cell["Three variables:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[2, {x, y, z}], {x, y, z}] // TableForm\)], "Input",
+  CellLabel->"In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x\^2 \[Equal] 
+          1 + 2\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 2, 
+            Power[ x, 2]], 
+          Plus[ 1, 
+            Times[ 2, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x\^2 \[Equal] 
+          1 + 2\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 2, 
+            Power[ x, 2]], 
+          Plus[ 1, 
+            Times[ 2, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ x\^2 \[Equal] 
+          1 + x + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, 
+            Power[ x, 2]], 
+          Plus[ 1, x, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ x\^2 \[Equal] 
+          1 + x + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, 
+            Power[ x, 2]], 
+          Plus[ 1, x, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^4 \[Equal] 
+          1 + x + y + x\ y\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ x, 4], 
+          Plus[ 1, x, y, 
+            Times[ x, y]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^4 \[Equal] 
+          1 + x + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ x, 4], 
+          Plus[ 1, x, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^4 \[Equal] 
+          1 + x + z + x\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ x, 4], 
+          Plus[ 1, x, z, 
+            Times[ x, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^4 \[Equal] 
+          1 + x + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ x, 4], 
+          Plus[ 1, x, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2 + 2\ x \[Equal] 
+          x\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 2, 
+            Times[ 2, x]], 
+          Plus[ 
+            Times[ x, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2 + 2\ x \[Equal] 
+          x\ y\^2 + y\^3\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 2, 
+            Times[ 2, x]], 
+          Plus[ 
+            Times[ x, 
+              Power[ y, 2]], 
+            Power[ y, 3]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2 + 2\ x \[Equal] 
+          x\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 2, 
+            Times[ 2, x]], 
+          Plus[ 
+            Times[ x, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2 + 2\ x \[Equal] 
+          x\ z\^2 + z\^3\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 2, 
+            Times[ 2, x]], 
+          Plus[ 
+            Times[ x, 
+              Power[ z, 2]], 
+            Power[ z, 3]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          2\ y + 2\ x\ y\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ 
+            Times[ 2, y], 
+            Times[ 2, x, y]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          2\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ 
+            Times[ 2, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          x + y + x\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ x, y, 
+            Times[ x, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          2\ y + 2\ y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ 
+            Times[ 2, y], 
+            Times[ 2, 
+              Power[ y, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          2\ z + 2\ x\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ 
+            Times[ 2, z], 
+            Times[ 2, x, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          2\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ 
+            Times[ 2, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          x + z + x\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ x, z, 
+            Times[ x, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 \[Equal] 
+          2\ z + 2\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2]], 
+          Plus[ 
+            Times[ 2, z], 
+            Times[ 2, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x + x\^2 \[Equal] 
+          1 + 2\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ x, 
+            Power[ x, 2]], 
+          Plus[ 1, 
+            Times[ 2, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x + x\^2 \[Equal] 
+          1 + 2\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ x, 
+            Power[ x, 2]], 
+          Plus[ 1, 
+            Times[ 2, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + 
+            x\^2 \[Equal] x + y + x\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, 
+            Power[ x, 2]], 
+          Plus[ x, y, 
+            Times[ x, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + 
+            x\^2 \[Equal] x + z + x\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, 
+            Power[ x, 2]], 
+          Plus[ x, z, 
+            Times[ x, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x + 
+            x\^2 \[Equal] 1 + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, x], 
+            Power[ x, 2]], 
+          Plus[ 1, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x + 
+            x\^2 \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, x], 
+            Power[ x, 2]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            x\^2 \[Equal] 2\ y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], 
+            Power[ x, 2]], 
+          Times[ 2, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            x\^2 \[Equal] y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], 
+            Power[ x, 2]], 
+          Plus[ y, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            x\^2 \[Equal] 2\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], 
+            Power[ x, 2]], 
+          Times[ 2, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            x\^2 \[Equal] z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], 
+            Power[ x, 2]], 
+          Plus[ z, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x + 
+            2\ x\^2 \[Equal] 1 + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, x], 
+            Times[ 2, 
+              Power[ x, 2]]], 
+          Plus[ 1, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x + 
+            2\ x\^2 \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, x], 
+            Times[ 2, 
+              Power[ x, 2]]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ x\ y \[Equal] 
+          1 + x + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, x, y], 
+          Plus[ 1, x, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ x\ y \[Equal] 
+          1 + y + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, x, y], 
+          Plus[ 1, y, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^2\ y \[Equal] 
+          1 + y + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 
+            Power[ x, 2], y], 
+          Plus[ 1, y, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ y\^2 \[Equal] 
+          1 + 2\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 2, 
+            Power[ y, 2]], 
+          Plus[ 1, 
+            Times[ 2, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ y\^2 \[Equal] 
+          1 + x\^2 + y\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, 
+            Power[ y, 2]], 
+          Plus[ 1, 
+            Power[ x, 2], y]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ y\^2 \[Equal] 
+          1 + y + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, 
+            Power[ y, 2]], 
+          Plus[ 1, y, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\ y\^2 \[Equal] 
+          1 + x + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ x, 
+            Power[ y, 2]], 
+          Plus[ 1, x, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^4 \[Equal] 
+          1 + x\^2 + y\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ y, 4], 
+          Plus[ 1, 
+            Power[ x, 2], y]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^4 \[Equal] 
+          1 + x + y + x\ y\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ y, 4], 
+          Plus[ 1, x, y, 
+            Times[ x, y]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^4 \[Equal] 
+          1 + y + z + y\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ y, 4], 
+          Plus[ 1, y, z, 
+            Times[ y, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^4 \[Equal] 
+          1 + y + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ y, 4], 
+          Plus[ 1, y, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            y \[Equal] x\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], y], 
+          Plus[ 
+            Times[ x, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            y \[Equal] y\^2 + x\ y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], y], 
+          Plus[ 
+            Power[ y, 2], 
+            Times[ x, 
+              Power[ y, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            y \[Equal] x\ y\^2 + y\^3\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], y], 
+          Plus[ 
+            Times[ x, 
+              Power[ y, 2]], 
+            Power[ y, 3]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            y \[Equal] x\ z\^2 + y\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], y], 
+          Plus[ 
+            Times[ x, 
+              Power[ z, 2]], 
+            Times[ y, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 + 
+            y \[Equal] x\ y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2], y], 
+          Plus[ 
+            Times[ x, y], 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 + 
+            y \[Equal] y\^2 + x\ y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2], y], 
+          Plus[ 
+            Power[ y, 2], 
+            Times[ x, 
+              Power[ y, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 + 
+            y \[Equal] 4\ y\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2], y], 
+          Times[ 4, y, z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 + 
+            y \[Equal] y\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2], y], 
+          Times[ y, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2 + 2\ y \[Equal] 
+          y\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 2, 
+            Times[ 2, y]], 
+          Plus[ 
+            Times[ y, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2 + 2\ y \[Equal] 
+          y\ z\^2 + z\^3\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 2, 
+            Times[ 2, y]], 
+          Plus[ 
+            Times[ y, 
+              Power[ z, 2]], 
+            Power[ z, 3]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + 
+            2\ y \[Equal] x\ z\^2 + y\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, 
+            Times[ 2, y]], 
+          Plus[ 
+            Times[ x, 
+              Power[ z, 2]], 
+            Times[ y, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^2 + 
+            x\ y \[Equal] 1 + x + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ x, 2], 
+            Times[ x, y]], 
+          Plus[ 1, x, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + y + 
+            x\ y \[Equal] x\ y\ z + x\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, y, 
+            Times[ x, y]], 
+          Plus[ 
+            Times[ x, y, z], 
+            Times[ x, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + y + 
+            x\ y \[Equal] x\ y\ z + y\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, y, 
+            Times[ x, y]], 
+          Plus[ 
+            Times[ x, y, z], 
+            Times[ y, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x + x\^2 + y + 
+            x\ y \[Equal] 1 + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ x, 
+            Power[ x, 2], y, 
+            Times[ x, y]], 
+          Plus[ 1, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x + x\^2 + y + 
+            x\ y \[Equal] 1 + y + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ x, 
+            Power[ x, 2], y, 
+            Times[ x, y]], 
+          Plus[ 1, y, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x + 
+            2\ x\ y \[Equal] 1 + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, x], 
+            Times[ 2, x, y]], 
+          Plus[ 1, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^2 + 
+            x\^2\ y \[Equal] 1 + x + y\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ x, 2], 
+            Times[ 
+              Power[ x, 2], y]], 
+          Plus[ 1, x, 
+            Power[ y, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y\^2 \[Equal] 
+          2\ z + 2\ y\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ y, 2]], 
+          Plus[ 
+            Times[ 2, z], 
+            Times[ 2, y, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y\^2 \[Equal] 
+          2\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ y, 2]], 
+          Plus[ 
+            Times[ 2, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y\^2 \[Equal] 
+          y + z + y\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ y, 2]], 
+          Plus[ y, z, 
+            Times[ y, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y\^2 \[Equal] 
+          2\ z + 2\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ y, 2]], 
+          Plus[ 
+            Times[ 2, z], 
+            Times[ 2, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + 
+            y\^2 \[Equal] 4\ x\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, 
+            Power[ y, 2]], 
+          Times[ 4, x, z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + 
+            y\^2 \[Equal] x\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, 
+            Power[ y, 2]], 
+          Times[ x, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y + y\^2 \[Equal] 
+          1 + 2\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ y, 
+            Power[ y, 2]], 
+          Plus[ 1, 
+            Times[ 2, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y + 
+            y\^2 \[Equal] y + z + y\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, y, 
+            Power[ y, 2]], 
+          Plus[ y, z, 
+            Times[ y, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ y + 
+            y\^2 \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, y], 
+            Power[ y, 2]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ y + 
+            y\^2 \[Equal] 2\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, y], 
+            Power[ y, 2]], 
+          Times[ 2, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ y + 
+            y\^2 \[Equal] z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, y], 
+            Power[ y, 2]], 
+          Plus[ z, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ y + 
+            2\ y\^2 \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, y], 
+            Times[ 2, 
+              Power[ y, 2]]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ x\ z \[Equal] 
+          1 + y\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, x, z], 
+          Plus[ 1, 
+            Power[ y, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^2\ z \[Equal] 
+          1 + y\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 
+            Power[ x, 2], z], 
+          Plus[ 1, 
+            Power[ y, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ y\ z \[Equal] 
+          1 + x\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, y, z], 
+          Plus[ 1, 
+            Power[ x, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^2\ z \[Equal] 
+          1 + x\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 
+            Power[ y, 2], z], 
+          Plus[ 1, 
+            Power[ x, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ z\^2 \[Equal] 
+          1 + x\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, 
+            Power[ z, 2]], 
+          Plus[ 1, 
+            Power[ x, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(4\ z\^2 \[Equal] 
+          1 + y\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Times[ 4, 
+            Power[ z, 2]], 
+          Plus[ 1, 
+            Power[ y, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(z\^4 \[Equal] 
+          1 + x\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ z, 4], 
+          Plus[ 1, 
+            Power[ x, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(z\^4 \[Equal] 
+          1 + y\^2 + z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ z, 4], 
+          Plus[ 1, 
+            Power[ y, 2], z]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(z\^4 \[Equal] 
+          1 + x + z + x\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ z, 4], 
+          Plus[ 1, x, z, 
+            Times[ x, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(z\^4 \[Equal] 
+          1 + y + z + y\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Power[ z, 4], 
+          Plus[ 1, y, z, 
+            Times[ y, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            z \[Equal] x\ y\^2 + y\^2\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], z], 
+          Plus[ 
+            Times[ x, 
+              Power[ y, 2]], 
+            Times[ 
+              Power[ y, 2], z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            z \[Equal] x\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], z], 
+          Plus[ 
+            Times[ x, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            z \[Equal] z\^2 + x\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], z], 
+          Plus[ 
+            Power[ z, 2], 
+            Times[ x, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ x + 
+            z \[Equal] x\ z\^2 + z\^3\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, x], z], 
+          Plus[ 
+            Times[ x, 
+              Power[ z, 2]], 
+            Power[ z, 3]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 + 
+            z \[Equal] x\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2], z], 
+          Plus[ 
+            Times[ x, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x\^2 + 
+            z \[Equal] z\^2 + x\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ x, 2], z], 
+          Plus[ 
+            Power[ z, 2], 
+            Times[ x, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ y + 
+            z \[Equal] x\^2\ y + x\^2\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, y], z], 
+          Plus[ 
+            Times[ 
+              Power[ x, 2], y], 
+            Times[ 
+              Power[ x, 2], z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ y + 
+            z \[Equal] y\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, y], z], 
+          Plus[ 
+            Times[ y, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ y + 
+            z \[Equal] z\^2 + y\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, y], z], 
+          Plus[ 
+            Power[ z, 2], 
+            Times[ y, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + 2\ y + 
+            z \[Equal] y\ z\^2 + z\^3\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Times[ 2, y], z], 
+          Plus[ 
+            Times[ y, 
+              Power[ z, 2]], 
+            Power[ z, 3]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y\^2 + 
+            z \[Equal] y\ z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ y, 2], z], 
+          Plus[ 
+            Times[ y, z], 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y\^2 + 
+            z \[Equal] z\^2 + y\ z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, 
+            Power[ y, 2], z], 
+          Plus[ 
+            Power[ z, 2], 
+            Times[ y, 
+              Power[ z, 2]]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + 
+            2\ z \[Equal] x\ y\^2 + y\^2\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, 
+            Times[ 2, z]], 
+          Plus[ 
+            Times[ x, 
+              Power[ y, 2]], 
+            Times[ 
+              Power[ y, 2], z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y + 
+            2\ z \[Equal] x\^2\ y + x\^2\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, y, 
+            Times[ 2, z]], 
+          Plus[ 
+            Times[ 
+              Power[ x, 2], y], 
+            Times[ 
+              Power[ x, 2], z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^2 + 
+            x\ z \[Equal] 1 + x + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ x, 2], 
+            Times[ x, z]], 
+          Plus[ 1, x, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + z + 
+            x\ z \[Equal] x\ y\^2 + x\ y\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, z, 
+            Times[ x, z]], 
+          Plus[ 
+            Times[ x, 
+              Power[ y, 2]], 
+            Times[ x, y, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + x + z + 
+            x\ z \[Equal] x\ y\ z + y\^2\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, x, z, 
+            Times[ x, z]], 
+          Plus[ 
+            Times[ x, y, z], 
+            Times[ 
+              Power[ y, 2], z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x + x\^2 + z + 
+            x\ z \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ x, 
+            Power[ x, 2], z, 
+            Times[ x, z]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x + x\^2 + z + 
+            x\ z \[Equal] 1 + z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ x, 
+            Power[ x, 2], z, 
+            Times[ x, z]], 
+          Plus[ 1, z, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ x + 
+            2\ x\ z \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, x], 
+            Times[ 2, x, z]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(x\^2 + 
+            x\^2\ z \[Equal] 1 + x + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ x, 2], 
+            Times[ 
+              Power[ x, 2], z]], 
+          Plus[ 1, x, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^2 + 
+            y\ z \[Equal] 1 + y + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ y, 2], 
+            Times[ y, z]], 
+          Plus[ 1, y, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y + z + 
+            y\ z \[Equal] x\^2\ y + x\ y\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, y, z, 
+            Times[ y, z]], 
+          Plus[ 
+            Times[ 
+              Power[ x, 2], y], 
+            Times[ x, y, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(1 + y + z + 
+            y\ z \[Equal] x\^2\ z + x\ y\ z\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 1, y, z, 
+            Times[ y, z]], 
+          Plus[ 
+            Times[ 
+              Power[ x, 2], z], 
+            Times[ x, y, z]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y + y\^2 + z + 
+            y\ z \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ y, 
+            Power[ y, 2], z, 
+            Times[ y, z]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y + y\^2 + z + 
+            y\ z \[Equal] 1 + z + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ y, 
+            Power[ y, 2], z, 
+            Times[ y, z]], 
+          Plus[ 1, z, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(2\ y + 
+            2\ y\ z \[Equal] 1 + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Times[ 2, y], 
+            Times[ 2, y, z]], 
+          Plus[ 1, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    InterpretationBox[\("Cannot decide: "\[InvisibleSpace]\(y\^2 + 
+            y\^2\ z \[Equal] 1 + y + z\^2\)\),
+      SequenceForm[ "Cannot decide: ", 
+        Equal[ 
+          Plus[ 
+            Power[ y, 2], 
+            Times[ 
+              Power[ y, 2], z]], 
+          Plus[ 1, y, 
+            Power[ z, 2]]]],
+      Editable->False]], "Print",
+  CellLabel->"From In[269]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "38680"},
+          {"False", "1963"},
+          {"Maybe", "111"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[269]//TableForm="]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Depth 3", "Subsection"],
+
+Cell["\<\
+Depth 3 is quite large. We can only handle the one variable case:\
+\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(stats[equations[3, {x}], {x}] // TableForm\)], "Input",
+  CellLabel->"In[270]:="],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {"True", "26581"},
+          {"False", "28026"},
+          {"Maybe", "0"}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output",
+  CellLabel->"Out[270]//TableForm="]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{1274, 992},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperSize"->{612, 792},
+"PaperOrientation"->"Portrait",
+"PostScriptOutputFile":>FrontEnd`FileName[{$RootDirectory, "home", "andrej", \
+"project", "peano"}, "Diophantine.ps", CharacterEncoding -> "iso8859-1"],
+"Magnification"->1},
+Magnification->1.5,
+StyleDefinitions -> "ArticleClassic.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 60, 0, 119, "Title"],
+Cell[1839, 55, 32, 0, 53, "Subtitle"],
+Cell[1874, 57, 39, 0, 44, "Subsubtitle"],
+Cell[1916, 59, 190, 6, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[2131, 69, 38, 0, 81, "Section"],
+Cell[2172, 71, 186, 4, 38, "Text"],
+Cell[2361, 77, 118, 3, 63, "Input"],
+Cell[2482, 82, 422, 10, 61, "Text"],
+Cell[2907, 94, 857, 17, 312, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3801, 116, 42, 0, 81, "Section"],
+Cell[3846, 118, 343, 13, 38, "Text"],
+Cell[4192, 133, 384, 9, 128, "Input"],
+Cell[4579, 144, 369, 9, 61, "Text"],
+
+Cell[CellGroupData[{
+Cell[4973, 157, 329, 7, 82, "Input"],
+Cell[5305, 166, 1831, 37, 569, "Output"]
+}, Open  ]],
+Cell[7151, 206, 155, 4, 38, "Text"],
+Cell[7309, 212, 351, 7, 105, "Input"],
+Cell[7663, 221, 113, 3, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[7801, 228, 89, 2, 59, "Input"],
+Cell[7893, 232, 64, 2, 40, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7994, 239, 96, 2, 59, "Input"],
+Cell[8093, 243, 64, 2, 40, "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8206, 251, 40, 0, 81, "Section"],
+Cell[8249, 253, 199, 6, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[8473, 263, 242, 4, 67, "Input"],
+Cell[8718, 269, 101, 2, 40, "Output"]
+}, Open  ]],
+Cell[8834, 274, 67, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[8926, 278, 192, 4, 67, "Input"],
+Cell[9121, 284, 62, 2, 40, "Output"]
+}, Open  ]],
+Cell[9198, 289, 67, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[9290, 293, 242, 4, 67, "Input"],
+Cell[9535, 299, 394, 6, 51, "Message"],
+Cell[9932, 307, 243, 4, 47, "Output"]
+}, Open  ]],
+Cell[10190, 314, 234, 8, 38, "Text"],
+Cell[10427, 324, 511, 10, 197, "Input"],
+Cell[10941, 336, 34, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[11000, 340, 140, 3, 67, "Input"],
+Cell[11143, 345, 64, 2, 40, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[11244, 352, 115, 2, 67, "Input"],
+Cell[11362, 356, 65, 2, 40, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[11464, 363, 140, 3, 67, "Input"],
+Cell[11607, 368, 428, 13, 37, "Print"],
+Cell[12038, 383, 65, 2, 40, "Output"]
+}, Open  ]],
+Cell[12118, 388, 105, 3, 38, "Text"],
+Cell[12226, 393, 309, 6, 105, "Input"],
+Cell[12538, 401, 114, 3, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[12677, 408, 72, 2, 59, "Input"],
+Cell[12752, 412, 88, 2, 47, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[12877, 419, 90, 2, 59, "Input"],
+Cell[12970, 423, 1387, 52, 425, "Output"]
+}, Open  ]],
+Cell[14372, 478, 75, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[14472, 482, 101, 2, 59, "Input"],
+Cell[14576, 486, 354, 12, 87, "Output"]
+}, Open  ]],
+Cell[14945, 501, 56, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[15026, 505, 97, 2, 59, "Input"],
+Cell[15126, 509, 660, 24, 199, "Output"]
+}, Open  ]],
+Cell[15801, 536, 97, 3, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[15923, 543, 108, 2, 59, "Input"],
+Cell[16034, 547, 353, 12, 87, "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[16436, 565, 29, 0, 81, "Section"],
+
+Cell[CellGroupData[{
+Cell[16490, 569, 29, 0, 58, "Subsection"],
+Cell[16522, 571, 29, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[16576, 575, 101, 2, 59, "Input"],
+Cell[16680, 579, 354, 12, 87, "Output"]
+}, Open  ]],
+Cell[17049, 594, 30, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[17104, 598, 107, 2, 59, "Input"],
+Cell[17214, 602, 354, 12, 87, "Output"]
+}, Open  ]],
+Cell[17583, 617, 32, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[17640, 621, 113, 2, 59, "Input"],
+Cell[17756, 625, 356, 12, 87, "Output"]
+}, Open  ]],
+Cell[18127, 640, 31, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[18183, 644, 121, 3, 59, "Input"],
+Cell[18307, 649, 356, 12, 87, "Output"]
+}, Open  ]],
+Cell[18678, 664, 31, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[18734, 668, 132, 3, 59, "Input"],
+Cell[18869, 673, 356, 12, 87, "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[19274, 691, 29, 0, 32, "Subsection"],
+Cell[19306, 693, 29, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[19360, 697, 101, 2, 59, "Input"],
+Cell[19464, 701, 357, 12, 87, "Output"]
+}, Open  ]],
+Cell[19836, 716, 30, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[19891, 720, 107, 2, 59, "Input"],
+Cell[20001, 724, 314, 9, 37, "Print"],
+Cell[20318, 735, 314, 9, 37, "Print"],
+Cell[20635, 746, 399, 12, 37, "Print"],
+Cell[21037, 760, 399, 12, 37, "Print"],
+Cell[21439, 774, 358, 12, 87, "Output"]
+}, Open  ]],
+Cell[21812, 789, 32, 0, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[21869, 793, 113, 2, 59, "Input"],
+Cell[21985, 797, 368, 11, 37, "Print"],
+Cell[22356, 810, 368, 11, 37, "Print"],
+Cell[22727, 823, 341, 10, 37, "Print"],
+Cell[23071, 835, 341, 10, 37, "Print"],
+Cell[23415, 847, 321, 9, 37, "Print"],
+Cell[23739, 858, 314, 9, 37, "Print"],
+Cell[24056, 869, 321, 9, 37, "Print"],
+Cell[24380, 880, 314, 9, 37, "Print"],
+Cell[24697, 891, 361, 11, 37, "Print"],
+Cell[25061, 904, 390, 12, 37, "Print"],
+Cell[25454, 918, 361, 11, 37, "Print"],
+Cell[25818, 931, 390, 12, 37, "Print"],
+Cell[26211, 945, 367, 11, 37, "Print"],
+Cell[26581, 958, 361, 11, 37, "Print"],
+Cell[26945, 971, 375, 11, 37, "Print"],
+Cell[27323, 984, 390, 12, 37, "Print"],
+Cell[27716, 998, 367, 11, 37, "Print"],
+Cell[28086, 1011, 361, 11, 37, "Print"],
+Cell[28450, 1024, 375, 11, 37, "Print"],
+Cell[28828, 1037, 390, 12, 37, "Print"],
+Cell[29221, 1051, 368, 11, 37, "Print"],
+Cell[29592, 1064, 368, 11, 37, "Print"],
+Cell[29963, 1077, 384, 11, 37, "Print"],
+Cell[30350, 1090, 384, 11, 37, "Print"],
+Cell[30737, 1103, 363, 11, 37, "Print"],
+Cell[31103, 1116, 363, 11, 37, "Print"],
+Cell[31469, 1129, 370, 11, 37, "Print"],
+Cell[31842, 1142, 370, 11, 37, "Print"],
+Cell[32215, 1155, 370, 11, 37, "Print"],
+Cell[32588, 1168, 370, 11, 37, "Print"],
+Cell[32961, 1181, 392, 12, 37, "Print"],
+Cell[33356, 1195, 392, 12, 37, "Print"],
+Cell[33751, 1209, 320, 9, 37, "Print"],
+Cell[34074, 1220, 320, 9, 37, "Print"],
+Cell[34397, 1231, 341, 10, 37, "Print"],
+Cell[34741, 1243, 368, 11, 37, "Print"],
+Cell[35112, 1256, 341, 10, 37, "Print"],
+Cell[35456, 1268, 341, 10, 37, "Print"],
+Cell[35800, 1280, 341, 10, 37, "Print"],
+Cell[36144, 1292, 314, 9, 37, "Print"],
+Cell[36461, 1303, 321, 9, 37, "Print"],
+Cell[36785, 1314, 321, 9, 37, "Print"],
+Cell[37109, 1325, 314, 9, 37, "Print"],
+Cell[37426, 1336, 370, 11, 37, "Print"],
+Cell[37799, 1349, 399, 12, 37, "Print"],
+Cell[38201, 1363, 399, 12, 37, "Print"],
+Cell[38603, 1377, 428, 13, 37, "Print"],
+Cell[39034, 1392, 370, 11, 37, "Print"],
+Cell[39407, 1405, 399, 12, 37, "Print"],
+Cell[39809, 1419, 322, 9, 37, "Print"],
+Cell[40134, 1430, 343, 10, 37, "Print"],
+Cell[40480, 1442, 361, 11, 37, "Print"],
+Cell[40844, 1455, 390, 12, 37, "Print"],
+Cell[41237, 1469, 428, 13, 37, "Print"],
+Cell[41668, 1484, 370, 11, 37, "Print"],
+Cell[42041, 1497, 412, 12, 37, "Print"],
+Cell[42456, 1511, 412, 12, 37, "Print"],
+Cell[42871, 1525, 377, 11, 37, "Print"],
+Cell[43251, 1538, 384, 11, 37, "Print"],
+Cell[43638, 1551, 369, 11, 37, "Print"],
+Cell[44010, 1564, 399, 12, 37, "Print"],
+Cell[44412, 1578, 367, 11, 37, "Print"],
+Cell[44782, 1591, 361, 11, 37, "Print"],
+Cell[45146, 1604, 375, 11, 37, "Print"],
+Cell[45524, 1617, 390, 12, 37, "Print"],
+Cell[45917, 1631, 322, 9, 37, "Print"],
+Cell[46242, 1642, 343, 10, 37, "Print"],
+Cell[46588, 1654, 368, 11, 37, "Print"],
+Cell[46959, 1667, 384, 11, 37, "Print"],
+Cell[47346, 1680, 363, 11, 37, "Print"],
+Cell[47712, 1693, 370, 11, 37, "Print"],
+Cell[48085, 1706, 370, 11, 37, "Print"],
+Cell[48458, 1719, 392, 12, 37, "Print"],
+Cell[48853, 1733, 320, 9, 37, "Print"],
+Cell[49176, 1744, 341, 10, 37, "Print"],
+Cell[49520, 1756, 320, 9, 37, "Print"],
+Cell[49843, 1767, 341, 10, 37, "Print"],
+Cell[50187, 1779, 341, 10, 37, "Print"],
+Cell[50531, 1791, 341, 10, 37, "Print"],
+Cell[50875, 1803, 314, 9, 37, "Print"],
+Cell[51192, 1814, 314, 9, 37, "Print"],
+Cell[51509, 1825, 321, 9, 37, "Print"],
+Cell[51833, 1836, 321, 9, 37, "Print"],
+Cell[52157, 1847, 428, 13, 37, "Print"],
+Cell[52588, 1862, 370, 11, 37, "Print"],
+Cell[52961, 1875, 399, 12, 37, "Print"],
+Cell[53363, 1889, 399, 12, 37, "Print"],
+Cell[53765, 1903, 370, 11, 37, "Print"],
+Cell[54138, 1916, 399, 12, 37, "Print"],
+Cell[54540, 1930, 428, 13, 37, "Print"],
+Cell[54971, 1945, 370, 11, 37, "Print"],
+Cell[55344, 1958, 399, 12, 37, "Print"],
+Cell[55746, 1972, 399, 12, 37, "Print"],
+Cell[56148, 1986, 370, 11, 37, "Print"],
+Cell[56521, 1999, 399, 12, 37, "Print"],
+Cell[56923, 2013, 428, 13, 37, "Print"],
+Cell[57354, 2028, 428, 13, 37, "Print"],
+Cell[57785, 2043, 370, 11, 37, "Print"],
+Cell[58158, 2056, 412, 12, 37, "Print"],
+Cell[58573, 2070, 412, 12, 37, "Print"],
+Cell[58988, 2084, 377, 11, 37, "Print"],
+Cell[59368, 2097, 384, 11, 37, "Print"],
+Cell[59755, 2110, 369, 11, 37, "Print"],
+Cell[60127, 2123, 399, 12, 37, "Print"],
+Cell[60529, 2137, 370, 11, 37, "Print"],
+Cell[60902, 2150, 412, 12, 37, "Print"],
+Cell[61317, 2164, 412, 12, 37, "Print"],
+Cell[61732, 2178, 377, 11, 37, "Print"],
+Cell[62112, 2191, 384, 11, 37, "Print"],
+Cell[62499, 2204, 369, 11, 37, "Print"],
+Cell[62871, 2217, 399, 12, 37, "Print"],
+Cell[63273, 2231, 362, 12, 87, "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[63684, 2249, 29, 0, 58, "Subsection"],
+Cell[63716, 2251, 91, 3, 38, "Text"],
+
+Cell[CellGroupData[{
+Cell[63832, 2258, 101, 2, 59, "Input"],
+Cell[63936, 2262, 361, 12, 87, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
