@@ -1,0 +1,66 @@
+(** Natural numbers. *)
+
+constant nat : Type
+constant O : nat
+constant S : nat → nat
+
+constant nat_rect : 
+  ∏ (P : nat → Type) (s0 : P O) (s : ∏ (n : nat), P n → P (S n)) (m : nat), P m
+
+(* We tell the standard library how to compute normal forms of nat_rect,
+   namely that the last argument should be normalized. *)
+now reducing = add_reducing nat_rect [lazy, lazy, lazy, eager]
+
+(* Computation rules for nat_rect. *)
+constant nat_iota_O :
+  ∏ (P : nat → Type) (s0 : P O) (s : ∏ (n : nat), P n → P (S n)),
+  nat_rect P s0 s O ≡ s0
+
+constant nat_iota_S :
+  ∏ (P : nat → Type) (s0 : P O) (s : ∏ (n : nat), P n → P (S n)) (m : nat),
+  nat_rect P s0 s (S m) ≡ s m (nat_rect P s0 s m)
+
+(* This adds the computation rules as β-rules *)
+now betas = add_betas [nat_iota_O, nat_iota_S]
+
+constant ( + ) : nat → nat → nat
+constant plus_def : 
+  ∏ (n m : nat),
+    n + m ≡ nat_rect (λ _, nat) n (λ _ x, S x) m
+
+(* We will not use plus_def as a β-rule. Instead we
+   derive Peano's rules and use those. *)
+
+(* The resolve and ? compute implicit/missing arguments. *)
+let plus_O = 
+  now betas = add_beta plus_def in
+    resolve ((λ n, refl ?) : ∏ n : nat, n + O ≡ n)
+
+let plus_S =
+  now betas = add_beta plus_def in
+    resolve ((λ n m, refl ?) : ∏ n m : nat, n + (S m) ≡ S (n + m))
+
+now betas = add_betas [plus_O, plus_S]
+
+(* Similarly we define multiplication. *)
+constant ( * ) : nat → nat → nat
+constant mult_def : 
+  ∏ n m : nat, n * m ≡ nat_rect (λ _, nat) O (λ _ x, x + n) m
+
+let mult_O = 
+  now betas = add_beta mult_def in
+  resolve ((λ n, refl ?) : ∏ n : nat, n * O ≡ O)
+
+let mult_S =
+  now betas = add_beta mult_def in
+  resolve ((λ n m, refl ?) : ∏ n m : nat, n * (S m) ≡ n * m + n)
+
+now betas = add_betas [mult_O, mult_S]
+
+(* Let us compute 2 + 3 * 4. We locally tell the standard
+   library to eagerly normalize the arguments of S, + and * *)
+do
+  now reducing = add_reducing S [eager] in
+  now reducing = add_reducing ( * ) [eager, eager] in
+  now reducing = add_reducing ( + ) [eager, eager] in
+    whnf ((S (S O)) + S (S (S O)) * S (S (S (S O))))

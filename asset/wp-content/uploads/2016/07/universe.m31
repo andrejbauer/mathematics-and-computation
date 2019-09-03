@@ -1,0 +1,128 @@
+(* An example showing how we might work with a universe, where conversion
+   between names and types is done automatically through handlers. *)
+
+(* The unit type *)
+constant Unit : Type
+constant tt : Unit
+
+(* Extensionality for Unit *)
+constant Unit_eta : ∏ (x y : Unit), x ≡ y
+
+(* This tells the standard library to use Unit_eta as an extensionality rule. *)
+now etas = add_eta Unit_eta
+
+(* We postulate a universe *)
+constant U : Type
+constant El : U → Type
+
+(* This tells the standard library that is should eagerly normalize
+   the argument of El *)
+now reducing = add_reducing El [eager]
+
+(* The name of a product *)
+constant pi : ∏ (a : U), (El a → U) → U
+constant El_pi : 
+  ∏ (a : U) (b : El a → U), 
+    El (pi a b) ≡ (∏ (x : El a), El (b x))
+(* This tells the standard library that El_pi should be used as a β-rule. *)
+now betas = add_beta El_pi
+
+(* The name of an arrow *)
+constant arrow : U → U → U
+constant arrow_def : 
+   ∏ (a b : U), arrow a b ≡ pi a (λ _, b)
+now betas = add_beta arrow_def
+
+(* The name of an equality type *)
+constant eq : ∏ (a : U), El a → El a → U
+constant El_eq : 
+   ∏ (a : U) (x y : El a), 
+     El (eq a x y) ≡ (x ≡ y)
+now betas = add_beta El_eq
+
+(* The name of the unit type *)
+constant unit : U
+constant El_unit : El unit ≡ Unit
+now betas = add_beta El_unit
+
+(* Reverse-engineer the name t of a type T and
+   return a witness of El t ≡ T. *)
+let rec name_of_ty T =
+  match T with
+  | ⊢ El _ ⇒ Some (refl T)
+  | ⊢ Unit ⇒ Some El_unit
+  | ⊢ (?x ≡ ?y) ⇒
+      let A = typeof x in
+      match name_of_ty A with
+      | None ⇒ None
+      | Some (⊢ ?ξ : El ?a ≡ _) ⇒ 
+        let x' = convert x (symmetry ξ)
+        and y' = convert y (symmetry ξ) in
+        let α = El_eq a x' y'
+        and β = convert_eq (x' ≡ y') ξ in
+        Some (transitivity α β)
+      end
+  | ⊢ Π (?x : ?A), ?B ⇒ 
+      match name_of_ty A with
+      | None ⇒ None
+      | Some (⊢ ?ξ : El ?a ≡ _) ⇒ 
+          match name_of_ty B with
+          | None ⇒ None
+          | Some (⊢ ?ξ2 : El ?b ≡ _) ⇒ 
+             Some (El_pi a (λ (y : El a), b where x = y))
+          end
+      end
+  | ?J ⇒ 
+    match whnf T with
+    | ⊢ ?ζ : _ ≡ ?T' ⇒
+      match T' with
+      | T ⇒ None
+      | _ ⇒ 
+        match name_of_ty T' with
+        | Some (⊢ ?ξ : El ?a ≡ _) ⇒
+            Some (tran Type (El a) T' T ξ (symmetry ζ))
+        | None ⇒ None
+        end
+      end
+    end
+  end
+
+(* The handler that coerces names to types and vice versa. *)
+let universe_handler =
+  handler
+  | coerce (⊢ ?a : U) (⊢ Type) ⇒ 
+    yield (Coercible (El a))
+  | coerce (⊢ ?T : Type) (⊢ U) ⇒
+    match name_of_ty T with
+    | None ⇒ yield NotCoercible
+    | Some (⊢ _ : El ?a ≡ _) ⇒ yield (Coercible a)
+    end
+  end
+
+(* Examples *)
+
+do
+  with universe_handler handle
+    arrow unit unit : Type
+(* output: ⊢ El (arrow unit unit) : Type *)
+
+do
+  with universe_handler handle
+    (Unit → Unit) : U
+(* output: ⊢ pi unit (λ (_ : El unit), unit) : U *)
+
+do
+  with universe_handler handle
+    assume x : Unit in 
+      (tt ≡ x) : U
+(* output: x₀ : Unit ⊢ eq unit tt x₀ : U *)
+
+do
+  with universe_handler handle
+    ((λ (x : Type), x) (Unit -> Unit)) : U
+(* output: ⊢ pi unit (λ (_ : El unit), unit) : U *)
+
+do
+  with universe_handler handle
+    (λ x, x) : arrow unit unit
+(* output: ⊢ λ (x : El unit), x : El (arrow unit unit) *)
