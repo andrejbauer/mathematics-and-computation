@@ -23,15 +23,23 @@
 <div class="comment-form">
 <h5>Post a comment:</h5>
 
+<div class="comment-legend">
+  Write your comment using <a href="https://www.markdownguide.org">Markdown</a>
+  and LaTeX (<code>$⋯$</code> for inline and <code>$$⋯$$</code> for display
+  formulas). Your E-mail address is only used to compute
+  your <a href="https://gravatar.com">Gravatar</a> and is not stored anywhere.
+  Comments are moderate through <a href="https://github.com/andrejbauer/mathematics-and-computation/pulls">pull requests</a>.
+</div>
+
 <form method="POST" action="{{ site.staticman.site }}/v2/entry/{{ site.staticman.username }}/{{ site.staticman.repository }}/{{ site.staticman.branch }}/comments">
   <input name="options[redirect]" type="hidden" value="{{site.url}}{{page.url}}">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <p class="comment-field">
-    <legend for="name">Name</legend>
+    <legend for="name" class="required">Name</legend>
     <input id="name" name="fields[name]" type="text">
   </p>
   <p class="comment-field">
-    <legend for="email">E-mail</legend>
+    <legend for="email" class="required">E-mail</legend>
     <input id="email" name="fields[email]" type="email">
   </p>
   <p class="comment-field">
@@ -39,7 +47,7 @@
     <input id="website" name="fields[url]" type="url">
   </p>
   <p class="comment-field">
-    <legend for="comment">Comment</legend>
+    <legend for="comment" class="required">Comment</legend>
     <textarea id="comment" name="fields[message]" rows="12"></textarea>
   </p>
 

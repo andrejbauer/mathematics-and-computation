@@ -345,6 +345,16 @@ div.comment-form {
 
 /* Comments submission */
 
+div.comment-legend {
+  font-size: 14px;
+  color: #404040;
+  width: 65%;
+}
+
+.comment-legend a {
+  color: inherit;
+}
+
 .comment-form legend {
   float: left;
   width: 15%;
@@ -362,4 +372,21 @@ div.comment-form {
 .comment-form textarea {
   font-size: 16px;
   width: 50%;
+}
+
+.comment-form button {
+  background: #e6e0c3;
+  font-size: 16px;
+  border: solid 1px;
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+}
+
+.comment-form button:hover {
+  background-color: #9f8033;
+}
+
+.required:after {
+  content: "*";
+  color: #ff0000;
 }

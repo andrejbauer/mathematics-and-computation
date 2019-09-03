@@ -1,10 +1,7 @@
 <ul>
-<li><a {% if page.navigation == "post" %}class="active"{% endif %}
-       href="/">Posts</a></li>
-<li><a {% if page.navigation == "publications" %}class="active"{% endif %}
-       href="/category/publications/">Publications</a></li>
-<li><a {% if page.navigation == "software" %}class="active"{% endif %}
-       href="/software/">Software</a></li>
-<li><a {% if page.navigation == "about" %}class="active"{% endif %}
-       href="/about/">About</a></li>
+<li><a {% if include.active == "post" %}class="active"{% endif %} href="/">Posts</a></li>
+<li><a {% if include.active == "Talks" %}class="active"{% endif %} href="/category/talks/">Talks</a></li>
+<li><a {% if include.active == "Publications" %}class="active"{% endif %} href="/category/publications/">Publications</a></li>
+<li><a {% if include.active == "software" %}class="active"{% endif %} href="/software/">Software</a></li>
+<li><a {% if include.active == "about" %}class="active"{% endif %} href="/about/">About</a></li>
 </ul>
