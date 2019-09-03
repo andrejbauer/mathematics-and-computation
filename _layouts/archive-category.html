@@ -18,6 +18,14 @@
 
       <h1>Posts in the category {{ page.title }}</h1>
 
+      {% if page.title == "Publications" %}
+      For a more comprehensive list of publications by Andrej Bauer, please visit:
+      <ul>
+      <li><a href="https://dblp.org/pers/hd/b/Bauer:Andrej">Andrej Bauer @ DBLP</a></li>
+      <li><a href="http://www.andrej.com/bibliography/">Andrej Bauer @ COBISS</a></li>
+      </ul>
+      {% endif %}
+
       {% for post in page.posts %}
       {% include excerpt.html post=post %}
       {% endfor %}
