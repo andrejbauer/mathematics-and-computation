@@ -5,7 +5,7 @@ description: A blog about mathematics for computers
 kramdown:
   hard_wrap: false
   input: Markdown
-  math_engine: nil
+  math_engine:
 
 exclude:
   - staticman.yml
