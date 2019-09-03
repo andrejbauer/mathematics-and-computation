@@ -6,4 +6,8 @@
 
 {{post.excerpt}}
 → <a href="{{site.url}}{{post.url}}" class="meta">continue reading</a>
+{% if site.data.comments[post.slug] %}
+{% assign s = site.data.comments[post.slug] | size %}
+({{s}} {% if s == 1 %}comment{%else%}comments{% endif %})
+{% endif %}
 </div>
