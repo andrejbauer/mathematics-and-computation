@@ -15,4 +15,4 @@ With [Chris Stone.](http://www.cs.hmc.edu/~stone/)
 
 **Abstract:** see [&#8220;Specifications via Realizability (CLASE)&#8221;](/2005/04/09/specifications-via-realizability/).
 
-**Talk notes:** [rz-dagstuhl.pdf](/data/rz-dagstuhl.pdf) (handwritten notes of the talk with examples of how RZ works)
+**Talk notes:** [rz-dagstuhl.pdf](/asset/data/rz-dagstuhl.pdf) (handwritten notes of the talk with examples of how RZ works)

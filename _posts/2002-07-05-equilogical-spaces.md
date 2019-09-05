@@ -15,4 +15,4 @@ With [Lars Birkedal](http://www.itu.dk/people/birkedal/) and [Dana Scott](http:/
 
 **Published in:** Theoretical Computer Science, 315(1):35-59, 2004.
 
-**Download:** [equ.pdf](/data/equ.pdf "Equilogical Spaces"), [equ.ps.gz](/data/equ.ps.gz "Equilogical Spaces").
+**Download:** [equ.pdf](/asset/data/equ.pdf "Equilogical Spaces"), [equ.ps.gz](/asset/data/equ.ps.gz "Equilogical Spaces").

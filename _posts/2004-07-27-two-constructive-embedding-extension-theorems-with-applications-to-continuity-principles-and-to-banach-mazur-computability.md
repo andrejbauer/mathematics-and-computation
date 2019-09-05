@@ -19,4 +19,4 @@ As a second application, we show that, when the notion of inhabited complete sep
 
 **Published in:** Mathematical Logic Quarterly, 50(4,5):351-369, 2004.
 
-**Download:** [continuity.pdf](/data/continuity.pdf "Two Constructive Embedding-Extensions Theorems with Applications"), [continuity.ps.gz](/data/continuity.ps.gz "Two Constructive Embedding-Extensions Theorems with Applications")
+**Download:** [continuity.pdf](/asset/data/continuity.pdf "Two Constructive Embedding-Extensions Theorems with Applications"), [continuity.ps.gz](/asset/data/continuity.ps.gz "Two Constructive Embedding-Extensions Theorems with Applications")

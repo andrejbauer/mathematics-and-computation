@@ -15,6 +15,6 @@ categories:
 
 **Presented at:** Mathematical Foundations of Programming Semantics XXI, Birmingham, 2004 (invited talk).
 
-**Download paper:** [synthetic.pdf](/data/synthetic.pdf "First Steps in Synthetic Computability Theory"), [synthetic.ps.gz](/data/synthetic.ps.gz "First Steps in Synthetic Computability Theory")
+**Download paper:** [synthetic.pdf](/asset/data/synthetic.pdf "First Steps in Synthetic Computability Theory"), [synthetic.ps.gz](/asset/data/synthetic.ps.gz "First Steps in Synthetic Computability Theory")
 
-**Download slides:** [synthetic-slides.pdf](/data/synthetic-slides.pdf "First Steps in Synthetic Computability (slides)")
+**Download slides:** [synthetic-slides.pdf](/asset/data/synthetic-slides.pdf "First Steps in Synthetic Computability (slides)")

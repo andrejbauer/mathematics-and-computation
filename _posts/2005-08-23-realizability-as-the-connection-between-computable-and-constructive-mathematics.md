@@ -16,4 +16,4 @@ These are lecture notes for a tutorial seminar which I gave at a satellite semin
 
 **Note:** I have revised the original version from August 23, 2005 and corrected the horrible error at the beginning of Section 2. I would appreciate reports on other mistakes that you find in these notes.
 
-**Download (version of October 16, 2005):** [c2c.pdf](/data/c2c.pdf "Realizability as the Connection between Computable and Constructive Mathematics"), [c2c.ps.gz](/data/c2c.ps.gz "Realizability as the Connection between Computable and Constructive Mathematics")
+**Download (version of October 16, 2005):** [c2c.pdf](/asset/data/c2c.pdf "Realizability as the Connection between Computable and Constructive Mathematics"), [c2c.ps.gz](/asset/data/c2c.ps.gz "Realizability as the Connection between Computable and Constructive Mathematics")

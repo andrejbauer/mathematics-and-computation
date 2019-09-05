@@ -15,4 +15,4 @@ with [Steve Awodey](http://www.andrew.cmu.edu/~awodey/).
 
 Sumitted for publication.
 
-**Download:** [sheaves_realizability.pdf](/data/sheaves_realizability.pdf "Sheaf Toposes for Realizability"), [sheaves_realizability.ps.gz](/data/sheaves_realizability.ps.gz "Sheaf Toposes for Realizability")
+**Download:** [sheaves_realizability.pdf](/asset/data/sheaves_realizability.pdf "Sheaf Toposes for Realizability"), [sheaves_realizability.ps.gz](/asset/data/sheaves_realizability.ps.gz "Sheaf Toposes for Realizability")

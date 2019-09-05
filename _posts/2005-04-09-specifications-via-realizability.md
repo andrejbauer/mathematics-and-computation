@@ -21,8 +21,8 @@ We present a system, called RZ, for automatic generation of program specificatio
 Constructive Logic for Automated Software Engineering (CLASE), Satellite event of ETAPS 2005, Edinburgh, 9th April 2005 
 
 **Download paper:**  
-[rz.pdf](/data/rz.pdf),  
-[rz.ps.gz](/data/rz.ps.gz) 
+[rz.pdf](/asset/data/rz.pdf),  
+[rz.ps.gz](/asset/data/rz.ps.gz) 
 
 **Download slides:**  
-[rz-slides.pdf](/data/rz-slides.pdf)
+[rz-slides.pdf](/asset/data/rz-slides.pdf)

@@ -19,6 +19,6 @@ Below is included a Mathematica notebook, as well as a PDF transcript of it, whi
 
 I have no solutions to offer, yet. Designing a _safe_ Computer Algebra System which is also _useful_ is a big open problem.
 
-**Download:** [Surprises.nb](/data/Surprises.nb "Surprises in Mathematica") or [Surprises.pdf](/data/Surprises.pdf "Surprises in Mathematica")
+**Download:** [Surprises.nb](/asset/data/Surprises.nb "Surprises in Mathematica") or [Surprises.pdf](/asset/data/Surprises.pdf "Surprises in Mathematica")
 
 P.S. I am interested in other examples which show design flaws and inherent limiations of Mathematica, especially when they cause surprising or wrong answers. If you know any, please [send them to me](mailto:Andrej.Bauer@andrej.com).

@@ -15,6 +15,6 @@ with [Edmund Clarke](http://www.cs.cmu.edu/~emc/) and Xudong Zhao.
 
 **Published in:** Journal of Automated Reasoning, Vol. 21, no.3 (1998) 295-325 
 
-**Download:** [analytica.pdf](/data/analytica.pdf "Analytica - An Experiment in Combining Theorem Proving and Symbolic Computation"), [analytica.ps.gz](/data/analytica.ps.gz "Analytica - An Experiment in Combining Theorem Proving and Symbolic Computation") 
+**Download:** [analytica.pdf](/asset/data/analytica.pdf "Analytica - An Experiment in Combining Theorem Proving and Symbolic Computation"), [analytica.ps.gz](/asset/data/analytica.ps.gz "Analytica - An Experiment in Combining Theorem Proving and Symbolic Computation") 
 
-**Source code:** [analytica.tar.gz](/data/analytica.tar.gz "Analytica theorem prover") contains the source code for Analytica. It works under Mathematica 2.2.2. I do not plan to port it to a newer version of Mathematics. If you do that, please let me know.
+**Source code:** [analytica.tar.gz](/asset/data/analytica.tar.gz "Analytica theorem prover") contains the source code for Analytica. It works under Mathematica 2.2.2. I do not plan to port it to a newer version of Mathematics. If you do that, please let me know.

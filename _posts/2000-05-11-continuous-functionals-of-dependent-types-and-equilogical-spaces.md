@@ -15,4 +15,4 @@ with [Lars Birkedal](http://www.itu.dk/people/birkedal/).
 
 **Published in:** In Proceedings of Computer Science Logic 2000, Lecture Notes in Computer Science, Vol. 1862, Editors: P.G. Clote, H. Schwichtenberg, Springer, August 2000, pp. 202-216.
 
-**Download:** [dependent_functionals.pdf](/data/dependent_functionals.pdf "Continuous Functionals of Dependent Types and Equilogical Spaces"), [dependent_functionals.ps.gz](/data/dependent_functionals.ps.gz "Continuous Functionals of Dependent Types and Equilogical Spaces")
+**Download:** [dependent_functionals.pdf](/asset/data/dependent_functionals.pdf "Continuous Functionals of Dependent Types and Equilogical Spaces"), [dependent_functionals.ps.gz](/asset/data/dependent_functionals.ps.gz "Continuous Functionals of Dependent Types and Equilogical Spaces")

@@ -19,4 +19,4 @@ We also show how to interpret first-order logic in type theory with brackets, an
 
 **Published in:** Journal of Logic and Computation. Volume 14, Issue 4, August 2004, pp. 447-471.
 
-**Download:** [bracket_types.pdf](/data/bracket_types.pdf "Propositions as [Types]"), [bracket_types.ps.gz](/data/bracket_types.ps.gz "Propositions as [Types]")
+**Download:** [bracket_types.pdf](/asset/data/bracket_types.pdf "Propositions as [Types]"), [bracket_types.ps.gz](/asset/data/bracket_types.ps.gz "Propositions as [Types]")

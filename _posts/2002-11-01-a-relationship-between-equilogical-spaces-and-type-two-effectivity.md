@@ -15,4 +15,4 @@ First, we show that Rep(B) is equivalent to a full coreflective subcategory of \
 
 **Published in:** Mathematical logic quarterly, 2002, vol. 48, suppl. 1, 1-15. 
 
-**Download:** [equtte.pdf](/data/equtte.pdf "A Relationship between Equilogical Spaces and Type Two Effectivity"), [equtte.ps.gz](/data/equtte.ps.gz "A Relationship between Equilogical Spaces and Type Two Effectivity")
+**Download:** [equtte.pdf](/asset/data/equtte.pdf "A Relationship between Equilogical Spaces and Type Two Effectivity"), [equtte.ps.gz](/asset/data/equtte.ps.gz "A Relationship between Equilogical Spaces and Type Two Effectivity")

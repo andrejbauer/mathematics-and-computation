@@ -15,4 +15,4 @@ With [Alex Simpson](http://homepages.inf.ed.ac.uk/als/) and [MartÃ­n EscardÃ�
 
 **Published in:** In Proceedings ICALP 2002, Springer LNCS 2380, pp. 488-500, 2002.
 
-**Download:** [paradigms.pdf](/data/paradigms.pdf "Comparing Functional Paradigms for Exact Real-number Computation"), [paradigms.ps.gz](/data/paradigms.ps.gz "Comparing Functional Paradigms for Exact Real-number Computation"), [paradigms_proofs.ps.gz](/data/paradigms_proofs.ps.gz "Comparing Functional Paradigms for Exact Real-number Computation (long version)") (long version, with proofs)
+**Download:** [paradigms.pdf](/asset/data/paradigms.pdf "Comparing Functional Paradigms for Exact Real-number Computation"), [paradigms.ps.gz](/asset/data/paradigms.ps.gz "Comparing Functional Paradigms for Exact Real-number Computation"), [paradigms_proofs.ps.gz](/asset/data/paradigms_proofs.ps.gz "Comparing Functional Paradigms for Exact Real-number Computation (long version)") (long version, with proofs)

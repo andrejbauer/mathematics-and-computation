@@ -16,4 +16,4 @@ At the EST training workshop in Fischbachau, Germany, I gave two lectures on syn
 Computability theory, which investigates computable functions and computable sets, lies at the foundation of logic and computer science. Its classical presentations usually involve a fair amount of Goedel encodings. Consequently, there have been a number of presentations of computability theory that aimed to present the subject in an abstract and conceptually pleasing way. We build on two such approaches, Hyland&#8217;s effective topos and Richman&#8217;s formulation in Bishop-style constructive mathematics, and develop basic computability theory, starting from a few simple axioms. Because we want a theory that resembles ordinary mathematics as much as possible, we never speak of Turing machines and Goedel encodings, but rather use familiar concepts from set theory and  
 topology.
 
-**Download slides:** [est.pdf](http://math.andrej.com/data/est.pdf "First Steps in Synthetic Computability Theory (EST training workshop)")
+**Download slides:** [est.pdf](http://math.andrej.com/asset/data/est.pdf "First Steps in Synthetic Computability Theory (EST training workshop)")

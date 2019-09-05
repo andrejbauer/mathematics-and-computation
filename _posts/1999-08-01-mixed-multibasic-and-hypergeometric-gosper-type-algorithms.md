@@ -15,4 +15,4 @@ with [Marko Petkovšek](http://www.fmf.uni-lj.si/~petkovsek/).
 
 **Published in:** Journal of Symbolic Computation, Vol. 28 (1999) 711-736. 
 
-**Download:** [gengosper.pdf](/data/gengosper.pdf), [gengosper.ps.gz](/data/gengosper.ps.gz)
+**Download:** [gengosper.pdf](/asset/data/gengosper.pdf), [gengosper.ps.gz](/asset/data/gengosper.ps.gz)
