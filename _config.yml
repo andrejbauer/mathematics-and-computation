@@ -33,6 +33,8 @@ paginate_path: "page-:num/"
 
 permalink: /:year/:month/:day/:slug/
 
+excerpt_separator: "<!--more-->"
+
 jekyll-archives:
   enabled:
     - categories

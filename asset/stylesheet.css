@@ -239,6 +239,13 @@ a.active {
   color: #800000;
 }
 
+/* Drafts */
+
+.draft:before {
+  color: #800000;
+  content: "(DRAFT) ";
+}
+
 /* Excerpt */
 
 div.excerpt {
