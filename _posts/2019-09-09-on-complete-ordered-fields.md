@@ -11,7 +11,7 @@ categories:
 
 > **Theorem:** *All [complete](https://en.wikipedia.org/wiki/Least-upper-bound_property) [ordered](https://en.wikipedia.org/wiki/Ordered_field) fields are isomorphic.*
 
-[The proof](https://twitter.com/JDHamkins/status/1169935061480804352?s=20) posted by Joel has two parts:
+[The standard proof](https://twitter.com/JDHamkins/status/1169935061480804352?s=20) posted by Joel has two parts:
 
 1. A complete ordered field is archimedean.
 2. Using the fact that the rationals are dense in an archimedean field, we construct an isomorphism between any two complete ordered fields.
@@ -20,7 +20,7 @@ The second step is constructive, but the first one is proved using excluded midd
 
 So I asked myself and the [constructive news mailing list](https://groups.google.com/forum/#!topic/constructivenews/4jncQ9axrxI) what the constructive status of the theorem is. But something was amiss, as [Fred Richman](http://math.fau.edu/richman/) immediately asked me to provide an example of a complete ordered field. Why would he do that, don't we have the [MacNeille reals](https://ncatlab.org/nlab/show/MacNeille+real+number)? After agreeing on definitions, [Toby Bartels](http://tobybartels.name) gave the answer, which I am taking the liberty to adapt a bit and present here. I am probably just reinventing the wheel, so if someone knows an original reference, please provide it in the comments.
 
-The theorem holds constructively, but for a bizarre reason: if there exists a complete ordered field, then the law of excluded middle holds!
+The theorem holds constructively, but for a bizarre reason: if there exists a complete ordered field, then the law of excluded middle holds, and the standard proof is valid!
 
 <!--more-->
 
