@@ -7,68 +7,80 @@ categories:
   - Constructive mathematics
 ---
 
-[Joel Hamkins](http://jdh.hamkins.org) advertised the following theorem in Twitter:
+[Joel Hamkins](http://jdh.hamkins.org) advertised the following theorem on Twitter:
 
-> **Theorem:** *All complete ordered fields are isomorphic.*
+> **Theorem:** *All [complete](https://en.wikipedia.org/wiki/Least-upper-bound_property) [ordered](https://en.wikipedia.org/wiki/Ordered_field) fields are isomorphic.*
 
-By "complete" we mean the Dedekind-MacNeille completeness: every inhabited bounded subset has a supremum. [The proof](https://twitter.com/JDHamkins/status/1169935061480804352?s=20) posted by Joel has two parts:
+[The proof](https://twitter.com/JDHamkins/status/1169935061480804352?s=20) posted by Joel has two parts:
 
-1. Show that a complete ordered field is archimedean.
-2. Using the fact that the rationals are dense in an archimedean ordered field, construct an isomorphism between any two of them.
+1. A complete ordered field is archimedean.
+2. Using the fact that the rationals are dense in an archimedean field, we construct an isomorphism between any two complete ordered fields.
 
-The second step is constructive, but the first one is proved using excluded middle, as follows. Suppose $F$ is a complete ordered field. If $b \in F$ is an upper bound for the natural numbers, construed as a subset of $F$, then so $b - 1$, but then no element of $F$ can be the supremum of $\mathbb{N}$. By excluded middle, above every $x \in F$ there is $n \in \mathbb{N}$.
+The second step is constructive, but the first one is proved using excluded middle, as follows. Suppose $F$ is a complete ordered field. If $b \in F$ is an upper bound for the natural numbers, construed as a subset of $F$, then so $b - 1$, but then no element of $F$ can be the least upper bound of $\mathbb{N}$. By excluded middle, above every $x \in F$ there is $n \in \mathbb{N}$.
 
-So I asked myself and the [constructive news mailing list](https://groups.google.com/forum/#!topic/constructivenews/4jncQ9axrxI) what the constructive status of the theorem is. But something was amiss, as [Fred Richman](http://math.fau.edu/richman/) immediately asked me to provide an example of a complete ordered field. Why would he do that, don't we have the [MacNeille reals](https://ncatlab.org/nlab/show/MacNeille+real+number)? After agreeing on definitions, [Toby Bartels](http://tobybartels.name) gave the answer, which I am taking the liberty to present here. All credit goes to Toby, although I would not be surprised to learn the argument is older than Toby, and possibly me.
+So I asked myself and the [constructive news mailing list](https://groups.google.com/forum/#!topic/constructivenews/4jncQ9axrxI) what the constructive status of the theorem is. But something was amiss, as [Fred Richman](http://math.fau.edu/richman/) immediately asked me to provide an example of a complete ordered field. Why would he do that, don't we have the [MacNeille reals](https://ncatlab.org/nlab/show/MacNeille+real+number)? After agreeing on definitions, [Toby Bartels](http://tobybartels.name) gave the answer, which I am taking the liberty to adapt a bit and present here. I am probably just reinventing the wheel, so if someone knows an original reference, please provide it in the comments.
 
-The theorem holds constructively, but for a bizarre reason: if there exists a complete ordered field, then the law of ecluded middle holds!
+The theorem holds constructively, but for a bizarre reason: if there exists a complete ordered field, then the law of excluded middle holds!
 
 <!--more-->
 
-As there are many constructive versions of order and completeness, let me spell out the definitions we are going to use. (I am fully aware of the fact that these are not constructively optimial, which is precisely one of the points of my post, namely that we should not blindly use the usual order-theoretic notion of completeness.)
+As there are many constructive versions of order and completeness, let me spell out the definitions that are well adapted to the oddities of constructive mathematics. In classical logic these are all equivalent to the usual ones. Having to disentangle definitions when passing to constructive mathematics is a bit like learning how to be careful when passing from commutative to non-commutative algebra.
 
-A *poset* is a set $P$ with a reflexive, transitive and antisymmetric relation $\leq$. An element $x \in P$ is an *upper bound* for $S \subseteq P$ when $y \leq x$ for all $y \in P$. An element $x \in P$ is the *supremum* of $S \subseteq P$ if it is an upper bound for $S$, and it is below all upper bounds for $S$.
+A **partial order** $\leq$ on a set $P$ is a reflexive, transitive and antisymmetric relation on $P$.
 
-We are interested in linearly ordered fields, but constructively we need to take care when defining linearity, as the usual $x \leq y \lor y \leq x$ is quite difficult to satisfy, and may fail for reals. Define a *strict linear order* on a set $P$ to be a transitive, irreflexive (and hence asymmetric), and weakly linear relation $<$, where weak linearity means $x < y \lor x < z \lor z < y$. (This notion is classically equivalent to the usual one.) Given a strict linear order, the *associated* (non-strict) partial order $\leq$ is defined by $x \leq y \Leftrightarrow \lnot (y \leq x)$.
+We are interested in **linearly** ordered fields, but constructively we need to take care, as the usual linearity, $x \leq y \lor y \leq x$, is quite difficult to satisfy, and may fail for reals.
 
-A poset $P$ is *(Dedekind-MacNeille) complete* when every inhabited bounded subset has a supremum (for the classically trained, $S \subseteq P$ is *inhabited* when there exists $x \in S$, and this is *not* the same as $S \neq \emptyset$).
+A **strict order** on a set $P$ is a relation $<$ which is:
 
-A basic exercise is to give a non-trivial complete linear order, i.e., a strict linear order $<$ whose associated partial order $\leq$ is complete.
+* irreflexive: $\lnot (x < x)$,
+* tight: $\lnot (x < y \lor y < x) \Rightarrow x = y$,
+* weakly linear: $x < y \Rightarrow x < z \lor z < y$
 
-> **Theorem:** *If there exists a non-trivial complete linear order then the  [weak excluded middle](https://ncatlab.org/nlab/show/weak+excluded+middle) holds.*
+The **associated** partial order is defined by $x \leq y \Leftrightarrow \lnot (y \leq x)$. The reflexivity, antisymmetry and transitivity of $\leq$ follow respectively from irreflexivity, tightness, and weak linearity of $<$.
 
-*Proof.* Suppose $<$ is a strict linear order on $P$ whose associated order $\leq$ is complete, and there exist $a, b \in P$ such that $a < b$. Let $\phi$ be any proposition. Consider the set $S = \lbrace x \in P \mid x = a \lor (\phi \land x = b)\rbrace$. Observe that $\phi$ is equivalent to $b \in S$. Because $a \in S \subseteq \lbrace a, b\rbrace$, the set $S$ is inhabited and bounded, so let $s$ be its supremum. We know that $a < s$ or $s < b$, from which we can decide $\lnot\phi$:
+Next, an element $x \in P$ is an **upper bound** for $S \subseteq P$ when $y \leq x$ for all $y \in P$. An element $x \in P$ is the *supremum* of $S \subseteq P$ if it is an upper bound for $S$, and for every $y < x$ there exists $z \in S$ such that $y < z$. A poset $P$ is **(Dedekind-MacNeille) complete** when every inhabited bounded subset has a supremum (for the classically trained, $S \subseteq P$ is *inhabited* when there exists $x \in S$, and this is *not* the same as $S \neq \emptyset$).
 
-1. If $a < s$ then $\lnot\lnot(b \in S)$: if we had $b \notin S$ then $S = \lbrace a \rbrace$ and $a < s = a$, which is impossible. In this case $\lnot\lnot\phi$ holds.
-2. If $s < b$ then $\lnot(b \in S)$: if we had $b \in S$ then $S = \lbrace a, b \rbrace$ and $b = s < b$, again impossible. In this case $\lnot\phi$. $\Box$
+A basic exercise is to give a non-trivial complete order, i.e., a strict order $<$ whose associated partial order $\leq$ is complete.
 
-> *Lemma:** Suppose $S \subseteq P$ has supremum $s$ and $t < s$. Then there exists $u \in S$ such that $t \leq u$.
+> **Theorem:** *If there exists a non-trivial complete order then excluded middle holds.*
 
+*Proof.* Suppose $<$ is a strict order on a set $P$ whose associated order $\leq$ is complete, and there exist $a, b \in P$ such that $a < b$. Let $\phi$ be any proposition. Consider the set $S = \lbrace x \in P \mid x = a \lor (\phi \land x = b)\rbrace$. Observe that $\phi$ is equivalent to $b \in S$. Because $a \in S \subseteq \lbrace a, b\rbrace$, the set $S$ is inhabited and bounded, so let $s$ be its supremum. We know that $a < s$ or $s < b$, from which we can decide $\phi$:
 
+1. If $a < s$ then $b \in S$: indeed, there exists $c \in S$ such that $a < c$, but then $c = b$. In this case $\lnot\lnot\phi$ holds.
+2. If $s < b$ then $\lnot(b \in S)$: if we had $b \in S$ then $S = \lbrace a, b \rbrace$ and $b = s < b$, which is impossible. In this case $\lnot\phi$. $\Box$
 
-This result is not good enough for our purposes, but we can strengten it using the algebraic structure of a field.
+This immediately gives us the desired theorem.
 
-> **Theorem:** *Let $F$ be a commutative unital ring with a complete linear order $<$, such that, for all $x, y, z \in F$:*
->
-> 1. *$0 < 1$.*
-> 2. *If $0 \leq x$ and $0 \leq y$ then $0 \leq x \cdot $.*
-> 3. *$x < y$ if, and only if, $x + z < y + z$.*
-> 4. *$x$ is invertible if, and only if, $x < 0 \lor 0 < x$.*
->
-> *Then excluded middle holds.*
+> **Theorem (constructive):** *All complete ordered fields are isomorphic.*
 
-*Proof.* Following Toby Bartels, consider any proposition $\phi$ and define
-$$S = \lbrace x \in F \mid x = -1 \lor (\phi \land x = 1) \rbrace.$$
-Let $s$ be the supremum of $S$, which exists because $-1 \in S \subseteq \lbrace -1, 1 \rbrace$.
-Observe that:
+*Proof.* The definition of a complete ordered field requires $0 < 1$, therefore excluded middle holds. Now proceed with the usual classical proof. $\Box$
 
-1. $0 < s$ implies $\phi$:
-2. $s < 0$ implies $\lnot\phi$: if $\phi$ then $s = 1$, hence $1 = s < 0$, which contradicts $0 < 1$.
+This is very odd, as I always thought that the MacNeille reals form a MacNeille complete ordered field. Recall that a [MacNeille real](https://ncatlab.org/nlab/show/MacNeille+real+number) is a pair $(L, U)$ of subsets of $\mathbb{Q}$ such that:
 
-Let us show that $s^2 = 1$ by proving $s^2 \leq 1$ and $1 \leq s^2$:
+1. $U$ is the set of upper bounds of $L$: $u \in U$ if, and only if, $\ell \leq u$ for all $\ell \in L$,
+2. $L$ is the set of lower bounds of $U$: $\ell \in U$ if, and only if, $\ell \leq u$ for all $u \in U$,
+3. $L$ and $U$ are inhabited.
 
-* Clearly we have $-1 \leq s \leq 1$, from which we get $0 \leq 1 + s$ and $0 \leq 1 - s$, and hence $s^2 \leq 1$.
-* Suppose we had $s^2 < 1$. Then $s^2 - 1 < 0$ and thus $1 - s^2$ is invertible, but then so are $s - 1$ and $s + 1$. It follows that $-1 < s < 1$. However, $s < 1$ implies $\lnot \phi$, which implies $s = -1$, contradicting $-1 < s$. Therefore, $1 \leq s^2$.
+Furthermore, the MacNeille reals are complete, as they are just the [MacNeille completion](https://ncatlab.org/nlab/show/MacNeille+completion) of the rationals. We may define a strict order on them by
+stipulating that, for $x = (L_x, U_x)$ and $y = (L_y, U_y)$,
+$$x < y \iff \exists q \in U_x . \exists r \in L_y \,.\, q < r.$$
+According to Peter Johnstone (Sketches of an Elephant, D4.7), the MacNeille reals form a commutative unital ring in which $x$ is invertible if, and only if, $x < 0 \lor x > 0$. So apparently, the weak linearity of the strict order is problematic.
 
-Now we know that $s$ is its own inverse, therefore $s < 0$ or $s > 0$. In the first case $\lnot\phi$ holds, and in the second $\phi$ holds. $\Box$
+What if we relax completeness? Two standard notions of completeness are:
 
+1. An ordered field $F$ is **Cauchy-complete** if every Cauchy sequence has a limit in $F$.
+2. An ordered field $F$ is **Dedekind-complete** if every Dedekind cut determines an element of $F$.
+
+It is easy enough to find non-isomorphic Cauchy-complete fields. Order the field $\mathbb{Q}(x)$ of rational functions with rational coefficients by stipulating that it extends the order of $\mathbb{Q}$ and that $q < x$ for all $q \in \mathbb{Q}$. The Cauchy-completion of $\mathbb{Q}(x)$ is a Cauchy complete field which is not isomorphic to $\mathbb{Q}$. Caveat: I am speaking off the top of my head, do not trust this paragraph! (Or any other for that matter.)
+
+Regarding Dedekind completeness, it is important constructively that we take
+*two-sided* Dedekind cuts, i.e., pairs $(L, U)$ of subsets of $F$ such that
+
+* $L$ is lower-rounded: $q \in L \iff \exists r \in L . q < r$,
+* $U$ is upper-rounded: $r \in U \iff \exists q \in U . q < r$,
+* the cut is bounded: $L$ and $U$ are inhabited,
+* the cut is disjoint: $L \cap U = \emptyset$,
+* the cut is located: if $q < r$ then $L \in q$ or $r \in U$.
+
+Dedekind completeness states that for every Dedekind cut $(L, U)$ in $F$ there exists a unique $x \in F$ such that $L = \lbrace y \in F \mid y < x\rbrace$ and $U = \lbrace y \in F \mid x < y\rbrace$. Constructively this is a weaker form of completeness than the Dedekind-MacNeille one, but classically they coincide. Thus we cannot hope to exhibit constructively two non-isomorphic Dedekind-complete ordered fields (because constructive results are also classically valid). But perhaps there is a model of constructive mathematics where such strange fields exist. Does anyone know of one?
 
