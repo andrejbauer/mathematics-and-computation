@@ -45,6 +45,7 @@ header h1 {
   font-family: Bitter, Georgia, serif;
   color: #000000;
   padding: 60px 0px 0px 60px;
+  white-space: nowrap;
 }
 
 header h2 {
@@ -54,6 +55,7 @@ header h2 {
   color: #303030;
   margin: 0px;
   padding-left: 60px;
+  white-space: nowrap;
 }
 
 header a {
@@ -76,7 +78,9 @@ footer a {
 */
 
 #content {
-  margin: 0px 60px 0px 60px;
+  margin: auto;
+  min-width: 500px;
+  width: 80%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -187,6 +191,7 @@ hr {
 nav {
   margin: 0px 0px 60px 0px;
   padding: 20px 0px 40px 60px;
+  white-space: nowrap;
   background: #e6e0c3;
 }
 
@@ -198,6 +203,7 @@ nav a {
   text-align: left;
   margin-right: 30px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 nav a:hover {
