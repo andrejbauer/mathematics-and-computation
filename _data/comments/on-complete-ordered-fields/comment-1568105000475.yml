@@ -1,0 +1,6 @@
+_id: 0a657050-d3a7-11e9-b777-a1f56fd4ee18
+name: Mike Shulman
+email: c72e8ff1dfaaaacdbe9844d0202f378a
+url: ''
+message: "(In case 1 of your first theorem, $\\neg\\neg\\phi$ should be $\\phi$.)\r\n\r\nWeak linearity (a.k.a. cotransitivity or comparison) is essentially a version of the \"locatedness\" that distinguishes the Dedekind reals from the MacNeille reals, so it's not surprising that if you require your \"complete ordered fields\" to satisfy it then you exclude the MacNeille reals.  Instead of weakening completeness, you could weaken this condition, e.g. by assuming that $\\le$ and $<$ are both transitive and $<$ is a \"bimodule\" over $\\le$; see e.g. https://mathoverflow.net/q/286670/49 and section 8 of https://arxiv.org/abs/1805.07518.  \r\n\r\n(At the moment I'm failing to see where Toby's alternative argument for WLEM involving the algebraic structure fails for the MacNeille reals.  Can you help me out?)"
+date: 1568105000
