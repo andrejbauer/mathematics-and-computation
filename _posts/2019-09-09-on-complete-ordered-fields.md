@@ -46,7 +46,7 @@ A basic exercise is to give a non-trivial complete order, i.e., a strict order $
 
 *Proof.* Suppose $<$ is a strict order on a set $P$ whose associated order $\leq$ is complete, and there exist $a, b \in P$ such that $a < b$. Let $\phi$ be any proposition. Consider the set $S = \lbrace x \in P \mid x = a \lor (\phi \land x = b)\rbrace$. Observe that $\phi$ is equivalent to $b \in S$. Because $a \in S \subseteq \lbrace a, b\rbrace$, the set $S$ is inhabited and bounded, so let $s$ be its supremum. We know that $a < s$ or $s < b$, from which we can decide $\phi$:
 
-1. If $a < s$ then $b \in S$: indeed, there exists $c \in S$ such that $a < c$, but then $c = b$. In this case $\lnot\lnot\phi$ holds.
+1. If $a < s$ then $b \in S$: indeed, there exists $c \in S$ such that $a < c$, but then $c = b$. In this case $\phi$ holds.
 2. If $s < b$ then $\lnot(b \in S)$: if we had $b \in S$ then $S = \lbrace a, b \rbrace$ and $b = s < b$, which is impossible. In this case $\lnot\phi$. $\Box$
 
 This immediately gives us the desired theorem.
