@@ -1,0 +1,6 @@
+_id: 8097f950-d401-11e9-b777-a1f56fd4ee18
+name: Mike Shulman
+email: ede34282f405f902e12fa7e6cf336572
+url: ''
+message: "Yes, certainly cotransitivity fails for the MacNeille reals; that's what distinguishes them from the Dedekind reals.  But I didn't see where Toby's original argument (as opposed to your improved version) used cotransitivity.\r\n\r\nRegarding the question in your final paragraph, what about something like taking the usual constructive definition of the Dedekind reals and weakening the inhabitedness of $L$ and $U$ to nonemptiness?  I think that should give a Dedekind-complete order that is not provably Archimedean in your strong sense (and probably fails to be so in some model), but I haven't checked that the algebraic operations work on it."
+date: 1568143853
