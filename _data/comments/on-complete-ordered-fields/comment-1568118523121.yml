@@ -1,0 +1,6 @@
+_id: 86709020-d3c6-11e9-b777-a1f56fd4ee18
+name: Andrej Bauer
+email: 59d57d95bc7c45ced5f1969279cec06b
+url: 'http://www.andre.com/'
+message: "(Fixed the typo, thanks.)\r\n\r\nTo come to the bottom of this, I need to take some time to read the Elephant, section D4.7, and just carefully work out the properties of MacNeille reals.\r\n\r\nToby's WLEM argument works as soon as we assume that we have a strict complete order $<$ with $a < b$, no algebraic structure is necessary. It is easy to adapt the argument I gave to the usual definition of suprema. So the MacNeille reals must fail to give a strict order. In fact, how do you get weak linearity (cotransitivity) for MacNeille reals? That seems hard."
+date: 1568118523
