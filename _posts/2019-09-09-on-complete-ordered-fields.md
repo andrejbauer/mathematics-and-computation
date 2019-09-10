@@ -58,7 +58,7 @@ This immediately gives us the desired theorem.
 This is very odd, as I always thought that the MacNeille reals form a MacNeille complete ordered field. Recall that a [MacNeille real](https://ncatlab.org/nlab/show/MacNeille+real+number) is a pair $(L, U)$ of subsets of $\mathbb{Q}$ such that:
 
 1. $U$ is the set of upper bounds of $L$: $u \in U$ if, and only if, $\ell \leq u$ for all $\ell \in L$,
-2. $L$ is the set of lower bounds of $U$: $\ell \in U$ if, and only if, $\ell \leq u$ for all $u \in U$,
+2. $L$ is the set of lower bounds of $U$: $\ell \in L$ if, and only if, $\ell \leq u$ for all $u \in U$,
 3. $L$ and $U$ are inhabited.
 
 Furthermore, the MacNeille reals are complete, as they are just the [MacNeille completion](https://ncatlab.org/nlab/show/MacNeille+completion) of the rationals. We may define a strict order on them by
