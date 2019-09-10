@@ -1,0 +1,6 @@
+_id: 1efc88d0-d3c7-11e9-b777-a1f56fd4ee18
+name: Andrej Bauer
+email: 59d57d95bc7c45ced5f1969279cec06b
+url: 'http://www.andrej.com/'
+message: "@Andrei: From what I know of constructivists, there are two possibilities. Some use Bishop-style informal constructive mathematics, which more or less corresponds to intuitionistic logic with dependent choice (but a somewhat peculiar treatment of equality on serts). Others use just some variant of intuitionistic logic or set theory without choice. There are very few who use a version of Brouwerian intuitionism.\r\n\r\nIn this particular case, what I said can be interpreted in intuitionistic set theory (IZF) or the internal language of a topos (higher-order logic with natural numbers)."
+date: 1568118778
