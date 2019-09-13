@@ -1,0 +1,6 @@
+_id: c5843af0-d63c-11e9-b777-a1f56fd4ee18
+name: Mike Shulman
+email: c72e8ff1dfaaaacdbe9844d0202f378a
+url: ''
+message: "(Hmm, I thought I posted this a few days ago, but it doesn't seem to have appeared even as a PR.)\r\n\r\nYes, of course the MacNeille reals don't satisfy cotransitivity; that's exactly what distinguishes them from the Dedekind reals.  But I didn't see where Toby's argument uses cotransitivity.  Maybe I didn't look hard enough?\r\n\r\nRegarding the question in the last paragraph of your post, the first idea that comes to my mind would be relaxing the usual constructive definition of the Dedekind reals by weakening the requirement that $L$ and $R$ be inhabited to ask only that they be nonempty.  It seems to me there's a chance that would yield a Dedekind-complete not-provably-Archimedean strict order, and maybe the algebraic operations would extend to it too."
+date: 1568389211
