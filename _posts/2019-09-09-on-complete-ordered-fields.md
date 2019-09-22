@@ -36,7 +36,7 @@ A **strict order** on a set $P$ is a relation $<$ which is:
 * tight: $\lnot (x < y \lor y < x) \Rightarrow x = y$,
 * weakly linear: $x < y \Rightarrow x < z \lor z < y$
 
-The **associated** partial order is defined by $x \leq y \Leftrightarrow \lnot (y \leq x)$. The reflexivity, antisymmetry and transitivity of $\leq$ follow respectively from irreflexivity, tightness, and weak linearity of $<$.
+The **associated** partial order is defined by $x \leq y \Leftrightarrow \lnot (y < x)$. The reflexivity, antisymmetry and transitivity of $\leq$ follow respectively from irreflexivity, tightness, and weak linearity of $<$.
 
 Next, an element $x \in P$ is an **upper bound** for $S \subseteq P$ when $y \leq x$ for all $y \in P$. An element $x \in P$ is the *supremum* of $S \subseteq P$ if it is an upper bound for $S$, and for every $y < x$ there exists $z \in S$ such that $y < z$. A poset $P$ is **(Dedekind-MacNeille) complete** when every inhabited bounded subset has a supremum (for the classically trained, $S \subseteq P$ is *inhabited* when there exists $x \in S$, and this is *not* the same as $S \neq \emptyset$).
 
