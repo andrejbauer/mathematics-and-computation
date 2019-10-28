@@ -120,13 +120,13 @@ bit of head scratching we realized that the two options are (analogous to) what
 is variously called ["checked" and "non-checked"
 exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html),
 [errors](http://man7.org/linux/man-pages/man3/errno.3.html) and
-[signal](http://man7.org/linux/man-pages/man7/signal.7.html), or [synchronous
+[signals](http://man7.org/linux/man-pages/man7/signal.7.html), or [synchronous
 and asynchronous
 exceptions](https://www.repository.cam.ac.uk/bitstream/handle/1810/283239/paper.pdf?sequence=3&isAllowed=y).
 And so we included in $\lambda_{\mathsf{coop}}$ both mechanisms: ordinary
 *exceptions*, which are special events that disrupt the flow of user code but
 can be caught and attended to, and *signals* which are unrecoverable failures
-that irrevocably *kill* user code, but can be finalized. We proved a finalization
+that irrevocably *kill* user code, but can still be finalized. We proved a finalization
 theorem which gives strong guarantees about resources always being properly
 finalized.
 
