@@ -86,7 +86,7 @@ call $\mathtt{op}(a, \kappa)$ is "executed" in the current world $w \in W$ by
 computing $\overline{\mathtt{op}}(a,w) = (b, w')$ to get the next world $w'$ and
 a result $b$. The program then proceeds with the continuation $\kappa\,b$ in the
 world $w'$. Notice how the world $w$ is an external entity that is manipulated
-by the external co-operation $\overline{\mathtt{op}}$ realistically in a *linear*
+by the external map $\overline{\mathtt{op}}$ realistically in a *linear*
 fashion, i.e., the world is neither discarded nor copied, just transformed.
 
 What I have just described is *not* a monad or a handler, but a *comodel*, also
