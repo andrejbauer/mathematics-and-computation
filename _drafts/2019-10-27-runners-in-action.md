@@ -69,9 +69,9 @@ cannot be the case: a handler may discard the continuation or run it twice, but
 Eff hardly has the ability to discard the external world, or to make it
 bifurcate into two separate realities.
 
-If `IO` monad is not really monad and a top-level handler is not really a
-handler, then what we have is a case of ingenious hackery in need of proper PL
-design.
+If `IO` monad is not an honest monad and a top-level handler is not really a
+handler, then what we have is a case of ingenious hackery in need of proper
+programming-language design.
 
 How precisely does an operation call in the program cause an effect in the
 external world? As we have just seen, some sort of runtime environment or top
@@ -93,9 +93,12 @@ What I have just described is *not* a monad or a handler, but a *comodel*, also
 known as a *runner*, and the map $\overline{\mathtt{op}}$ is not an operation,
 but a *co-operation*. This was all observed a while ago by [Gordon
 Plotkin](http://homepages.inf.ed.ac.uk/gdp/) and [John
-Power](https://scholar.google.co.uk/citations?user=aOCekqQAAAAJ), and by [Tarmo
-Uustalu](https://www.ioc.ee/~tarmo/), see our paper for references. Perhaps we
-should replace "top-level" effects and "special" monads with runners?
+Power](https://scholar.google.co.uk/citations?user=aOCekqQAAAAJ), [Tarmo
+Uustalu](https://www.ioc.ee/~tarmo/), and generalized by [Rasmus
+Møgelberg](http://www.itu.dk/people/mogel/) and [Sam
+Staton](https://www.cs.ox.ac.uk/people/samuel.staton/main.html), see our paper
+for references. Perhaps we should replace "top-level" handlers and "special"
+monads with runners?
 
 Danel and I worked out how *effectful* runners (a generalization of runners that
 supports other effects, apart from state) provide a mathematical model of
@@ -106,25 +109,44 @@ be nested and combined in interesting ways. We capture the core ideas of
 programming with runners in an equational calculus $\lambda_{\mathsf{coop}}$,
 that guarantees the linear use of resources and execution of finalization code.
 
+An interesting practical aspect of $\lambda_{\mathsf{coop}}$, that was begotten by
+theory, is modeling of extra-ordinary circumstances. The external environment
+should have the ability to signal back to the program an extra-ordinary
+circumstance that prevents if from returning a result. This is normally
+accomplished by an exception mechanism, but since the external world is
+stateful, there are *two* ways of combining it with exceptions, namely the sum
+and the tensor of algebraic theories. Which one is the right one? Both! After a
+bit of head scratching we realized that the two options are (analogous to) what
+is variously called ["checked" and "non-checked"
+exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html),
+[errors](http://man7.org/linux/man-pages/man3/errno.3.html) and
+[signal](http://man7.org/linux/man-pages/man7/signal.7.html), or [synchronous
+and asynchronous
+exceptions](https://www.repository.cam.ac.uk/bitstream/handle/1810/283239/paper.pdf?sequence=3&isAllowed=y).
+And so we included in $\lambda_{\mathsf{coop}}$ both mechanisms: ordinary
+*exceptions*, which are special events that disrupt the flow of user code but
+can be caught and attended to, and *signals* which are unrecoverable failures
+that irrevocably *kill* user code, but can be finalized. We proved a finalization
+theorem which gives strong guarantees about resources always being properly
+finalized.
+
 If you are familiar with handlers, as a first approximation you can think of
 runners as handlers that use the continuation at most once in a tail-call
-position. As it turns out, while runners are less general than handlers (and
-monads), they have very good properties: they can be modularly composed in
-several ways, they guarantee that finalization code will be executed, and they
-give an account of *two* kinds of exceptions: ordinary *exceptions*, which are
-special events that disrupt the flow of user code and need to be attended to,
-and *signals* which are unrecoverable failures which *kill* user code and cannot
-be caught, but can be finalized. Various programming languages call these two
-kinds "checked" and "non-checked" exceptions, or "exceptions" and "errors", etc.
+position. Many handlers are already of this form but not all. Non-determinism,
+probability, and handlers that hijack the continuation (`delimcc`, threads, and
+selection functionals) fall outside of the scope of runners. Perhaps in the
+future we can resurrect some of these (in particular it seems like threads, or
+even some form of concurrency would be worth investigating). There are many
+other directions of possible future investigations: efficient compilation, notions
+of correctness, extensions to the simple effect subtyping discipline that we
+implemented, etc.
 
-To find out more, we kindly invite you to have a look at the paper, and to try
-out the implementations.
-
+To find out more, we kindly invite you to have a look at the
+[paper]((http://arxiv.org/abs/1910.11629)), and to try out the implementations.
 The prototype programming language [Coop](https://github.com/andrejbauer/coop)
-implements and extends $\lambda_{\mathsf{coop}}$. You can start by skimming the [Coop
-manual](https://github.com/andrejbauer/coop/blob/master/Manual.md) and the
-[examples](https://github.com/andrejbauer/coop/tree/master/examples).
-
-Depending on your preferred setup, you might like better the
+implements and extends $\lambda_{\mathsf{coop}}$. You can start by skimming the
+[Coop manual](https://github.com/andrejbauer/coop/blob/master/Manual.md) and the
+[examples](https://github.com/andrejbauer/coop/tree/master/examples). If you
+prefer to experiment on your own, you might prefer the
 [Haskell-Coop](https://github.com/danelahman/haskell-coop) library, as it allows
 you to combine runners with everything else that Haskell has to offer.
