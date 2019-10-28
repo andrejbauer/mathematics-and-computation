@@ -85,7 +85,9 @@ set of parameters, and $B$ the set of results of the operation. The operation
 call $\mathtt{op}(a, \kappa)$ is "executed" in the current world $w \in W$ by
 computing $\overline{\mathtt{op}}(a,w) = (b, w')$ to get the next world $w'$ and
 a result $b$. The program then proceeds with the continuation $\kappa\,b$ in the
-world $w'$.
+world $w'$. Notice how the world $w$ is manipulated realistically in a *linear*
+fashion, i.e., the co-operation takes in the current world~$w$ and yields the
+next one~$w'$.
 
 What I have just described is *not* a monad or a handler, but a *comodel*, also
 known as a *runner*, and the map $\overline{\mathtt{op}}$ is not an operation,
