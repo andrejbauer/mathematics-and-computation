@@ -101,7 +101,7 @@ for references. Perhaps we should replace "top-level" handlers and "special"
 monads with runners?
 
 Danel and I worked out how *effectful* runners (a generalization of runners that
-supports other effects, apart from state) provide a mathematical model of
+supports other effects in addition to state) provide a mathematical model of
 resource management. They also give rise to a programming concept that models
 top-level external resources, as well as allows programmers to modularly define
 their own “virtual machines” and run code inside them. Such virtual machines can
