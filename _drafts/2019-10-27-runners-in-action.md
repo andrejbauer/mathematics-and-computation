@@ -89,12 +89,14 @@ world $w'$.
 
 What I have just described is *not* a monad or a handler, but a *comodel*, also
 known as a *runner*, and the map $\overline{\mathtt{op}}$ is not an operation,
-but a *co-operation*. This was all observed a while ago by Gordon Plotkin and
-John Power, and by [Tarmo Uustalu](https://www.ioc.ee/~tarmo/), see our paper
-for references. A short introductory account of comodels is given in Section 4
-of my notes [What is algebraic about algebraic effects and
-handlers?](https://arxiv.org/abs/1807.05923). We should be using runners, not
-"top-level" effects and "special" monads.
+but a *co-operation*. This was all observed a while ago by [Gordon
+Plotkin](http://homepages.inf.ed.ac.uk/gdp/) and [John
+Power](https://scholar.google.co.uk/citations?user=aOCekqQAAAAJ), and by [Tarmo
+Uustalu](https://www.ioc.ee/~tarmo/), see our paper for references. A short
+introductory account of comodels is given in Section 4 of my notes [What is
+algebraic about algebraic effects and
+handlers?](https://arxiv.org/abs/1807.05923). Perhaps we should replace
+"top-level" effects and "special" monads with runners?
 
 Danel and I worked out how *effectful* runners (a generalization of runners that
 supports other effects, apart from state) provide a mathematical model of
@@ -114,7 +116,7 @@ give an account of *two* kinds of exceptions: ordinary *exceptions*, which are
 special events that disrupt the flow of user code and need to be attended to,
 and *signals* which are unrecoverable failures which *kill* user code and cannot
 be caught, but can be finalized. Various programming languages call these two
-kinds "checked" and "non-checked" exceptions, or "errors" and "exceptions", etc.
+kinds "checked" and "non-checked" exceptions, or "exceptions" and "errors", etc.
 
 To find out more, we kindly invite you to have a look at the paper, and to try
 out the implementations.
