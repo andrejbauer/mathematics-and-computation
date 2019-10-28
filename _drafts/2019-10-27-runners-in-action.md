@@ -75,7 +75,7 @@ design.
 
 How precisely does an operation call in the program cause an effect in the
 external world? As we have just seen, some sort of runtime environment or top
-level needs to do relate it to the external world. From the viewpoint of the
+level needs to relate it to the external world. From the viewpoint of the
 program, the external world appears as state which is not directly accessible,
 or even representable in the language. The effect of calling an operation
 $\mathtt{op}(a,\kappa)$ is to change the state of the world, and to get back a
@@ -85,20 +85,17 @@ set of parameters, and $B$ the set of results of the operation. The operation
 call $\mathtt{op}(a, \kappa)$ is "executed" in the current world $w \in W$ by
 computing $\overline{\mathtt{op}}(a,w) = (b, w')$ to get the next world $w'$ and
 a result $b$. The program then proceeds with the continuation $\kappa\,b$ in the
-world $w'$. Notice how the world $w$ is manipulated realistically in a *linear*
-fashion, i.e., the co-operation takes in the current world $w$ and yields the
-next one $w'$.
+world $w'$. Notice how the world $w$ is an external entity that is manipulated
+by the external co-operation $\overline{\mathtt{op}}$ realistically in a *linear*
+fashion, i.e., the world is neither discarded nor copied, just transformed.
 
 What I have just described is *not* a monad or a handler, but a *comodel*, also
 known as a *runner*, and the map $\overline{\mathtt{op}}$ is not an operation,
 but a *co-operation*. This was all observed a while ago by [Gordon
 Plotkin](http://homepages.inf.ed.ac.uk/gdp/) and [John
 Power](https://scholar.google.co.uk/citations?user=aOCekqQAAAAJ), and by [Tarmo
-Uustalu](https://www.ioc.ee/~tarmo/), see our paper for references. A short
-introductory account of comodels is given in Section 4 of my notes [What is
-algebraic about algebraic effects and
-handlers?](https://arxiv.org/abs/1807.05923). Perhaps we should replace
-"top-level" effects and "special" monads with runners?
+Uustalu](https://www.ioc.ee/~tarmo/), see our paper for references. Perhaps we
+should replace "top-level" effects and "special" monads with runners?
 
 Danel and I worked out how *effectful* runners (a generalization of runners that
 supports other effects, apart from state) provide a mathematical model of
