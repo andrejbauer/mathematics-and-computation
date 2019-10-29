@@ -1,0 +1,10 @@
+_id: f7e05cd0-fa73-11e9-a033-8ffa8c91046b
+name: Max S. New
+email: 00431e21cdc60799fc8122044f77b917
+url: 'http://maxsnew.github.io'
+message: >-
+  So previous work on the enriched effect calculus by Mogelborg, Staton and
+  others proves a representation theorem that "all monads are linear state
+  monads". Can you take advantage of this in some way to share some code between
+  uses of runners and uses of effects?
+date: 1572371160
