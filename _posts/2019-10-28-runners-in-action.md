@@ -142,7 +142,7 @@ of correctness, extensions to the simple effect subtyping discipline that we
 implemented, etc.
 
 To find out more, we kindly invite you to have a look at the
-[paper]((http://arxiv.org/abs/1910.11629)), and to try out the implementations.
+[paper](http://arxiv.org/abs/1910.11629), and to try out the implementations.
 The prototype programming language [Coop](https://github.com/andrejbauer/coop)
 implements and extends $\lambda_{\mathsf{coop}}$. You can start by skimming the
 [Coop manual](https://github.com/andrejbauer/coop/blob/master/Manual.md) and the
