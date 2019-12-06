@@ -58,12 +58,12 @@ No proof by contradiction here!
 
 My second remark is that this particular example is perhaps not good for discussing proofs of negation because it reduces to inequality of natural numbers, which is a decidable property. That is, as far as intuitionistic logic is concerned, equality and inequality of natural numbers are both equally &#8220;positive&#8221; relations. This is reflected in various variants of the proof given by Gowers on his blog, some of which are &#8220;positive&#8221; in nature.
 
-The situation with reals is different. There we could define the so-called _apartness_ relation $x \# y$ to mean $x < y \lor y < x$. The negation of apartness is equality, but the negation of equality is not apartness, at least not intuitionistically (classically of course this whole discussion is a triviality). A proof of inequality $x \neq y$ of real numbers $x$ and $y$ may thus proceed in two ways:
+The situation with reals is different. There we could define the so-called _apartness_ relation $x \sharp y$ to mean $x < y \lor y < x$. The negation of apartness is equality, but the negation of equality is not apartness, at least not intuitionistically (classically of course this whole discussion is a triviality). A proof of inequality $x \neq y$ of real numbers $x$ and $y$ may thus proceed in two ways:
 
   1. The _direct_ way: assume $x = y$ and derive absurdity
-  2. Via apartness: prove $x \# y$ and conclude that $x \neq y$
+  2. Via apartness: prove $x \sharp y$ and conclude that $x \neq y$
 
-Note that the proof of $x \# y \Rightarrow x \neq y$ still involves the usual proof of negation in which we assume $x \# y \land x = y$ and derive absurdity.
+Note that the proof of $x \sharp y \Rightarrow x \neq y$ still involves the usual proof of negation in which we assume $x \sharp y \land x = y$ and derive absurdity.
 
 #### A continuous map on $[0,1]$ is bounded
 
