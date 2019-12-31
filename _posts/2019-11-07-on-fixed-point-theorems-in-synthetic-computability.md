@@ -19,7 +19,7 @@ Lawvere](https://en.wikipedia.org/wiki/William_Lawvere) on the occasion of their
 80th birthdays.
 
 Lawvere's paper ["Diagonal arguments and cartesian closed
-categories](http://tac.mta.ca/tac/reprints/articles/15/tr15abs.html) proves a
+categories](https://content.sciendo.com/view/journals/tmj/10/3/article-p167.xml) proves a
 beautifully simple fixed point theorem.
 
 > **Theorem:** (Lawvere) *If $e : A \to B^A$ is a surjection then every $f : B \to B$ has a fixed point.*
