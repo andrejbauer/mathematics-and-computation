@@ -1,0 +1,11 @@
+_id: bff72250-357d-11ea-b7f0-ed3f6b3e5860
+name: Loïc D.
+email: d250b80d68fdc74f85e328847e5b9085
+url: ''
+message: >-
+  It is a fascinating idea, but it seems to me that there is an obvious flaw.
+  One can only agree that all computable functions are continuous if one thinks
+  that all numbers are real (which seems a bit extreme from a constructivist
+  point of view). If one considers the sign function over rational numbers, then
+  it is both discontinuous at 0 and computable.
+date: 1578862479
