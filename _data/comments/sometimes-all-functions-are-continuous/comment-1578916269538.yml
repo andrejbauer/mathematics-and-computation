@@ -1,0 +1,6 @@
+_id: fcc904f0-35fa-11ea-b7f0-ed3f6b3e5860
+name: Andrej Bauer
+email: 59d57d95bc7c45ced5f1969279cec06b
+url: 'http://www.andrej.com/'
+message: "@LoïcD.: Well, I cannot explain everything in a blog post like this one, but one also has to be careful about which topology a space gets. For rational numbers, you should use the discrete topology (and then of course every computable function is continuous).\r\n\r\nWhy the discrete topology? That is a whole different story, but a quick explanation is that it's because the rational numbers have decidable equality."
+date: 1578916269
