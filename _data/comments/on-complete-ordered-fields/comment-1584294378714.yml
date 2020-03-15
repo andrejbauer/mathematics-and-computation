@@ -1,0 +1,9 @@
+_id: dfc815b0-66e4-11ea-a370-17ff27463fc5
+name: Andrej Bauer
+email: 59d57d95bc7c45ced5f1969279cec06b
+url: 'http://www.andrej/com/'
+message: >-
+  @Berrick: Yes, I think so, except that it would be better to phrase LEM as a
+  single sentence, rather than a schema. For instance, you could take it to be
+  $\forall x . (\emptyset \in x \lor \emptyset \not\in x)$.
+date: 1584294378
