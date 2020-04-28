@@ -23,7 +23,7 @@ Getting the authors of proof assistants to travel to Ljubljana and giving talks
 at our [Foundations of mathematics and theoretical computer
 science](https://www.fmf.uni-lj.si/si/obvestila/agregator/seminar-temelji/)
 seminar has largely become impossible. But luckily research seminars world-wide
-are rapdily moving online, and so is our Foundations seminar. I am therefore
+are rapidly moving online, and so is our Foundations seminar. I am therefore
 delighted to announce the first "Every proof assistant" seminar:
 
 > ##### Arend proof assistant
