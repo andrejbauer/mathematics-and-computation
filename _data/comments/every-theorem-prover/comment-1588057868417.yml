@@ -1,0 +1,6 @@
+_id: 6e793490-891f-11ea-910d-21eaae6f7756
+name: Andrej Bauer
+email: 59d57d95bc7c45ced5f1969279cec06b
+url: 'http://www.andrej.com/'
+message: "I am not sure what we will cover. We will start with proof assistants that are closer to the type-theoretic community, just because I know the scenery there better.\r\n\r\nPVS and ACL2 definitely belong to the \"established\" group, together with Coq, Agda, Lean, Isabelle etc. We will get to those eventually."
+date: 1588057868
