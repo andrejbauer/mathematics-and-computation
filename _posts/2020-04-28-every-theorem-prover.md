@@ -27,7 +27,7 @@ are rapidly moving online, and so is our Foundations seminar. I am therefore
 delighted to announce the first "Every proof assistant" seminar:
 
 > ##### Arend proof assistant
-> **Time:** Thursday, April 30, 2020 from 19:00 to 20:00 (Central European Time)  
+> **Time:** Thursday, April 30, 2020 from 18:00 to 19:00 (Central European Summer Time, UTC+2)  
 > **Location:** online at [Zoom ID 965 4439 5816](https://zoom.us/j/96544395816)  
 > **Speaker:** [Valery Isaev](https://research.jetbrains.org/researchers/valis) (JetBrains research)
 >
