@@ -5,6 +5,7 @@ layout: post
 categories:
   - Talks
   - News
+  - Every proof assistant
 ---
 
 For a while now I have been contemplating a series of seminars titled *"Every
@@ -45,3 +46,8 @@ delighted to announce the first "Every proof assistant" seminar:
 > reasoning about various higher structures.
 
 I have a couple more in the pipeline, so follow this blog, the [Foundations seminar announcements](https://www.fmf.uni-lj.si/si/obvestila/agregator/seminar-temelji/) or my Twitter account [@andrejbauer](https://twitter.com/andrejbauer).
+
+**Supplemental (2020-05-01)**
+
+* [video recording of "Arend proof assistant"](https://vimeo.com/413726748)
+* [Arend proof assistant](https://arend-lang.github.io) web page
