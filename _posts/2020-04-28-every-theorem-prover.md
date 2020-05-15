@@ -1,5 +1,5 @@
 ---
-title: Every proof assistant
+title: "Every proof assistant: Arend"
 author: Andrej Bauer
 layout: post
 categories:
@@ -31,6 +31,7 @@ delighted to announce the first "Every proof assistant" seminar:
 > **Time:** Thursday, April 30, 2020 from 18:00 to 19:00 (Central European Summer Time, UTC+2)  
 > **Location:** online at [Zoom ID 965 4439 5816](https://zoom.us/j/96544395816)  
 > **Speaker:** [Valery Isaev](https://research.jetbrains.org/researchers/valis) (JetBrains research)
+> **Proof assistant:** [Arend proof assistant](https://arend-lang.github.io)
 >
 > **Abstract:** I will discuss Arend, a proof assistant developed at JetBrains
 > Research. The aim of Arend is to provide a powerful system for formalization
@@ -44,10 +45,10 @@ delighted to announce the first "Every proof assistant" seminar:
 > the style of cubical type theories. I will talk about these features and also
 > about our plans to implement language extensions that can be used to simplify
 > reasoning about various higher structures.
+>
+> [Video recording](https://vimeo.com/413726748) of the talk is available.
+
 
 I have a couple more in the pipeline, so follow this blog, the [Foundations seminar announcements](https://www.fmf.uni-lj.si/si/obvestila/agregator/seminar-temelji/) or my Twitter account [@andrejbauer](https://twitter.com/andrejbauer).
 
-**Supplemental (2020-05-01)**
 
-* [video recording of "Arend proof assistant"](https://vimeo.com/413726748)
-* [Arend proof assistant](https://arend-lang.github.io) web page
