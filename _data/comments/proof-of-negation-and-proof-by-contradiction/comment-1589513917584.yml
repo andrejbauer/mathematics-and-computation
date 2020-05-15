@@ -1,0 +1,6 @@
+_id: 8f7f21e0-965d-11ea-8ab6-952feb1e41a9
+name: Juan Raphael Diaz Simões
+email: 6dbddb3971b1b2748e5ef8293d5e4ffe
+url: ''
+message: "I am pretty new to constructive patterns, and I am a little confused by the assertion that the proof of \r\nx♯y⇒x≠y consists on assuming\r\nx♯y∧x=y and deriving absurdity.\r\n\r\nThe source of my confusion is the term x♯y∧x, which I understand intuitively as a a relation and a proof of one of its members. Is this pattern common? Are there references or textbooks that talk about them with more details?\r\n\r\nThanks"
+date: 1589513917
