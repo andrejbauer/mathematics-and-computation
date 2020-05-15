@@ -38,7 +38,7 @@ I am happy to announce the next seminar in the "Every proof assistant" series.
 The spring schedule of talks is planned as follows:
 
 * May 28, 2020: [Brigitte Pientka](https://www.cs.mcgill.ca/~bpientka/) - [Beluga](http://complogic.cs.mcgill.ca/beluga/)
+* June 4, 2020: [Jon Sterling](https://www.jonmsterling.com) - [redtt](https://github.com/RedPRL/redtt) (to be confirmed)
 * June 11, 2020: [Conor McBride](http://strictlypositive.org) - [Epigram 2](https://github.com/mietek/epigram2)
 * June 25, 2020: [William J. Bowman](https://www.williamjbowman.com), [Cur](https://github.com/wilbowma/cur)
 * July 2, 2020: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/) - [cubicaltt](https://github.com/mortberg/cubicaltt) (to be confirmed)
-* July 9, 2020: [Jon Sterling](https://www.jonmsterling.com) - [redtt](https://github.com/RedPRL/redtt) (to be confirmed)
