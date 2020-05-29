@@ -1,0 +1,6 @@
+_id: 166976f0-a208-11ea-8255-6f58f2a93b8e
+name: Yassine
+email: a740da4bf031426e800c5ffd7e0480fd
+url: 'http://abstractfun.com'
+message: "Sorry I'm sorta out of league here but I couldn't not notice the similarity between the runner signatures and co-algebras which reminded me of this article about comonads and how they interact/pair with monads\r\n\r\nhttps://blog.functorial.com/posts/2016-08-07-Comonads-As-Spaces.html\r\n\r\nSo the runners seem like the comonads (or machines) that represent the set of all possible states (sort of phase space) and the algebraic handlers are like the language that move us inside that space (or drive the machine)\r\n\r\nsorry for the ambiguous language. I'm primarily a developer interested in Algebraic effects."
+date: 1590796621
