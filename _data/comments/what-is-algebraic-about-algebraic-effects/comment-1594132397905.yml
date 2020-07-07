@@ -1,0 +1,6 @@
+_id: cc3a19c0-c05e-11ea-875d-670cd27300e4
+name: Vlad Patryshev
+email: dae11b30544529b3c0836855a14cd653
+url: 'http://presheaf.com'
+message: "In this paper, you state that \"In the opposite category the map turns its direction, and the exponentials become products\" - this looks strange to me.\r\n\r\nDid you mean exponentials taken in the op category? (in the lucky case they exist)\r\nOr did you mean exponentials taken in the original category, and they serve as a product in the op category? I'm sure it's the sum in the original category that serves as a product in the op category (and vice versa)."
+date: 1594132397
