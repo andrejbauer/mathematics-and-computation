@@ -10,7 +10,7 @@ categories:
 I forgot to record the fact that already two years ago I wrote a paper on
 Lawvere's fixed-point theorem in synthetic computability:
 
-> Andrej Bauer: [*On fixed-point theorems in synthetic computability*](https://content.sciendo.com/view/journals/tmj/10/3/article-p167.xml).
+> Andrej Bauer: [*On fixed-point theorems in synthetic computability*](/asset/data/recursion-theorem.pdf).
 > Tbilisi Mathematical Journal, Volume 10: Issue 3, pp. 167–181.
 
 It was a special issue in honor of Professors [Peter J.
