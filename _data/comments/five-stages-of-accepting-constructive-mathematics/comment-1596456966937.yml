@@ -1,0 +1,6 @@
+_id: 1b688c50-d583-11ea-b930-7f06f2344dfb
+name: Andrej Bauer
+email: 59d57d95bc7c45ced5f1969279cec06b
+url: 'http://www.andrej/com/'
+message: "@Tony: Remember that constructive mathematics makes no explicit assumptions about effective procedures. In particular, it does not *require* everything to be effective, although it is *consistent* to assume that everything is constructive.\r\n\r\nRegarding your example of the number $a = 1$ if the Riemann hypothesis holds and $a = 0$ if it does not: your definition is not yet complete, as you have not demonstrated that the Riemann hypothesis is decidable, and so you have not yet defined the number $a$. It is not clear what sets $A$ and $B$ you are referring to.\r\n\r\nThere are several notionf of finite sets. I used a very strong one, because it fit my purposes. In constructive mathematics, and in mathematics in general, picking the correct definition is a matter of getting work done most efficiently and with greatest insight.\r\n\r\nYou seem to think that constructive mathematics is a political affair laden with philosophical conundrums. Perhaps it was a long time ago, but not anymore, so your remaining remarks are mostly off mark."
+date: 1596456966
