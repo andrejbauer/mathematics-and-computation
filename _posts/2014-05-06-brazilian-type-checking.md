@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=1633
 permalink: /2014/05/06/brazilian-type-checking/
 categories:
-  - Homotopy type theory
+  - Type theory
   - Talks
 ---
 I just gave a talk at [&#8220;Semantics of proofs and certified mathematics&#8221;](https://ihp2014.pps.univ-paris-diderot.fr/doku.php?id=workshop_1). I spoke about a new proof checker [Chris Stone](http://www.cs.hmc.edu/~stone/) and I are working on. The interesting feature is that it has both kinds of equality, the &#8220;paths&#8221; and the &#8220;strict&#8221; ones. It is based on a [homotopy type system](https://uf-ias-2012.wikispaces.com/file/view/HTS.pdf/410120566/HTS.pdf) proposed by [Vladimir Voevodsky](http://www.math.ias.edu/~vladimir/Site3/home.html). The slides contain talk notes and explain why it is &#8220;Brazilian&#8221;.

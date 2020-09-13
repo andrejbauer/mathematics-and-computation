@@ -8,7 +8,7 @@ guid: http://math.andrej.com/?p=1535
 permalink: /2013/08/28/the-elements-of-an-inductive-type/
 categories:
   - Constructive math
-  - Homotopy type theory
+  - Type theory
   - Tutorial
 ---
 In the HoTT book [issue 460](https://github.com/HoTT/book/issues/460) a question by _gluttonousGrandma_ (where do people get these nicknames?) once more exposed a common misunderstanding that we tried to explain in [section 5.8](http://books.google.si/books?id=LkDUKMv3yp0C&lpg=PA3&dq=homotopy%20type%20theory&pg=PA166#v=onepage&q&f=false) of the book (many thanks to Bas Spitters for putting the book into Google Books so now we can link to particular pages). Apparently the following belief is widely spread, and I admit to holding it a couple of years ago:

@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=2001
 permalink: /2017/12/11/spartan-type-theory/
 categories:
-  - Homotopy type theory
+  - Type theory
   - Talks
   - Tutorial
 ---

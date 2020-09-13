@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=2038
 permalink: /2019/05/08/a-course-on-homotopy-type-theory/
 categories:
-  - Homotopy type theory
+  - Type theory
   - Teaching
 ---
 This semester my colleague [Jaka Smrekar](https://www.fmf.uni-lj.si/~smrekar/) and I are teaching a graduate course on homotopy theory and homotopy type theory. The first part was taught by Jaka and was a nice review of classical homotopy theory leading up to Quillen model categories. In the second part I am covering basic homotopy type theory.

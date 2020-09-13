@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=1227
 permalink: /2012/08/23/a-hott-thesis/
 categories:
-  - Homotopy type theory
+  - Type theory
   - News
   - Tutorial
 ---

@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=1584
 permalink: /2014/01/13/univalent-foundations-subsume-classical-mathematics/
 categories:
-  - Homotopy type theory
+  - Type theory
   - Logic
   - Tutorial
 ---

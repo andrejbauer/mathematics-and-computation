@@ -10,7 +10,7 @@ categories:
   - Computation
   - Constructive math
   - Guest post
-  - Homotopy type theory
+  - Type theory
 ---
 
 In the post [Seemingly impossible functional programs](http://math.andrej.com/2007/09/28/seemingly-impossible-functional-programs/), I wrote increasingly efficient Haskell programs to [realize](http://en.wikipedia.org/wiki/Realizability) the mathematical statement

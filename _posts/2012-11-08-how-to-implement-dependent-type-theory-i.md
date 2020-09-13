@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=1284
 permalink: /2012/11/08/how-to-implement-dependent-type-theory-i/
 categories:
-  - Homotopy type theory
+  - Type theory
   - Programming
   - Software
   - Tutorial

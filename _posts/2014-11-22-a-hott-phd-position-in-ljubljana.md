@@ -8,7 +8,7 @@ guid: http://math.andrej.com/?p=1801
 permalink: /2014/11/22/a-hott-phd-position-in-ljubljana/
 categories:
   - Eff
-  - Homotopy type theory
+  - Type theory
   - Programming
   - Teaching
 ---

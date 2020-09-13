@@ -9,7 +9,7 @@ permalink: /2013/06/20/the-hott-book/
 categories:
   - Constructive math
   - General
-  - Homotopy type theory
+  - Type theory
   - News
   - Publications
 ---

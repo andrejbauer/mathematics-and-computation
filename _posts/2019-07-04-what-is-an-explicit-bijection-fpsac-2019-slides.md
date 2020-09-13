@@ -8,7 +8,7 @@ guid: http://math.andrej.com/?p=2047
 permalink: /2019/07/04/what-is-an-explicit-bijection-fpsac-2019-slides/
 categories:
   - General
-  - Homotopy type theory
+  - Type theory
   - Talks
 ---
 Here are the slides with speaker notes for the talk _What is an explicit bijection_ which I gave at the [31st International Conference on Formal Power Series and Algebraic Combinatorics](http://fpsac2019.fmf.uni-lj.si) (FPSAC 2019). It was the "outsider" talk, where they invite someone to tell them something outside of their area.
