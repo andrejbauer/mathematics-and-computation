@@ -42,7 +42,7 @@ views of type theory. Our approach could perhaps be described as "concrete" and
 One can argue each of the above points, and we have done so among ourselves many times.
 Nevertheless, I feel that we have accomplished something worthwhile – but the ultimate
 judges will be our readers, or lack of them. You are kindly invited to take a look at the
-paper
+paper.
 
 **Download PDF:** [`arxiv.org/pdf/2009.05539.pdf`](https://arxiv.org/pdf/2009.05539.pdf)
 
