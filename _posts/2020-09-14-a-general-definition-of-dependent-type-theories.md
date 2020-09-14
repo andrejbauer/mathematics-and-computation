@@ -11,7 +11,8 @@ The preprint version of the paper [A general definition of dependent type
 theories](https://arxiv.org/abs/2009.05539) has finally appeared on the arXiv! Over three
 years ago [Peter Lumsdaine](http://peterlefanulumsdaine.com) invited me to work on the
 topic, which I gladly accepted, and dragged my student [Philipp
-Haselwarter](http://haselwarter.org/~philipp/) into it. We set out to give *an* answer
+Haselwarter](http://haselwarter.org/~philipp/) into it. We set out to give *an* answer to
+the queation:
 
 > **What is type theory, precisely?**
 
@@ -20,7 +21,7 @@ Voevodsky, who would ask the question to type-theoretic audiences. Some took him
 troll and others a newcomer who just had to learn more type theory. I was among the
 latter, but eventually the question got through to me – I could point to any number of
 *specific* examples of type theories, but not a comprehensive and mathematically precise
-definition of the underlying concept.
+definition of the *general* concept.
 
 It is too easy to dismiss the question by claiming that type theory is an open-ended concept
 which therefore cannot be completely captured by any mathematical definition. Of
