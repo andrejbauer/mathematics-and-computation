@@ -66,8 +66,9 @@ header a {
 /* Footer */
 footer {
   margin-top: 60px;
-  padding: 20px 0px 20px 60px;
+  padding: 20px 20px 20px 60px;
   background: url(/asset/imast-mej-orange.jpg) no-repeat scroll bottom;
+  text-align: right;
 }
 
 footer a {
