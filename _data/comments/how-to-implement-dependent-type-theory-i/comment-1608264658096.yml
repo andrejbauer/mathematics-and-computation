@@ -1,0 +1,6 @@
+_id: 07cbc570-40e7-11eb-99b3-c3816a6da7c6
+name: 'Daniel Donnelly, Jr.'
+email: 31ef0a24624629cdfe557f3b4b7275aa
+url: ''
+message: "I am going through your tutorial now to learn the syntax and how things work in a type checker.  However, why are you trying to do things similar to Coq?  I'm assuming it's just because that's what the courses you're taking are taught in.\r\n\r\nUsually, when I design something I think \"how can I do this differently\" and possibly stand out or outperform in some way.\r\n\r\nI'll be prototyping in Python and will post my result ot github.  But one's first thought is why not implement things in C++, therefore you'd have maybe 2-3 times the speed of Ocaml roughly."
+date: 1608264658
