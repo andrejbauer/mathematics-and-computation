@@ -44,4 +44,6 @@ enumerated. Classic theorems of computability may be proved in a straightforward
 notion of computation. We end by showing that in synthetic computability Turing reducibility is expressed in terms of
 sequential continuity of maps between directed-complete partial orders.
 
-The talk will be recorded and the slides made public afterwards.
+The [**slides**](/asset/data/madison-synthetic-computability-talk.pdf) and the [**video**](https://vimeo.com/510188470)
+recording of the talk are now available.
+
