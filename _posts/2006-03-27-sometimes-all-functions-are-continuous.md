@@ -16,12 +16,17 @@ You may have heard at times that there are mathematicians who think that _all_ f
 
 #### Surely they are not all continuous!?
 
-You must be thinking to yourself: how can anyone in their right mind claim that all functions are continuous &#8211; here&#8217;s one that isn&#8217;t:  
-$$\mathrm{sgn}(x)=\begin{cases}  
--1 & x < 0 \\  
-0 & x = 0 \\  
-1 & x > 0  
-\end{cases}$$  
+You must be thinking to yourself: how can anyone in their right mind claim that all functions are continuous -- here's one that isn't:
+
+$$
+\mathrm{sgn}(x) =
+\begin{cases}
+-1 & \text{if $x < 0$,} \\\
+0  & \text{if $x = 0$,} \\\
+1  & \text{if $x > 0$.}
+\end{cases}
+$$
+
 At $x=0$ the sign function jumps from $-1$ to $0$ to $1$, which is a nice discontinuity. As crazy as it seems, it makes sense to refuse to admit that $\textrm{sgn}$ is a legitimate function!
 
 The official definition nowadays is that a function $f : A \to B$ is the same thing as a _functional relation_ on $A \times B$. Recall that a relation $R$ on $A \times B$ is just a subset of $A \times B$. It is functional when it is
@@ -37,7 +42,7 @@ So for a moment let us shake off the prejudices of classical training and accept
 
 > **Definition:** A _function_ $f : A \to B$ is a computational procedure which takes as an input $x \in A$ and yields as output a uniquely determined $y \in B$.
 
-We have left out many details here, but the basic intuition is clear: &#8220;It ain&#8217;t a function if it can&#8217;t be computed&#8221;. Now we return to the sign function defined above. Is it a function? In order to compute $\mathrm{sgn}(x)$, we must for any given real number $x$ discover whether it is negative, zero, or positive. So suppose we inspect the digits of $x$ for a while and discover, say, that the first billion of them are all zero. Then $\mathrm{sgn}(x)$ is either $0$ or $1$, but we cannot tell which. In fact, no finite amount of computation will guarantee that we will be able to tell whether $x=0$ or $x > 0$. Since infinite amount of computation is impossible in finite time (please do not drag in quantum computing, it does not help) the sign function cannot be computed. It is not a function!
+We have left out many details here, but the basic intuition is clear: &#8220;It ain&#8217;'t a function if it can&#8217;'t be computed&#8221;. Now we return to the sign function defined above. Is it a function? In order to compute $\mathrm{sgn}(x)$, we must for any given real number $x$ discover whether it is negative, zero, or positive. So suppose we inspect the digits of $x$ for a while and discover, say, that the first billion of them are all zero. Then $\mathrm{sgn}(x)$ is either $0$ or $1$, but we cannot tell which. In fact, no finite amount of computation will guarantee that we will be able to tell whether $x=0$ or $x > 0$. Since infinite amount of computation is impossible in finite time (please do not drag in quantum computing, it does not help) the sign function cannot be computed. It is not a function!
 
 An argument similar to the one above shows that we cannot hope to compute a function $f : \mathbb{R} \to \mathbb{R}$ at a point of discontinuity. With a more formal treatment we could prove:
 
