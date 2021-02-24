@@ -19,7 +19,7 @@ equivalence.  We also establish this for the types of sets, magmas, monoids and
 groups. The arguments in this post are also [written](https://www.cs.bham.ac.uk/~mhe/TypeTopology/BuraliForti.html#Burali-Forti) in
 [Agda](https://agda.readthedocs.io/en/v2.6.1.3/).
 
-<!!--more-->
+<!--more-->
 
 #### Ordinals in univalent type theory
 
