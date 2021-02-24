@@ -227,7 +227,7 @@ next were an equivalence, then we would have a small copy of the type of ordinal
 
 This case is more interesting.
 
-The axiom of choice is equivalent to the statement that [any set can
+The axiom of choice is equivalent to the statement that [any non-empty set can
 be given the structure of a
 group](https://en.wikipedia.org/wiki/Group_structure_and_the_axiom_of_choice). So
 if we assumed the axiom of choice we would be done. But we are brave
