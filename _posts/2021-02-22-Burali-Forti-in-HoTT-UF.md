@@ -173,8 +173,7 @@ We define the order of $X$ from that of $\operatorname{Ordinal}\,\mathcal{U}$ by
 $$
 x \prec y = f(x) \triangleleft f(y).
 $$
-It is [laborious but not hard to see](https://www.cs.bham.ac.uk/~mhe/TypeTopology/OrdinalsWellOrderTransport.html#transfer-structure) that this order satisfies the required axioms for making $X$ into an ordinal, except that it has values in
-in $\mathcal{U}^+$ rather than $\mathcal{U}$. But this problem is solved by instead using the resized-down relation $\triangleleft^-$ discussed above, which is equivalent to $\triangleleft$ by univalence.
+It is [laborious but not hard to see](https://www.cs.bham.ac.uk/~mhe/TypeTopology/OrdinalsWellOrderTransport.html#transfer-structure) that this order satisfies the required axioms for making $X$ into an ordinal, except that it has values in $\mathcal{U}^+$ rather than $\mathcal{U}$. But this problem is solved by instead using the resized-down relation $\triangleleft^-$ discussed above, which is equivalent to $\triangleleft$ by univalence.
 $\square$
 
 #### There are more types and sets in $\mathcal{U}^+$ than in $\mathcal{U}$
@@ -192,7 +191,7 @@ universe $\mathcal{U}$:
 
 > **Theorem.** The universe embedding $\mathcal{U} \to \mathcal{U}^+$ doesn't have a section and therefore is not an equivalence.
 
-**Proof.** A section would would give a type in the universe $\mathcal{U}$ equivalent to the type of ordinals in $\mathcal{U}$, but we have seen that there is no such type. $\square$
+**Proof.** A section would give a type in the universe $\mathcal{U}$ equivalent to the type of ordinals in $\mathcal{U}$, but we have seen that there is no such type. $\square$
 
 (However, by Theorem 29 of [Injective types in univalent mathematics](https://www.cambridge.org/core/journals/mathematical-structures-in-computer-science/article/injective-types-in-univalent-mathematics/AFCBBABE47F29ED7AFB4C262929D8810), if propositional resizing holds then the universe embedding $\mathcal{U} \to \mathcal{U}^+$
 [is a section](https://www.cs.bham.ac.uk/~mhe/TypeTopology/UF-Size.html#Lift-is-section).)
@@ -227,7 +226,7 @@ next were an equivalence, then we would have a small copy of the type of ordinal
 
 This case is more interesting.
 
-The axiom of choice is equivalent to the statement that [any set can
+The axiom of choice is equivalent to the statement that [any non-empty set can
 be given the structure of a
 group](https://en.wikipedia.org/wiki/Group_structure_and_the_axiom_of_choice). So
 if we assumed the axiom of choice we would be done. But we are brave
@@ -262,7 +261,7 @@ embedding](https://www.cs.bham.ac.uk/~mhe/TypeTopology/FreeGroup.html).
    all equivalent to small
    types](https://www.cs.bham.ac.uk/~mhe/TypeTopology/BuraliForti.html#the-type-of-ordinals-is-locally-small)).
 
-But we want to be as general as possible, and hence work with a spartan univalent type theory which doesn't include higher inductive types other than propositional truncation. We include the empty type, the unit type, natural numbers, list types ([which can actually be constructed from the other type formers](https://www.cs.bham.ac.uk/~mhe/agda-new/Fin.html#vec)), coproduct types, $\Sigma$-types, $\Pi$-types, identity types and and a sequence of universes. We also assume the univalence axiom (from which we automatically get functional and propositional extensionality) and the axiom of existence of propositional truncations.
+But we want to be as general as possible, and hence work with a spartan univalent type theory which doesn't include higher inductive types other than propositional truncation. We include the empty type, the unit type, natural numbers, list types ([which can actually be constructed from the other type formers](https://www.cs.bham.ac.uk/~mhe/agda-new/Fin.html#vec)), coproduct types, $\Sigma$-types, $\Pi$-types, identity types and a sequence of universes. We also assume the univalence axiom (from which we automatically get functional and propositional extensionality) and the axiom of existence of propositional truncations.
 
 1. We [construct the free
    group](https://www.cs.bham.ac.uk/~mhe/TypeTopology/FreeGroup.html)
