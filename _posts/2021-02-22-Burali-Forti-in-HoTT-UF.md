@@ -192,7 +192,7 @@ universe $\mathcal{U}$:
 
 > **Theorem.** The universe embedding $\mathcal{U} \to \mathcal{U}^+$ doesn't have a section and therefore is not an equivalence.
 
-**Proof.** A section would would give a type in the universe $\mathcal{U}$ equivalent to the type of ordinals in $\mathcal{U}$, but we have seen that there is no such type. $\square$
+**Proof.** A section would give a type in the universe $\mathcal{U}$ equivalent to the type of ordinals in $\mathcal{U}$, but we have seen that there is no such type. $\square$
 
 (However, by Theorem 29 of [Injective types in univalent mathematics](https://www.cambridge.org/core/journals/mathematical-structures-in-computer-science/article/injective-types-in-univalent-mathematics/AFCBBABE47F29ED7AFB4C262929D8810), if propositional resizing holds then the universe embedding $\mathcal{U} \to \mathcal{U}^+$
 [is a section](https://www.cs.bham.ac.uk/~mhe/TypeTopology/UF-Size.html#Lift-is-section).)
