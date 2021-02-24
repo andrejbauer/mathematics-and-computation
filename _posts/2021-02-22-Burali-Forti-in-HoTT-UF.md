@@ -267,7 +267,7 @@ But we want to be as general as possible, and hence work with a spartan univalen
 1. We [construct the free
    group](https://www.cs.bham.ac.uk/~mhe/TypeTopology/FreeGroup.html)
    as a quotient of a type of words following [Mines, Richman and
-   Ruttenburg](https://www.springer.com/gb/book/9780387966403). To
+   Ruitenburg](https://www.springer.com/gb/book/9780387966403). To
    prove that the universal map is an embedding, one first proves a
    Church-Rosser property for the equivalence relation on words. It is
    remarkable that this can be done without assuming that the set of
