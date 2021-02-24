@@ -3,8 +3,7 @@ title: The Burali-Forti argument in HoTT/UF
 author: Martin Escardo
 layout: post
 categories:
-  - General
-  - HoTT/UF
+  - Type theory
   - Constructive mathematics
 ---
 
