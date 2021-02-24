@@ -201,7 +201,7 @@ in $\mathcal{U}^+$ than in $\mathcal{U}$, because the type of ordinals
 is a set. For a universe $\mathcal{U}$ define the type
 $$\operatorname{hSet}\,\mathcal{U} : \mathcal{U}^+$$
 by
-$$ \operatorname{hSet}\,\mathcal{U} = Σ A : \mathcal{U} , \text{$A$ is a set}.$$
+$$ \operatorname{hSet}\,\mathcal{U} = \Sigma A : \mathcal{U} , \text{$A$ is a set}.$$
 By an [**hSet embedding**](https://www.cs.bham.ac.uk/~mhe/TypeTopology/UF-UniverseEmbedding.html#is-hSet-embedding) we mean a map
 $$f : \operatorname{hSet}\,\mathcal{U} → \operatorname{hSet}\,\mathcal{V}$$
 such that the underlying type of $f(\mathbb{X})$ is equivalent to the underlying type of $\mathbb{X}$ for every $\mathbb{X} : \operatorname{hSet}\,\mathcal{U}$, that is,
