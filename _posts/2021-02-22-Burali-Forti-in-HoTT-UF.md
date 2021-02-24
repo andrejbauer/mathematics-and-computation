@@ -174,8 +174,7 @@ We define the order of $X$ from that of $\operatorname{Ordinal}\,\mathcal{U}$ by
 $$
 x \prec y = f(x) \triangleleft f(y).
 $$
-It is [laborious but not hard to see](https://www.cs.bham.ac.uk/~mhe/TypeTopology/OrdinalsWellOrderTransport.html#transfer-structure) that this order satisfies the required axioms for making $X$ into an ordinal, except that it has values in
-in $\mathcal{U}^+$ rather than $\mathcal{U}$. But this problem is solved by instead using the resized-down relation $\triangleleft^-$ discussed above, which is equivalent to $\triangleleft$ by univalence.
+It is [laborious but not hard to see](https://www.cs.bham.ac.uk/~mhe/TypeTopology/OrdinalsWellOrderTransport.html#transfer-structure) that this order satisfies the required axioms for making $X$ into an ordinal, except that it has values in $\mathcal{U}^+$ rather than $\mathcal{U}$. But this problem is solved by instead using the resized-down relation $\triangleleft^-$ discussed above, which is equivalent to $\triangleleft$ by univalence.
 $\square$
 
 #### There are more types and sets in $\mathcal{U}^+$ than in $\mathcal{U}$
