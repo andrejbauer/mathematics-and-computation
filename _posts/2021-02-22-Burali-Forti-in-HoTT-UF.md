@@ -262,7 +262,7 @@ embedding](https://www.cs.bham.ac.uk/~mhe/TypeTopology/FreeGroup.html).
    all equivalent to small
    types](https://www.cs.bham.ac.uk/~mhe/TypeTopology/BuraliForti.html#the-type-of-ordinals-is-locally-small)).
 
-But we want to be as general as possible, and hence work with a spartan univalent type theory which doesn't include higher inductive types other than propositional truncation. We include the empty type, the unit type, natural numbers, list types ([which can actually be constructed from the other type formers](https://www.cs.bham.ac.uk/~mhe/agda-new/Fin.html#vec)), coproduct types, $\Sigma$-types, $\Pi$-types, identity types and and a sequence of universes. We also assume the univalence axiom (from which we automatically get functional and propositional extensionality) and the axiom of existence of propositional truncations.
+But we want to be as general as possible, and hence work with a spartan univalent type theory which doesn't include higher inductive types other than propositional truncation. We include the empty type, the unit type, natural numbers, list types ([which can actually be constructed from the other type formers](https://www.cs.bham.ac.uk/~mhe/agda-new/Fin.html#vec)), coproduct types, $\Sigma$-types, $\Pi$-types, identity types and a sequence of universes. We also assume the univalence axiom (from which we automatically get functional and propositional extensionality) and the axiom of existence of propositional truncations.
 
 1. We [construct the free
    group](https://www.cs.bham.ac.uk/~mhe/TypeTopology/FreeGroup.html)
