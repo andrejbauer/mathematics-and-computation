@@ -230,7 +230,7 @@ The axiom of choice is equivalent to the statement that [any non-empty set can
 be given the structure of a
 group](https://en.wikipedia.org/wiki/Group_structure_and_the_axiom_of_choice). So
 if we assumed the axiom of choice we would be done. But we are brave
-and work without assuming excluded middle, and hence without choice.
+and work without assuming excluded middle, and hence without choice, so that our results [hold in any $\infty$-topos](https://arxiv.org/abs/1904.07004).
 
 
 It is also  the case that [the type of propositions can be given the structure of a group](https://homotopytypetheory.org/2021/01/23/can-the-type-of-truth-values-be-given-the-structure-of-a-group/) if and only if the principle of excluded middle holds. And [the type of propositions is a retract of the type of ordinals](https://www.cs.bham.ac.uk/~mhe/TypeTopology/OrdinalArithmetic-Properties.html#retract-%CE%A9-of-Ordinal), which makes it unlikely that the type of ordinals can be given the structure of a group without excluded middle.
