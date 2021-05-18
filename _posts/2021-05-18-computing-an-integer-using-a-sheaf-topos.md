@@ -89,7 +89,7 @@ Because it is not provable in neutral mathematics that continuous functions on t
 
 The details of the mathematics can be found in the [above paper](https://www.sciencedirect.com/science/article/pii/S0168007216300410), and the Agda formalization can be found at [Chuangjie's page](https://cj-xu.github.io/). A few years later, [we ported part of this formalization](https://www.cs.bham.ac.uk/~mhe/chuangjie-xu-thesis-cubical/html/) to [Cubical Agda](https://agda.readthedocs.io/en/v2.6.1.3/language/cubical.html) to deal properly with function extensionality (which we originally dealt with in *ad hoc* ways).
 
-#### The number we compute
+#### The integer we compute
 
 After we construct the sheaf topos, we define a simple type theory and we interpret it in the topos. We define a "function" $(\mathbb{N} \to 2) \to \mathbb{N}$ in this type theory, without proving that it is uniformly continuous, and apply the interpretation map to get a morphism of the topos, which amounts to a uniformly continuous function. From this morphism we get the modulus of uniform continuity, which is the integer we are interested in.
 The interested reader can find the details in the [above paper](https://www.sciencedirect.com/science/article/pii/S0168007216300410) and [Agda code for the paper](http://www.cs.bham.ac.uk/~mhe/papers/kleene-kreisel/) or the substantially more comprehensive [Agda code](http://cj-xu.github.io/ContinuityType/) for [Chuangjie's thesis](http://cj-xu.github.io/ContinuityType/xu-thesis.pdf).
