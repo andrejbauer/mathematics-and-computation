@@ -80,7 +80,7 @@ Now our plot has a twist: we work within *neutral* mathematics to build a provin
 
 [Johnstone's topological topos (1979)](https://academic.oup.com/plms/article-abstract/s3-38/2/237/1484548) would do the job, except that it is built using classical ingredients. This topos has siblings by [Mike Fourman (1982)](http://homepages.inf.ed.ac.uk/mfourman/research/publications/pdf/fourman82-notions-of-choice-sequence.pdf) and [van der Hoeven and Moerdijk (1984)](https://www.sciencedirect.com/science/article/pii/0168007284900356) with aims similar to ours, as explained in our own [2013](https://cj-xu.github.io/papers/xu-escardo-model-uc.pdf) and [2016](https://www.sciencedirect.com/science/article/pii/S0168007216300410) papers, which give a third sibling.
 
-Johnstone's topological topos is very easy to describe: take the monoid of continuous endomaps of the one-point compactification of the natural numbers, considered as a category, then take sheaves for the canonical coverage.
+Johnstone's topological topos is very easy to describe: take the monoid of continuous endomaps of the one-point compactification of the discrete natural numbers, considered as a category, then take sheaves for the canonical coverage.
 Van der Hoeven and Moerdijk's topos is similar: this time take the monoid of continuous endomaps of the Baire space,
 with the "open-cover coverage". Fourman's topos is constructed from a site of formal spaces or locales, with a similar coverage.
 
