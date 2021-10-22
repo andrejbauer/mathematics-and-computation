@@ -1,0 +1,6 @@
+_id: 979f6580-330d-11ec-8d35-c33f6964bcbf
+name: Vincent Semeria
+email: 3a54c5c34f51486c7398abb012ae2552
+url: ''
+message: "Hi Andrej. The limited principle of omniscience is defined in Haskell, and not uniformly continuous\r\nlpo :: (Integer -> Bool) -> Bool\r\nlpo alpha = case alpha 0 of\r\n  True -> True\r\n  False -> lpo (\\n -> alpha (n+1))\r\nunfn is not total, because unfn lpo loops infinitely. Then your isomorphism between Haskell types Integer and (Integer -> Bool) -> Bool is fragile, because you must explain how non terminating values map. I am not sure that fn (unfn lpo) is equal to lpo, have you tried computing them on a few functions alpha ? I suspect some fn (unfn lpo) alpha loop, when lpo alpha terminates. More generally, the Haskell type Integer does not exactly represent mathematical natural numbers, because what number is this Integer ?\r\nomega :: Integer\r\nomega = omega\r\nTo prove a mathematical isomorphism between Nat and (Nat -> Bool) -> Bool, it seems easier to use a standard category like topological spaces, as France Dacar suggests. Or use terminating calculi like Coq, Agda or System F."
+date: 1634889401
