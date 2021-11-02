@@ -14,4 +14,4 @@ A talk given at &#8220;Computation with Infinite Data: Logical and Topological F
 
 Also see the post [Constructive gem: an injection from Baire space to natural numbers](http://math.andrej.com/2011/06/15/constructive-gem-an-injection-from-baire-space-to-natural-numbers/) for written notes on this topic.
 
-<iframe src="https://player.vimeo.com/video/30368682" style="padding: 20px; align: center" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+**Video recording:** [Embedding the Baire space into natural numbers](https://youtu.be/1pIlK4mKNso)

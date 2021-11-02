@@ -13,7 +13,9 @@ categories:
 Last year I participated in a project whose goal was to record at low cost my lectures on video and put them on-line. Since the most expensive parts of recording are having a camera man and manual post production, we set up a static camera and just uploaded raw video online at [videolectures.net](http://videolectures.net/logikainmnozice2010_ljubljana/). As you can see for yourself, the sound is good (I wore a microphone) but the whiteboard is mostly illegible. In addition, it took about two weeks for the lectures to show up on-line because there were men-in-the-middle. So that got me thinking whether there was a better way.  
 <!--more-->
 
-  
+[**Supplemental 2021-10-30:** I have moved my videos from Vimeo to a [Youtube channel](https://www.youtube.com/channel/UCsM0PBdlKtPsC5lrruKNK3g). The links given in this post are probably out of date.]
+
+
 This year I am performing a new experiment, where I record my own lectures as [screencasts](http://en.wikipedia.org/wiki/Screencast) and I upload them on-line myself. You can see the results at [vimeo.com](http://vimeo.com/andrejbauer) and form your own opinion (the [Talks channel](http://vimeo.com/channels/251330) contains recordings of my conference talks, which are in English).
 
 Here is the tally of the costs:
