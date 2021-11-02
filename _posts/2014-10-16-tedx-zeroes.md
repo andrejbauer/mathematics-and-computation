@@ -27,7 +27,7 @@ Oh, and a piece of Mathematica code that generates the zeroes [fits into a tweet
 
 ### The videos
 
-The &#8220;[Zeroes](https://vimeo.com/album/3086303)&#8221; Vimeo album contains the animations. The ones I showed in the TEDx talk are in Full HD (1920 by 1080). There is also a lower resolution animation of how zeroes move around when we change the coefficients. Here is one of the movies, but you really should watch it in Full HD to see all the details.
+The &#8220;[Zeroes](https://www.youtube.com/playlist?list=PL-47DDuiZOMBk0_yOF75WtKqe75OrhCf5)&#8221; YouTube channel contains the animations. The ones I showed in the TEDx talk are in Full HD (1920 by 1080). There is also a lower resolution animation of how zeroes move around when we change the coefficients. Here is one of the movies, but you really should watch it in Full HD to see all the details.
 
 
 

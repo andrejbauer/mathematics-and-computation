@@ -46,7 +46,7 @@ delighted to announce the first "Every proof assistant" seminar:
 > about our plans to implement language extensions that can be used to simplify
 > reasoning about various higher structures.
 >
-> [Video recording](https://vimeo.com/413726748) of the talk is available.
+> [Video recording](https://youtu.be/BUUEvTbVQR8) of the talk is available.
 
 
 I have a couple more in the pipeline, so follow this blog, the [Foundations seminar announcements](https://www.fmf.uni-lj.si/si/obvestila/agregator/seminar-temelji/) or my Twitter account [@andrejbauer](https://twitter.com/andrejbauer).

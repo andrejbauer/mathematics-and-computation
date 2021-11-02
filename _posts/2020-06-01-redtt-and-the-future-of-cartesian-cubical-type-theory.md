@@ -30,7 +30,7 @@ This week the speaker will be Jon Sterling, and we are getting two proof assista
 > definitional eta law for disjunction. While `cooltt` is still in the early stages, it
 > already has full support for univalence and cubical interactive proof development.
 >
-> The [video recording of the talk](https://vimeo.com/425917591).
+> The [video recording of the talk](https://youtu.be/u0Ac3e6_FYg).
 
 Upcoming talks:
 

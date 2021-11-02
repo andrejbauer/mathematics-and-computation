@@ -28,6 +28,6 @@ Note that we start an hour later than usual, at 17:00 UTC+2.
 > convince you that you want similar capabilities in a proof assistant, and explain and
 > demonstrate Cur's attempt at solving the problem.
 >
-> The talk [video recording](https://vimeo.com/432569820) and [slides with notes and demo code](https://williamjbowman.com/#epa-less-devious) are available.
+> The talk [video recording](https://youtu.be/kQCFGENufSY) and [slides with notes and demo code](https://williamjbowman.com/#epa-less-devious) are available.
 
 Upcoming talks: Anders Mörtberg's talk on Cubical Agda will take place in September 2020.

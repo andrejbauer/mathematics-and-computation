@@ -34,6 +34,6 @@ concerned.
 > show a variety of examples of how to use Cubical Agda in practice to
 > reason about mathematics and computer science.
 >
-> The talk [video recording](https://vimeo.com/459020971) is available.
+> The talk [video recording](https://youtu.be/w13B4JWFEm8) is available.
 
 We have more talks in store, but we will space them out a bit to give slots to our local seminar.

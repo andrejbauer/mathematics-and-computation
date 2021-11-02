@@ -31,7 +31,7 @@ This week shall witness a performance by Conor McBride.
 > least one of which I can walk through. I'll also explore the reasons,
 > human and technological, why the thing did not survive the long dark.
 >
-> The [video recording of the talk](https://vimeo.com/428161108).
+> The [video recording of the talk](https://youtu.be/5vZJVWCgf_4).
 
 Upcoming talks:
 

@@ -33,7 +33,7 @@ I am happy to announce the next seminar in the "Every proof assistant" series.
 > drawn from the LATIN project, a long-running project of building a modular, highly inter-related
 > suite of formalizations of logics and related formal systems.
 >
-> The [video recording of the talk](https://vimeo.com/421123419).
+> The [video recording of the talk](https://youtu.be/zepEL0B_En0).
 
 The spring schedule of talks is planned as follows:
 

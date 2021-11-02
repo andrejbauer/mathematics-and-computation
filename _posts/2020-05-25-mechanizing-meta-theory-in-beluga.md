@@ -31,7 +31,7 @@ We are marching on with the Every proof assistant series!
 > mechanizations of the meta-theory of formal systems, in particular programming
 > languages and logics.
 >
-> The [video recording of the talk](https://vimeo.com/423668919).
+> The [video recording of the talk](https://youtu.be/Ka9VCE13h3U).
 
 Upcoming talks:
 
