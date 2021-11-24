@@ -32,7 +32,7 @@ Sometimes we substitute terms into terms. Suppose we have an expression $t(x)$ w
 
 
 <center>
-  <br /> <i>Substitution of a term into a predicate is pullback,</br> but substitution of a term into a term is composition.</i><br />
+  <br /> <i>Substitution of a term into a predicate is pullback,<br /> but substitution of a term into a term is composition.</i><br />
 </center>
 
   
@@ -40,5 +40,5 @@ Or if you are a type theorist:
 
 
 <center>
-  <br /> <i>Substitution of a term into a dependent type is pullback,</br> but substitution of a term into a term is composition.</i><br />
+  <br /> <i>Substitution of a term into a dependent type is pullback,<br /> but substitution of a term into a term is composition.</i><br />
 </center>

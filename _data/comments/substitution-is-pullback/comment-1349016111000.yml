@@ -7,7 +7,10 @@ message: >-
 
 
   The <b>Subsititution Lemma</b> in type theory says how substitutions commute:
-  $$ [a/x]^* ([b/y]^* t) = [a/x]^* ([[a/x]^*b/y]^*t),$$ where $[a/x]^*t$ is the
+
+  $$ [a/x]^* ([b/y]^* t) = [a/x]^* ([[a/x]^*b/y]^*t),$$
+   
+  where $[a/x]^*t$ is the
   result of substituting $a$ for $x$ in $t$. The superscript star comes from
   inverse images and pullbacks in category theory.
 
@@ -32,6 +35,6 @@ message: >-
   <center><img src="http://www.paultaylor.eu/prafm/png/page449001.png"></center>
 
   It is an example of the easy "pullback lemma" of which Andrej for some reason
-  recently <a href=http://math.andrej.com/2012/05/30/the-pullback-lemma/
-  rel="nofollow">gave a proof</a>. 
+  recently <a href=\"http://math.andrej.com/2012/05/30/the-pullback-lemma/\"
+  rel=\"nofollow\">gave a proof</a>. 
 email: 24674efd7c9de6dad323b394fbdf2ebd
