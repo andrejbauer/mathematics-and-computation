@@ -24,7 +24,7 @@ Let me first introduce some notation:
 
 I should warn you that $2$ is not in general isomorphic to the set of truth values $\Omega$, and consequently $2^A$ is _not_ generally isomorphic to $\Omega^A = P(A)$, the powerset of $A$. Rather, the elements of $2^A$ are the characteristic functions of _decidable_ subsets of $A$.
 
-Now suppose someone asks you to show that $3^\mathbb{N}$ and $5^\mathbb{N}$ are isomorphic. If you are classically trained you might say: &#8220;They are isomorphic because they both have the cardinality of continuum.&#8221; That&#8217;s a quick and dirty proof. But then you are asked to show that $3^\mathbb{N}$ and $5^\mathbb{N}$ are isomorphic _as topological spaces_, and you have to think again. You could construct an actual homeomorphism, although any self-respecting topologist will notice that both spaces are &#8220;compact, countably based, 0-dimensional Hausdorff spaces without isolated points, therefore homeomorphic to the Cantor space by a well-known theorem&#8221;. That&#8217;s the kind of answer I would expect from my topology friends. And when you are done with that, you will be asked to show that $3^\mathbb{N}$ are $5^\mathbb{N}$ are _computably_ isomorphic, so you will have to think again. Can we not have a single proof which works in all three cases?
+Now suppose someone asks you to show that $3^\mathbb{N}$ and $5^\mathbb{N}$ are isomorphic. If you are classically trained you might say: “They are isomorphic because they both have the cardinality of continuum.” That's a quick and dirty proof. But then you are asked to show that $3^\mathbb{N}$ and $5^\mathbb{N}$ are isomorphic _as topological spaces_, and you have to think again. You could construct an actual homeomorphism, although any self-respecting topologist will notice that both spaces are “compact, countably based, 0-dimensional Hausdorff spaces without isolated points, therefore homeomorphic to the Cantor space by a well-known theorem”. That's the kind of answer I would expect from my topology friends. And when you are done with that, you will be asked to show that $3^\mathbb{N}$ are $5^\mathbb{N}$ are _computably_ isomorphic, so you will have to think again. Can we not have a single proof which works in all three cases?
 
 To find such a proof, you should forget heavy weapons from set theory and topology, and just look at the sets involved. How they are _constructed_ will tell you what tools to use in your proof. The spaces $3^\mathbb{N}$ and $5^\mathbb{N}$ are _exponentials_, so we should use $lambda$-calculus! Recall the exponential laws, where I write equality in place of isomorphism,
 
@@ -33,10 +33,10 @@ To find such a proof, you should forget heavy weapons from set theory and topolo
 
 The isomorphism $i : (A \times B)^C \to A^C \times B^C$ and its inverse $j$ may be written down explicitly, for example in Haskell:
 
-<pre class="brush: plain; title: ; notranslate" title="">i :: (c -&gt; (a,b)) -&gt; (c -&gt; a, c -&gt; b)
+<pre class="brush: plain; title: ; notranslate" title="">i :: (c -> (a,b)) -> (c -> a, c -> b)
 i f = (fst . f, snd . f)
 
-j :: (c -&gt; a, c -&gt; b) -&gt; (c -&gt; (a, b))
+j :: (c -> a, c -> b) -> (c -> (a, b))
 j (g, h) c = (g c, h c)
 </pre>
 
@@ -77,30 +77,30 @@ Because we only used the basic exponential laws which are witnessed by construct
 
 I must admit to a little bit of cheating. I chose $3^\mathbb{N}$ and $5^\mathbb{N}$ because they can both be manipulated to $45^\mathbb{N}$. If you try to show $2^\mathbb{N} = 3^\mathbb{N}$ you will be probably get stuck; if not, show me how!
 
-Let us think  about the general question of how to show that $m^\mathbb{N} = n^\mathbb{N}$ for $n, m \geq 2.$ We certainly expect this to hold, but what is the &#8220;best&#8221; proof? One idea is to first show that $m^\mathbb{N} = m^\mathbb{N} + m^\mathbb{N}$, from which it quickly follows that $m^\mathbb{N} = n \times m^\mathbb{N}$ and $m^\mathbb{N} = (n \times m)^\mathbb{N}$. But what is the slickest way to get $m^\mathbb{N} = m^\mathbb{N} + m^\mathbb{N}$?
+Let us think  about the general question of how to show that $m^\mathbb{N} = n^\mathbb{N}$ for $n, m \geq 2.$ We certainly expect this to hold, but what is the “best” proof? One idea is to first show that $m^\mathbb{N} = m^\mathbb{N} + m^\mathbb{N}$, from which it quickly follows that $m^\mathbb{N} = n \times m^\mathbb{N}$ and $m^\mathbb{N} = (n \times m)^\mathbb{N}$. But what is the slickest way to get $m^\mathbb{N} = m^\mathbb{N} + m^\mathbb{N}$?
 
 For which $m$ and $n$ does my trick work? Observe that
 
-> $m^\mathbb{N} = (m-1) \times m^\mathbb{N} + m^\mathbb{N} = (m-1) \times m^\mathbb{N} + m \times m^\mathbb{N} = (2 m &#8211; 1) \times m^\mathbb{N} =$  
-> $= (2 m &#8211; 2) \times m^\mathbb{N} + m \times m^\mathbb{N} = (3 m &#8211; 2) \times m^\mathbb{N}$
+> $m^\mathbb{N} = (m-1) \times m^\mathbb{N} + m^\mathbb{N} = (m-1) \times m^\mathbb{N} + m \times m^\mathbb{N} = (2 m - 1) \times m^\mathbb{N} =$  
+> $= (2 m - 2) \times m^\mathbb{N} + m \times m^\mathbb{N} = (3 m - 2) \times m^\mathbb{N}$
 
 and by applying this procedure $k$ times we get
 
-> $m^\mathbb{N} = (k m &#8211; k + 1) \times m^\mathbb{N}$
+> $m^\mathbb{N} = (k m - k + 1) \times m^\mathbb{N}$
 
 from which it follows that
 
-> $m^\mathbb{N} = (m^\mathbb{N})^\mathbb{N} = ((k m &#8211; k + 1) \times m^\mathbb{N})^\mathbb{N} =$  
-> $= (k m &#8211; k + 1)^\mathbb{N} \times m^{\mathbb{N} \times \mathbb{N}} = (m (k m &#8211; k + 1))^\mathbb{N}.$
+> $m^\mathbb{N} = (m^\mathbb{N})^\mathbb{N} = ((k m - k + 1) \times m^\mathbb{N})^\mathbb{N} =$  
+> $= (k m - k + 1)^\mathbb{N} \times m^{\mathbb{N} \times \mathbb{N}} = (m (k m - k + 1))^\mathbb{N}.$
 
 My trick can therefore show that $m^\mathbb{N} = n^\mathbb{N}$ provided there are $k$ and $j$ such that
 
-> $m (k m &#8211; k + 1) = n (j n &#8211; j + 1)$.
+> $m (k m - k + 1) = n (j n - j + 1)$.
 
 This is a linear Diophantine equation in $k$ and $j$:
 
-> $m (m &#8211; 1) k &#8211; n (n &#8211; 1) j = n &#8211; m$.
+> $m (m - 1) k - n (n - 1) j = n - m$.
 
-It has a solution if, and only if, the greatest common divisor of $m (m &#8211; 1)$ and $n (n &#8211; 1)$ divides $n &#8211; m$. It is easy to find pairs $(m,n)$ for which there is no solution, e.g., $(m=2,n=3)$, $(m=3,n=7)$, $(m=4,n=9)$, etc.
+It has a solution if, and only if, the greatest common divisor of $m (m - 1)$ and $n (n - 1)$ divides $n - m$. It is easy to find pairs $(m,n)$ for which there is no solution, e.g., $(m=2,n=3)$, $(m=3,n=7)$, $(m=4,n=9)$, etc.
 
-Perhaps someone can come up with a different trick that always works. Remember, you are only supposed to use the general laws that hold in bicartesian closed categories, for details see the paper [&#8220;Remarks on Isomorphisms in Typed Lambda Calculi with Empty and Sum Types&#8221;](http://www.cl.cam.ac.uk/~mpf23/papers/Types/shortremarks.pdf) by [Marcelo Fiore](www.cl.cam.ac.uk/~mpf23/), [Roberto Di Cosmo](http://www.dicosmo.org/index.html.en), and [Vincent Balat](http://www.pps.jussieu.fr/~balat/).
+Perhaps someone can come up with a different trick that always works. Remember, you are only supposed to use the general laws that hold in bicartesian closed categories, for details see the paper [“Remarks on Isomorphisms in Typed Lambda Calculi with Empty and Sum Types”](http://www.cl.cam.ac.uk/~mpf23/papers/Types/shortremarks.pdf) by [Marcelo Fiore](www.cl.cam.ac.uk/~mpf23/), [Roberto Di Cosmo](http://www.dicosmo.org/index.html.en), and [Vincent Balat](http://www.pps.jussieu.fr/~balat/).

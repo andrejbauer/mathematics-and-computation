@@ -11,6 +11,6 @@ categories:
   - Talks
   - Tutorial
 ---
-The slides from the talk &#8220;Spartan type theory&#8221;, given at the [School and Workshop on Univalent Mathematics](https://unimath.github.io/bham2017/).
+The slides from the talk “Spartan type theory”, given at the [School and Workshop on Univalent Mathematics](https://unimath.github.io/bham2017/).
 
 **Download slides with speaker notes: [Spartan Type Theory](http://math.andrej.com/wp-content/uploads/2017/12/Spartan-Type-Theory.pdf) [PDF]**

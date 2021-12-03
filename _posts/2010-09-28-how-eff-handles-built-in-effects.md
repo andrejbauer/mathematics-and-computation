@@ -18,7 +18,7 @@ From some of the responses we have been getting it looks like people think that 
 
 ### What does the `io` handler do?
 
-The `io` handler does not print anything. It handles operations `print_string`, `read_string`, and `read_string` by triggering further operations, for example `print_string` triggers `PRINT_STRING` (which is not a valid operation name in eff, so programmers can&#8217;t do the same thing). Have a look at `builtin.ml` in the [repository](http://hg.andrej.com/eff/).
+The `io` handler does not print anything. It handles operations `print_string`, `read_string`, and `read_string` by triggering further operations, for example `print_string` triggers `PRINT_STRING` (which is not a valid operation name in eff, so programmers can't do the same thing). Have a look at `builtin.ml` in the [repository](http://hg.andrej.com/eff/).
 
 There are only a handful of such built-in operations. Currently they are `RAISE`, `PRINT_STRING`, `PRINT_VALUE` and `READ_STRING`, see the file `toplevel.ml` (at the moment the interpreter is a bit fishy about handling native references, but we promise to fix that soon). We try to keep their number small, as these are the gates to actual real-world effects.
 
@@ -36,7 +36,7 @@ The only reason we could think of for having `unsafePerformIO` is to give the pr
 
 Yes, this is possible when an operation escapes its handler. The easiest way to do this is to send an operation outside of its scope in a closure. For example, consider an operation `kaboom`:
 
-<pre class="brush: plain; gutter: false; highlight: [8]; title: ; notranslate" title="">&gt;&gt;&gt; effect bomb:
+<pre class="brush: plain; gutter: false; highlight: [8]; title: ; notranslate" title="">>>> effect bomb:
 ...     operation kaboom(): BigExplosion
 ... with bomb:
 ...     a = 5
@@ -48,7 +48,7 @@ BigExplosion
 
 So far no surprises, the operation was handled. But now:
 
-<pre class="brush: plain; gutter: false; highlight: [5]; title: ; notranslate" title="">&gt;&gt;&gt; f = (with bomb:
+<pre class="brush: plain; gutter: false; highlight: [5]; title: ; notranslate" title="">>>> f = (with bomb:
 ...          lambda (): kaboom ())
 ... f ()
 ...
@@ -59,6 +59,6 @@ Because the operation `kaboom` was triggered in line 3, which is outside of the 
 
 ### But I want my programs to be pure!
 
-You are out of luck then. If a program is _absolutely_ pure, you need not run it since it won&#8217;t cause an observable effect. Even in Haskell the program is required to be in the `IO` monad. After all, the only way for a program to communicate with the outside world is through a computational effect.
+You are out of luck then. If a program is _absolutely_ pure, you need not run it since it won't cause an observable effect. Even in Haskell the program is required to be in the `IO` monad. After all, the only way for a program to communicate with the outside world is through a computational effect.
 
 It is a good idea to concentrate all real-world computational effects just in one place, without cheating, and treat them in the same way as user-defined effects, as far as that is feasible. It should then be possible to devise a type system which can guarantee that certain effects do not happen, just like in Haskell. The algebraic semantics of eff is such a type system, but at a semantic level. What we need now is a useful implementation of it.

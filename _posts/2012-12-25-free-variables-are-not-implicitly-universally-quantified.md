@@ -1,6 +1,6 @@
 ---
 id: 1387
-title: 'Free variables are not &#8220;implicitly universally quantified&#8221;!'
+title: 'Free variables are not “implicitly universally quantified”!'
 date: 2012-12-25T03:27:53+02:00
 author: Andrej Bauer
 layout: post
@@ -10,26 +10,26 @@ categories:
   - Logic
   - Tutorial
 ---
-Mathematicians are often confused about the meaning of variables. I hear them say &#8220;a free variable is implicitly universally quantified&#8221;, by which they mean that it is ok to equate a formula $\phi$ with a free variable $x$ with its universal closure $\forall x \,.\, \phi$. I am addressing this post to those who share this opinion.
+Mathematicians are often confused about the meaning of variables. I hear them say “a free variable is implicitly universally quantified”, by which they mean that it is ok to equate a formula $\phi$ with a free variable $x$ with its universal closure $\forall x \,.\, \phi$. I am addressing this post to those who share this opinion.
 
 <!--more-->
 
-I will give several reasons, which are all essentially the same, why &#8220;there is no difference between $\phi$ and $\forall x \,.\, \phi$&#8221; is a really bad opinion to have.
+I will give several reasons, which are all essentially the same, why “there is no difference between $\phi$ and $\forall x \,.\, \phi$” is a really bad opinion to have.
 
-### Reason 1: you wouldn&#8217;t equate a function with its definite integral
+### Reason 1: you wouldn't equate a function with its definite integral
 
-You would not claim that a real-valued function $f : \mathbb{R} \to \mathbb{R}$ is &#8220;the same thing&#8221; as its definite integral $\int_{\mathbb{R}} f(x) \, d x$, would you? One is a real function, the other is a real number. Likewise, $\phi$ is a truth <emph>function</emph> and $\forall x \,.\, \phi(x)$ is a truth <emph>value</emph>.
+You would not claim that a real-valued function $f : \mathbb{R} \to \mathbb{R}$ is “the same thing” as its definite integral $\int_{\mathbb{R}} f(x) \, d x$, would you? One is a real function, the other is a real number. Likewise, $\phi$ is a truth <emph>function</emph> and $\forall x \,.\, \phi(x)$ is a truth <emph>value</emph>.
 
 ### Reason 2: functions are not their own values
 
 To be quite precise, the expression $\phi$ by itself is not a function, just like the expression $x + \sin x$ is not a function. To make it into a function we must first <emph>abstract</emph> the variable $x$, which is usually written as $x \mapsto x + \sin x$, or $\lambda x \,.\, x + \sin x$, or `fun x -> x +. sin x`. In logic we indicate the fact that $\phi$ is a function by putting it in a <emph>context</emph>, so we write something like $x : \mathbb{R} \vdash \phi$.
 
-Why is all this nit-picking necessary? Try answering these questions with &#8220;yes&#8221; and &#8220;no&#8221; consistently:
+Why is all this nit-picking necessary? Try answering these questions with “yes” and “no” consistently:
 
   1. Is $x + \sin x$ a function in variable $x$?
   2. Is $x + \sin x$ a function in variables $x$ and $y$?
-  3. Is $y &#8211; y + x + \sin x$ a function in variables $x$ and $y$?
-  4. Is $x + \sin x = y &#8211; y + x + \sin x$?
+  3. Is $y - y + x + \sin x$ a function in variables $x$ and $y$?
+  4. Is $x + \sin x = y - y + x + \sin x$?
 
 A similar sort of mistake happens in algebra where people think that polynomials are functions. They are not. They are elements of a certain freely generated ring.
 
@@ -49,7 +49,7 @@ The formula $x > 2$ is obviously not the same thing as the formula $y > 2$. But 
 
 Perhaps we can just forbid free variables altogether and <emph>stipulate</emph> that all variables must always be quantified. But how are you then going to prove $\forall x \in \mathbb{R} \,.\, \phi$? The usual way
 
-> &#8220;Consider any $x \in \mathbb{R}$. Then bla bla bla, therefore $\phi$.&#8221; 
+> “Consider any $x \in \mathbb{R}$. Then bla bla bla, therefore $\phi$.” 
 
 is now forbidden because the first sentence introduces $x$ as a free variable.
 
@@ -64,6 +64,6 @@ There is a theorem in model theory:
 >   1. the universal closure $\forall x\_1, \ldots, x\_n \,.\, \phi$ is valid in $M$,
 >   2. for every valuation $\nu : \lbrace x\_1, \ldots, x\_n \rbrace \to M$, $\phi[\nu]$ is valid in $M$.
 
-This is sometimes abbreviated (quite inaccurately) as &#8220;a formula and its universal closure are semantically equivalent&#8221;. This theorem is causing a lot of harm because mathematicians interpret it as &#8220;free variables are implicitly universally bound&#8221;. But the theorem itself clearly distinguishes a formula from its universal closure. It has a limited range of applications in model theory. It is not a general reasoning principle that would allow you to dispose of thinking about free variables.
+This is sometimes abbreviated (quite inaccurately) as “a formula and its universal closure are semantically equivalent”. This theorem is causing a lot of harm because mathematicians interpret it as “free variables are implicitly universally bound”. But the theorem itself clearly distinguishes a formula from its universal closure. It has a limited range of applications in model theory. It is not a general reasoning principle that would allow you to dispose of thinking about free variables.
 
-You are in good company. Philosophers have thought about free variables for millennia, although they phrase the problem in the language of [universals](http://en.wikipedia.org/wiki/Universal_(metaphysics)) and [particulars](http://en.wikipedia.org/wiki/Particular). They wonder whether &#8220;dog&#8221; is the same thing as the set of all dogs, or perhaps there is an ideal dog which is &#8220;pure dogness&#8221;, but then do we need two ideal dogs to make ideal pups, etc. The answer is simple: a free variable is a projection from a cartesian product.
+You are in good company. Philosophers have thought about free variables for millennia, although they phrase the problem in the language of [universals](http://en.wikipedia.org/wiki/Universal_(metaphysics)) and [particulars](http://en.wikipedia.org/wiki/Particular). They wonder whether “dog” is the same thing as the set of all dogs, or perhaps there is an ideal dog which is “pure dogness”, but then do we need two ideal dogs to make ideal pups, etc. The answer is simple: a free variable is a projection from a cartesian product.

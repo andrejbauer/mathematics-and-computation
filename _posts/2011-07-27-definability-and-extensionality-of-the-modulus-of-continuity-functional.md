@@ -37,9 +37,9 @@ After this barrage of definitions some examples will hopefully make things a bit
 
 The functional `u` returns 1 if its argument `f` evaluates its argument, and 0 otherwise. It is not extensional:
 
-<pre class="brush: plain; gutter: false; title: ; notranslate" title=""># u (fun a -&gt; 0) ;;
+<pre class="brush: plain; gutter: false; title: ; notranslate" title=""># u (fun a -> 0) ;;
 - : int = 0
-# u (fun a -&gt; 0 * a 0) ;;
+# u (fun a -> 0 * a 0) ;;
 - : int = 1
 </pre>
 
@@ -55,7 +55,7 @@ To avoid writing down lots of ugly types, we preassign types to the following va
 We need one further piece of notation. Given a total function $\alpha$, let $\overline{\alpha}(k) = [\alpha(0), \alpha(1), \ldots, \alpha(k-1)]$ be the finite list of the first $k$ values of $\alpha$.
 
 A total type 2 functional $F$ is _continuous at a total $\alpha$_ if the value $F(\alpha)$ depends only on a finite prefix $\overline{\alpha}(k)$: $$\forall \beta \in T_1 . \overline{\beta}(k) = \overline{\alpha}(k) \Rightarrow F(\alpha) = F(\beta).$$  
-You should convince yourself that this definition of continuity coincides with the usual one for metric spaces if we equip $\mathbf{N}$ with the usual metric $d(i,j) = |i &#8211; j|$ and $T_1$  with the _comparison metric_ $$d(\alpha, \beta) = 2^{-\min \lbrace k \mid \alpha(k) \neq \beta(k) \rbrace}.$$ We would expect every computable total functional to be continuous because, intuitively speaking, in order for an algorithm to compute $F(\alpha)$ in finitely many steps it can only inspect finitely many values of $\alpha$. Of course, this assumes that an algorithm cannot do anything other than test $\alpha$ at various values. There are theorems in computability theory which say that, provided $F$ is extensional (see below), an algorithm cannot really do much else, even if it has the source code of $\alpha$ at its disposal. (Exercise: which theorems?)
+You should convince yourself that this definition of continuity coincides with the usual one for metric spaces if we equip $\mathbf{N}$ with the usual metric $d(i,j) = |i - j|$ and $T_1$  with the _comparison metric_ $$d(\alpha, \beta) = 2^{-\min \lbrace k \mid \alpha(k) \neq \beta(k) \rbrace}.$$ We would expect every computable total functional to be continuous because, intuitively speaking, in order for an algorithm to compute $F(\alpha)$ in finitely many steps it can only inspect finitely many values of $\alpha$. Of course, this assumes that an algorithm cannot do anything other than test $\alpha$ at various values. There are theorems in computability theory which say that, provided $F$ is extensional (see below), an algorithm cannot really do much else, even if it has the source code of $\alpha$ at its disposal. (Exercise: which theorems?)
 
 To keep things simple we shall concentrate on continuity at the zero sequence $o = \lambda n . 0$. Thus a functional $F$ is continuous at $o$ if there exists $k$ such that $\forall \beta \in T_1. \overline{\beta}(k) = \overline{o}(k) \Rightarrow F(\beta) = F(o)$. We say that $k$ is a _modulus of continuity_ for $F$ at $o$.
 
@@ -74,9 +74,9 @@ We expect `phi` to compute a modulus of continuity if `f` is extensional, but I 
 
 The modulus of continuity `phi` defined above is not extensional, since it returns different values for extensionally equal functionals:
 
-<pre class="brush: plain; gutter: false; title: ; notranslate" title=""># phi (fun alpha -&gt; 0) ;;
+<pre class="brush: plain; gutter: false; title: ; notranslate" title=""># phi (fun alpha -> 0) ;;
 - : int = 0
-# phi (fun alpha -&gt; 0 * alpha 41) ;;
+# phi (fun alpha -> 0 * alpha 41) ;;
 - : int = 42
 </pre>
 

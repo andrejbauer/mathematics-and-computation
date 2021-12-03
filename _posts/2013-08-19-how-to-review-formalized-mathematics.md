@@ -15,7 +15,7 @@ In a typical situation an author submits a paper accompanied with some source co
 
 <!--more-->
 
-Before I say anything about reviewing formalized mathematics, let me just point out that being anonymous does not give the referee the right to be impolite or even abusive. A good guiding principle is to never write anything in a review that you would not say to the author&#8217;s face. You can be harsh and you can criticize, but do it politely and ground your opinions in arguments. After all, you expect no less of the author.
+Before I say anything about reviewing formalized mathematics, let me just point out that being anonymous does not give the referee the right to be impolite or even abusive. A good guiding principle is to never write anything in a review that you would not say to the author's face. You can be harsh and you can criticize, but do it politely and ground your opinions in arguments. After all, you expect no less of the author.
 
 Let us imagine  a submission to a journal in which the author claims to have checked proofs using a computer proof assistant or some other such tool. Almost everything I write below follows from the simple observation that _**the code contains proofs  and that proofs are an essential part of the paper**_. If as a reviewer or an editor you are ever in doubt, just imagine how you would act if the formalized part were actually an appendix written informally as ordinary math.
 
@@ -74,11 +74,11 @@ This is an extremely difficult thing to accomplish, so the journal should do wha
 
 Comments:
 
-  1. It may be quite hard to find a reviewer that both knows the math and can deal with the code. In such as a case the best strategy might be to find two reviewers whose joint abilities cover all tasks. But it is a very bad idea for the two reviewers to work independently, for who is going to check that the paper theorems really correspond to the computer proofs? It is not enough to just have a reviewer run the code and report back as &#8220;it compiles&#8221;.
+  1. It may be quite hard to find a reviewer that both knows the math and can deal with the code. In such as a case the best strategy might be to find two reviewers whose joint abilities cover all tasks. But it is a very bad idea for the two reviewers to work independently, for who is going to check that the paper theorems really correspond to the computer proofs? It is not enough to just have a reviewer run the code and report back as “it compiles”.
   2. In particular, the editor must: 
       * insist that the code be enclosed with the paper
       * convince the journal that the code be archived appropriately
-      * require that the reviewer explicitly describe to what extent he verified the code: did he run it, did he check it corresponds to the paper theorems, etc? (See the list under &#8220;The rules for the reviewer&#8221;.)
+      * require that the reviewer explicitly describe to what extent he verified the code: did he run it, did he check it corresponds to the paper theorems, etc? (See the list under “The rules for the reviewer”.)
 
 ### Can we trust formalized mathematics?
 

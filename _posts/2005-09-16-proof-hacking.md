@@ -12,7 +12,7 @@ categories:
   - Logic
   - Tutorial
 ---
-I recently lectured at an EST training workshop in Fischbachau, Germany. There were also a number of student talks, one of which was given by [Luca Chiarabini](http://www.mathematik.uni-muenchen.de/~chiarabi/) from Munich. He talked about extraction of programs from proofs, using (a variant of) [Curry-Howard isomorphism](http://en.wikipedia.org/wiki/Curry-Howard_isomorphism), also known as _propositions-as-types_. He had some very interesting ideas which were obviously related to old programming tricks, but he approached them from the logical point of view, rather than the programmer&#8217;s point of view. It got me thinking about how to write certain recursive programs as proofs. Since it is a nice application of program extraction, I want to share it with you here. 
+I recently lectured at an EST training workshop in Fischbachau, Germany. There were also a number of student talks, one of which was given by [Luca Chiarabini](http://www.mathematik.uni-muenchen.de/~chiarabi/) from Munich. He talked about extraction of programs from proofs, using (a variant of) [Curry-Howard isomorphism](http://en.wikipedia.org/wiki/Curry-Howard_isomorphism), also known as _propositions-as-types_. He had some very interesting ideas which were obviously related to old programming tricks, but he approached them from the logical point of view, rather than the programmer's point of view. It got me thinking about how to write certain recursive programs as proofs. Since it is a nice application of program extraction, I want to share it with you here. 
 
 <!--more-->
 
@@ -22,7 +22,7 @@ You have heard that in the propositions-as-types correspondence conjunction is c
 
 > \`(x\_0:P(0) qquad f: forall n in NN. (P(n) => P(n+1)))/(ind\ x\_0\ f : forall n in NN. P(n))\` 
 
-You should read this &#8220;fraction&#8221; as follows: if \`x\_0\` is a proof of \`P(0)\` and \`f\` is a proof of \`forall n in NN.(P(n) => P(n+1))\`, then \`ind\ x\_0\ f\` is a proof of \`forall n in NN. P(n)\`. Then the question is, what does \`ind\` compute? According to propositions-as-types, \`ind\ x\_0\ f n\` is supposed to give a proof of \`P(n)\`. If you stare at it for long enough you will realize that \`ind\` is just definition by recursion, i.e., \`ind\ x\_0\ f\ n\` computes \`f (f (f &#8230; f(x_0) &#8230;))\` with \`f\` nested \`n\` times. We could program \`ind\` in ML ([ocaml](http://www.ocaml.org), actually) like this:
+You should read this “fraction” as follows: if \`x\_0\` is a proof of \`P(0)\` and \`f\` is a proof of \`forall n in NN.(P(n) => P(n+1))\`, then \`ind\ x\_0\ f\` is a proof of \`forall n in NN. P(n)\`. Then the question is, what does \`ind\` compute? According to propositions-as-types, \`ind\ x\_0\ f n\` is supposed to give a proof of \`P(n)\`. If you stare at it for long enough you will realize that \`ind\` is just definition by recursion, i.e., \`ind\ x\_0\ f\ n\` computes \`f (f (f ... f(x_0) ...))\` with \`f\` nested \`n\` times. We could program \`ind\` in ML ([ocaml](http://www.ocaml.org), actually) like this:
 
 > <pre>let rec ind x0 f n =
   if n = 0 then x0 else f n (ind x0 f (n-1))
@@ -32,20 +32,20 @@ For the purposes of this discussion I want to have precise control over how recu
 
 > <pre>let rec ind x0 f n =
   print_endline ("Computing n = " ^ (string_of_int n)) ;
-  if n = 0 then x0 else f n (fun () -&gt; ind x0 f (n-1))
+  if n = 0 then x0 else f n (fun () -> ind x0 f (n-1))
 </pre>
 
 Now we can use `ind` to define a recursive function whose value at \`n+1\` depends on the value at \`n\`. All we need to do is to give the base case \`x_0\` and a function which gets us from the value at \`n-1\` to the value at \`n\` (this function receives \`n\` and a thunk\`p\`. Whenever it evaluates \`p()\`, it gets the value at \`n-1\`). For example, to define the function `pow`, which computes powers of 2 by recursive definition \`pow(0) = 1\` and \`pow(n+1) = pow(n) + pow(n)\`, we would write:
 
-> <pre>let pow = ind 1 (fun n p -&gt; p() + p())
+> <pre>let pow = ind 1 (fun n p -> p() + p())
 </pre>
 
 This way of programming is very stupid, of course. Nobody would ever compute powers of 2 this way, because we make two recursive calls at each step and end up with an exponential algorithm:
 
 > <pre>Objective Caml version 3.08.3
 
-val ind : 'a -&gt; (int -&gt; (unit -&gt; 'a) -&gt; 'a) -&gt; int -&gt; 'a = &lt;fun&gt;
-val pow : int -&gt; int = &lt;fun&gt;
+val ind : 'a -> (int -> (unit -> 'a) -> 'a) -> int -> 'a = <fun>
+val pow : int -> int = <fun>
 # pow 3;; 
 Computing n = 3
 Computing n = 2
@@ -71,14 +71,14 @@ The point of program extraction is to turn such stupid programs into smart ones,
   print_endline ("Computing n = " ^ (string_of_int n)) ;
   if n = 0 then x0 else
     let y = ind x0 f (n-1) in
-      f n (fun () -&gt; y)
+      f n (fun () -> y)
 </pre>
 
 Now we get a fast `pow`:
 
-> <pre>val ind' : 'a -&gt; (int -&gt; (unit -&gt; 'a) -&gt; 'a) -&gt; int -&gt; 'a = &lt;fun&gt;
-# let pow' = ind' 1 (fun n p -&gt; p() + p()) ;;
-val pow' : int -&gt; int = &lt;fun&gt;
+> <pre>val ind' : 'a -> (int -> (unit -> 'a) -> 'a) -> int -> 'a = <fun>
+# let pow' = ind' 1 (fun n p -> p() + p()) ;;
+val pow' : int -> int = <fun>
 # pow' 3 ;;
 Computing n = 3
 Computing n = 2
@@ -98,12 +98,12 @@ The important bit is that we did not change `pow`, only `ind`. Let us now turn t
 First let us check it still works:
 
 > <pre># let ind' x0 f n =
-  ind (fun x y -&gt; y)
-      (fun () p x y -&gt; p() (x+1) (f x (fun () -&gt; y)))
+  ind (fun x y -> y)
+      (fun () p x y -> p() (x+1) (f x (fun () -> y)))
       n 0 x0;;
-val ind' : 'a -&gt; (int -&gt; (unit -&gt; 'a) -&gt; 'a) -&gt; int -&gt; 'a = &lt;fun&gt;
-# let pow' = ind' 1 (fun n p -&gt; p() + p()) ;;
-val pow' : int -&gt; int = &lt;fun&gt;
+val ind' : 'a -> (int -> (unit -> 'a) -> 'a) -> int -> 'a = <fun>
+# let pow' = ind' 1 (fun n p -> p() + p()) ;;
+val pow' : int -> int = <fun>
 # pow' 3 ;;
 Computing n = 3
 Computing n = 2
@@ -119,7 +119,7 @@ let ind'' x0 f n =
   let rec helper k x y =
     if k = 0 then y
     else
-      helper (k-1) (x+1) (f x (fun () -&gt; y))
+      helper (k-1) (x+1) (f x (fun () -> y))
   in
     helper n 0 x0
 </pre>
@@ -131,10 +131,10 @@ let ind''' x0 f n =
   let k = ref n in
   let x = ref 0 in
   let y = ref x0 in
-    while !k &lt;> 0 do
+    while !k <> 0 do
       k := !k - 1 ;
       x := !x + 1 ;
-      y := f !x (fun () -&gt; !y)
+      y := f !x (fun () -> !y)
     done ;
     !y
 </pre>
@@ -142,7 +142,7 @@ let ind''' x0 f n =
 You may or may not find this version easier to understand. Now let us return back to `ind'`. According to the Curry-Howard isomorphism, it corresponds to a proof.  
 What does this proof prove? Since `ind'` is just a variant of `ind`, they both prove the same thing, i.e., \`forall n in NN. P(n)\`. The body of `ind'` is of the form `lemma n 0 x0` where `lemma` is the piece of code
 
-> <pre>ind (fun x y -&gt; y) (fun () p x y -&gt; p() (x+1) (f x (fun () -&gt; y)))
+> <pre>ind (fun x y -> y) (fun () p x y -> p() (x+1) (f x (fun () -> y)))
 </pre>
 
 Remebering that application corresponds either to modus ponens or instantiation of a universal statement, we would expect `lemma` to be the proof of something of the form

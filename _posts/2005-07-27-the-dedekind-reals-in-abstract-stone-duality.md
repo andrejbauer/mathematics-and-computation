@@ -21,4 +21,4 @@ Further topics in real analysis within ASD, such as the Intermediate Value Theor
 
 To be presented at [Computability and Complexity in Analysis 2005](http://cca-net.de/cca2005), Kyoto, Japan.
 
-**Download:** an [up-to-date version](http://www.monad.me.uk/ASD/analysis.php#dedras) from Paul Taylor&#8217;s [Abstract Stone Duality page](http://www.monad.me.uk/ASD/).
+**Download:** an [up-to-date version](http://www.monad.me.uk/ASD/analysis.php#dedras) from Paul Taylor's [Abstract Stone Duality page](http://www.monad.me.uk/ASD/).

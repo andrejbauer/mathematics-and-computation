@@ -36,7 +36,7 @@ But Theorem 1 is not the punchline. The punchline is this:
 
 > **Theorem 2 (Kirby and Paris):** Any proof technique that proves Theorem 1 is strong enough to prove that Peano arithmetic is consistent.
 
-Consistency of Peano arithmetic is [Hilbert&#8217;s second problem](http://en.wikipedia.org/wiki/Hilbert%27s_second_problem), which was [solved by Gentzen](http://en.wikipedia.org/wiki/Gentzen's_consistency_proof) in 1936.
+Consistency of Peano arithmetic is [Hilbert's second problem](http://en.wikipedia.org/wiki/Hilbert%27s_second_problem), which was [solved by Gentzen](http://en.wikipedia.org/wiki/Gentzen's_consistency_proof) in 1936.
 
 #### Download the program
 

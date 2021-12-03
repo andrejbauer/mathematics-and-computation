@@ -42,7 +42,7 @@ So for a moment let us shake off the prejudices of classical training and accept
 
 > **Definition:** A _function_ $f : A \to B$ is a computational procedure which takes as an input $x \in A$ and yields as output a uniquely determined $y \in B$.
 
-We have left out many details here, but the basic intuition is clear: &#8220;It ain&#8217;'t a function if it can&#8217;'t be computed&#8221;. Now we return to the sign function defined above. Is it a function? In order to compute $\mathrm{sgn}(x)$, we must for any given real number $x$ discover whether it is negative, zero, or positive. So suppose we inspect the digits of $x$ for a while and discover, say, that the first billion of them are all zero. Then $\mathrm{sgn}(x)$ is either $0$ or $1$, but we cannot tell which. In fact, no finite amount of computation will guarantee that we will be able to tell whether $x=0$ or $x > 0$. Since infinite amount of computation is impossible in finite time (please do not drag in quantum computing, it does not help) the sign function cannot be computed. It is not a function!
+We have left out many details here, but the basic intuition is clear: “It ain''t a function if it can''t be computed”. Now we return to the sign function defined above. Is it a function? In order to compute $\mathrm{sgn}(x)$, we must for any given real number $x$ discover whether it is negative, zero, or positive. So suppose we inspect the digits of $x$ for a while and discover, say, that the first billion of them are all zero. Then $\mathrm{sgn}(x)$ is either $0$ or $1$, but we cannot tell which. In fact, no finite amount of computation will guarantee that we will be able to tell whether $x=0$ or $x > 0$. Since infinite amount of computation is impossible in finite time (please do not drag in quantum computing, it does not help) the sign function cannot be computed. It is not a function!
 
 An argument similar to the one above shows that we cannot hope to compute a function $f : \mathbb{R} \to \mathbb{R}$ at a point of discontinuity. With a more formal treatment we could prove:
 
@@ -52,19 +52,19 @@ As long as we stick to functions that can actually be computed, we will never wi
 
 > **Theorem** (classically equivalent form): All functions are continuous.
 
-When constructive mathematicians says that &#8220;all functions are continuous&#8221; they have something even better in mind. They are telling you that all functions are _computably_ continuous. This is where interesting stuff begins to happen.
+When constructive mathematicians says that “all functions are continuous” they have something even better in mind. They are telling you that all functions are _computably_ continuous. This is where interesting stuff begins to happen.
 
 #### They might be all continuous
 
 To simplify the argument, let me switch from real-valued functions $\mathbb{R} \to \mathbb{R}$ to something that is more readily handled in a programming language. Instead of the reals, let us consider _Baire space_ $B$, which is the space of all infinite number sequences,  
 $$B = \mathbb{N} \to \mathbb{N}.$$  
-Programmers will recognize in $B$ the datatype of infinite streams of non-negative integers, or the _total_ elements of type `nat -> nat`. A function $f : B \to \lbrace 0,1 \rbrace$ is said to be classically continuous if the value $f(x)$ depends only on finitely many terms of the input sequence $x$. A function $f$ is _computably continuous_, if we can actually compute an upper bound on how many terms of $x$ are needed to determine $f(x)$. (This characterization of continuity of $f : B \to \lbrace 0,1 \rbrace$ comes from taking the product topology on $B$ and discrete topology on $\lbrace 0,1 \rbrace$.) Since we are concerned with computable continuity we shall drop the qualifier &#8220;computable&#8221; and call it just continuity.
+Programmers will recognize in $B$ the datatype of infinite streams of non-negative integers, or the _total_ elements of type `nat -> nat`. A function $f : B \to \lbrace 0,1 \rbrace$ is said to be classically continuous if the value $f(x)$ depends only on finitely many terms of the input sequence $x$. A function $f$ is _computably continuous_, if we can actually compute an upper bound on how many terms of $x$ are needed to determine $f(x)$. (This characterization of continuity of $f : B \to \lbrace 0,1 \rbrace$ comes from taking the product topology on $B$ and discrete topology on $\lbrace 0,1 \rbrace$.) Since we are concerned with computable continuity we shall drop the qualifier “computable” and call it just continuity.
 
 > **Theorem:** All functions $B \to \lbrace 0,1 \rbrace$ are continuous.
 
 Without going into too many details, let me just state that the proof of the above theorem comes down to the following programming exercise.
 
-> **Exercise:** Write a program $m : (B \to \lbrace 0,1 \rbrace) \to B \to \mathbb{N}$ such that, for any $f : B \to \lbrace 0,1 \rbrace$ and $x \in B$ the value of $f(x)$ depends at most on the first $m(f)(x)$ terms of $x$. More precisely, if $M = m(f)(x)$, then for every $y \in B$, if $x\_0 = y\_0$, &#8230;, $x\_M = y\_M$ then $f(x) = f(y)$.
+> **Exercise:** Write a program $m : (B \to \lbrace 0,1 \rbrace) \to B \to \mathbb{N}$ such that, for any $f : B \to \lbrace 0,1 \rbrace$ and $x \in B$ the value of $f(x)$ depends at most on the first $m(f)(x)$ terms of $x$. More precisely, if $M = m(f)(x)$, then for every $y \in B$, if $x\_0 = y\_0$, ..., $x\_M = y\_M$ then $f(x) = f(y)$.
 
 The program $m$ is called a _modulus of continuity functional_ because it gives us information about how $f$ is continuous: any input $y \in B$ which agrees with $x$ in the first $m(f)(x)$ terms gives the same output $f(y)$ as does $f(x)$. Incidentally, such an $m$ is an [order 3 functional](/2006/03/21/interesting-higher-order-functionals/).
 
@@ -86,7 +86,7 @@ Another possibility is to use exceptions instead of mutable store. This time, we
 let m f x =
   let rec search k =
     try
-      let y n = (if n &lt; k then x n else raise Abort) in
+      let y n = (if n < k then x n else raise Abort) in
         f y ; k
     with Abort \to search (k+1)
   in
@@ -95,7 +95,7 @@ let m f x =
 
 We now have two solutions, one using mutable store, another using exceptions. Could we use some other feature instead? Yes, we could program $m$ using [continuations](http://en.wikipedia.org/wiki/Continuations), which I leave as an exercise.
 
-An interesting question comes to mind: which programming features, apart from the ones we mentioned above, allow us to program $m$? In terms of Haskell, the same question is which monads allow us to program $m$. Can we do it without any extra features and use just &#8220;pure&#8221; functional programming?
+An interesting question comes to mind: which programming features, apart from the ones we mentioned above, allow us to program $m$? In terms of Haskell, the same question is which monads allow us to program $m$. Can we do it without any extra features and use just “pure” functional programming?
 
 If by pure functional programming we understand a functional programming language with natural numbers, booleans and recusive definitions, also known as [PCF](http://en.wikipedia.org/wiki/Programming_language_for_Computable_Functions), the answer is _no_. The [proof](http://www.cs.bham.ac.uk/~mhe/papers/cca2001.pdf) of this uses denotational semantics and domain theory, and I will not go into it now. You may entertain yourself by trying and failing to define $m$ in pure Haskell or ML, i.e., no side effects, no exceptions, no mutable store, no parallelism, no monads.
 
@@ -107,10 +107,10 @@ We know mutable store, exceptions and continuations give us continuity of all fu
 
 #### Type II Computability
 
-Very likely &#8220;Type 2 Computability&#8221; experts are lurking around. This comment is for them. In Type 2 Computability we do not work with a programming language but directly with (Type 2) Turing machines. There is a well-known proof that in this setting the modulus of continuity $m$ is computable. The proof uses the fact that functions $B \to \lbrace 0,1 \rbrace$ are represented in such a way that the value of $m(f)(x)$ can be read off the tape directly.
+Very likely “Type 2 Computability” experts are lurking around. This comment is for them. In Type 2 Computability we do not work with a programming language but directly with (Type 2) Turing machines. There is a well-known proof that in this setting the modulus of continuity $m$ is computable. The proof uses the fact that functions $B \to \lbrace 0,1 \rbrace$ are represented in such a way that the value of $m(f)(x)$ can be read off the tape directly.
 
-Type II Turing machines are not special. They _are_ just another programming language in disguise. In comparison with pure functional programming, a Type II Turing machine can do the following special thing: it can do a thing for a while, and if it takes too long, it just stops doing it and does something else instead. The programming feature that this corresponds to is _timeout_, which works as follows: $\mathtt{timeout}\, k\, x\, y$ evaluates $x$ for at most $k$ steps. If $x$ evaluates successfully within $k$ steps, its value is returned. If the evaluation of $x$ is interrupted, $y$ is evaluated instead. I have heard John Longley claim that Type II Turing machines are equivalent to PCF+timeout+catch (where &#8220;catch&#8221; is a form of local exceptions), but I think the question was never settled. It would be interesting to know, because then we could replace arguments using Turing machines with source code written in ML+timeout+catch.
+Type II Turing machines are not special. They _are_ just another programming language in disguise. In comparison with pure functional programming, a Type II Turing machine can do the following special thing: it can do a thing for a while, and if it takes too long, it just stops doing it and does something else instead. The programming feature that this corresponds to is _timeout_, which works as follows: $\mathtt{timeout}\, k\, x\, y$ evaluates $x$ for at most $k$ steps. If $x$ evaluates successfully within $k$ steps, its value is returned. If the evaluation of $x$ is interrupted, $y$ is evaluated instead. I have heard John Longley claim that Type II Turing machines are equivalent to PCF+timeout+catch (where “catch” is a form of local exceptions), but I think the question was never settled. It would be interesting to know, because then we could replace arguments using Turing machines with source code written in ML+timeout+catch.
 
 #### Is there a lesson?
 
-The lesson is for those &#8220;experts&#8221; who &#8220;know&#8221; that all reasonable models of computation are equivalent to Turing machines. This is true if one looks just at functions from $\mathbb{N}$ to $\mathbb{N}$. However, at higher types, such as the type of our function $m$, questions of representation become important, and it does matter which model of computation is used.
+The lesson is for those “experts” who “know” that all reasonable models of computation are equivalent to Turing machines. This is true if one looks just at functions from $\mathbb{N}$ to $\mathbb{N}$. However, at higher types, such as the type of our function $m$, questions of representation become important, and it does matter which model of computation is used.

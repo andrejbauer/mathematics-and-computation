@@ -14,7 +14,7 @@ categories:
 ---
 With [Iztok Kavkler](http://www.fmf.uni-lj.si/~kavkler/).
 
-**Abstract:** The interval domain was proposed by Dana Scott as a domain-theoretic model for real numbers. It is a successful theoretical idea which also inspired a number of computational models for real numbers. However, current state-of-the-art implementations of real numbers, e.g., Mueller&#8217;s iRRAM and Lambov&#8217;s RealLib, do not seem to be based on the interval domain. In fact, their authors have observed that domain-theoretic concepts such as monotonicity of functions hinder efficiency of computation.
+**Abstract:** The interval domain was proposed by Dana Scott as a domain-theoretic model for real numbers. It is a successful theoretical idea which also inspired a number of computational models for real numbers. However, current state-of-the-art implementations of real numbers, e.g., Mueller's iRRAM and Lambov's RealLib, do not seem to be based on the interval domain. In fact, their authors have observed that domain-theoretic concepts such as monotonicity of functions hinder efficiency of computation.
 
 I will review the data structures and algorithms that are used in modern implementations of exact real arithmetic. They provide important insights, but some questions remain about what theoretical models support them, and how we can show them to be correct. It turns out that the correctness is not always clear, and that the good old interval domain still has a few tricks to offer.
 

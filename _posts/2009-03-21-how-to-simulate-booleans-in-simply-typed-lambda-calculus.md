@@ -13,7 +13,7 @@ I have been writing lecture notes on computable mathematics. One of the question
 
 The simply-typed $\lambda$-calculus is a purely functional language in which we have a single base type, functions, and pairs. In this language every term normalizes, so we cannot write a non-terminating program, and it does not matter whether we evaluate eagerly or lazily. To make things more concrete, let me rephrase this as a fragment of Haskell (Ocaml or ML would do just as well). We may use _only the following constructs_:
 
-  1. An abstract &#8220;base&#8221; type, which is traditionally denoted by _O_ (the letter). In Ocaml this would be a type whose implementation is hidden by a signature. I am not quite sure what it is in Haskell, but it could be a type parameter about which nothing is known. For practical purposes we may take _O_ to be _Int_ and make sure we do not use anything specific about _Int_.
+  1. An abstract “base” type, which is traditionally denoted by _O_ (the letter). In Ocaml this would be a type whose implementation is hidden by a signature. I am not quite sure what it is in Haskell, but it could be a type parameter about which nothing is known. For practical purposes we may take _O_ to be _Int_ and make sure we do not use anything specific about _Int_.
   2. Functions: we may form functions by $\lambda$-abstraction and apply them. Very importantly, _all variables must be explicitly typed (polymorphism is forbidden)._ For example, it is ok to write `\(x :: O) -> x` but not `\x -> x` because that would be polymorphic. (We must include the pragma `{-# LANGUAGE PatternSignatures #-}` in Haskell code to allow explicitly typed variables.)
   3. Pairs: we may form pairs and use the projections `fst` and `snd`. This is really just a convenience, because we can always eliminate pairs by currying.
 
@@ -24,7 +24,7 @@ false  :: Boolean</pre>
 
 and for each type `t` a constant
 
-> <pre>cond_t :: Boolean -&gt; t -&gt; t -&gt; t</pre>
+> <pre>cond_t :: Boolean -> t -> t -> t</pre>
 
 such that, for all `x` and `y` of type `t`:
 
@@ -37,11 +37,11 @@ Notice that since polymorphism is forbidden, we have a family of constants `cond
 
 If we allow polymorphic functions, the booleans may be defined thus:
 
-> <pre>type Boolean t = t -&gt; t -&gt; t
+> <pre>type Boolean t = t -> t -> t
 true, false :: Boolean t
 true  x y = x
 false x y = y
-cond :: Boolean t -&gt; t -&gt; t -&gt; t
+cond :: Boolean t -> t -> t -> t
 cond  b x y = b x y</pre>
 
 Of course, since we have polymorphism a single `cond` does the job.

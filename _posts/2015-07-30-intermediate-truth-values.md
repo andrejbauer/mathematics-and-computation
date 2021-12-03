@@ -13,20 +13,20 @@ categories:
 ---
 I have not written a blog post in a while, so I decided to write up a short observation about truth values in intuitionistic logic which sometimes seems a bit puzzling.
 
-Let $\Omega$ be the set of truth values (in Coq this would be the setoid whose underlying type is $\mathsf{Prop}$ and equality is equivalence $\leftrightarrow$, while in HoTT it is the h-propostions). Call a truth value $p : \Omega$ **intermediate** if it is neither true nor false, i.e., $p \neq \bot$ and $p \neq \top$. Such a &#8220;third&#8221; truth value $p$ is proscribed by excluded middle.
+Let $\Omega$ be the set of truth values (in Coq this would be the setoid whose underlying type is $\mathsf{Prop}$ and equality is equivalence $\leftrightarrow$, while in HoTT it is the h-propostions). Call a truth value $p : \Omega$ **intermediate** if it is neither true nor false, i.e., $p \neq \bot$ and $p \neq \top$. Such a “third” truth value $p$ is proscribed by excluded middle.
 
 The puzzle is to explain how the following two facts fit together:
 
-  1. **&#8220;There is no intermediate truth value&#8221;** is an intuitionistic theorem.
+  1. **“There is no intermediate truth value”** is an intuitionistic theorem.
   2. **There are models of intuitionistic logic with many truth values.**
 
 <!--more-->
 
-Mind you, excluded middle says &#8220;every truth value is either $\bot$ or $\top$&#8221; while we are saying that there is no truth value different from $\bot$ and $\top$:  
+Mind you, excluded middle says “every truth value is either $\bot$ or $\top$” while we are saying that there is no truth value different from $\bot$ and $\top$:  
 $$\lnot \exists p : \Omega \,.\, (p \neq \top) \land (p \neq \bot).$$  
 Coq proves this:
 
-<pre class="brush: plain; title: ; notranslate" title="">Theorem no_intermediate: ~ exists p : Prop, ~ (p &lt;-&gt; True) /\ ~ (p &lt;-&gt; False).
+<pre class="brush: plain; title: ; notranslate" title="">Theorem no_intermediate: ~ exists p : Prop, ~ (p <-> True) /\ ~ (p <-> False).
 Proof.
   firstorder.
 Qed.
@@ -52,9 +52,9 @@ Indeed, $U$ is _not_ a counterexample!
 
 We have here a typical distinction between _internal_ and _external_ language:
 
-  * The mathematicians inside the topos think and speak _locally_. They ask not &#8220;Is this statement true?&#8221; but &#8220;_Where_ is this statement true?&#8221; If you aks them a yes/no question they will answer by giving you an open subset of $X$. They will conclude that $U \neq \top$ holds on the exterior of $U$, and $U \neq \bot$ on the double exterior of $U$, and that nowhere are they true both together. 
-  * The mathematicians outside the topos (that&#8217;s us) understand $(U \neq \top) \land (U \neq \bot)$ differently: it is about comparing the open set $U$ to the open sets $X$ and $\emptyset$ as elements of the topology of $X$. For them &#8220;yes&#8221; and &#8220;no&#8221; are valid answers, and no other. 
+  * The mathematicians inside the topos think and speak _locally_. They ask not “Is this statement true?” but “_Where_ is this statement true?” If you aks them a yes/no question they will answer by giving you an open subset of $X$. They will conclude that $U \neq \top$ holds on the exterior of $U$, and $U \neq \bot$ on the double exterior of $U$, and that nowhere are they true both together. 
+  * The mathematicians outside the topos (that's us) understand $(U \neq \top) \land (U \neq \bot)$ differently: it is about comparing the open set $U$ to the open sets $X$ and $\emptyset$ as elements of the topology of $X$. For them “yes” and “no” are valid answers, and no other. 
 
-By the way, the mathematicians on the inside also think that &#8220;yes&#8221; and &#8220;no&#8221; are valid answers, and there is no other – that is precisely the statement &#8220;there is no intermediate truth value&#8221; – but they think of it as &#8220;holding everywhere on $X$&#8221;.
+By the way, the mathematicians on the inside also think that “yes” and “no” are valid answers, and there is no other – that is precisely the statement “there is no intermediate truth value” – but they think of it as “holding everywhere on $X$”.
 
-There are of course many situations where the difference between iternal and external language may create confusion. For example, if $X = \mathbb{N}$ is a countable discrete space then the object of natural numbers is the sheaf of _all_ maps into $\mathbb{N}$, of which there are uncountably many. Thus on the outside we &#8220;see&#8221; that there are uncountably many natural numbers in $\mathsf{Sh}(X)$. Those on the inside would of course disagree. This is an amusing situation, sort of a reverse of [Skolem&#8217;s paradox](https://en.wikipedia.org/wiki/Skolem%27s_paradox).
+There are of course many situations where the difference between iternal and external language may create confusion. For example, if $X = \mathbb{N}$ is a countable discrete space then the object of natural numbers is the sheaf of _all_ maps into $\mathbb{N}$, of which there are uncountably many. Thus on the outside we “see” that there are uncountably many natural numbers in $\mathsf{Sh}(X)$. Those on the inside would of course disagree. This is an amusing situation, sort of a reverse of [Skolem's paradox](https://en.wikipedia.org/wiki/Skolem%27s_paradox).

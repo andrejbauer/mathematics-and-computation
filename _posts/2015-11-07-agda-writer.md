@@ -10,7 +10,7 @@ categories:
   - Software
   - Teaching
 ---
-My student [Marko Koležnik](https://github.com/markokoleznik) is about to finish his Master&#8217;s degree in Mathematics at the University of Ljubljana. He implemented **[Agda Writer](http://markokoleznik.github.io/agda-writer/)**, a graphical user interface  for the Agda proof assistant on the OS X platform. As he puts it, the main advantage of Agda Writer is _no Emacs_, but the list of cool features is a bit longer:
+My student [Marko Koležnik](https://github.com/markokoleznik) is about to finish his Master's degree in Mathematics at the University of Ljubljana. He implemented **[Agda Writer](http://markokoleznik.github.io/agda-writer/)**, a graphical user interface  for the Agda proof assistant on the OS X platform. As he puts it, the main advantage of Agda Writer is _no Emacs_, but the list of cool features is a bit longer:
 
   * **bundled Agda:** it comes with preinstalled Agda so there is **zero installation effort **(of course, you can use your own Agda as well).
   * **UTF-8 keyboard shortcuts:** it is super-easy to enter UTF-8 characters by typing their LaTeX names, just like in Emacs. It trumps Emacs by converting ASCII arrows to their UTF8 equivalents on the fly. In the preferences you can customize the long list of shortcuts to your liking.

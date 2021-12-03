@@ -39,7 +39,7 @@ For example, the signature for a group is $u : (1,0), i : (1,1), m : (1,2).$ A _
   1. for every $x \in X$, $\mathtt{return}(x) \in F_\Sigma(X)$,
   2. if $f$ is an operation name of type $(P,N)$, $p \in P$, and $k : N \to F\_\Sigma(X)$ then the symbolic expression $f(p,k)$ is an element of $F\_\Sigma(X)$.
 
-The reason for writing $\mathtt{return}(x)$ instead of just $x$ is that it should remind you of $\mathtt{return}$ from Haskell&#8217;s monads. The elements of $F_\Sigma(X)$ are best thought of as well-founded trees whose leaves are labeled with elements of $X$ and whose branching types are the operations from $\Sigma$.
+The reason for writing $\mathtt{return}(x)$ instead of just $x$ is that it should remind you of $\mathtt{return}$ from Haskell's monads. The elements of $F_\Sigma(X)$ are best thought of as well-founded trees whose leaves are labeled with elements of $X$ and whose branching types are the operations from $\Sigma$.
 
 Given a $\Sigma$-algebra $A$ and a map $r : X \to A$ there is a unique homomorphism $h : F_\Sigma(X) \to A$ such that, for all $x \in X$,  
 $$h(\mathtt{return}(x)) = r(x)$$  
@@ -63,7 +63,7 @@ Thus $\mathtt{lookup}$ accepts no parameters (in other words, the parameter spac
 $$\mathtt{update} (t, \mathtt{update} (u, k)) = \mathtt{update} (u, k)$$  
 and  
 $$\mathtt{lookup} (\lambda s . \mathtt{update} (s, k)) = k.$$  
-The first one says that writing $t$ then $u$ to the memory cell is the same as writing just $u$. The second one says that writing the value that has just been looked up is the same as doing nothing. You may try writing down all the relevant equations for $\mathtt{lookup}$ and $\mathtt{update}$ before you look them up in papers of Gordon Plotkin and John Power, or [Matija&#8217;s thesis](http://matija.pretnar.info/the-logic-and-handling-of-algebraic-effects.pdf).
+The first one says that writing $t$ then $u$ to the memory cell is the same as writing just $u$. The second one says that writing the value that has just been looked up is the same as doing nothing. You may try writing down all the relevant equations for $\mathtt{lookup}$ and $\mathtt{update}$ before you look them up in papers of Gordon Plotkin and John Power, or [Matija's thesis](http://matija.pretnar.info/the-logic-and-handling-of-algebraic-effects.pdf).
 
 Observe that $\mathtt{lookup}$ and $\mathtt{update}$ are polymorphic in the type $T$ of the result. This means that we can use them anywhere in the program, no matter what happens afterwards. Many operations are like that, but not all (we shall see examples later on).
 
@@ -129,11 +129,11 @@ Now it is clear that the handler corresponds to the unique homomorphism $h : F\_
 
 ### Generic effects and sequencing
 
-We have seen that an operation accepts a parameter and a continuation. We cannot expect programmers to write down explicit continuations all the time, so we switch to an equivalent but friendlier syntax known as _generic_ effects and _sequencing_ (or &#8220;[do notation](http://www.haskell.org/haskellwiki/Monad#Special_notation)&#8221; in Haskell). An operation applied to parameter $p$ and continuation $\lambda x . c$,  
+We have seen that an operation accepts a parameter and a continuation. We cannot expect programmers to write down explicit continuations all the time, so we switch to an equivalent but friendlier syntax known as _generic_ effects and _sequencing_ (or “[do notation](http://www.haskell.org/haskellwiki/Monad#Special_notation)” in Haskell). An operation applied to parameter $p$ and continuation $\lambda x . c$,  
 $$f(p, \lambda x . c),$$  
 is written with generic effects and sequencing as  
 $$\begin{split}&x \leftarrow f_\mathrm{gen}(p) \\ & c.\end{split}$$  
-Read this as: &#8220;First perform generic effect $f_\mathrm{gen}$ applied to parameter $p$, let $x$ be the return value, and then do $c$.&#8221;
+Read this as: “First perform generic effect $f_\mathrm{gen}$ applied to parameter $p$, let $x$ be the return value, and then do $c$.”
 
 If $f$ is an operation of type $(P,N)$ then $f\_\mathrm{gen}$ is a map $f\_\mathrm{gen} : P \to F\_\Sigma(N)$ defined by $f\_\mathrm{gen}(p) = f(p, \lambda x . \mathtt{return}(x))$.
 
@@ -155,6 +155,6 @@ Mathematicians often take an algebra $A$ and consider two instances of it, for e
     ...
 </pre>
 
-The above code creates an instance of effect $E$ and calls it $x$. The scope of the instance is local, i.e., it only exists inside the block marked with &#8220;&#8230;&#8221;.
+The above code creates an instance of effect $E$ and calls it $x$. The scope of the instance is local, i.e., it only exists inside the block marked with “...”.
 
 Without further ado, let us now [look at eff proper.](http://math.andrej.com/2010/09/27/programming-with-effects-ii-introducing-eff/)

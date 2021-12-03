@@ -10,7 +10,7 @@ categories:
   - Talks
 ---
 
-A talk given at &#8220;Computation with Infinite Data: Logical and Topological Foundations&#8221; [Dagstuhl seminar 11411](http://www.dagstuhl.de/11411). I describe a realizability model based on infinite-time Turing machines in which it is possible to embed the Baire space (infinite sequences of numbers) into the space of numbers.
+A talk given at “Computation with Infinite Data: Logical and Topological Foundations” [Dagstuhl seminar 11411](http://www.dagstuhl.de/11411). I describe a realizability model based on infinite-time Turing machines in which it is possible to embed the Baire space (infinite sequences of numbers) into the space of numbers.
 
 Also see the post [Constructive gem: an injection from Baire space to natural numbers](http://math.andrej.com/2011/06/15/constructive-gem-an-injection-from-baire-space-to-natural-numbers/) for written notes on this topic.
 

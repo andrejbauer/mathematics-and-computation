@@ -24,7 +24,7 @@ However, we typically want to keep several copies of the backup (daily, weekly, 
   * use rsync to update the copy with the original on machine A,
   * delete some of the old backups if there are too many.
 
-This idea is fine, except that each backup takes up as much space as the original. Although disk space is very cheap, we would quickly run out of space on machine B. Even more annoying would be the time needed to make a copy of the backup (if you do not believe me, try copying 30GB of data spread accross ten thousand files from one directory to another on the same disk). A little bit of Unix filesystem magic helps solve the problem. Instead of physically copying the latest backup, we copy just the directory structure and [hard link](http://http://en.wikipedia.org/wiki/Hard_link) the files (read the [Wikipedia article on hard links](http://http://en.wikipedia.org/wiki/Hard_link) if you have never heard of them). The [GNU cp command](http://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html) with the `--link` argument does this very efficiently. This way the latest backup and its copy share all the data. When we run rsync on the copy, it &#8220;unshares&#8221; only those files that have changed. That&#8217;s it.
+This idea is fine, except that each backup takes up as much space as the original. Although disk space is very cheap, we would quickly run out of space on machine B. Even more annoying would be the time needed to make a copy of the backup (if you do not believe me, try copying 30GB of data spread accross ten thousand files from one directory to another on the same disk). A little bit of Unix filesystem magic helps solve the problem. Instead of physically copying the latest backup, we copy just the directory structure and [hard link](http://http://en.wikipedia.org/wiki/Hard_link) the files (read the [Wikipedia article on hard links](http://http://en.wikipedia.org/wiki/Hard_link) if you have never heard of them). The [GNU cp command](http://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html) with the `--link` argument does this very efficiently. This way the latest backup and its copy share all the data. When we run rsync on the copy, it “unshares” only those files that have changed. That's it.
 
 The net result is a series of backups which share common data. Additionally, if we delete any of the backups, the others remain intact (even though they share data). When the last backup holding a reference to a particular file is deleted, the Unix filesystem removes the data for that file from disk. We have incremental backups where each snapshot behaves exactly like the original.
 
@@ -32,7 +32,7 @@ The backup script does all this for you. It also controls the number of old back
 
 ### Backup in practice
 
-I just backed up my laptop. It took very long, 7 minutes, because I had not backed it up for two weeks and have accumulated many new files. Typically it takes somewhere between 30 seconds for &#8220;empty&#8221; backup and 2 minutes after a day&#8217;s work with lots of downloads and compilation of large chunks of source code. My backup server contains a total of 21 backups of my laptop, which comes up to 29 GB of disk space. The oldest backup is from 2006 and it takes 694 MB, whereas the latest is from one minute ago and takes 12 GB of space.
+I just backed up my laptop. It took very long, 7 minutes, because I had not backed it up for two weeks and have accumulated many new files. Typically it takes somewhere between 30 seconds for “empty” backup and 2 minutes after a day's work with lots of downloads and compilation of large chunks of source code. My backup server contains a total of 21 backups of my laptop, which comes up to 29 GB of disk space. The oldest backup is from 2006 and it takes 694 MB, whereas the latest is from one minute ago and takes 12 GB of space.
 
 Other uses of the backup script that I have heard of:
 
@@ -42,7 +42,7 @@ Other uses of the backup script that I have heard of:
 
 ### MacOS and Windows
 
-There are certain similarities between the backup script and MacOS [&#8220;Time machine&#8221;](http://www.apple.com/macosx/features/timemachine.html), but I suspect the Time machine actually backs up journals from a [journaling file system](http://en.wikipedia.org/wiki/Journaling_file_system). Anyhow, the backup script should work on MacOS, which is just Unix in disguise.
+There are certain similarities between the backup script and MacOS [“Time machine”](http://www.apple.com/macosx/features/timemachine.html), but I suspect the Time machine actually backs up journals from a [journaling file system](http://en.wikipedia.org/wiki/Journaling_file_system). Anyhow, the backup script should work on MacOS, which is just Unix in disguise.
 
 If you want to backup a Windows machine, you could install perl, ssh and rsync on it. It ought to work in principle (note that only the server needs a file system with hard links). Or you can mount its filesystem on a Linux machine with [Samba](http://us1.samba.org/samba/), and make the backup from the Linux machine. If there is enough interest, I can ask a friend who does this to provide more info.
 

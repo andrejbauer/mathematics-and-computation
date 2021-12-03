@@ -9,9 +9,10 @@ permalink: /2010/09/30/delimited-continuations-in-eff/
 categories:
   - Eff
 ---
+
 **[UPDATE 2012-03-08: since this post was written eff has changed considerably. For updated information, please visit the [eff page](/eff/).]**
 
-****Let&#8217;s keep the blog rolling! Here are delimited continuations in eff, and a bunch of questions I do not know the answers to.
+****Let's keep the blog rolling! Here are delimited continuations in eff, and a bunch of questions I do not know the answers to.
 
 <!--more-->
 
@@ -21,24 +22,24 @@ I am not going to explain what [continuations](http://en.wikipedia.org/wiki/Cont
   operation shift f: f (lambda x: yield x)
 </pre>
 
-Reset is done with &#8220;`with reset:`&#8220;. Shift takes a function as a parameter and passes to it the continuation (delimited by the correspoding `with`). Here is a basic example:
+Reset is done with “`with reset:`“. Shift takes a function as a parameter and passes to it the continuation (delimited by the correspoding `with`). Here is a basic example:
 
-<pre class="brush: plain; gutter: false; highlight: [4]; title: ; notranslate" title="">&gt;&gt;&gt; with reset:
+<pre class="brush: plain; gutter: false; highlight: [4]; title: ; notranslate" title="">>>> with reset:
 ...     shift (lambda k: k(k(k(7)))) * 2 + 1
 ...
 63
 </pre>
 
-Let&#8217;s see if we understand this. When shift hapens its continuation is &#8220;multiply by 2 and add 1&#8221;. So `k` will be the function $x \mapsto 2 x + 1$. Thus $k(k(k(7)))$ is $2 \cdot (2 \cdot (2 \cdot 7 +1) + 1) + 1 = 63$, if I got my arithmetic right.
+Let's see if we understand this. When shift hapens its continuation is “multiply by 2 and add 1”. So `k` will be the function $x \mapsto 2 x + 1$. Thus $k(k(k(7)))$ is $2 \cdot (2 \cdot (2 \cdot 7 +1) + 1) + 1 = 63$, if I got my arithmetic right.
 
 They say that continuations are the GOTO statement of functional programming:
 
-<pre class="brush: plain; gutter: false; highlight: [3]; title: ; notranslate" title="">&gt;&gt;&gt; (with reset: (shift (lambda k: 10)) * 3 + 1) + 2
+<pre class="brush: plain; gutter: false; highlight: [3]; title: ; notranslate" title="">>>> (with reset: (shift (lambda k: 10)) * 3 + 1) + 2
 ...
 12
 </pre>
 
-This time when shift happens the continuation is &#8220;multiply by 3 and add 1&#8221;, so $k$ is the map $x \mapsto 3 x + 1$. But shift ignores $k$ and just passes $10$ straight to reset (that&#8217;s the GOTO), so the answer is $10 + 2 = 12$.
+This time when shift happens the continuation is “multiply by 3 and add 1”, so $k$ is the map $x \mapsto 3 x + 1$. But shift ignores $k$ and just passes $10$ straight to reset (that's the GOTO), so the answer is $10 + 2 = 12$.
 
 Let us compute the type of shift. The continuation is a function of type $A \to B$. The argument of shift is a function which accepts the continuation so it has type $(A \to B) \to C$. But this only makese sense if the result of `shift` is the same as the result of the continuation, therefore $C = B$. The type of `shift` is  
 $$B^{B^A} \times B^A \to B.$$  
@@ -48,7 +49,7 @@ Strictly speaking, this is not an equation in the sense of universal algebra bec
 
 Since in eff we can have multiple instances of an effect, we get delimited continuations with multiple prompts, i.e., multiple resets. For example, try wrapping your head around the following piece of code:
 
-<pre class="brush: plain; gutter: false; highlight: [9,10,11,12,13,14,15,16,17,18]; title: ; notranslate" title="">&gt;&gt;&gt; with io:
+<pre class="brush: plain; gutter: false; highlight: [9,10,11,12,13,14,15,16,17,18]; title: ; notranslate" title="">>>> with io:
 ...     with reset as promptA:
 ...         print_string "Batman"
 ...         with reset as promptB:

@@ -15,6 +15,6 @@ A position is available for a PhD student at the University of Ljubljana in the 
 
 The position will be funded by the Effmath project (see [project description](http://math.andrej.com/wp-content/uploads/2014/11/description.pdf)). Full tuition & stipend will be provided.
 
-The candidate should have a master&#8217;s (or equivalent) degree in either mathematics or computer science, with background knowledge relevant to the project area. The student will officially enrol in October 2015 at the University of Ljubljana. No knowledge of the Slovene language is required.
+The candidate should have a master's (or equivalent) degree in either mathematics or computer science, with background knowledge relevant to the project area. The student will officially enrol in October 2015 at the University of Ljubljana. No knowledge of the Slovene language is required.
 
 The candidates should contact <a href="mailto:Alex.Simpson@fmf.uni-lj.si" target="_blank">Alex.Simpson@fmf.uni-lj.si</a> by email as soon as possible. Please include a short CV and a statement of interest.

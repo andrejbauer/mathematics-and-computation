@@ -14,7 +14,7 @@ categories:
   - Programming
   - Tutorial
 ---
-As a preparation for my part of a joint tutorial _Programs from proofs_ at [MFPS 27](http://129.81.170.14/~mfps/MFPS27/MFPS_XXVII.html) at the end of this month with [Ulrich Berger](http://www.cs.swan.ac.uk/~csulrich/), [Monika Seisenberger](http://www.cs.swan.ac.uk/~csmona/), and [Paulo Oliva](http://www.eecs.qmul.ac.uk/~pbo/), I&#8217;ve developed in [Agda](http://wiki.portal.chalmers.se/agda/pmwiki.php) some things we&#8217;ve been doing together.
+As a preparation for my part of a joint tutorial _Programs from proofs_ at [MFPS 27](http://129.81.170.14/~mfps/MFPS27/MFPS_XXVII.html) at the end of this month with [Ulrich Berger](http://www.cs.swan.ac.uk/~csulrich/), [Monika Seisenberger](http://www.cs.swan.ac.uk/~csmona/), and [Paulo Oliva](http://www.eecs.qmul.ac.uk/~pbo/), I've developed in [Agda](http://wiki.portal.chalmers.se/agda/pmwiki.php) some things we've been doing together.
 
 Using
 
@@ -24,7 +24,7 @@ Using
 
 for giving a proof term for classical countable choice, we prove the classical infinite pigeonhole principle in Agda: every infinite boolean sequence has a constant infinite subsequence, where the existential quantification is classical (double negated).
 
-As a corollary, we get the finite pigeonhole principle, using Friedman&#8217;s trick to make the existential quantifiers intuitionistic.
+As a corollary, we get the finite pigeonhole principle, using Friedman's trick to make the existential quantifiers intuitionistic.
 
 This we can run, and it runs fast enough. The point is to illustrate in Agda how we can get witnesses from classical proofs that use countable choice. The finite pigeonhole principle has a simple constructive proof, of course, and hence this is really for illustration only.
 

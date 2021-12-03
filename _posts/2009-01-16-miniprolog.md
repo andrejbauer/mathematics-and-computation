@@ -9,4 +9,4 @@ permalink: /2009/01/16/miniprolog/
 categories:
   - Programming languages
 ---
-I have aded to the [PL Zoo](http://andrej.com/plzoo/) a mini prolog interpreter. It really is minimalistic, as it only handles pure Horn clauses. There is no arithmetic, lists, cuts, or disjunctions. Nevertheless, it ought to be possible to write a miniml interpreter in it&#8230; If anyone does it, please send me the code!
+I have aded to the [PL Zoo](http://andrej.com/plzoo/) a mini prolog interpreter. It really is minimalistic, as it only handles pure Horn clauses. There is no arithmetic, lists, cuts, or disjunctions. Nevertheless, it ought to be possible to write a miniml interpreter in it... If anyone does it, please send me the code!

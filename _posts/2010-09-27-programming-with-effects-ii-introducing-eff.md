@@ -41,7 +41,7 @@ Eff has Python-like syntax, with mandatory indentation. Tabs are not allowed in 
 
 Before digging into the effects, let us look at some examples of purely functional code. Throughout the post, we present the examples as if they were written in the interactive toplevel. For example:
 
-<pre class="brush: plain; gutter: false; highlight: [2]; title: ; notranslate" title="">&gt;&gt;&gt; 1 + 2
+<pre class="brush: plain; gutter: false; highlight: [2]; title: ; notranslate" title="">>>> 1 + 2
 3
 </pre>
 
@@ -49,11 +49,11 @@ You can also write code in a file and run it with eff, but in this case you shou
 
 First, we have basic integer arithmetic with integers of unbounded size, booleans, strings, together with the basic operations:
 
-<pre class="brush: plain; gutter: false; highlight: [2,4,9]; title: ; notranslate" title="">&gt;&gt;&gt; (1379610 + 9) * 80618151420468743021
+<pre class="brush: plain; gutter: false; highlight: [2,4,9]; title: ; notranslate" title="">>>> (1379610 + 9) * 80618151420468743021
 111222333444555666777888999
-&gt;&gt;&gt; 1 == 2
+>>> 1 == 2
 False
-&gt;&gt;&gt; if 1 &lt; 2:
+>>> if 1 < 2:
 ...   "one is less" ^ " than two"
 ... else:
 ...   "you must be kidding"
@@ -62,56 +62,56 @@ False
 
 We have tuples, lists, variants and records, all of which can be decomposed with pattern matching:
 
-<pre class="brush: plain; gutter: false; highlight: [3,5,8,12,15]; title: ; notranslate" title="">&gt;&gt;&gt; (_, a, b) = (3, 4, 5)
-&gt;&gt;&gt; (a, b, a + b)
+<pre class="brush: plain; gutter: false; highlight: [3,5,8,12,15]; title: ; notranslate" title="">>>> (_, a, b) = (3, 4, 5)
+>>> (a, b, a + b)
 (4, 5, 9)
-&gt;&gt;&gt; 1 :: [2, 3, 4, 5] @ [6, 7, 8]
+>>> 1 :: [2, 3, 4, 5] @ [6, 7, 8]
 [1, 2, 3, 4, 5, 6, 7, 8]
-&gt;&gt;&gt; Tree l r = Tree (Leaf 4) (Tree (Leaf 5) (Leaf 6))
-&gt;&gt;&gt; r
+>>> Tree l r = Tree (Leaf 4) (Tree (Leaf 5) (Leaf 6))
+>>> r
 Tree (Leaf 5) (Leaf 6)
-&gt;&gt;&gt; z = (re = 1, im = 5)
-&gt;&gt;&gt; (re = x, im = _) = z
-&gt;&gt;&gt; x
+>>> z = (re = 1, im = 5)
+>>> (re = x, im = _) = z
+>>> x
 1
-&gt;&gt;&gt; (a, Foo (re = x), _) = ("banana", Foo (re=4, im=10), ["some", "stuff"])
-&gt;&gt;&gt; (a, x)
+>>> (a, Foo (re = x), _) = ("banana", Foo (re=4, im=10), ["some", "stuff"])
+>>> (a, x)
 ("banana",  4)
 </pre>
 
 $\lambda$-abstraction is written like in Python, except you can start a block after the colon:
 
-<pre class="brush: plain; gutter: false; highlight: [2,8,10]; title: ; notranslate" title="">&gt;&gt;&gt; (lambda x: (x, x + 1)) 5
+<pre class="brush: plain; gutter: false; highlight: [2,8,10]; title: ; notranslate" title="">>>> (lambda x: (x, x + 1)) 5
 (5, 6)
-&gt;&gt;&gt; f = lambda x (y, z):
+>>> f = lambda x (y, z):
 ...         a = x + y
 ...         b = z + a
 ...         a * b
-&gt;&gt;&gt; f 1
-&lt;fun&gt;
-&gt;&gt;&gt; f 1 (2, 3)
+>>> f 1
+<fun>
+>>> f 1 (2, 3)
 18
 </pre>
 
-You can use patterns in $\lambda$-abstractions and write `lambda p q r: e` instead of `lambda p: lambda q: lambda r: e`. Note that eff is an expression-based language. There is no `return` command to return the result, even though for clarity we wrote explicit $\mathtt{return}$&#8217;s the previous post.
+You can use patterns in $\lambda$-abstractions and write `lambda p q r: e` instead of `lambda p: lambda q: lambda r: e`. Note that eff is an expression-based language. There is no `return` command to return the result, even though for clarity we wrote explicit $\mathtt{return}$'s the previous post.
 
-Recursive definitions are formed with `def`. Mutually recursive definitions are formed with `def`&#8230;`and`&#8230;`and`&#8230; In the following example we also see how to write match statements:
+Recursive definitions are formed with `def`. Mutually recursive definitions are formed with `def`...`and`...`and`... In the following example we also see how to write match statements:
 
-<pre class="brush: plain; gutter: false; highlight: [9]; title: ; notranslate" title="">&gt;&gt;&gt; def is_odd n:
+<pre class="brush: plain; gutter: false; highlight: [9]; title: ; notranslate" title="">>>> def is_odd n:
 ...     match n:
 ...         case 0: False
 ...         case n: is_even (n - 1)
 ... and is_even n:
 ...     if n == 0: True
 ...     else: is_odd (n - 1)
-&gt;&gt;&gt; is_odd 1234
+>>> is_odd 1234
 False
 </pre>
 
 Recursive definitions need not define functions:
 
-<pre class="brush: plain; gutter: false; highlight: [3]; title: ; notranslate" title="">&gt;&gt;&gt; def one_two_three : [1, 2, 3] @ one_two_three
-&gt;&gt;&gt; one_two_three
+<pre class="brush: plain; gutter: false; highlight: [3]; title: ; notranslate" title="">>>> def one_two_three : [1, 2, 3] @ one_two_three
+>>> one_two_three
 [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, ...]
 </pre>
 
@@ -119,9 +119,9 @@ For more examples, look at the file `prelude.eff`, which is loaded into eff befo
 
 ### How to use effects
 
-One of eff&#8217;s built-in effects are references (mutable store). To create a new reference instance `x` with initial value 5 we use the `with` statement:
+One of eff's built-in effects are references (mutable store). To create a new reference instance `x` with initial value 5 we use the `with` statement:
 
-<pre class="brush: plain; gutter: false; highlight: [6,7]; title: ; notranslate" title="">&gt;&gt;&gt; with ref 5 as x:
+<pre class="brush: plain; gutter: false; highlight: [6,7]; title: ; notranslate" title="">>>> with ref 5 as x:
 ...     a = x.lookup ()
 ...     x.update (a + 3)
 ...     x.update (x.lookup() + x.lookup())
@@ -138,7 +138,7 @@ From now on, we are not going to show these warnings. If you do not like them, y
 
 We can create and mix several instances of `ref` (can you tell how many sequencing warnings would we get?):
 
-<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">&gt;&gt;&gt; with ref 5 as x:
+<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">>>> with ref 5 as x:
 ...     with ref 10 as y:
 ...         a = x.lookup () + y.lookup ()
 ...         x.update (a + y.lookup ())
@@ -148,7 +148,7 @@ We can create and mix several instances of `ref` (can you tell how many sequenci
 
 If only one instance of an effect is needed, we need not give it a name. So we can have one nameless global `ref` instance:
 
-<pre class="brush: plain; gutter: false; highlight: [4]; title: ; notranslate" title="">&gt;&gt;&gt; with ref 5:
+<pre class="brush: plain; gutter: false; highlight: [4]; title: ; notranslate" title="">>>> with ref 5:
 ...    update (lookup () + 7)
 ...    lookup ()
 12
@@ -166,7 +166,7 @@ In eff we can define our own effects with the `effect` statement:
    finally x: f(x)
 </pre>
 
-The above code defines an effect `e` with operations $\mathtt{op}\_1, \mathtt{op}\_2, \ldots$ which are handled by the code $h\_1, h\_2, \ldots$, respectively. The `return` clause tells us how to handle (pure) values. The `finally` clause tells us what should be done with the value, returned from the `with` statement that uses the effect `e`. In other words, it defines a wrapper which tells us how to &#8220;run&#8221; the effect as well as how to &#8220;get out&#8221; of it (compare to Haskell&#8217;s [runState](http://www.haskell.org/haskellwiki/State_Monad) for the state monad).
+The above code defines an effect `e` with operations $\mathtt{op}\_1, \mathtt{op}\_2, \ldots$ which are handled by the code $h\_1, h\_2, \ldots$, respectively. The `return` clause tells us how to handle (pure) values. The `finally` clause tells us what should be done with the value, returned from the `with` statement that uses the effect `e`. In other words, it defines a wrapper which tells us how to “run” the effect as well as how to “get out” of it (compare to Haskell's [runState](http://www.haskell.org/haskellwiki/State_Monad) for the state monad).
 
 If you leave out the `return` or `finally` clauses it is assumed that they are identity functions.
 
@@ -174,7 +174,7 @@ If you leave out the `return` or `finally` clauses it is assumed that they are i
 
 Let us convert the reference example from the [first post](http://math.andrej.com/2010/09/27/programming-with-effects-i-theory/) to eff code. Since eff already has a builtin effect called `ref` we call our references `myref`:
 
-<pre class="brush: plain; gutter: false; title: ; notranslate" title="">&gt;&gt;&gt; effect myref s_initial:
+<pre class="brush: plain; gutter: false; title: ; notranslate" title="">>>> effect myref s_initial:
 ...         operation lookup (): (lambda s: yield s s)
 ...         operation update s_new: (lambda s: yield () s_new)
 ...         return x: (lambda s: x)
@@ -183,7 +183,7 @@ Let us convert the reference example from the [first post](http://math.andrej.co
 
 or, more concisely but equivalently:
 
-<pre class="brush: plain; gutter: false; title: ; notranslate" title="">&gt;&gt;&gt; effect myref s_initial:
+<pre class="brush: plain; gutter: false; title: ; notranslate" title="">>>> effect myref s_initial:
 ...     operation lookup () s: yield s s
 ...     operation update s_new s: yield () s_new
 ...     return x s: x
@@ -194,19 +194,19 @@ This is the definition of a function `myref` which maps `s_initial` to an effect
 
 Recall that a program which uses a reference of type $S$ and returns a value of type $T$ is in fact a map $S \to T$. The `finally` clause tells us what should be done with such a function, namely it should be applied to the initial state. In other words, `finally` is just syntactic sugar for a wrapper around the `with` statement, so
 
-<pre class="brush: plain; gutter: false; title: ; notranslate" title="">&gt;&gt;&gt; with myref 5:
+<pre class="brush: plain; gutter: false; title: ; notranslate" title="">>>> with myref 5:
 ...     some code
 </pre>
 
 is equivalent to
 
-<pre class="brush: plain; gutter: false; title: ; notranslate" title="">&gt;&gt;&gt; (with myref_without_finally:
+<pre class="brush: plain; gutter: false; title: ; notranslate" title="">>>> (with myref_without_finally:
 ...     some code) 5
 </pre>
 
 Let us check how our references mix with the builtin ones:
 
-<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">&gt;&gt;&gt; with myref 100 as u:
+<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">>>> with myref 100 as u:
 ...     with ref 10 as z:
 ...         u.update (u.lookup () + z.lookup ())
 ...         z.update (u.lookup () + z.lookup ())
@@ -222,9 +222,9 @@ As the next example we define a choice operation. In general such an operation i
 
 Let us first define a boring choice, which always chooses the first value:
 
-<pre class="brush: plain; gutter: false; highlight: [7]; title: ; notranslate" title="">&gt;&gt;&gt; effect left_choice:
+<pre class="brush: plain; gutter: false; highlight: [7]; title: ; notranslate" title="">>>> effect left_choice:
 ...     operation choose (a, _): yield a
-&gt;&gt;&gt; with left_choice:
+>>> with left_choice:
 ...     x = choose (3, 2)
 ...     y = choose (5, 10)
 ...     x + y
@@ -233,14 +233,14 @@ Let us first define a boring choice, which always chooses the first value:
 
 Observe how we used `yield` to pass the result of the operation back to the continuation. It may take a bit of getting used to `yield` if you are not familiar with continuations.
 
-A more interesting kind of choice is &#8220;magical&#8221; choice with always selects that value which leads to the least possible end result:
+A more interesting kind of choice is “magical” choice with always selects that value which leads to the least possible end result:
 
-<pre class="brush: plain; gutter: false; highlight: [10]; title: ; notranslate" title="">&gt;&gt;&gt; effect min_choice:
+<pre class="brush: plain; gutter: false; highlight: [10]; title: ; notranslate" title="">>>> effect min_choice:
 ...     operation choose (a, b):
 ...         l = yield a
 ...         r = yield b
 ...         min l r
-&gt;&gt;&gt; with min_choice:
+>>> with min_choice:
 ...     x = choose (3, 2)
 ...     y = choose (5, 10)
 ...     x + y
@@ -249,7 +249,7 @@ A more interesting kind of choice is &#8220;magical&#8221; choice with always se
 
 Notice how we used `yield` twice in order to test both possibilities: what happens if we choose `a` and what happens if we choose `b`. The end result is a kind of depth-first search. Another test case:
 
-<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">&gt;&gt;&gt; with min_choice:
+<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">>>> with min_choice:
 ...     x = choose (3, 4)
 ...     y = choose (5, 6)
 ...     z = choose (10, 1)
@@ -257,17 +257,17 @@ Notice how we used `yield` twice in order to test both possibilities: what happe
 -151
 </pre>
 
-It should be possible to write all sorts of &#8220;choose&#8221; and &#8220;search&#8221; operators in eff that allow the programmer to write backtracking code with seemingly magical choice operators.
+It should be possible to write all sorts of “choose” and “search” operators in eff that allow the programmer to write backtracking code with seemingly magical choice operators.
 
 What if we wanted to collect _all_ possible results rather than just a particular one? No problem:
 
-<pre class="brush: plain; gutter: false; highlight: [11]; title: ; notranslate" title="">&gt;&gt;&gt; effect all_choices:
+<pre class="brush: plain; gutter: false; highlight: [11]; title: ; notranslate" title="">>>> effect all_choices:
 ...     operation choose (a, b):
 ...         l = yield a
 ...         r = yield b
 ...         l @ r
 ...     return v: [v]
-&gt;&gt;&gt; with all_choices:
+>>> with all_choices:
 ...     x = choose (3, 2)
 ...     y = choose (5, 10)
 ...     x + y
@@ -280,7 +280,7 @@ In this case, the operation first yields its left argument to the continuation a
 
 When we define an effect we tell how its operations are handled by default. We may also wrap a piece of code in a handler that temporarily redefines the behavior of operations. Here is a handler which intercepts lookups to reference `z` and always adds `1` to the actual value:
 
-<pre class="brush: plain; gutter: false; highlight: [11]; title: ; notranslate" title="">&gt;&gt;&gt; with ref 10 as z:
+<pre class="brush: plain; gutter: false; highlight: [11]; title: ; notranslate" title="">>>> with ref 10 as z:
 ...     y = z.lookup ()
 ...     handle:
 ...         z.update 100
@@ -297,18 +297,18 @@ When we define an effect we tell how its operations are handled by default. We m
 
 Eff does not have builtin exceptions. The $\mathtt{fail}$ exception could be defined like this:
 
-<pre class="brush: plain; gutter: false; highlight: [11,17]; title: ; notranslate" title="">&gt;&gt;&gt; effect maybe:
+<pre class="brush: plain; gutter: false; highlight: [11,17]; title: ; notranslate" title="">>>> effect maybe:
 ...     operation fail(): Nothing
 ...     return x: Just x
 ...
-&gt;&gt;&gt; with maybe:
+>>> with maybe:
 ...     a = 5
 ...     b = 6
 ...     fail ()
 ...     a + b
 ...
 Nothing
-&gt;&gt;&gt; with maybe:
+>>> with maybe:
 ...     a = 5
 ...     b = 6
 ...     a + b
@@ -316,9 +316,9 @@ Nothing
 Just 11
 </pre>
 
-We are reminded of Haskell&#8217;s Maybe monad, and not without reason. The cool thing is that exceptions act like exceptions within their scope and like optional values outside the scope. Thus we can handle exceptions inside their scope just as expected:
+We are reminded of Haskell's Maybe monad, and not without reason. The cool thing is that exceptions act like exceptions within their scope and like optional values outside the scope. Thus we can handle exceptions inside their scope just as expected:
 
-<pre class="brush: plain; gutter: false; highlight: [10]; title: ; notranslate" title="">&gt;&gt;&gt; with maybe:
+<pre class="brush: plain; gutter: false; highlight: [10]; title: ; notranslate" title="">>>> with maybe:
 ...     a = 5
 ...     handle:
 ...         b = 6
@@ -332,17 +332,17 @@ Just 42
 
 We can also have a version of `maybe` with default values:
 
-<pre class="brush: plain; gutter: false; highlight: [10,16]; title: ; notranslate" title="">&gt;&gt;&gt; effect default x:
+<pre class="brush: plain; gutter: false; highlight: [10,16]; title: ; notranslate" title="">>>> effect default x:
 ...     operation fail(): x
 ...
-&gt;&gt;&gt; with default 42:
+>>> with default 42:
 ...     a = 5
 ...     b = 6
 ...     fail ()
 ...     a + b
 ...
 42
-&gt;&gt;&gt; with default 42:
+>>> with default 42:
 ...     a = 5
 ...     b = 6
 ...     a + b
@@ -354,30 +354,30 @@ We can also have a version of `maybe` with default values:
 
 Eff has a builting effect `io` with operations `print_value`, `print_string` and `read_string` which print to standard output and read from standard input. If you want to print something out you should not forget to first tell eff that you want to use the `io` effect:
 
-<pre class="brush: plain; gutter: false; highlight: [2,5,6]; title: ; notranslate" title="">&gt;&gt;&gt; print_string "Hello, world!"
+<pre class="brush: plain; gutter: false; highlight: [2,5,6]; title: ; notranslate" title="">>>> print_string "Hello, world!"
 Runtime error: Name print_string is not defined. (L1, 1-12)
-&gt;&gt;&gt; with io: print_string "Hello, world!"
+>>> with io: print_string "Hello, world!"
 ...
 Hello, world!
 ()
 </pre>
 
-Having to write &#8220;`with io`&#8221; all the time is annoying, so eff allows you to declare globally in a file (but not in the interactive shell) that you will use `io`:
+Having to write “`with io`” all the time is annoying, so eff allows you to declare globally in a file (but not in the interactive shell) that you will use `io`:
 
 <pre class="brush: plain; gutter: false; title: ; notranslate" title="">with io ...
 </pre>
 
 This is the same as writing `with io:` and indenting the rest of the file. Of course, there is nothing special about `io`. You can declare any effect instance for the rest of the file in the same way.
 
-If you are using `io` for printing debugging information, don&#8217;t! Eff has a special command `check` just for that purpose:
+If you are using `io` for printing debugging information, don't! Eff has a special command `check` just for that purpose:
 
-<pre class="brush: plain; gutter: false; highlight: [3,6,10,11]; title: ; notranslate" title="">&gt;&gt;&gt; check: "Hello, world!"
+<pre class="brush: plain; gutter: false; highlight: [3,6,10,11]; title: ; notranslate" title="">>>> check: "Hello, world!"
 ...
 "Hello, world!"
-&gt;&gt;&gt; check: 1 + 2 + 3
+>>> check: 1 + 2 + 3
 ...
 6
-&gt;&gt;&gt; with io:
+>>> with io:
 ...     check: print_string "Hello, world"
 ...
 Operation print_string "Hello, world" (global)
@@ -388,7 +388,7 @@ The last example requires explanation: since `check` is intended for debugging i
 
 Let us write an effect which redirects output to a string:
 
-<pre class="brush: plain; gutter: false; title: ; notranslate" title="">&gt;&gt;&gt; effect print_to_string:
+<pre class="brush: plain; gutter: false; title: ; notranslate" title="">>>> effect print_to_string:
 ...   operation print_string x c: yield () (c ^ x)
 ...   return () c: c
 ...   finally f: f ""
@@ -396,17 +396,17 @@ Let us write an effect which redirects output to a string:
 
 We can use it to collect output to a string:
 
-<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">&gt;&gt;&gt; a = (with print_to_string:
+<pre class="brush: plain; gutter: false; highlight: [6]; title: ; notranslate" title="">>>> a = (with print_to_string:
 ...          print_string "Hello, world!"
 ...          print_string "And good bye.")
 ...
-&gt;&gt;&gt; a
+>>> a
 "Hello, world!And good bye."
 </pre>
 
 For some reason people find the following example surprising:
 
-<pre class="brush: plain; gutter: false; highlight: [9,10,11,12]; title: ; notranslate" title="">&gt;&gt;&gt; with io:
+<pre class="brush: plain; gutter: false; highlight: [9,10,11,12]; title: ; notranslate" title="">>>> with io:
 ...   print_string "Please enter your name:"
 ...   response = handle with print_to_string:
 ...                      print_string "Hello "

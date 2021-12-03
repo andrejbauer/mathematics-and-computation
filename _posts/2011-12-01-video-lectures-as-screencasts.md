@@ -32,9 +32,9 @@ This sort of money is negligible in comparison with human work. I also had to in
 
 There is just one thing I am not happy with. I cannot find an good program for writing hand-written notes on screen. I have tried a bunch:
 
-  * The Wacom tablet comes with [EverNote](http://blog.evernote.com/2010/02/16/the-wacom-pen-tablet-and-evernote/), which however insists on hand-writing recognition, which _does not work well_, and it won&#8217;t work for mathematical notation in the foreseeable future.
+  * The Wacom tablet comes with [EverNote](http://blog.evernote.com/2010/02/16/the-wacom-pen-tablet-and-evernote/), which however insists on hand-writing recognition, which _does not work well_, and it won't work for mathematical notation in the foreseeable future.
   * The Wacom tablet comes with the [Bamboo paper app](http://www.wacom.com/en/Products/Bamboo/BambooPaper/Desktop.aspx), which also exists for the iPad. The desktop version is too simplistic. It only allows export of _single_ pages as images, and in fullscreen mode it insists on showing two portrait pages instead of a single landscape one.
-  * There is [Jarnal](http://www.dklevine.com/general/software/tc1000/jarnal.htm), an open-source program, which I used on my Thinkpad tablet, but it&#8217;s too clumsy on my Mac. Also, the handwriting looks a bit ugly, and it does not have pressure sensitivity.
+  * There is [Jarnal](http://www.dklevine.com/general/software/tc1000/jarnal.htm), an open-source program, which I used on my Thinkpad tablet, but it's too clumsy on my Mac. Also, the handwriting looks a bit ugly, and it does not have pressure sensitivity.
   * [Xournal](http://xournal.sourceforge.net/) is not a finished piece of software, as far as I am concerned.
   * The French world produces [Sankore](http://getuniboard.com/), an open source program for electronic boards in education. I could use it on my Mac, but it is too baroque for my taste. There is always a lot of stuff on screen, and I do not really like programs that implement their own user interface from scratch. I want the buttons and the menus to look like the rest of my Mac.
   * I used [InkBook 2](http://www.magesw.com/inkbook/) for a while, but it is buggy. It does not let me choose pens and colors from the button on the toolbar, and it makes annoying lines when I raise the pen. Have a look at one of my early lectures, from October 2011, and you will see what I mean.
@@ -43,14 +43,14 @@ The Circus Ponies Notebook is acceptable, I suppose. It is annoying in several w
 
   * It insists that every page have a _typed_ title so I have to go for the keyboard. If I disable display of titles then the contents of the page moves up uncontrollably, and parts of it get obscured by the toolbar.
   * It creates too many damn indices. Who wants an index of capitalized words?! I want to disable all the pages I do not need.
-  * It keeps switching the input mode to &#8220;default&#8221; when I move between pages, instead of leaving it in either &#8220;sketch&#8221; or &#8220;hand-write&#8221; mode.
-  * It insists on hand-written recognition in hand-write mode, and it keeps turning on &#8220;show recognition&#8221; on every new page, so I have to use &#8220;sketch&#8221; mode for writing.
+  * It keeps switching the input mode to “default” when I move between pages, instead of leaving it in either “sketch” or “hand-write” mode.
+  * It insists on hand-written recognition in hand-write mode, and it keeps turning on “show recognition” on every new page, so I have to use “sketch” mode for writing.
   * But at least it does not draw surprising lines across the page, as InkBook does.
 
 I just want a simple notebook, _without clutter_, with empty pages spanning the entire screen, no hand-written recognition, and good-quality export to PDF, i.e., not as bitmaps. Is that too much to ask for?
 
 A typical lecture lasts about 45 minutes, which is way too long for a single video. Thus I always split the lectures into separate chunks so that students can find what they are looking for. A good sized chunk is between 5 and 10 minutes, although sometimes a complicated proof makes a chunk 20 minutes long.
 
-Vimeo.com allows people to comment on the videos. So far the students have not had a single comment. I attribute this to two factors. First, vimeo.com requires registration before a comment can be posted. Second, the students are afraid of me, the monster that I am. (That&#8217;s a wide-spread phenomenon at the central European universities.) What remains then is for me to figure out some way of getting feedback from students.
+Vimeo.com allows people to comment on the videos. So far the students have not had a single comment. I attribute this to two factors. First, vimeo.com requires registration before a comment can be posted. Second, the students are afraid of me, the monster that I am. (That's a wide-spread phenomenon at the central European universities.) What remains then is for me to figure out some way of getting feedback from students.
 
 Comments are welcome! If anyone can suggest a good note-taking program for a Mac, I would love to hear it.

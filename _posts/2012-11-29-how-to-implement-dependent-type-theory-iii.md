@@ -18,7 +18,7 @@ The code is available on Github in the repository [andrejbauer/tt](https://githu
 
 <!--more-->
 
-People say that de Bruijn indices and explicit substitutions are difficult to implement. I agree, I spent far too long debugging my code. But because every bug crashed and burnt my program immediately, I at least knew I was not done. In contrast, &#8220;manual&#8221; substitutions hide their bugs really well, and so are even more difficult to get right. I am convinced that my implementation from part II is still buggy.
+People say that de Bruijn indices and explicit substitutions are difficult to implement. I agree, I spent far too long debugging my code. But because every bug crashed and burnt my program immediately, I at least knew I was not done. In contrast, “manual” substitutions hide their bugs really well, and so are even more difficult to get right. I am convinced that my implementation from part II is still buggy.
 
 ### Blitz introduction to de Bruijn indices and explicit substitution
 
@@ -38,7 +38,7 @@ The shifting and pushing of new things onto the context is expressed with explic
   | Dot of expr * substitution
 </pre>
 
-Read `Shift k` as &#8220;add $k$ to all indices&#8221; and `Dot(e,s)` as &#8220;push $e$ and use $s$&#8221;. In mathematical notation we write $\uparrow^n$ instead of `Shift n` and $e \cdot \sigma$ instead of `Dot(e,sigma)`. An explicit substitution $\sigma$ acts on an expression $e$ to give a new expression $[\sigma] e$. For example:
+Read `Shift k` as “add $k$ to all indices” and `Dot(e,s)` as “push $e$ and use $s$”. In mathematical notation we write $\uparrow^n$ instead of `Shift n` and $e \cdot \sigma$ instead of `Dot(e,sigma)`. An explicit substitution $\sigma$ acts on an expression $e$ to give a new expression $[\sigma] e$. For example:
 
   * $\[\uparrow^k\] (\mathtt{Var}\, m) = \mathtt{Var} (k + m)$
   * $\[e \cdot \sigma)\] (\mathtt{Var}\, 0) = e$
@@ -94,10 +94,10 @@ The [`Syntax`](https://github.com/andrejbauer/tt/blob/blog-part-III/syntax.ml) m
 
 <pre class="brush: plain; title: ; notranslate" title="">let rec compose s t =
   match s, t with
-    | s, Shift 0 -&gt; s
-    | Dot (e, s), Shift m -&gt; compose s (Shift (m - 1))
-    | Shift m, Shift n -&gt; Shift (m + n)
-    | s, Dot (e, t) -&gt; Dot (mk_subst s e, compose s t)
+    | s, Shift 0 -> s
+    | Dot (e, s), Shift m -> compose s (Shift (m - 1))
+    | Shift m, Shift n -> Shift (m + n)
+    | s, Dot (e, t) -> Dot (mk_subst s e, compose s t)
 </pre>
 
 In mathematical notation:
@@ -114,14 +114,14 @@ Of course, composition $\circ$ is the operation characterized by the equation $\
 let subst =
   let rec subst s ((e', loc) as e) =
     match s, e' with
-      | Shift m, Var k -&gt; Var (k + m), loc
-      | Dot (e, s), Var 0 -&gt; subst idsubst e
-      | Dot (e, s), Var k -&gt; subst s (Var (k - 1), loc)
-      | s, Subst (t, e) -&gt; subst s (subst t e)
-      | _, Universe _ -&gt; e
-      | s, Pi a -&gt; Pi (subst_abstraction s a), loc
-      | s, Lambda a -&gt; Lambda (subst_abstraction s a), loc
-      | s, App (e1, e2) -&gt; App (mk_subst s e1, mk_subst s e2), loc
+      | Shift m, Var k -> Var (k + m), loc
+      | Dot (e, s), Var 0 -> subst idsubst e
+      | Dot (e, s), Var k -> subst s (Var (k - 1), loc)
+      | s, Subst (t, e) -> subst s (subst t e)
+      | _, Universe _ -> e
+      | s, Pi a -> Pi (subst_abstraction s a), loc
+      | s, Lambda a -> Lambda (subst_abstraction s a), loc
+      | s, App (e1, e2) -> App (mk_subst s e1, mk_subst s e2), loc
   and subst_abstraction s (x, e1, e2) =
     let e1 = mk_subst s e1 in
     let e2 = mk_subst (Dot (mk_var 0, compose (Shift 1) s)) e2 in

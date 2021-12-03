@@ -12,7 +12,7 @@ categories:
   - Software
   - Tutorial
 ---
-I am spending a semester at the [Institute for Advanced Study](http://www.ias.edu/) where we have a special year on [Univalent foundations](http://www.math.ias.edu/sp/univalent). We are doing all sorts of things, among others experimenting with type theories. We [have](http://en.wikipedia.org/wiki/Per_Martin-Löf) [got](http://www.cse.chalmers.se/~coquand/) [some](http://pauillac.inria.fr/~herbelin/index-eng.html) [real](http://mattam.org) [experts](http://www.lix.polytechnique.fr/~barras/) [here](http://www.lix.polytechnique.fr/~assia/rech-eng.html) who know type theory and Coq inside out, and much more, and they&#8217;re doing crazy things to Coq (I will report on them when they are done). In the meanwhile I have been thinking how one might implement dependent type theories with undecidable type checking. This is a tricky subject and I am certainly not the first one to think about it. Anyhow, if I want to experiment with type theories, I need a small prototype first. Today I will present a very minimal one, and build on it in future posts.
+I am spending a semester at the [Institute for Advanced Study](http://www.ias.edu/) where we have a special year on [Univalent foundations](http://www.math.ias.edu/sp/univalent). We are doing all sorts of things, among others experimenting with type theories. We [have](http://en.wikipedia.org/wiki/Per_Martin-Löf) [got](http://www.cse.chalmers.se/~coquand/) [some](http://pauillac.inria.fr/~herbelin/index-eng.html) [real](http://mattam.org) [experts](http://www.lix.polytechnique.fr/~barras/) [here](http://www.lix.polytechnique.fr/~assia/rech-eng.html) who know type theory and Coq inside out, and much more, and they're doing crazy things to Coq (I will report on them when they are done). In the meanwhile I have been thinking how one might implement dependent type theories with undecidable type checking. This is a tricky subject and I am certainly not the first one to think about it. Anyhow, if I want to experiment with type theories, I need a small prototype first. Today I will present a very minimal one, and build on it in future posts.
 
 Make a guess, how many lines of code does it take to implement a dependent type theory with universes, dependent products, a parser, lexer, pretty-printer, and a toplevel which uses line-editing when available?
 
@@ -26,7 +26,7 @@ Make a guess, how many lines of code does it take to implement a dependent type 
 
 I am going to assume you are already familiar with Martin-Löf [dependent type theory](http://en.wikipedia.org/wiki/Intuitionistic_type_theory). We are going to implement:
 
-  * a hierarchy of [universes](http://en.wikipedia.org/wiki/Intuitionistic_type_theory#Universes) $\mathtt{Type}\_0$, $\mathtt{Type}\_1$, $\mathtt{Type}_2$, &#8230;
+  * a hierarchy of [universes](http://en.wikipedia.org/wiki/Intuitionistic_type_theory#Universes) $\mathtt{Type}\_0$, $\mathtt{Type}\_1$, $\mathtt{Type}_2$, ...
   * [dependent products](http://en.wikipedia.org/wiki/Intuitionistic_type_theory#.CE.A0-types) $\prod_{x : A} B$
   * functions $\lambda x : A . e$, and
   * application $e\_1 \; e\_2$.
@@ -51,7 +51,7 @@ and abstraction = variable * expr * expr
 
 We choose a concrete syntax that is similar to that of [Coq](http://coq.inria.fr/):
 
-  * universes are written `Type 0`, `Type 1`, `Type 2`, &#8230;
+  * universes are written `Type 0`, `Type 1`, `Type 2`, ...
   * the dependent product is written `forall x : A, B`,
   * a function is written `fun x : A => B`,
   * application is juxtaposition `e1 e2`.
@@ -92,17 +92,17 @@ Here is the substitution code:
 let refresh =
   let k = ref 0 in
     function
-      | String x | Gensym (x, _) -&gt; (incr k ; Gensym (x, !k))
-      | Dummy -&gt; (incr k ; Gensym ("_", !k))
+      | String x | Gensym (x, _) -> (incr k ; Gensym (x, !k))
+      | Dummy -> (incr k ; Gensym ("_", !k))
 
 (** [subst [(x1,e1); ...; (xn;en)] e] performs the given substitution of
     expressions [e1], ..., [en] for variables [x1], ..., [xn] in expression [e]. *)
 let rec subst s = function
-  | Var x -&gt; (try List.assoc x s with Not_found -&gt; Var x)
-  | Universe k -&gt; Universe k
-  | Pi a -&gt; Pi (subst_abstraction s a)
-  | Lambda a -&gt; Lambda (subst_abstraction s a)
-  | App (e1, e2) -&gt; App (subst s e1, subst s e2)
+  | Var x -> (try List.assoc x s with Not_found -> Var x)
+  | Universe k -> Universe k
+  | Pi a -> Pi (subst_abstraction s a)
+  | Lambda a -> Lambda (subst_abstraction s a)
+  | App (e1, e2) -> App (subst s e1, subst s e2)
 
 and subst_abstraction s (x, t, e) =
   let x' = refresh x in
@@ -137,19 +137,19 @@ We said we would read off the typing rules from the source code:
 
 <pre class="brush: plain; title: ; notranslate" title="">(** [infer_type ctx e] infers the type of expression [e] in context [ctx].  *)
 let rec infer_type ctx = function
-  | Var x -&gt;
+  | Var x ->
     (try lookup_ty x ctx
-     with Not_found -&gt; Error.typing "unkown identifier %t" (Print.variable x))
-  | Universe k -&gt; Universe (k + 1)
-  | Pi (x, t1, t2) -&gt;
+     with Not_found -> Error.typing "unkown identifier %t" (Print.variable x))
+  | Universe k -> Universe (k + 1)
+  | Pi (x, t1, t2) ->
     let k1 = infer_universe ctx t1 in
     let k2 = infer_universe (extend x t1 ctx) t2 in
       Universe (max k1 k2)
-  | Lambda (x, t, e) -&gt;
+  | Lambda (x, t, e) ->
     let _ = infer_universe ctx t in
     let te = infer_type (extend x t ctx) e in
       Pi (x, t, te)
-  | App (e1, e2) -&gt;
+  | App (e1, e2) ->
     let (x, s, t) = infer_pi ctx e1 in
     let te = infer_type ctx e2 in
       check_equal ctx s te ;
@@ -161,7 +161,7 @@ Ok, here we go:
   1. The type of a variable is looked up in the context.
   2. The type of $\mathtt{Type}\_k$ is $\mathtt{Type}\_{k+1}$.
   3. The type of $\prod\_{x : T\_1} T\_2$ is $\mathtt{Type}\_{\max(k, m)}$ where $T\_1$ has type $\mathtt{Type}\_k$ and $T\_2$ has type $\mathtt{Type}\_m$ in the context extended with $x : T_1$.
-  4. The type of $\lambda x : T \; . \; e$ is $\prod_{x : T} T&#8217;$ where $T&#8217;$ is the type of $e$ in the context extended with $x : T$.
+  4. The type of $\lambda x : T \; . \; e$ is $\prod_{x : T} T'$ where $T'$ is the type of $e$ in the context extended with $x : T$.
   5. The type of $e\_1 \; e\_2$ is $T[x/e\_2]$ where $e\_1$ has type $\prod\_{x : S} T$ and $e\_2$ has type $S$.
 
 The typing rules refer to auxiliary functions `infer_universe`, `infer_pi`, and `check_equal`, which we have not defined yet. The function `infer_universe` infers the type of an expression, makes sure that the type is of the form $\mathtt{Type}_k$, and returns $k$. A common mistake is to think that you can implement it like this:
@@ -169,8 +169,8 @@ The typing rules refer to auxiliary functions `infer_universe`, `infer_pi`, and 
 <pre class="brush: plain; title: ; notranslate" title="">(** Why is this infer_universe wrong? *)
 and bad_infer_universe ctx t =
     match infer_type ctx t with
-      | Universe k -&gt; u
-      | App _ | Var _ | Pi _ | Lambda _ -&gt; Error.typing "type expected"
+      | Universe k -> u
+      | App _ | Var _ | Pi _ | Lambda _ -> Error.typing "type expected"
 </pre>
 
 This will not do. For example, what if `infer_type ctx t` returns the type $(\lambda x : \mathtt{Type}\_{4} \; . \; x) \mathtt{Type}\_3$? Then `infer_universe` will complain, because it does not see that the type it got is equal to $\mathtt{Type}_3$, even though it is not syntactically the same expression. We need to insert a normalization procedure which converts the type to a form from which we can read off its shape:
@@ -179,8 +179,8 @@ This will not do. For example, what if `infer_type ctx t` returns the type $(\la
 and infer_universe ctx t =
   let u = infer_type ctx t in
     match normalize ctx u with
-      | Universe k -&gt; k
-      | App _ | Var _ | Pi _ | Lambda _ -&gt; Error.typing "type expected"
+      | Universe k -> k
+      | App _ | Var _ | Pi _ | Lambda _ -> Error.typing "type expected"
 </pre>
 
 We shall implement normalization in a moment, but first we write down the other two auxiliary functions:
@@ -190,8 +190,8 @@ We shall implement normalization in a moment, but first we write down the other 
 and infer_pi ctx e =
   let t = infer_type ctx e in
     match normalize ctx t with
-      | Pi a -&gt; a
-      | Var _ | App _ | Universe _ | Lambda _ -&gt; Error.typing "function expected"
+      | Pi a -> a
+      | Var _ | App _ | Universe _ | Lambda _ -> Error.typing "function expected"
 
 (** [check_equal ctx e1 e2] checks that expressions [e1] and [e2] are equal. *)
 and check_equal ctx e1 e2 =
@@ -201,28 +201,28 @@ and check_equal ctx e1 e2 =
 
 ### Normalization and equality
 
-We need a function `normalize` which takes an expression and &#8220;computes&#8221; it, so that we can tell when something is a universe, and when something is a function. There are several strategies on how we might do this, and any will do as long as we have the following property: if $e\_1$ and $e\_2$ are equal (type theorists say that they are _judgmentally equal_, or sometimes that they are _definitionally equal_) then after normalization they should become syntactically equal, up to renaming of bound variables.
+We need a function `normalize` which takes an expression and “computes” it, so that we can tell when something is a universe, and when something is a function. There are several strategies on how we might do this, and any will do as long as we have the following property: if $e\_1$ and $e\_2$ are equal (type theorists say that they are _judgmentally equal_, or sometimes that they are _definitionally equal_) then after normalization they should become syntactically equal, up to renaming of bound variables.
 
 Our judgmental equality essentially has just two simple rules, [$\beta$-reduction](http://en.wikipedia.org/wiki/Beta_reduction#Reduction) and unfolding of definitions. So this is what the normalization procedure does:
 
 <pre class="brush: plain; title: ; notranslate" title="">(** [normalize ctx e] normalizes the given expression [e] in context [ctx]. It removes
     all redexes and it unfolds all definitions. It performs normalization under binders.  *)
 let rec normalize ctx = function
-  | Var x -&gt;
+  | Var x ->
     (match
         (try lookup_value x ctx
-         with Not_found -&gt; Error.runtime "unkown identifier %t" (Print.variable x))
+         with Not_found -> Error.runtime "unkown identifier %t" (Print.variable x))
      with
-       | None -&gt; Var x
-       | Some e -&gt; normalize ctx e)
-  | App (e1, e2) -&gt;
+       | None -> Var x
+       | Some e -> normalize ctx e)
+  | App (e1, e2) ->
     let e2 = normalize ctx e2 in
       (match normalize ctx e1 with
-        | Lambda (x, _, e1') -&gt; normalize ctx (subst [(x,e2)] e1')
-        | e1 -&gt; App (e1, e2))
-  | Universe k -&gt; Universe k
-  | Pi a -&gt; Pi (normalize_abstraction ctx a)
-  | Lambda a -&gt; Lambda (normalize_abstraction ctx a)
+        | Lambda (x, _, e1') -> normalize ctx (subst [(x,e2)] e1')
+        | e1 -> App (e1, e2))
+  | Universe k -> Universe k
+  | Pi a -> Pi (normalize_abstraction ctx a)
+  | Lambda a -> Lambda (normalize_abstraction ctx a)
 
 and normalize_abstraction ctx (x, t, e) =
   let t = normalize ctx t in
@@ -236,12 +236,12 @@ How about testing for equality of expressions, which was needed in the rule for 
 let equal ctx e1 e2 =
   let rec equal e1 e2 =
     match e1, e2 with
-      | Var x1, Var x2 -&gt; x1 = x2
-      | App (e11, e12), App (e21, e22) -&gt; equal e11 e21 && equal e12 e22
-      | Universe k1, Universe k2 -&gt; k1 = k2
-      | Pi a1, Pi a2 -&gt; equal_abstraction a1 a2
-      | Lambda a1, Lambda a2 -&gt; equal_abstraction a1 a2
-      | (Var _ | App _ | Universe _ | Pi _ | Lambda _), _ -&gt; false
+      | Var x1, Var x2 -> x1 = x2
+      | App (e11, e12), App (e21, e22) -> equal e11 e21 && equal e12 e22
+      | Universe k1, Universe k2 -> k1 = k2
+      | Pi a1, Pi a2 -> equal_abstraction a1 a2
+      | Lambda a1, Lambda a2 -> equal_abstraction a1 a2
+      | (Var _ | App _ | Universe _ | Pi _ | Lambda _), _ -> false
   and equal_abstraction (x, t1, e1) (y, t2, e2) =
     equal t1 t2 && (equal e1 (subst [(y, Var x)] e2))
   in
@@ -254,7 +254,7 @@ And that is it! We have the core of the system written down. The rest is just [c
 
 #### Parser: [`parser.mly`](https://github.com/andrejbauer/tt/blob/blog-part-I/parser.mly) and [`lexer.mll`](https://github.com/andrejbauer/tt/blob/blog-part-I/lexer.mll)
 
-You never ever want to write a parser with your bare hands. Insetad, you should use a [parser generator](http://en.wikipedia.org/wiki/Compiler-compiler). There are many, I used [menhir](http://gallium.inria.fr/~fpottier/menhir/). Parser generators can be a bit scary, but a good way to get started is to take someone else&#8217;s parser and fiddle with it.
+You never ever want to write a parser with your bare hands. Insetad, you should use a [parser generator](http://en.wikipedia.org/wiki/Compiler-compiler). There are many, I used [menhir](http://gallium.inria.fr/~fpottier/menhir/). Parser generators can be a bit scary, but a good way to get started is to take someone else's parser and fiddle with it.
 
 #### Pretty printer: [`print.ml`](https://github.com/andrejbauer/tt/blob/blog-part-I/print.ml) and [`beautify.ml`](https://github.com/andrejbauer/tt/blob/blog-part-I/beautify.ml)
 
@@ -283,20 +283,20 @@ Here is a sample session:
 [Type Ctrl-D to exit or "Help." for help.]
 # Parameter N : Type 0.
 N is assumed
-# Parameter z : N. Parameter s : N -&gt; N.
+# Parameter z : N. Parameter s : N -> N.
 z is assumed
 s is assumed
-# Definition three := fun f : N -&gt; N =&gt; fun x : N =&gt; f (f (f x)).
+# Definition three := fun f : N -> N => fun x : N => f (f (f x)).
 three is defined
 # Context.
-three = fun f : N -&gt; N =&gt; fun x : N =&gt; f (f (f x))
-    : (N -&gt; N) -&gt; N -&gt; N
-s : N -&gt; N
+three = fun f : N -> N => fun x : N => f (f (f x))
+    : (N -> N) -> N -> N
+s : N -> N
 z : N
 N : Type 0
 # Check (three (three s)).
 three (three s)
-    : N -&gt; N
+    : N -> N
 # Eval (three (three s)) z.
     = s (s (s (s (s (s (s (s (s z))))))))
     : N

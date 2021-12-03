@@ -13,6 +13,6 @@ With [Chris Stone.](http://www.cs.hmc.edu/~stone/)
 
 **Presented at:** _Reliable Implementation of Real Number Algorithms: Theory and Practice,_ [Dagstuhl Seminar 06021](http://www.dagstuhl.de/06021/). 
 
-**Abstract:** see [&#8220;Specifications via Realizability (CLASE)&#8221;](/2005/04/09/specifications-via-realizability/).
+**Abstract:** see [“Specifications via Realizability (CLASE)”](/2005/04/09/specifications-via-realizability/).
 
 **Talk notes:** [rz-dagstuhl.pdf](/asset/data/rz-dagstuhl.pdf) (handwritten notes of the talk with examples of how RZ works)

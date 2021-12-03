@@ -1,6 +1,6 @@
 ---
 id: 1777
-title: 'TEDx &#8220;Zeroes&#8221;'
+title: 'TEDx “Zeroes”'
 date: 2014-10-16T09:01:03+02:00
 author: Andrej Bauer
 layout: post
@@ -11,7 +11,7 @@ categories:
   - Software
   - Talks
 ---
-I spoke at [TEDx University of Ljubljana](http://tedxul.si). The topic was how programming influences various aspects of life. I showed the audence how a bit of simple programming can reveal the beauty of mathematics. Taking John Baez&#8217;s [The Bauty of Roots](http://www.math.ucr.edu/home/baez/roots/) as an inspiration, I drew a very large image (20000 by 17500 pixels) of all roots of all polynomials of degree at most 26 whose coefficients are $-1$ or $1$. That&#8217;s 268.435.452 polynomials and 6.979.321.752 roots. It is two degrees more than Sam Derbyshire&#8217;s image,  so consider the race to be on! Who can give me 30 degrees?
+I spoke at [TEDx University of Ljubljana](http://tedxul.si). The topic was how programming influences various aspects of life. I showed the audence how a bit of simple programming can reveal the beauty of mathematics. Taking John Baez's [The Bauty of Roots](http://www.math.ucr.edu/home/baez/roots/) as an inspiration, I drew a very large image (20000 by 17500 pixels) of all roots of all polynomials of degree at most 26 whose coefficients are $-1$ or $1$. That's 268.435.452 polynomials and 6.979.321.752 roots. It is two degrees more than Sam Derbyshire's image,  so consider the race to be on! Who can give me 30 degrees?
 
 <!--more-->
 
@@ -27,7 +27,7 @@ Oh, and a piece of Mathematica code that generates the zeroes [fits into a tweet
 
 ### The videos
 
-The &#8220;[Zeroes](https://www.youtube.com/playlist?list=PL-47DDuiZOMBk0_yOF75WtKqe75OrhCf5)&#8221; YouTube channel contains the animations. The ones I showed in the TEDx talk are in Full HD (1920 by 1080). There is also a lower resolution animation of how zeroes move around when we change the coefficients. Here is one of the movies, but you really should watch it in Full HD to see all the details.
+The “[Zeroes](https://www.youtube.com/playlist?list=PL-47DDuiZOMBk0_yOF75WtKqe75OrhCf5)” YouTube channel contains the animations. The ones I showed in the TEDx talk are in Full HD (1920 by 1080). There is also a lower resolution animation of how zeroes move around when we change the coefficients. Here is one of the movies, but you really should watch it in Full HD to see all the details.
 
 
 

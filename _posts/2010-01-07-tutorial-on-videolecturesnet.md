@@ -12,4 +12,4 @@ categories:
   - Programming
   - Tutorial
 ---
-Already a while ago [videolectures.net](http://www.videolectures.net) published this **[tutorial on Computer Verified Exact Analysis](http://videolectures.net/aug09_spitters_oconnor_cvia/)** by [Bas Spitters](http://www.cs.ru.nl/~spitters/) and [Russell O&#8217;Connor](http://r6.ca/) from [Computability and Complexity in Analysis 2009](http://cca-net.de/cca2009/). I forgot to advertise it, so I am doing this now. It is about an implementation of exact real arithmetic whose correctness has been verified in Coq. Russell also gave a quick tutorial on Coq.
+Already a while ago [videolectures.net](http://www.videolectures.net) published this **[tutorial on Computer Verified Exact Analysis](http://videolectures.net/aug09_spitters_oconnor_cvia/)** by [Bas Spitters](http://www.cs.ru.nl/~spitters/) and [Russell O'Connor](http://r6.ca/) from [Computability and Complexity in Analysis 2009](http://cca-net.de/cca2009/). I forgot to advertise it, so I am doing this now. It is about an implementation of exact real arithmetic whose correctness has been verified in Coq. Russell also gave a quick tutorial on Coq.

@@ -35,9 +35,9 @@ Let us consider an example. The real numbers are a mathematical object of fundam
   7. The reals as Brouwerian continuum cannot be decomposed into two disjoint inhabited subsets.
   8. The reals are overt.
 
-We can have some of these properties but not all at once. History has chosen for us a combination that is taught today as a dogma. Any attempt to deviate from it is met with opposition. Thus you probably consider 1, 2, 3, and 4 as true, 5 as something exotic you heard of, 6 as Leibniz&#8217;s biggest mistake, 7 as intuitionistic hallucination (because obviously the reals can be decomposed into the non-negative and negative numbers), and 8 as something you never heard of (but you should have because it is the concept dual to compactness and you have been using it all your life).
+We can have some of these properties but not all at once. History has chosen for us a combination that is taught today as a dogma. Any attempt to deviate from it is met with opposition. Thus you probably consider 1, 2, 3, and 4 as true, 5 as something exotic you heard of, 6 as Leibniz's biggest mistake, 7 as intuitionistic hallucination (because obviously the reals can be decomposed into the non-negative and negative numbers), and 8 as something you never heard of (but you should have because it is the concept dual to compactness and you have been using it all your life).
 
-Once we break free from Cantor&#8217;s paradise that Hilbert threw us in we discover unsuspected possibilities:
+Once we break free from Cantor's paradise that Hilbert threw us in we discover unsuspected possibilities:
 
   1. It may happen that the reals are in 1-1 correspondence with a subset of the natural numbers, while at the same time they form an uncountable set.
   2. It may happen that the reals form a proper class.

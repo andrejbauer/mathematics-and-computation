@@ -20,7 +20,7 @@ I am on a roll. In the second post on how to implement dependent type theory we 
 
 <!--more-->
 
-The relevant Github repository is [andrejbauer/tt/](https://github.com/andrejbauer/tt/tree/blog-part-II) (branch blog-part-II). By the way, there are probably bugs in the implementation, I am not spending a huge amount of time on testing (mental note: put &#8220;implement testing&#8221; on the to do list). If you discover one, please tell me, or preferrably make a pull request with a fix. This also applies to old branches.
+The relevant Github repository is [andrejbauer/tt/](https://github.com/andrejbauer/tt/tree/blog-part-II) (branch blog-part-II). By the way, there are probably bugs in the implementation, I am not spending a huge amount of time on testing (mental note: put “implement testing” on the to do list). If you discover one, please tell me, or preferrably make a pull request with a fix. This also applies to old branches.
 
 ### Source code positions
 
@@ -33,7 +33,7 @@ The OCaml lexer keeps track of positions, and menhir has support for them, so we
   | Nowhere
 </pre>
 
-The type `Lexing.position` is the one from OCaml lexer. Each expression is associated with two such positions, its beginning and end. To tag expressions with positions we define two types: `expr` is an expression with a position and `expr'` without (I stole the idea from [Matija Pretnar](http://matija.pretnar.info/)&#8216;s [eff](/eff/) code):
+The type `Lexing.position` is the one from OCaml lexer. Each expression is associated with two such positions, its beginning and end. To tag expressions with positions we define two types: `expr` is an expression with a position and `expr'` without (I stole the idea from [Matija Pretnar](http://matija.pretnar.info/)'s [eff](/eff/) code):
 
 <pre class="brush: plain; title: ; notranslate" title="">(** Abstract syntax of expressions. *)
 type expr = expr' * position
@@ -56,12 +56,12 @@ We also extend the pretty printer and error reporting with positions, feel free 
 
 This is a fairly trivial change. It is annoying to have to write things like
 
-<pre class="brush: plain; title: ; notranslate" title="">fun x : A =&gt; fun y : A =&gt; fun z : B =&gt; fun w : B =&gt; ...
+<pre class="brush: plain; title: ; notranslate" title="">fun x : A => fun y : A => fun z : B => fun w : B => ...
 </pre>
 
 We improve the parser so that it accepts syntax like
 
-<pre class="brush: plain; title: ; notranslate" title="">fun (x y : A) (z w : B) =&gt; ...
+<pre class="brush: plain; title: ; notranslate" title="">fun (x y : A) (z w : B) => ...
 </pre>
 
 Let us read out the relevant portion of [parser.mly](https://github.com/andrejbauer/tt/blob/blog-part-II/parser.mly), namely the rules `abstraction`, `bind1` and `binds`:
@@ -75,7 +75,7 @@ Let us read out the relevant portion of [parser.mly](https://github.com/andrejba
 bind1: mark_position(plain_bind1) { $1 }
 plain_bind1:
   | xs = nonempty_list(NAME) COLON t = expr
-    { (List.map (fun x -&gt; String x) xs, t) }
+    { (List.map (fun x -> String x) xs, t) }
 
 binds:
   | LPAREN b = bind1 RPAREN
@@ -84,13 +84,13 @@ binds:
     { b :: lst }
 </pre>
 
-A `bind1` is something of the form `x y ... z : t`. A `binds` is a non-empty list of parenthesized `bind1`&#8216;s. An abstraction is either a `bind1` or a `binds`. Thus we can write `fun x y z : t => ...` and `fun (x y z : t) => ...` and `fun (x y : t) (z : t) => ...` but not `fun x y : y (z : t) => ...`.
+A `bind1` is something of the form `x y ... z : t`. A `binds` is a non-empty list of parenthesized `bind1`'s. An abstraction is either a `bind1` or a `binds`. Thus we can write `fun x y z : t => ...` and `fun (x y z : t) => ...` and `fun (x y : t) (z : t) => ...` but not `fun x y : y (z : t) => ...`.
 
 ### Normalization by evaluation
 
-In the first version we performed normalization by substitution, just like theory books say we should. But this is horribly inefficient. We could improve efficiency by keeping a current substitution (a &#8220;runtime&#8221; environment) which maps variables to the expressions. When we encounter a variable we look up its value in the current substitution. This way at least we do not keep traversing expressions during substitutions.
+In the first version we performed normalization by substitution, just like theory books say we should. But this is horribly inefficient. We could improve efficiency by keeping a current substitution (a “runtime” environment) which maps variables to the expressions. When we encounter a variable we look up its value in the current substitution. This way at least we do not keep traversing expressions during substitutions.
 
-An even cooler way to normalize is known as normalization by evaluation. We first &#8220;evaluate&#8221; expressions to actual OCaml values in such a way that definitionally equal expressions evaluate to (observationally) equivalent values, and then we reconstruct the expression from the value (the fancy speak is that we [reify](http://dictionary.reference.com/browse/reify) the value). Apart from giving us a normal form there are all sorts of other benefits (Dan Grayson keeps asking me which, perhaps the more knowledgable readers can point them out).
+An even cooler way to normalize is known as normalization by evaluation. We first “evaluate” expressions to actual OCaml values in such a way that definitionally equal expressions evaluate to (observationally) equivalent values, and then we reconstruct the expression from the value (the fancy speak is that we [reify](http://dictionary.reference.com/browse/reify) the value). Apart from giving us a normal form there are all sorts of other benefits (Dan Grayson keeps asking me which, perhaps the more knowledgable readers can point them out).
 
 We need a datatype `value` into which we evaluate expressions. We need to evaluate expressions with free variables, which means that we are going to get stuck on applications of the form `x v1 v2 .. vn` where `x` is a free variable (these are called head-normal). We collect those in a separate datatype `neutral`:
 
@@ -100,7 +100,7 @@ We need a datatype `value` into which we evaluate expressions. We need to evalua
   | Pi of abstraction
   | Lambda of abstraction
 
-and abstraction = variable * value * (value -&gt; value)
+and abstraction = variable * value * (value -> value)
 
 and neutral =
   | Var of variable
@@ -119,23 +119,23 @@ Ok, let us try something fun. How about [Church numerals](http://en.wikipedia.or
 
 <pre class="brush: plain; title: ; notranslate" title="">Parameter N : Type 0.
 Parameter z : N.
-Parameter s : N -&gt; N.
+Parameter s : N -> N.
 
-Definition numeral := forall A : Type 0, (A -&gt; A) -&gt; (A -&gt; A).
+Definition numeral := forall A : Type 0, (A -> A) -> (A -> A).
 
-Definition zero := fun (A : Type 0) (f : A -&gt; A) (x : A) =&gt; x.
-Definition one := fun (A : Type 0) (f : A -&gt; A) =&gt; f.
-Definition two := fun (A : Type 0) (f : A -&gt; A) (x : A) =&gt; f (f x).
-Definition three := fun (A : Type 0) (f : A -&gt; A) (x : A) =&gt; f (f (f x)).
+Definition zero := fun (A : Type 0) (f : A -> A) (x : A) => x.
+Definition one := fun (A : Type 0) (f : A -> A) => f.
+Definition two := fun (A : Type 0) (f : A -> A) (x : A) => f (f x).
+Definition three := fun (A : Type 0) (f : A -> A) (x : A) => f (f (f x)).
 
 Definition plus :=
-  fun (m n : numeral) (A : Type 0) (f : A -&gt; A) (x : A) =&gt; m A f (n A f x).
+  fun (m n : numeral) (A : Type 0) (f : A -> A) (x : A) => m A f (n A f x).
 
 Definition times :=
-  fun (m n : numeral) (A : Type 0) (f : A -&gt; A) (x : A) =&gt; m A (n A f) x.
+  fun (m n : numeral) (A : Type 0) (f : A -> A) (x : A) => m A (n A f) x.
 
 Definition power :=
-  fun (m n : numeral) (A : Type 0) =&gt; m (A -&gt; A) (n A).
+  fun (m n : numeral) (A : Type 0) => m (A -> A) (n A).
   
 Definition four := plus two two.
 Definition five := plus two three.

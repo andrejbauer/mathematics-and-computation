@@ -17,9 +17,9 @@ The languages are not meant to compete in speed or complexity with their bigger 
 
 It takes time to clean up the code and translate it from Slovene to English, so I am starting with just three languages:
 
-  * **calc** &#8211; a simple calculator
-  * **miniml** &#8211; eager purely functional language
-  * **minihaskell** &#8211; lazy purely functional language
+  * **calc** - a simple calculator
+  * **miniml** - eager purely functional language
+  * **minihaskell** - lazy purely functional language
 
 I have many more in store: a polymorphic functional language, an imperative language, a language with record subtyping, an object-oriented language, miniScheme, and miniProlog. I will eventually clean up the source code and publish it in the [PL Zoo](http://www.andrej.com/plzoo/). In the future I would like to add other languages, as well as demonstrate a variety of compilation and optimization techniques.
 

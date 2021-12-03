@@ -14,10 +14,10 @@ categories:
 ---
 I am looking for a PhD student in mathematics. Full tuition & stipend will be provided for a period of three years, which is also the official length of the programme. The topic of research is somewhat flexible and varies from constructive models of homotopy type theory to development of a programming language for a proof assistant based on dependent type theory, see the [short summary of the Effmath project](http://math.andrej.com/wp-content/uploads/2014/11/description.pdf) for a more detailed description.
 
-The candidate should have as many of the following desiderata as possible, and at the very least a master&#8217;s degree (or an equivalent one):
+The candidate should have as many of the following desiderata as possible, and at the very least a master's degree (or an equivalent one):
 
-  1. a master&#8217;s degree in mathematics, with good knowledge of computer science
-  2. a master&#8217;s degree in computer science, with good knowledge of mathematics
+  1. a master's degree in mathematics, with good knowledge of computer science
+  2. a master's degree in computer science, with good knowledge of mathematics
   3. experience with functional programming
   4. experience with proof assistants
   5. familiarity with homotopy type theory
