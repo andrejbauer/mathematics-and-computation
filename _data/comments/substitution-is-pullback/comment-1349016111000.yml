@@ -6,15 +6,16 @@ message: >-
   composition and sometimes pullback.
 
 
-  The <b>Subsititution Lemma</b> in type theory says how substitutions commute:
-  $$ [a/x]^* ([b/y]^* t) = [a/x]^* ([[a/x]^*b/y]^*t),$$ where $[a/x]^*t$ is the
+  The **Substitution Lemma** in type theory says how substitutions commute:
+  $$[a/x]^\ast([b/y]^\ast t) = [a/x]^\ast ([[a/x]^\ast b/y]^\ast t),$$
+  where $[a/x]^*t$ is the
   result of substituting $a$ for $x$ in $t$. The superscript star comes from
   inverse images and pullbacks in category theory.
 
 
-  All of this is an <b>action</b> on $t$, which we can omit. This leaves
+  All of this is an **action** on $t$, which we can omit. This leaves
   composition of abstract morphisms, in fact in the classifying category. So, as
-  Andrej says, <b>substitution of terms is composition</b>.
+  Andrej says, **substitution of terms is composition**.
 
 
   However, this commutative square of morphisms is a pullback.
@@ -32,6 +33,5 @@ message: >-
   <center><img src="http://www.paultaylor.eu/prafm/png/page449001.png"></center>
 
   It is an example of the easy "pullback lemma" of which Andrej for some reason
-  recently <a href=http://math.andrej.com/2012/05/30/the-pullback-lemma/
-  rel="nofollow">gave a proof</a>. 
+  recently [gave a proof](http://math.andrej.com/2012/05/30/the-pullback-lemma). 
 email: 24674efd7c9de6dad323b394fbdf2ebd
