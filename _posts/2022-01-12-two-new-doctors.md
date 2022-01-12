@@ -6,10 +6,10 @@ categories:
   - News
 ---
 
-Within one month two of my students defended their theses: [Dr. Anja Petković Komel](https://anjapetkovic.com) just before Christmas, and [Dr. Philipp Haselwarter](https://haselwarter.org) just yesterday. I am very proud of them. Congratulations!
+Within a month two of my students defended their theses: [Dr. Anja Petković Komel](https://anjapetkovic.com) just before Christmas, and [Dr. Philipp Haselwarter](https://haselwarter.org) just yesterday. I am very proud of them. Congratulations!
 
 
-Philipp's thesis [An Effective Metatheory for Type Theory](link-pending) has three parts:
+Philipp's thesis [An Effective Metatheory for Type Theory](https://haselwarter.org/assets/pdfs/effective-metatheory-for-type-theory.pdf) has three parts:
 
 1. A formulation and a study of the notion of **finitary type theories** and **standard type theories**. These are closely related to the [general type theories](https://arxiv.org/abs/2009.05539) that were developed with [Peter Lumsdaine](http://peterlefanulumsdaine.com), but are tailored for implementation.
 
