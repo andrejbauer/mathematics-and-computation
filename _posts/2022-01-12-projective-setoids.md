@@ -47,7 +47,7 @@ Such objects are known as *projective*. The Agda code for this is
 Actually, the above code uses surjectivity in place of being epimorphic, so we should verify that the two notions coincide in setoids, which is done in [`Epimorphism.agda`](https://gist.github.com/andrejbauer/65ee1ae98167e6411e512d3e5a36c086#file-epimorphism-agda). The human proof goes as follows, where we write $=_A$ or just $=$ for the equivalence relation on a setoid $A$.
 
 
-**Theorem:** *A setoid morphism $f : A \to B$ is epi if, and only if, $\Pi (y : B) . \Sigma (x : B) . f \, x =_B y$.*
+**Theorem:** *A setoid morphism $f : A \to B$ is epi if, and only if, $\Pi (y : B) . \Sigma (x : A) . f \, x =_B y$.*
 
 *Proof.* (⇒) I [wrote up the proof on MathOverflow](https://mathoverflow.net/a/178804/1176). That one works for toposes, but is easy to transliterate to setoids, just replace the subobject classifier $\Omega$ with the setoid of propositions $(\mathrm{Type}, {\leftrightarrow})$.
 
@@ -83,7 +83,7 @@ Suppose $(A, {=_A})$ is a projective setoid. How could we get a type $T$ such th
 \end{align}
 
 is surjective, therefore epi. Because $A$ is projective, the map splits, so we have a setoid morphism $s : (A, {=_A}) \to (A, \mathrm{Id}_A)$ such that $r \circ s = \mathrm{id}$. The endomap $s \circ r : A \to A$ is a choice of canonical representatives of equivalence classes of $(A, {=_A})$, so we expect $(A, {=_A})$ to be isomorphic to $\Delta T$ where
-$$T = \Sigma (x : A) \mathrm{Id}_A(s (r \, x), x).$$
+$$T = \Sigma (x : A) . \mathrm{Id}_A(s (r \, x), x).$$
 The mediating isomorphisms are
 
 \begin{align}
@@ -99,10 +99,10 @@ There is no a priori reason why $\zeta x$ and $\xi$ would be equal.
 If $A$ is an h-set then we are done because they will be equal by fiat. But what do to in general? I do not know and I leave you with an open problem:
 
 <center>
-**Is every projective setoids isomorphic to a type?**
+<b>Is every projective setoids isomorphic to a type?</b>
 </center>
 
-Egbert Rijke and I spent one tea-time thinking about producing a counter-example by using circles and other HoTT gadgets, but we failed. Just a word of warning: in HoTT/UF the map $1 \to S^1$ from the unit type to the circle us onto (in the HoTT sense) *but* $\Delta 1 \to \Delta S^1$ is *not* epi in setoids, because that would give us a splitting o $1 \to S^1$.
+Egbert Rijke and I spent one tea-time thinking about producing a counter-example by using circles and other HoTT gadgets, but we failed. Just a word of warning: in HoTT/UF the map $1 \to S^1$ from the unit type to the circle is onto (in the HoTT sense) *but* $\Delta 1 \to \Delta S^1$ is *not* epi in setoids, because that would split $1 \to S^1$.
 
 Here is an obvious try: use the propositional truncation and define
 $$
