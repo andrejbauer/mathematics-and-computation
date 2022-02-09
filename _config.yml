@@ -1,5 +1,6 @@
 name: Mathematics and Computation
 description: A blog about mathematics for computers
+url: http://math.andrej.com
 
 kramdown:
   hard_wrap: false
