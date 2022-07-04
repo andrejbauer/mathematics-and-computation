@@ -1,0 +1,6 @@
+_id: e83d64c0-fbb6-11ec-9eaa-614716a6ee31
+name: Ezalb
+email: 17616f20c398044dbe0de693926b7d5a
+url: ''
+message: "Hi Professor Bauer,\r\n\r\nIf I were to prove an implication of the form $\\phi \\Rightarrow \\neg \\psi$ by assuming $\\phi and $\\psi and deriving absurdity, I would be proving it by contradiction, right? Because I'm assuming that the implication does not hold. If I set $\\theta = $\\phi \\Rightarrow \\neg \\psi$, what I'm doing is to assume $\\neg \\theta$ and from that derive a falsity. Is this correct?"
+date: 1656952354
