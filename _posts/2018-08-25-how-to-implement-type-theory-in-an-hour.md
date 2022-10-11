@@ -13,4 +13,5 @@ categories:
 ---
 I was purging the disk on my laptop of large files and found a video lecture which I forgot to publish. Here it is with some delay. I lectured on how to implement type theory at the [School and Workshop on Univalent Mathematics](https://unimath.github.io/bham2017/) in December 2017, at the University of Birmingham (UK).
 
-You may [watch the video](https://vimeo.com/286652934) and visit the accompanying GitHub repository [spartan-type-theory](https://github.com/andrejbauer/spartan-type-theory).
+You may visit the GitHub repository [spartan-type-theory](https://github.com/andrejbauer/spartan-type-theory).
+There used to be a video, but I lost it.
