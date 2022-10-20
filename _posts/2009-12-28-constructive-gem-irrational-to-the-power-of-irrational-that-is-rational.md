@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=410
 permalink: /2009/12/28/constructive-gem-irrational-to-the-power-of-irrational-that-is-rational/
 categories:
-  - General
+  - Constructive gem
 ---
 The following argument is [often cited](http://en.wikipedia.org/wiki/Law_of_the_excluded_middle#Examples) as an example of the necessity of the law of excluded middle and classical logic. We are supposed to demonstrate the existence of two irrational numbers $a$ and $b$ such that their power $a^b$ is rational. By the law of excluded middle, $\sqrt{2}^{\sqrt{2}}$ is rational or not. If it is rational, take $a = b = \sqrt{2}$, otherwise take $a = \sqrt{2}^{\sqrt{2}}$ and $b = \sqrt{2}$. In either case $a^b$ is rational. Let us think about this for a moment, from constructive point of view.
 
