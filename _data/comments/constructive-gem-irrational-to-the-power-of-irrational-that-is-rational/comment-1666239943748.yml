@@ -1,0 +1,18 @@
+_id: 4272acd0-502f-11ed-a52d-65da6f212714
+name: Koray
+email: 7914aef5c0c657574722d7ace789cc9d
+url: ''
+message: >-
+  In the constructive proof we show witnesses to the claim that there are two
+  irrational numbers $$a$$ and $$b$$ such that $$a^{b}$$ is irrational, and we
+  do this without using LEM. But this proof relies on the proposition that for
+  any two real numbers $$a$$ and $$b$$, $$a^{\log{a}b} = b$$. Maybe we are using
+  LEM in the proof of this proposition? Or did we actually compute the value of
+  $$2^{\log_{2}3}$$ and found it to be 3? And also, what would be a constructive
+  definition of logarithm? Is it an algorithm that computes $$\log_{a}b$$ for
+  any real number $$a$$ and $$b$$? My point is, without some further
+  clarification, the constructive proof looks just like a classical proof that
+  picks out two numbers. It is not using LEM on the surface, but I am not sure
+  if we have managed to avoid it completely; so I hesitate to call this proof
+  constructive, and I know that this is a famous example of constructive proof.
+date: 1666239943
