@@ -8,6 +8,7 @@ categories:
 
 Within a month two of my students defended their theses: [Dr. Anja Petković Komel](https://anjapetkovic.com) just before Christmas, and [Dr. Philipp Haselwarter](https://haselwarter.org) just yesterday. I am very proud of them. Congratulations!
 
+<!--more-->
 
 Philipp's thesis [An Effective Metatheory for Type Theory](https://haselwarter.org/assets/pdfs/effective-metatheory-for-type-theory.pdf) has three parts:
 

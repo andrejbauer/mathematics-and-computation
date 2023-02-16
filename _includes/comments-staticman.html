@@ -1,0 +1,62 @@
+<div class="comments">
+    {% if site.data.comments[page.slug] %}
+      <h3>Comments</h3>
+
+        {% assign count = 0 %}
+
+        {% assign comments = site.data.comments[page.slug] %}
+        {% assign comments = (comments | sort) %}
+        {% for comment in comments %}
+            {% assign index       = (forloop.index | minus: count) %}
+            {% assign avatar      = comment[1].avatar %}
+            {% assign email       = comment[1].email %}
+            {% assign name        = comment[1].name %}
+            {% assign url         = comment[1].url %}
+            {% assign date        = comment[1].date %}
+            {% assign message     = comment[1].message %}
+            {% include comment.html index=index avatar=avatar email=email name=name url=url date=date message=message %}
+            {% assign count = count | plus: 1 %}
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div class="comment-form">
+<h5>Post a comment:</h5>
+
+<div class="comment-legend">
+  Write your comment using <a href="https://www.markdownguide.org">Markdown</a>.
+  Use <code>$⋯$</code> for inline and <code>$$⋯$$</code> for display LaTeX formulas,
+  and <code>&lt;pre&gt;⋯&lt;/pre&gt;</code> for display code. Your E-mail address is only used to compute
+  your <a href="https://gravatar.com">Gravatar</a> and is not stored anywhere.
+
+  After submitting your comment, you will be taken to the GitHub
+  <a href="https://github.com/andrejbauer/mathematics-and-computation/pulls">pull requests</a>
+  page where you should be able to confirm that your comment has been submitted.
+</div>
+
+<form method="POST" action="{{ site.staticman.site }}/v2/entry/{{ site.staticman.username }}/{{ site.staticman.repository }}/{{ site.staticman.branch }}/comments">
+  <input name="options[redirect]" type="hidden" value="{{site.url}}{{page.url}}">
+  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <p class="comment-field">
+    <legend for="name" class="required">Name</legend>
+    <input id="name" name="fields[name]" type="text">
+  </p>
+  <p class="comment-field">
+    <legend for="email" class="required">E-mail</legend>
+    <input id="email" name="fields[email]" type="email">
+  </p>
+  <p class="comment-field">
+    <legend for="website">Website</legend>
+    <input id="website" name="fields[url]" type="url">
+  </p>
+  <p class="comment-field">
+    <legend for="comment" class="required">Comment</legend>
+    <textarea id="comment" name="fields[message]" rows="12"></textarea>
+  </p>
+
+  <div>
+    <legend>&nbsp;</legend>
+    <button type="submit">Post comment</button>
+  </div>
+</form>
+</div>

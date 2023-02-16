@@ -9,9 +9,12 @@ categories:
 
 It is my pleasure to have the opportunity to speak at the [University of Wisconsin Logic
 seminar](https://www.math.wisc.edu/logic/seminar.html). The hosts are graciously keeping the seminar open for everyone.
-I will speak about a favorite topic of mine:
+I will speak about a favorite topic of mine, synthetic computability.
+
+<!--more-->
 
 ##### Synthetic mathematics with an excursion into computability theory
+
 
 **Speaker:** Andrej Bauer (University of Ljubljana)  
 **Location:** [University of Wisconsin Logic seminar](https://www.math.wisc.edu/logic/seminar.html)  
