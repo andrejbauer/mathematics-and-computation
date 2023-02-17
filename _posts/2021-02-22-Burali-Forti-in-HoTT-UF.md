@@ -4,7 +4,7 @@ author: Martin Escardo
 layout: post
 categories:
   - Type theory
-  - Constructive mathematics
+  - Constructive math
 ---
 
 This is joint work with [Marc Bezem](https://www.uib.no/en/persons/Marcus.Aloysius.Bezem), [Thierry Coquand](https://www.cse.chalmers.se/~coquand/), [Peter Dybjer](https://www.cse.chalmers.se/~peterd/).

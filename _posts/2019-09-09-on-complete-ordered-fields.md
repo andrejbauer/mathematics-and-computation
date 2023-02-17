@@ -4,7 +4,7 @@ author: Andrej Bauer
 layout: post
 categories:
   - General
-  - Constructive mathematics
+  - Constructive math
 ---
 
 [Joel Hamkins](http://jdh.hamkins.org) advertised the following theorem on Twitter:

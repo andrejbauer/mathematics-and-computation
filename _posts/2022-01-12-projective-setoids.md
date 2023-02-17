@@ -3,7 +3,7 @@ title: Is every projective setoid isomorphic to a type?
 author: Andrej Bauer
 layout: post
 categories:
-  - Constructive mathematics
+  - Constructive math
   - Type theory
   - Formalization
 ---

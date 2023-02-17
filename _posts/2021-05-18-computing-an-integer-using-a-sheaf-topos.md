@@ -3,7 +3,7 @@ title: Computing an integer using a Grothendieck topos
 author: Martin Escardo
 layout: post
 categories:
-  - Constructive mathematics
+  - Constructive math
   - Type theory
   - Formalization
 ---
