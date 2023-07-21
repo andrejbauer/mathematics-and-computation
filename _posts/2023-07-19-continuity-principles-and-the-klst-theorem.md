@@ -59,7 +59,7 @@ Given how trivial the proof is, we cannot expect to squeeze much from the intrin
 But suppose we knew that the intrinsic topologies of $X$ and $Y$ were **metrized**, i.e., they coincided with metric topologies induces by some metrics $d_X : X \times X \to \mathbb{R}$ and $d_Y : Y \times Y \to \mathbb{R}$. Then the intrinsic continuity principle would imply that every map $f : X \to Y$ is continuous  with respect to the metrics. But can this happen? In “[Metric spaces in synthetic topology](https://doi.org/10.1016/j.apal.2011.06.017)” by Davorin Lešnik and myself we showed that in the Kleene-Vesley topos the intrinsic topology of a complete separable metric space is indeed metrized. Consequently, we may factor Brouwer's continuity principles into two facts:
 
 1. Easy general fact: the intrinsic continuity principle.
-2. Hard specific fact: in the Kleene-Vesley topos the intrinsic topology of a complete separable metric space are metrized.
+2. Hard specific fact: in the Kleene-Vesley topos the intrinsic topology of a complete separable metric space is metrized.
 
 Can we similarly factor the KLST continuity principle? I give an affirmative answer in the [submitted
 paper](https://arxiv.org/abs/2307.07830), by translating Dieter Spreen's “[On Effective Topological
@@ -85,7 +85,7 @@ Are there any non-trivial Spreen spaces? In classical mathematics every Spreen s
 
 Please consult the paper for the proof.
 
-There is an emergent pattern here: take a theorem that holds under very special circumstances, for instance in a specific topos or in the presence of anti-classical axioms, and reformulate it so that it becomes generally true, has a simple proof, but in order to exhibit some interesting instances of the theorem, we have to work hard. What are some other examples of such theorems? I know of one, namely [Lawvere's fixed point theorem](https://ncatlab.org/nlab/show/Lawvere%27s+fixed+point+theorem). It took some effort to produce non-trivial examples of it, once again in synthetic computability, see [On fixed-point theorems in synthetic computability](https://math.andrej.co/2019/11/07/on-fixed-point-theorems-in-synthetic-computability/).
+There is an emergent pattern here: take a theorem that holds under very special circumstances, for instance in a specific topos or in the presence of anti-classical axioms, and reformulate it so that it becomes generally true, has a simple proof, but in order to exhibit some interesting instances of the theorem, we have to work hard. What are some other examples of such theorems? I know of one, namely [Lawvere's fixed point theorem](https://ncatlab.org/nlab/show/Lawvere%27s+fixed+point+theorem). It took some effort to produce non-trivial examples of it, once again in synthetic computability, see [On fixed-point theorems in synthetic computability](https://math.andrej.com/2019/11/07/on-fixed-point-theorems-in-synthetic-computability/).
 
 **A note about comments:** I disabled my rudimentary blog commenting system, as it was not working very well and it suffered from bit rot. You are kindly invited to discuss this blog post in this [Mastodon thread](https://mathstodon.xyz/@andrejbauer/110743580760940344).
 
