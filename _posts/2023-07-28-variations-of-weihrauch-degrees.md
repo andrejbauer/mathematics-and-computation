@@ -1,5 +1,5 @@
 ---
-title: Variations of Weihrauch degrees (CiE 2023)
+title: Variations on Weihrauch degrees (CiE 2023)
 author: Andrej Bauer
 layout: post
 categories:
