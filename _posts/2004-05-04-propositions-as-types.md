@@ -11,7 +11,7 @@ categories:
 ---
 With [Steve Awodey](http://www.andrew.cmu.edu/~awodey).
 
-**Abstract:** Image factorizations in regular categories are stable under pullbacks, so they model a natural modal operator in dependent type theory. This unary type constructor \`[A]\` has turned up previously in a syntactic form as a way of erasing computational content, and formalizing a notion of proof irrelevance. Indeed, semantically, the notion of a support is sometimes used as surrogate proposition asserting inhabitation of an indexed family.
+**Abstract:** Image factorizations in regular categories are stable under pullbacks, so they model a natural modal operator in dependent type theory. This unary type constructor $[A]$ has turned up previously in a syntactic form as a way of erasing computational content, and formalizing a notion of proof irrelevance. Indeed, semantically, the notion of a support is sometimes used as surrogate proposition asserting inhabitation of an indexed family.
 
 We give rules for bracket types in dependent type theory and provide complete semantics using regular categories. We show that dependent type theory with the unit type, strong extensional equality types, strong dependent sums, and bracket types is the internal type theory of regular categories, in the same way that the usual dependent type theory with dependent sums and products is the internal type theory of locally cartesian closed categories. 
 
