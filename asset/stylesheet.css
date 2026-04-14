@@ -74,7 +74,7 @@ a.active {
 header {
   width: 100%;
   min-height: clamp(100px, 14vw, 180px);
-  background-image: url('/asset/imast-mej.png');
+  background-image: url('/asset/imast-mej.webp');
   background-color: var(--image-tint);
   background-blend-mode: multiply;
   background-size: cover;
