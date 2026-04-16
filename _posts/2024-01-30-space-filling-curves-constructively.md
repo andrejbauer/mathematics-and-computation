@@ -4,7 +4,6 @@ author: Andrej Bauer
 layout: post
 categories:
   - Constructive math
-  - Gems and stones
 ---
 
 In 1890 Giuseppe Peano [discovered a square-filling curve](https://doi.org/10.1007%2FBF01199438), and a year later David Hilbert [published his variation](https://doi.org/10.1007/BF01199431). In those days people did not waste readers' attention with dribble – Peano explained it all on 3 pages, and Hilbert on just 2 pages, with a picture!

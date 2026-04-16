@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=266
 permalink: /2009/09/08/constructive-stone-minima-of-sets-of-natural-numbers/
 categories:
-  - Gems and stones
+  - Constructive math
 ---
 I promise I will post a constructive gem soon. This constructive stone came up as a reaction to the [cardinality of finite sets](/2009/09/08/constructive-stone-cardinality-of-sets/) stone. I show that inhabited sets of natural numbers need not have minima, constructively.
 

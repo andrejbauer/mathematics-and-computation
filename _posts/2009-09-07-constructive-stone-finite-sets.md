@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=230
 permalink: /2009/09/07/constructive-stone-finite-sets/
 categories:
-  - Gems and stones
+  - Constructive math
 ---
 Just like in real life, constructive stones are easier to find than constructive gems, so let me start the series with a stone about constructive finite sets.  
 <font style='position: absolute;overflow: hidden;height: 0;width: 0'><br /> <a href="http://www.hppc.org/talk/blog/?page_id=1205"> Two girl one cup </a><br /> </font>  

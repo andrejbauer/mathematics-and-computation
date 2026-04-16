@@ -8,7 +8,6 @@ guid: http://math.andrej.com/?p=968
 permalink: /2011/06/15/constructive-gem-an-injection-from-baire-space-to-natural-numbers/
 categories:
   - Constructive math
-  - Gems and stones
   - Logic
   - Publications
 ---

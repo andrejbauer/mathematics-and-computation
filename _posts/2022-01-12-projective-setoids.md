@@ -5,7 +5,7 @@ layout: post
 categories:
   - Constructive math
   - Type theory
-  - Formalization
+  - Formalized mathematics
 ---
 
 [Jacques Carette](https://t.co/pr2rfOaFQ8) [asked on Twitter](https://twitter.com/jjcarett2/status/1478883775555723267?s=20) for a refence to the fact that countable choice holds in setoids. I then spent a day formalizing [facts about the axiom of choice in setoids](https://gist.github.com/andrejbauer/65ee1ae98167e6411e512d3e5a36c086#file-setoidchoice-agda) in Agda. I noticed something interesting that is worth blogging about.

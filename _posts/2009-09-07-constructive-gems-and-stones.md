@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=228
 permalink: /2009/09/07/constructive-gems-and-stones/
 categories:
-  - Gems and stones
+  - Constructive math
 ---
 In various mathematical forums, mostly those of a logical flavor, I regularly see people asking basic questions about constructive mathematics. I also see misconceptions about constructive mathematics. I shall make a series of posts, _Constructive Gems and Stone_s, which will answer basic questions about constructive mathematics, and will hopefully help fix wrong ideas about constructive mathematics.
 

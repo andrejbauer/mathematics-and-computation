@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=338
 permalink: /2009/10/12/constructive-gem-double-exponentials/
 categories:
-  - Gems and stones
+  - Constructive math
   - Programming
 ---
 In the last constructive gem we studied the exponential $2^\mathbb{N}$ and its isomorphic copies. This time we shall compute the _double_ exponential $2^{2^\mathbb{N}}$ and even write some Haskell code.<!--more-->

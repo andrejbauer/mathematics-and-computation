@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=249
 permalink: /2009/09/08/constructive-stone-cardinality-of-sets/
 categories:
-  - Gems and stones
+  - Constructive math
 ---
 Cardinality of sets in constructive mathematics is not as well behaved as in classical mathematics. Cardinalities of finite sets are _not_ natural numbers, and cardinalities are _not_ linearly ordered.
 
