@@ -4,7 +4,7 @@ layout: page
 navigation: archive
 ---
 
-<h2 class="archive-heading">By category</h2>
+<h3>By category</h3>
 <p class="archive-inline">
 {% assign categories = site.categories | sort %}
 {% for category in categories %}
@@ -14,10 +14,12 @@ navigation: archive
 {% endfor %}
 </p>
 
-<h2 class="archive-heading">By year</h2>
+<h3>By year</h3>
 <p class="archive-inline">
 {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 {% for year_group in years %}
 <a href="/{{ year_group.name }}/" class="meta">{{ year_group.name }}</a> <span class="archive-count">({{ year_group.items | size }})</span>{% unless forloop.last %} &middot; {% endunless %}
 {% endfor %}
 </p>
+
+<p class="archive-all">→ <a href="/all/" class="meta">All posts</a> <span class="archive-count">({{ site.posts | size }})</span></p>

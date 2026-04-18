@@ -7,7 +7,6 @@
    --nav-bg       #e8dfc4  sandy gold (nav bar, footer strip)
    --border       #d0c6a0  warm tan  (hr, table borders)
    --muted        #555555  mid-grey  (timestamps, secondary text)
-   --image-tint   #b89640  golden    (blended over the header image)
 */
 
 :root {
@@ -15,7 +14,6 @@
   --nav-bg:      #e8dfc4;
   --border:      #d0c6a0;
   --muted:       #555555;
-  --image-tint:  #b89640;
   --content-max: 800px;
   --content-pad: clamp(1rem, 4vw, 2.5rem);
 }
@@ -33,7 +31,7 @@ body {
   padding: 0;
   background: #fff;
   color: #111;
-  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -56,10 +54,6 @@ a.meta {
 
 a.meta:hover {
   text-decoration: underline;
-}
-
-a.active {
-  color: var(--accent);
 }
 
 /* ── Header ────────────────────────────────────────────────── */
@@ -110,13 +104,15 @@ header h2 {
 
 header h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
   font-weight: bold;
   color: #111;
   letter-spacing: -0.01em;
-  text-shadow: 0 1px 6px rgba(255, 248, 220, 0.8);
+  text-shadow:
+    0 0 8px rgba(255, 248, 220, 1),
+    0 0 16px rgba(255, 248, 220, 0.9),
+    0 1px 3px rgba(255, 248, 220, 1);
   line-height: 1.1;
-  white-space: nowrap;
 }
 
 header h2 {
@@ -137,50 +133,17 @@ header a {
   color: inherit;
 }
 
-/* ── Navigation ────────────────────────────────────────────── */
-
-nav {
-  background: var(--nav-bg);
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 0;
+p.archive-all {
+  margin-top: 1.5rem;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0 var(--content-pad);
-  max-width: calc(var(--content-max) + 2 * var(--content-pad));
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
+p.site-links {
+  text-align: right;
+  margin: 0 0 2rem;
 }
 
-nav li {
-  margin: 0;
-}
-
-nav ul li::before {
-  content: "";
-  margin: 0;
-}
-
-nav a {
-  display: block;
-  padding: 0.65rem 1rem;
-  font-size: 0.95rem;
-  color: #222;
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  transition: color 0.15s ease;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-nav a.active {
-  color: var(--accent);
-  font-weight: bold;
+p.pagination-nav {
+  margin-top: 1.5rem;
 }
 
 /* ── Main content ──────────────────────────────────────────── */
@@ -322,7 +285,6 @@ div.previous-next-post {
   display: flex;
   justify-content: space-between;
   margin: 0 0 2rem;
-  font-size: 0.9rem;
   gap: 1rem;
 }
 
@@ -345,7 +307,6 @@ div.excerpt-header {
 }
 
 .excerpt-header h3 {
-  font-size: 1.2rem;
   margin: 0 0 0.4rem;
 }
 
@@ -357,25 +318,8 @@ div.excerpt-header {
   text-decoration: underline;
 }
 
-div.browse-posts {
-  text-align: right;
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-}
-
 /* ── Archive page ──────────────────────────────────────────── */
 
-h2.archive-heading {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  font-family: system-ui, sans-serif;
-  font-weight: 600;
-  margin: 1.5rem 0 0.5rem;
-  border-bottom: 1px dashed var(--border);
-  padding-bottom: 0.4rem;
-}
 
 p.archive-inline {
   margin: 0;
@@ -385,62 +329,6 @@ p.archive-inline {
 .archive-count {
   color: var(--muted);
   font-size: 0.85rem;
-}
-
-/* ── Topic grid (homepage) ─────────────────────────────────── */
-
-.topic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 0.6rem;
-  margin: 1.5rem 0 2.5rem;
-}
-
-.topic-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 0.55rem 0.85rem;
-  border: 1px solid var(--border);
-  background: #faf8f2;
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.15s, background 0.15s;
-}
-
-.topic-card:hover {
-  border-color: var(--accent);
-  background: var(--nav-bg);
-  color: var(--accent);
-}
-
-.topic-name {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.9rem;
-}
-
-.topic-count {
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-left: 0.75rem;
-  flex-shrink: 0;
-}
-
-h2.section-heading {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  font-family: system-ui, sans-serif;
-  font-weight: 600;
-  margin: 0 0 1.5rem;
-  border-bottom: 1px dashed var(--border);
-  padding-bottom: 0.4rem;
-}
-
-p.pagination-nav {
-  margin: 1.5rem 0;
-  font-size: 0.9rem;
 }
 
 /* ── Drafts ────────────────────────────────────────────────── */
@@ -522,12 +410,18 @@ article.comment.child {
 
 footer {
   margin-top: 4rem;
-  padding: 1.2rem var(--content-pad);
   background: var(--nav-bg);
   border-top: 1px solid var(--border);
-  text-align: right;
-  font-size: 0.9rem;
   color: var(--muted);
+}
+
+.footer-inner {
+  max-width: calc(var(--content-max) + 2 * var(--content-pad));
+  margin: 0 auto;
+  padding: 1.2rem var(--content-pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer a {
@@ -550,11 +444,6 @@ footer img {
 @media (max-width: 600px) {
   body {
     font-size: 17px;
-  }
-
-  nav a {
-    padding: 0.55rem 0.75rem;
-    font-size: 0.88rem;
   }
 
   div.previous-next-post {

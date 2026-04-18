@@ -3,8 +3,12 @@ title: Latest posts
 layout: page
 ---
 
+{% if paginator.page == 1 %}
+<p class="site-links">→ <a href="/browse/" class="meta">Archive</a> → <a href="/about/" class="meta">About</a></p>
+{% endif %}
+
 {% if paginator.previous_page %}
-← <a href="{{ paginator.previous_page_path }}" class="meta">newer posts</a>
+<p class="pagination-nav">← <a href="{{ paginator.previous_page_path }}" class="meta">newer posts</a></p>
 {% endif %}
 
 {% for post in paginator.posts %}
@@ -12,5 +16,5 @@ layout: page
 {% endfor %}
 
 {% if paginator.next_page %}
-→ <a href="{{ paginator.next_page_path }}" class="meta">earlier posts</a>
+<p class="pagination-nav">→ <a href="{{ paginator.next_page_path }}" class="meta">earlier posts</a></p>
 {% endif %}
