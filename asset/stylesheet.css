@@ -4,14 +4,14 @@
 
    Colour palette
    --accent       #800000  dark red  (links, active nav, draft marker)
-   --nav-bg       #e8dfc4  sandy gold (nav bar, footer strip)
+   --nav-bg       #e8cc96  warm amber (footer strip)
    --border       #d0c6a0  warm tan  (hr, table borders)
    --muted        #555555  mid-grey  (timestamps, secondary text)
 */
 
 :root {
   --accent:      #800000;
-  --nav-bg:      #e8dfc4;
+  --nav-bg:      #e8cc96;
   --border:      #d0c6a0;
   --muted:       #555555;
   --content-max: 800px;
@@ -67,7 +67,7 @@ header {
   width: 100%;
   min-height: clamp(100px, 14vw, 180px);
   background-image: url('/asset/imast-mej.webp');
-  background-color: #e8dfc4;
+  background-color: #e8cc96;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center 8%;
