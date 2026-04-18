@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=1903
 permalink: /2016/07/28/the-andromeda-proof-assistant-leeds-workshop-slides/
 categories:
-  - Andromeda
+  - Software
   - Talks
 ---
 I am about to give an invited talk at the  [Workshop on Categorical Logic and Univalent Foundations 2016](http://www.hott16.leeds.ac.uk) in Leeds, UK. It's a charming workshop that I am enjoing a great deal. Here are the slides of my talk, with speaker notes, as well as the Andromeda examples that I am planning to cover.

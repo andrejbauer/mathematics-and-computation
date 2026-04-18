@@ -66,16 +66,14 @@ a.active {
 /*
    The random-art image is square (2024×2024).  background-size: cover
    combined with background-position: top center shows the dense
-   patterned top portion as a wide banner.  The golden tint is applied
-   via background-blend-mode: multiply so no separate tinted file is
-   needed — adjusting --image-tint changes the colour.
+   patterned top portion as a wide banner.
 */
 
 header {
   width: 100%;
   min-height: clamp(100px, 14vw, 180px);
   background-image: url('/asset/imast-mej.webp');
-  background-color: var(--image-tint);
+  background-color: #e8dfc4;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center 8%;
@@ -118,6 +116,7 @@ header h1 {
   letter-spacing: -0.01em;
   text-shadow: 0 1px 6px rgba(255, 248, 220, 0.8);
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 header h2 {
@@ -361,6 +360,86 @@ div.excerpt-header {
 div.browse-posts {
   text-align: right;
   margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ── Archive page ──────────────────────────────────────────── */
+
+h2.archive-heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 0.4rem;
+}
+
+p.archive-inline {
+  margin: 0;
+  line-height: 2;
+}
+
+.archive-count {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ── Topic grid (homepage) ─────────────────────────────────── */
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.6rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.topic-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--border);
+  background: #faf8f2;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.topic-card:hover {
+  border-color: var(--accent);
+  background: var(--nav-bg);
+  color: var(--accent);
+}
+
+.topic-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+}
+
+.topic-count {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+
+h2.section-heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 0.4rem;
+}
+
+p.pagination-nav {
+  margin: 1.5rem 0;
   font-size: 0.9rem;
 }
 

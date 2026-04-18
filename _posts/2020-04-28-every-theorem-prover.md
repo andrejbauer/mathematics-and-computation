@@ -5,7 +5,7 @@ layout: post
 categories:
   - Talks
   - News
-  - Every proof assistant
+  - Formalized mathematics
 ---
 
 For a while now I have been contemplating a series of seminars titled *"Every

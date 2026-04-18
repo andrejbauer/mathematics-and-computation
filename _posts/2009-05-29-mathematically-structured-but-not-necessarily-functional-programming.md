@@ -10,7 +10,7 @@ categories:
   - Computation
   - Constructive math
   - Programming
-  - RZ
+  - Software
   - Talks
 ---
 These are the slides and the extended abstract from my [MSFP](http://msfp.org.uk/) 2008 talk. Apparently, I forgot to publish them online. There is a discussion on the [Agda](http://wiki.portal.chalmers.se/agda/) mailing list to which the talk is somewhat relevant, so I am publishing now.

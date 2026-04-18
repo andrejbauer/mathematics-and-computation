@@ -1,34 +1,23 @@
 ---
-title: Browse posts
+title: Archive
 layout: page
-navigation: post
+navigation: archive
 ---
 
-<h2><a name="by-category">Posts by category</a></h2>
-
+<h2 class="archive-heading">By category</h2>
+<p class="archive-inline">
 {% assign categories = site.categories | sort %}
 {% for category in categories %}
 {% assign cat = category | first %}
-{% assign cat_size = site.categories[cat] | size %}
-  <a href="/category/{{cat | slugify}}/" class="meta">{{cat}}</a>&nbsp;({{ cat_size }})
-  {% if forloop.last == false %} &nbsp;|&nbsp; {% endif %}
+{% assign count = category | last | size %}
+<a href="/category/{{ cat | slugify }}/" class="meta">{{ cat }}</a> <span class="archive-count">({{ count }})</span>{% unless forloop.last %} &middot; {% endunless %}
 {% endfor %}
+</p>
 
-
-<h2><a name="by-year">Posts by year</a></h2>
-
-{% assign year_count = 1 %}
-{% assign prev_year = 999 %}
-{% for post in site.posts %}
-  {% assign year = post.date | date: "%Y" %}
-  {% if year != prev_year and forloop.first == false %}
-    <a href="/{{prev_year}}/" class="meta">{{prev_year}}</a>&nbsp;({{year_count}}) &nbsp;|&nbsp;
-    {% assign year_count = 1 %}
-  {% else %}
-    {% assign year_count = year_count | plus: 1 %}
-  {% endif %}
-  {% assign prev_year = year %}
+<h2 class="archive-heading">By year</h2>
+<p class="archive-inline">
+{% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year_group in years %}
+<a href="/{{ year_group.name }}/" class="meta">{{ year_group.name }}</a> <span class="archive-count">({{ year_group.items | size }})</span>{% unless forloop.last %} &middot; {% endunless %}
 {% endfor %}
-<a href="/{{year}}/" class="meta">{{year}}</a> ({{year_count}})
-
-<h2><a href="/all.html" class="meta">All posts</a> ({{site.posts | size}})</h2>
+</p>

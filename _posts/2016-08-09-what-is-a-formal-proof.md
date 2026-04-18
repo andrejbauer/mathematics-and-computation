@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=1920
 permalink: /2016/08/09/what-is-a-formal-proof/
 categories:
-  - Andromeda
+  - Software
   - Logic
 ---
 Mike Shulman just wrote a very nice [blog post on what is a formal proof](https://golem.ph.utexas.edu/category/2016/08/what_is_a_formal_proof.html). I much agree with what he says, but I would like to offer my own perspective. I started writing it as a comment to Mike's post and then realized that it is too long, and that I would like to have it recorded independently as well. Please read Mike's blog post first.

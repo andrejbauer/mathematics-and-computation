@@ -8,7 +8,7 @@ guid: http://math.andrej.com/2007/01/21/rz-a-tool-for-bringing-constructive-and-
 permalink: /2007/01/21/rz-a-tool-for-bringing-constructive-and-computable-mathematics-closer-to-programming-practice/
 categories:
   - Publications
-  - RZ
+  - Software
   - Talks
 ---
 With [Chris Stone](http://www.cs.hmc.edu/~stone/). 

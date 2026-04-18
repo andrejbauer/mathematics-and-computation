@@ -4,7 +4,7 @@ author: Andrej Bauer
 layout: post
 categories:
   - Talks
-  - Every proof assistant
+  - Formalized mathematics
 ---
 
 We are marching on with the Every proof assistant series!

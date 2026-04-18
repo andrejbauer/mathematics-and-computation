@@ -9,7 +9,7 @@ guid: http://math.andrej.com/?p=29
 permalink: /2005/04/09/specifications-via-realizability/
 categories:
   - Publications
-  - RZ
+  - Software
   - Talks
 ---
 With [Chris Stone](http://www.cs.hmc.edu/~stone/).

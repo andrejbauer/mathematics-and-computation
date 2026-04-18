@@ -9,7 +9,7 @@ permalink: /2007/09/18/the-role-of-the-interval-domain-in-modern-exact-real-airt
 categories:
   - Computation
   - Constructive math
-  - RZ
+  - Software
   - Talks
 ---
 With [Iztok Kavkler](http://www.fmf.uni-lj.si/~kavkler/).

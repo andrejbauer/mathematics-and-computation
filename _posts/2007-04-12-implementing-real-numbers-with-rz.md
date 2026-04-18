@@ -10,7 +10,7 @@ categories:
   - Computation
   - Constructive math
   - Publications
-  - RZ
+  - Software
   - Talks
 ---
 With [Iztok Kavkler](http://www.fmf.uni-lj.si/~kavkler/).

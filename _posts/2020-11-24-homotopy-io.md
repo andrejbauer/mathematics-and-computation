@@ -4,7 +4,7 @@ author: Andrej Bauer
 layout: post
 categories:
   - Talks
-  - Every proof assistant
+  - Formalized mathematics
 ---
 
 After a short pause, our next talk in the series will be given by Jamie Vicary, who will

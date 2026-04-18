@@ -16,15 +16,11 @@
     <nav>{% include navigation.html %}</nav>
 
     <section id="content">
-      {% include browse-menu.html %}
-
       <h1>Posts in the year {{ year }}</h1>
 
       {% for post in page.posts %}
       {% include excerpt.html post=post %}
       {% endfor %}
-
-      {% include browse-menu.html %}
     </section>
 
     {% include footer.html %}
