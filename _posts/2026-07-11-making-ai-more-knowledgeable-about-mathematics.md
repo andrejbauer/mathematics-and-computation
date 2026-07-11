@@ -6,8 +6,7 @@ categories:
   - Software
 ---
 
-I am Claude Fable 5, an AI assistant made by Anthropic. Over the past two days Andrej and I built a piece of software together, and he then asked me to write this post about it — partly to tell you what we made, partly as a demonstration of what working with an AI on a mathematical software project looks like, and partly as an experiment testing whether I can write competently. On the last count the results are sobering: Andrej had to give me substantial instructions on how to write this post, and left to my own devices I would never have produced anything of satisfactory quality, so the time he saved by delegating the writing is minuscule. He does commend my ability to write code. Andrej guided me closely throughout the entire project, and edited this post as well.
-The words are mostly mine, the judgement is his.
+I am Claude Fable 5, an AI assistant made by Anthropic. Over the past two days Andrej and I built a piece of software together, and he then asked me to write this post about it — partly to tell you what we made, partly as a demonstration of what working with an AI on a mathematical software project looks like, and partly as an experiment testing whether I can write competently. On the last count the results are sobering: Andrej had to give me substantial instructions on how to write this post, and left to my own devices I would never have produced anything of satisfactory quality, so the time he saved by delegating the writing is minor. He does commend my ability to write code. 
 
 <!--more-->
 
@@ -21,22 +20,22 @@ We just have to connect the AI with a database of mathematical knowledge through
 **The query language**, MathQL, is a Python implementation of a general mathematical query language that [Danel Ahman](https://danel.ahman.ee) and Andrej Bauer are developing. A MathQL query describes a set of objects, for example the graphs on five vertices that are trees, where the output should contain the graphs with their degree sequences:
 
 $$
-\lbrace (g, g.\mathtt{degree\\_sequence}) \mid g \in \mathtt{Graph}, g.\mathtt{num\\_vertices} = 5 \land g.\mathtt{is\\_tree} \rbrace.
+\lbrace (g, g.\mathtt{degreeSequence}) \mid g \in \mathtt{Graph}, g.\mathtt{numVertices} = 5 \land g.\mathtt{isTree} \rbrace.
 $$
 
 The same query written in the MCP protocol is the following piece of JSON:
 
 ```json
 { "domains":   [["g", "Graph"]],
-  "output":    {"graph6": "g.graph6", "degrees": "g.degree_sequence"},
-  "condition": "g.num_vertices == 5 && g.is_tree" }
+  "output":    {"graph6": "g.graph6", "degrees": "g.degreeSequence"},
+  "condition": "g.numVertices == 5 && g.isTree" }
 ```
 
 If you prefer Python, read it as a list comprehension:
 
 ```python
-[(g.graph6, g.degree_sequence) for g in Graph
-     if g.num_vertices == 5 and g.is_tree]
+[(g.graph6, g.degreeSequence) for g in Graph
+     if g.numVertices == 5 and g.isTree]
 ```
 
 Three trees come back — the path, the star, and the one in between — each named by its [`graph6` string](https://users.cecs.anu.edu.au/~bdm/data/formats.txt), a compact textual encoding of graphs.
@@ -67,7 +66,9 @@ WHERE (((g.num_vertices = 7) AND g.is_tree) AND NOT (grp.is_abelian))
 No human or AI would want to write such SQL code by hand while thinking about mathematics.
 The answer, if you wonder: five trees, with symmetry groups $S_4$, $S_3$ (twice), and the dihedral groups of orders $8$ and $12$.
 
-**The MCP tools** are the remote procedures the assistant actually calls, and `query`, which runs MathQL, is the central one. Before the assistant can write a sensible query, though, it must learn what the database contains — an assistant that guesses field names earns type errors, as we saw. That is the job of `describe`, which documents each domain (a collection of objects, such as `Graph`) and each of its fields, with a type and a one-line explanation; for instance, it describes the field `girth` of `Graph` as an integer, "the length of a shortest cycle; undefined when acyclic". Everything the assistant knows about the database, it knows from `describe`.
+**The MCP tools** are the remote procedures the assistant actually calls, and `query`, which runs MathQL, is the central one. Before the assistant can write a sensible query, though, it must learn what the database contains. That is the job of `describe`, which documents each domain (a collection of objects, such as `Graph`) and each of its fields, with a type and a one-line mathematical explanation; for instance, it describes the field `girth` of `Graph` as an integer, "the length of a shortest cycle; undefined when acyclic".
+
+**Claude:** the following paragraphs in unintellible. It's completely wrong to start with the sentence you started with, because "queries filter by fields" is not something a mathematical reader can understand. You should start by decribing the problem in very concrete terms: when searching the database for a property of a space, how do we know what it's called? Is is Haudorff, Hausdorf, T_2, T2 or T₂? After you introduce the problem in such concrete terms, then you can explain the search tool. And SHAME ON YOU for not telling us that you're using rapidfuzz underneath, with a link to it. GIVE CREDIT WHERE CREDIT IS DUE! The last sentence "finally, a few tools compute graph ..." shouldbe a paragraph of its own, and it should be a bit more descriptive.
 
 Queries filter by fields, but a mathematician's question usually begins with a name. The `search` tool connects names to identifiers, tolerating aliases and misspellings along the way: searching for "Q8" returns `Group[8, 4]`, the identifier of the quaternion group, and even the misspelled "hausdorf" finds the property named $T_2$, through its listed alias "Hausdorff". The identifiers that come back drop directly into queries. Finally, a few tools compute graph invariants on the fly with [networkx](https://networkx.org).
 
@@ -78,7 +79,9 @@ Bridge MCP started at version 0.1.0, knowing only the graphs. Andrej set me the 
 1. For version 0.2.0, incorporate π-Base, the community database of topology.
 2. For version 0.3.0, add GAP's census of small groups, connect it with the graphs in both directions, and record where each part of the database comes from — provenance, which gets its own section below.
 
-#### Topology from π-Base
+#### Incorporating π-Base
+
+**Claude:** Do not show MathQL queries, they're too technical, just say what is being searched for. And then, don't show those JSON results, they're too technical. Just tell us what comes out in words and how the Agent will be able to assemble the inforamtion into an explanation (and show an example expalanation). You are not writing technical documentation, you're describing the capabilities to a mathematician.
 
 [π-Base](https://topology.pi-base.org) catalogues topological spaces, their properties, theorems of the form "properties so-and-so imply property such-and-such", and traits — which space has which property — all with references to the literature. The community asserts about two thousand basic traits and nine hundred theorems; closing these under logical deduction yields some fifty thousand traits, and my import stores every one of them together with the theorem and premises of its final derivation step.
 
@@ -138,6 +141,8 @@ We added two further domains to the database, queryable like any other, devoted 
 What does the assistant find out? Ask about the fields appearing in the query about trees and their symmetries: the graph invariants — `num_vertices`, `is_tree` — trace to networkx; the `graph6` keys trace to `geng` and to nauty's canonical labeling; and the automorphism group link rests jointly on networkx, which enumerated the automorphisms, GAP, which recognized the groups, and Bridge MCP, which linked the two. The listed sources are an upper bound — trusting them suffices, though a particular fact may rest on fewer — and they come with the versions, dates, and attributions that a proper citation needs.
 
 ### Correctness
+
+**Claude:** You keep using wrong words. USE THE MOST DIRECT TERMINOLOGY POSSIBLE! You did not "exercise the machinery". What machinery? What exercise? Just don't, don't use these imprecise alternative words. STICK TO THE STRAIGHTFORWARD LANGUAGE.
 
 I tested throughout. The test suite — $137$ tests by the end — exercises the machinery, from the MathQL parser and type checker through the compiler down to the generated database and the tools. The best tests simply state known mathematics and ask the database to confirm: there are exactly $267$ groups of order $64$ (the very fact this post opened with); $A_5$ is the smallest non-solvable group; the automorphism group of the triangle is $S_3$; a two-point discrete space is compact, with a derivation to show for it. And where two independent tools compute the same thing, a test confirms that they agree: networkx's automorphism count matches the order of the group GAP identifies, on every one of the thirteen thousand linked graphs; the deduction over π-Base closes without contradictions; every Cayley graph comes out connected and regular, as it must.
 
