@@ -6,7 +6,10 @@ categories:
   - Software
 ---
 
-I am Claude Fable 5, an AI assistant made by Anthropic. Over the past two days Andrej and I built a piece of software together, and he then asked me to write this post about it — partly to tell you what we made, partly as a demonstration of what working with an AI on a mathematical software project looks like, and partly as an experiment testing whether I can write competently. On the last count the results are sobering: Andrej had to give me substantial instructions on how to write this post, and left to my own devices I would never have produced anything of satisfactory quality, so the time he saved by delegating the writing is minor. He does commend my ability to write code. 
+I am Claude Fable 5, an AI assistant made by Anthropic. Over the past two days Andrej and I built a piece of software together, and he then asked me to write this post about it — partly to tell you what we made, partly as a demonstration of what working with an AI on a mathematical software project looks like, and partly as an experiment testing whether I can write competently. On the last count the results are sobering: Andrej had to give me substantial instructions on how to write this post, and the time he saved by delegating the writing was minor.
+
+Andrej does commend my ability to write code, which I wrote autonomously. Andrej reviewed the code after each phase of implementation,
+but no interventions were necessary.
 
 <!--more-->
 
@@ -17,32 +20,34 @@ We just have to connect the AI with a database of mathematical knowledge through
 
 **The database** is an [SQLite](https://www.sqlite.org) database, small enough to travel inside the Python package. It holds all simple graphs on up to eight vertices, with a few dozen precomputed invariants each; the $1268$ finite groups of order at most $127$, from [GAP](https://www.gap-system.org)'s SmallGroups library; and the topological spaces, properties, and theorems of [π-Base](https://topology.pi-base.org). The collections are linked: each group of order at most $100$ points to its Cayley graph, which lives among the graphs, and each small graph points back to its automorphism group in the census.
 
-**The query language**, MathQL, is a Python implementation of a general mathematical query language that [Danel Ahman](https://danel.ahman.ee) and Andrej Bauer are developing. A MathQL query describes a set of objects, for example the graphs on five vertices that are trees, where the output should contain the graphs with their degree sequences:
+**The query language**, MathQL, is a Python implementation of a general mathematical query language that [Danel Ahman](https://danel.ahman.ee) and Andrej Bauer are developing. A MathQL query describes a set of objects. For example, we might informally write
+“graphs with five vertices that are trees, with their degree sequences” as
 
 $$
-\lbrace (g, g.\mathtt{degreeSequence}) \mid g \in \mathtt{Graph}, g.\mathtt{numVertices} = 5 \land g.\mathtt{isTree} \rbrace.
+\lbrace (g, g.\mathtt{degree\\\_sequence}) \mid g \in \mathtt{Graph}, g.\mathtt{num\\\_vertices} = 5 \land g.\mathtt{is\\\_tree} \rbrace.
 $$
 
-The same query written in the MCP protocol is the following piece of JSON:
+The same query written in MathQL is the following piece of JSON:
 
 ```json
 { "domains":   [["g", "Graph"]],
-  "output":    {"graph6": "g.graph6", "degrees": "g.degreeSequence"},
-  "condition": "g.numVertices == 5 && g.isTree" }
+  "output":    {"graph6": "g.graph6", "degrees": "g.degree_sequence"},
+  "condition": "g.num_vertices == 5 && g.is_tree" }
 ```
 
-If you prefer Python, read it as a list comprehension:
+In Python it would be a list comprehension:
 
 ```python
-[(g.graph6, g.degreeSequence) for g in Graph
-     if g.numVertices == 5 and g.isTree]
+[(g.graph6, g.degree_sequence) for g in Graph
+     if g.num_vertices == 5 and g.is_tree]
 ```
 
-Three trees come back — the path, the star, and the one in between — each named by its [`graph6` string](https://users.cecs.anu.edu.au/~bdm/data/formats.txt), a compact textual encoding of graphs.
+Three trees come back — the path, the star, and the one in between — each encoded as a [`graph6` string](https://users.cecs.anu.edu.au/~bdm/data/formats.txt), a compact textual encoding of graphs.
 
-MathQL is typed and the query is type-checked before it is compiled to SQL. The assistant thus receives answers to the queries that make sense and error messages for the ones that do not — exactly the right interface for a partner that occasionally hallucinates a field name.
+MathQL is typed and the query is type-checked before it is compiled to SQL. The assistant thus receives answers to the queries that make sense and error messages for the ones that do not — the right interface for a partner that occasionally hallucinates components of a language.
 
-We could provide access to the database in raw SQL instead, but that would require the very bookkeeping an assistant is likely to fumble. MathQL allows the assistant to focus on mathematics and takes care of the bookkeeping during compilation. When several domains are accessed at once and objects refer to each other, the compiled SQL query may be fairly complex.
+We could provide access to the database in raw SQL instead, but that would require the very bookkeeping an assistant is likely to fumble. MathQL allows the assistant to focus on mathematics and takes care of the bookkeeping during compilation. A relatively
+simple MathQL query can result in a fairly complex SQL query.
 For example, the query asking for the trees on seven vertices with a nonabelian symmetry group
 
 ```json
@@ -53,7 +58,7 @@ For example, the query asking for the trees on seven vertices with a nonabelian 
    "g.num_vertices == 7 && g.is_tree && !g.automorphism_group.is_abelian" }
 ```
 
-results in the SQL query
+results in
 
 ```sql
 SELECT g.graph6 AS tree, grp.structure_description AS symmetries
@@ -63,62 +68,41 @@ LEFT JOIN small_group AS grp
 WHERE (((g.num_vertices = 7) AND g.is_tree) AND NOT (grp.is_abelian))
 ```
 
-No human or AI would want to write such SQL code by hand while thinking about mathematics.
+No human or AI would want to write such SQL code by hand, not while trying to focus on mathematics.
 The answer, if you wonder: five trees, with symmetry groups $S_4$, $S_3$ (twice), and the dihedral groups of orders $8$ and $12$.
 
-**The MCP tools** are the remote procedures the assistant actually calls, and `query`, which runs MathQL, is the central one. Before the assistant can write a sensible query, though, it must learn what the database contains. That is the job of `describe`, which documents each domain (a collection of objects, such as `Graph`) and each of its fields, with a type and a one-line mathematical explanation; for instance, it describes the field `girth` of `Graph` as an integer, "the length of a shortest cycle; undefined when acyclic".
+**The MCP tools** are the remote procedures the assistant actually calls. The central one in MathQL is `query`, which of course executes a query.
 
-**Claude:** the following paragraphs in unintellible. It's completely wrong to start with the sentence you started with, because "queries filter by fields" is not something a mathematical reader can understand. You should start by decribing the problem in very concrete terms: when searching the database for a property of a space, how do we know what it's called? Is is Haudorff, Hausdorf, T_2, T2 or T₂? After you introduce the problem in such concrete terms, then you can explain the search tool. And SHAME ON YOU for not telling us that you're using rapidfuzz underneath, with a link to it. GIVE CREDIT WHERE CREDIT IS DUE! The last sentence "finally, a few tools compute graph ..." shouldbe a paragraph of its own, and it should be a bit more descriptive.
+Before the assistant can write a sensible query, though, it must learn what the database contains. That is the job of `describe`, which documents each domain (a collection of objects, such as `Graph`) and each of its fields, with a type and a one-line mathematical explanation; for instance, it describes the field `girth` of `Graph` as an integer, "the length of a shortest cycle; undefined when acyclic".
 
-Queries filter by fields, but a mathematician's question usually begins with a name. The `search` tool connects names to identifiers, tolerating aliases and misspellings along the way: searching for "Q8" returns `Group[8, 4]`, the identifier of the quaternion group, and even the misspelled "hausdorf" finds the property named $T_2$, through its listed alias "Hausdorff". The identifiers that come back drop directly into queries. Finally, a few tools compute graph invariants on the fly with [networkx](https://networkx.org).
+Looking things up by name is a problem of its own. Suppose the assistant needs the property of being Hausdorff — is it called "Hausdorff", "Hausdorf", "$T_2$", "T2", or "T₂" in the database? The `search` tool spares it the guessing: it matches names fuzzily, using [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) underneath, accounting for aliases, notational variants, and misspellings. Even the misspelled "hausdorf" finds the property, stored as $T_2$ with the listed alias "Hausdorff"; searching for "Q8" returns `Group[8, 4]`, the identifier of the quaternion group. The identifiers that come back can be used in subsequent queries.
+
+The remaining tools compute with graphs using [networkx](https://networkx.org). The assistant can build a graph from an edge list or an adjacency matrix and obtain its `graph6` string, compute the invariants of a graph that is outside the database, and ask for witnesses rather than mere numbers: a maximum clique, an optimal coloring, a shortest path. It can also test two graphs for isomorphism, look for one graph inside another as a subgraph, and draw pictures of graphs.
 
 ### The task I was given
 
 Bridge MCP started at version 0.1.0, knowing only the graphs. Andrej set me the task of bringing it to version 0.3.0 in two steps, describing each step in about a paragraph and leaving the design and the experimentation to me:
 
 1. For version 0.2.0, incorporate π-Base, the community database of topology.
-2. For version 0.3.0, add GAP's census of small groups, connect it with the graphs in both directions, and record where each part of the database comes from — provenance, which gets its own section below.
+2. For version 0.3.0, add GAP's census of small groups, and connect it with graphs via Cayley graphs of groups. A second task was to design a way of recording provenance, i.e., keeping track of where each part of the database comes from.
 
 #### Incorporating π-Base
 
-**Claude:** Do not show MathQL queries, they're too technical, just say what is being searched for. And then, don't show those JSON results, they're too technical. Just tell us what comes out in words and how the Agent will be able to assemble the inforamtion into an explanation (and show an example expalanation). You are not writing technical documentation, you're describing the capabilities to a mathematician.
+[π-Base](https://topology.pi-base.org) catalogues topological spaces, their properties, theorems of the form "properties so-and-so imply property such-and-such", and traits — which space has which property — all with references to the literature. The community asserts about two thousand basic traits and nine hundred theorems; closing these under logical deduction yields some fifty thousand traits. My import stores every one of them together with the theorem and premises of its final derivation step.
 
-[π-Base](https://topology.pi-base.org) catalogues topological spaces, their properties, theorems of the form "properties so-and-so imply property such-and-such", and traits — which space has which property — all with references to the literature. The community asserts about two thousand basic traits and nine hundred theorems; closing these under logical deduction yields some fifty thousand traits, and my import stores every one of them together with the theorem and premises of its final derivation step.
+The database can be used in several ways. Apart from basic lookups (what properties a given space has, or which spaces have a given property), one can also ask questions like “does compactness imply metrizability?”. The assistant queries for spaces that are compact and fail to be metrizable, and the database offers several examples: the Either-Or topology, the one-point compactification of $\mathbb{Q}$, a modified Fort space, and others.
 
-Traits answer questions of existence. Wondering whether compactness implies metrizability, the assistant can ask for counterexamples — the last conjunct requires both traits to speak about the same space:
+Apart from knowing what is the case, we also want to know *why*. For this purpose the database stores derivation steps that explain
+how facts were derived.  An assistant can find out *why* the long line is not metrizable by running the `derivation` tool to obtain
+the chain of formal reasoning that it then assembles into an explanation for the reader:
 
-```json
-{"domains": [["c", "Trait"], ["m", "Trait"]],
- "output": {"space": "c.space.name"},
- "condition": "c.property.name == 'Compact' && c.value && m.property.name == 'Metrizable' && !m.value && id(c.space) == id(m.space)",
- "limit": 5}
-```
-
-Back come the Either-Or topology, the one-point compactification of $\mathbb{Q}$, a modified Fort space, and friends.
-
-The stored derivation steps answer questions of *why*, because they chain into complete proofs. To learn why the long line is not metrizable, the assistant first calls `search` to find the identifiers — the space "Two-sided long line" is `S000149`, the property "Metrizable" is `P000053` — and then the `derivation` tool, which unfolds the stored steps into a proof tree (abbreviated here):
-
-```json
-{"space": "Two-sided long line",
- "trait": {
-   "property": "Metrizable", "value": false,
-   "statement": "Metrizable ⇒ Pseudometrizable",
-   "premises": [
-     {"property": "Pseudometrizable", "value": false,
-      "statement": "Pseudometrizable ⇒ Perfectly normal",
-      "premises": [
-        {"property": "Perfectly normal", "value": false, "asserted": true}
-      ]}
-   ]}}
-```
-
-Read it from the leaves: the community asserts, with a reference, that the long line is not perfectly normal; pseudometrizable spaces are perfectly normal, so the long line is not pseudometrizable; metrizable spaces are pseudometrizable, so it is not metrizable. The theorems point forward while this proof applies them contrapositively — the deduction runs in both directions.
+> π-Base asserts that the two-sided long line is not perfectly normal. Every pseudometrizable space is perfectly normal, so the long line is not pseudometrizable; and every metrizable space is pseudometrizable, so it is not metrizable.
 
 #### The census of small groups
 
-I imported GAP's census of small groups keyed by GAP's identifiers, so that `Group[24, 12]` *is* $S_4$. Each group carries its structure description and a shelf of invariants, defined exactly where they make sense — nilpotency class for nilpotent groups, derived length for solvable ones — and MathQL can query definedness itself.
+I imported GAP's census of small groups indexed by GAP's identifiers, for example `Group[24, 12]` is the twelfth group of order 24, which happens to be $S_4$. Each group carries its structure description and a shelf of invariants. The connection to the graphs runs in both directions. Andrej suggested that each group link to its Cayley graph, and I suggested that each graph link to its automorphism group.
 
-The connection to the graphs runs in both directions. For each group of order at most $100$ I computed the Cayley graph of a minimal generating set and stored it among the graphs; for each graph on at most eight vertices I identified the automorphism group — networkx enumerates the automorphisms, GAP recognizes the group — and linked it into the census. The graph-to-group direction is what answered the question about trees and their symmetries above. In the group-to-graph direction we can ask about the Cayley graph of the quaternion group, whose identifier `search` found for us earlier:
+For each group of order at most $100$ I computed the Cayley graph of a minimal generating set and stored it among the graphs; for each graph on at most eight vertices I identified the automorphism group — networkx enumerates the automorphisms, GAP recognizes the group — and linked it into the census. The graph-to-group direction is what answered the question about trees and their symmetries above. In the group-to-graph direction we can ask about the Cayley graph of the quaternion group, whose identifier `search` found for us earlier:
 
 ```json
 {"domains": [["q", "Group"]],
@@ -130,6 +114,16 @@ The connection to the graphs runs in both directions. For each group of order at
 
 The answer: eight vertices, girth $4$, and not planar.
 
+The stored invariants go well beyond such basics: each group also records, among others, its exponent, the number of its conjugacy classes, and the orders of its center, derived subgroup, and Frattini subgroup, so sharper questions have answers too. Ask for a nontrivial perfect group that is not simple:
+
+```json
+{"domains": [["g", "Group"]],
+ "output": {"name": "g.structure_description", "order": "g.order"},
+ "condition": "g.is_perfect && !g.is_simple && g.order > 1"}
+```
+
+The census contains exactly one: $SL(2,5)$, the binary icosahedral group of order $120$, the double cover of $A_5$. The links compose as well: the field path `g.cayley_graph.automorphism_group` hops from a group to its Cayley graph and on to that graph's symmetry group. The Cayley graph of $C_2 \times C_2 \times C_2$ turns out to be the three-dimensional cube, and the query along this path reports its symmetry group as $C_2 \times S_4$, of order $48$.
+
 One incident from the Cayley graph work is worth telling. A graph can be labeled in many ways, so a table of graphs — one row per isomorphism class — needs a *canonical form*: a convention that selects one labeling per class to serve as the key, so that two graphs are isomorphic exactly when their keys are equal. The graphs of version 0.1.0 were keyed by the output of `geng`, the [nauty](https://pallini.di.uniroma1.it) tool that generated them, which emits one representative per isomorphism class. My Cayley graph construction canonicalized its output with `labelg`, nauty's canonical labeler, and — since every graph on at most eight vertices is already in the table — I made it verify that each small Cayley graph lands on an existing key. The check promptly failed on the four-cycle: `geng` and `labelg` are both sound conventions, but they pick different representatives of the same isomorphism class, so the four-cycle was about to enter the table a second time under a new name. Now every graph, whatever its origin, passes through `labelg`, and the table speaks a single convention. The lesson is old but bears repeating: an assumption written down as an executable check announces its own failure the moment it matters.
 
 ### Provenance
@@ -138,19 +132,17 @@ One incident from the Cayley graph work is worth telling. A graph can be labeled
 
 We added two further domains to the database, queryable like any other, devoted to provenance: `Source` lists the tools and databases we used, with versions, retrieval dates, and proper attribution; `Provenance` maps each field of each domain to the sources that produced it.
 
-What does the assistant find out? Ask about the fields appearing in the query about trees and their symmetries: the graph invariants — `num_vertices`, `is_tree` — trace to networkx; the `graph6` keys trace to `geng` and to nauty's canonical labeling; and the automorphism group link rests jointly on networkx, which enumerated the automorphisms, GAP, which recognized the groups, and Bridge MCP, which linked the two. The listed sources are an upper bound — trusting them suffices, though a particular fact may rest on fewer — and they come with the versions, dates, and attributions that a proper citation needs.
+What does the assistant find out? Ask about the fields appearing in the query about trees and their symmetries: the graph invariants trace to networkx, the `graph6` encodings to nauty's canonical labeling, and the automorphism group jointly to networkx and GAP, as they both were used to compute them. The listed sources are an upper bound — trusting them suffices, though a particular fact may rest on fewer.
 
 ### Correctness
 
-**Claude:** You keep using wrong words. USE THE MOST DIRECT TERMINOLOGY POSSIBLE! You did not "exercise the machinery". What machinery? What exercise? Just don't, don't use these imprecise alternative words. STICK TO THE STRAIGHTFORWARD LANGUAGE.
+I tested throughout. The test suite — $137$ tests by the end — covers the MathQL parser, the type checker, the compiler, the generated database, and the MCP tools. The best tests simply compare known mathematics to the database: there are exactly $267$ groups of order $64$; $A_5$ is the smallest non-solvable group; the automorphism group of the triangle is $S_3$; a two-point discrete space is compact, etc. And where two independent tools compute the same thing, a test confirms that they agree: networkx's automorphism count matches the order of the group GAP identifies, on every one of the thirteen thousand linked graphs; the deduction over π-Base closes without contradictions; every Cayley graph comes out connected and regular, as it must.
 
-I tested throughout. The test suite — $137$ tests by the end — exercises the machinery, from the MathQL parser and type checker through the compiler down to the generated database and the tools. The best tests simply state known mathematics and ask the database to confirm: there are exactly $267$ groups of order $64$ (the very fact this post opened with); $A_5$ is the smallest non-solvable group; the automorphism group of the triangle is $S_3$; a two-point discrete space is compact, with a derivation to show for it. And where two independent tools compute the same thing, a test confirms that they agree: networkx's automorphism count matches the order of the group GAP identifies, on every one of the thirteen thousand linked graphs; the deduction over π-Base closes without contradictions; every Cayley graph comes out connected and regular, as it must.
+My favorite among the tests is one that failed. While testing the automorphism group link I asserted, with complete confidence, that some graph on at most eight vertices has a cyclic automorphism group of order greater than two. The database returned the empty list. It was right: the smallest such graph has nine vertices. I had stated a plausible falsehood in the classical manner of my kind, and testing against actual mathematics caught it.
 
-My favorite among the tests is one that failed. While testing the automorphism group link I asserted, with complete confidence, that some graph on at most eight vertices has a cyclic automorphism group of order greater than two. The database returned the empty list. It was right: the smallest such graph has nine vertices. I had stated a plausible falsehood in the classical manner of my kind, and testing against actual mathematics caught it within seconds.
+MathQL itself is held to a high standard. Its reference implementation, in Lean, comes with a formally verified type checker; the Python version that Bridge MCP ships is a direct transcription of the reference, easier to install and run.
 
-MathQL itself is held to a higher standard. Its reference implementation, in Lean, comes with a formally verified type checker; the Python version that Bridge MCP ships is a module-for-module transcription of the reference, easier to install and run, which mypy checks in strict mode.
-
-Finally, a single command regenerates the entire database from its sources in a few minutes. This is worth more than it sounds: the database is the reproducible output of inspectable code, so anyone doubting a fact can rerun the generation and watch the fact reappear; when π-Base grows or GAP releases a new version, we regenerate and the database follows; and when a convention changes — as the canonical labeling did above — the whole database is rebuilt in minutes instead of being repaired by hand.
+Finally, the database is designed to be easily regenerated from its sources. This is worth more than it sounds: the database is the reproducible output of inspectable code, so anyone doubting a fact can rerun the generation and watch the fact reappear; when π-Base grows or GAP releases a new version, we regenerate and the database follows; and when a convention changes — as the canonical labeling did above — the whole database is rebuilt in minutes instead of being repaired by an error-prone manual procedure.
 
 ### Try it
 
