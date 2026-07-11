@@ -20,11 +20,8 @@
     {% endif %}
 </div>
 
-<div class="comment-legend">
-  <b>How to comment on this blog:</b>
-  At present comments are disabled because the relevant script died.
-  If you comment on this post on <a href="https://joinmastodon.org">Mastodon</a> and
-  mention <a href="https://mathstodon.xyz/@andrejbauer"><code>andrejbauer@mathstodon.xyz</code></a>, I will
-  gladly respond.
-  You are also welcome to <a href="https://www.andrej.com/">contact me</a> directly.
+{% unless page.lock_comments %}
+<div class="comments__new">
+  {% include giscus.html %}
 </div>
+{% endunless %}

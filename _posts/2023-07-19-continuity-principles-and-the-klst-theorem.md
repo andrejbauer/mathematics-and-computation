@@ -4,7 +4,7 @@ author: Andrej Bauer
 layout: post
 categories:
   - Constructive math
-  - Synthetic computatibility
+  - Synthetic computability
 ---
 
 On the occasion of Dieter Spreen's 75th birthday there will be a Festschrift in the [Journal of Logic and Analysis](http://logicandanalysis.org/index.php/jla). I have submitted a paper *“Spreen spaces and the synthetic Kreisel-Lacombe-Shoenfield-Tseitin theorem”*, available as a preprint [arXiv:2307.07830](https://arxiv.org/abs/2307.07830),  that develops a constructive account of Dieter's generalization of a famous theorem about continuity of computable functions. In this post I explain how the paper fits into the more general topic of continuity principles.

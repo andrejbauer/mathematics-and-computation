@@ -8,7 +8,6 @@ guid: http://math.andrej.com/?p=1825
 permalink: /2015/07/30/intermediate-truth-values/
 categories:
   - Constructive math
-  - Gems and stones
   - Logic
 ---
 I have not written a blog post in a while, so I decided to write up a short observation about truth values in intuitionistic logic which sometimes seems a bit puzzling.

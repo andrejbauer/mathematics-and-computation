@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=2053
 permalink: /2019/08/21/derivations-as-computations/
 categories:
-  - Andromeda
+  - Software
   - Talks
 ---
 I gave a [keynote talk "Derivations as Computations"](https://icfp19.sigplan.org/details/icfp-2019-Keynotes-and-Reports/3/Derivations-as-computations) at [ICFP 2019](https://icfp19.sigplan.org).

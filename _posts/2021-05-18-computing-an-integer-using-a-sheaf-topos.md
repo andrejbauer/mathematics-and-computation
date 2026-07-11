@@ -5,7 +5,7 @@ layout: post
 categories:
   - Constructive math
   - Type theory
-  - Formalization
+  - Formalized mathematics
 ---
 
 

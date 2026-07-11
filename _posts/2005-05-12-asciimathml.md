@@ -15,7 +15,7 @@ For example, if I type
 
 <pre>`forall x in RR exists y in CC. (1-x^2 )/sqrt(1+y^4)=1`</pre>
 
-it is seen as \`forall x in RR exists y in CC. (1-x^2 )/sqrt(1+y^4)=1\`. If you are going to post to the blog, you may be interested in [the ASCIIMathML syntax reference page](http://www1.chapman.edu/~jipsen/mathml/asciimathsyntax.html). 
+it is seen as $\forall x \in \mathbb{R} \exists y \in \mathbb{C}. (1-x^2 )/\sqrt(1+y^4)=1$. If you are going to post to the blog, you may be interested in [the ASCIIMathML syntax reference page](http://www1.chapman.edu/~jipsen/mathml/asciimathsyntax.html). 
 
 To enable MathML on your computer, install [mathplayer](http://www.dessci.com/en/products/mathplayer/welcome.asp) plugin  
 if you are using Internet Explorer. For Firefox and Mozilla, you have to install [math fonts](http://www.mozilla.org/projects/mathml/fonts/).

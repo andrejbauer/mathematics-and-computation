@@ -4,7 +4,7 @@ author: Andrej Bauer
 layout: post
 categories:
   - Talks
-  - Every proof assistant
+  - Formalized mathematics
 ---
 
 This week the speaker will be Jon Sterling, and we are getting two proof assistants for the price of one!

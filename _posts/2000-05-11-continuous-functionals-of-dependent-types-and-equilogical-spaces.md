@@ -11,7 +11,7 @@ categories:
 ---
 with [Lars Birkedal](http://www.itu.dk/people/birkedal/).
 
-**Abstract:** We show that dependent sums and dependent products of continuous parametrizations on domains with dense, codense, and natural totalities agree with dependent sums and dependent products in equilogical spaces, and thus also in the realizability topos \`RT(P(NN))\`.
+**Abstract:** We show that dependent sums and dependent products of continuous parametrizations on domains with dense, codense, and natural totalities agree with dependent sums and dependent products in equilogical spaces, and thus also in the realizability topos $RT(P(\mathbb{N}))$.
 
 **Published in:** In Proceedings of Computer Science Logic 2000, Lecture Notes in Computer Science, Vol. 1862, Editors: P.G. Clote, H. Schwichtenberg, Springer, August 2000, pp. 202-216.
 

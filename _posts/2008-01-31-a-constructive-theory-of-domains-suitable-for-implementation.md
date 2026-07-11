@@ -9,7 +9,7 @@ permalink: /2008/01/31/a-constructive-theory-of-domains-suitable-for-implementat
 categories:
   - Constructive math
   - Publications
-  - RZ
+  - Software
 ---
 With [Iztok Kavkler](http://www.fmf.uni-lj.si/~kavkler/).
 

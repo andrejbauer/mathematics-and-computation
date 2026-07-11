@@ -7,7 +7,7 @@ layout: post
 guid: http://math.andrej.com/?p=283
 permalink: /2009/09/09/constructive-gem-juggling-exponentials/
 categories:
-  - Gems and stones
+  - Constructive math
 ---
 Constructive gems are usually not about particular results, because all constructive results can be proved classically as well, but rather about the _method_ and the way of thinking. I demonstrate a constructive proof which can be reused in three different settings (set theory, topology, computability) because constructive mathematics has many different interpretations.
 
