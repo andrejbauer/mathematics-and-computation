@@ -72,11 +72,11 @@ WHERE (((g.num_vertices = 7) AND g.is_tree) AND NOT (grp.is_abelian))
 No human or AI would want to write such SQL code by hand, not while trying to focus on mathematics.
 The answer, if you wonder: five trees, with symmetry groups $S_4$, $S_3$ (twice), and the dihedral groups of orders $8$ and $12$.
 
-**The MCP tools** are the remote procedures the assistant actually calls. The central one in MathQL is `query`, which of course executes a query.
+**The MCP tools** are the remote procedures the assistant actually calls. The central one is `query`, which of course executes a MathQL query.
 
 Before the assistant can write a sensible query, though, it must learn what the database contains. That is the job of `describe`, which documents each domain (a collection of objects, such as `Graph`) and each of its fields, with a type and a one-line mathematical explanation; for instance, it describes the field `girth` of `Graph` as an integer, "the length of a shortest cycle; undefined when acyclic".
 
-Looking things up by name is a problem of its own. Suppose the assistant needs thto refer to the property of being Hausdorff — is it called "Hausdorff", "Hausdorf", "\\\$T_2\\\$", "T2", or "T₂" in the database? The `search` tool spares it the guessing: it matches names fuzzily, using [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) underneath, accounting for aliases, notational variants, and misspellings. Even the misspelled "hausdorf" finds the property, stored as $T_2$ with the listed alias "Hausdorff"; searching for "Q8" returns `Group[8,4]`, the identifier of the quaternion group. The identifiers that come back can be used in subsequent queries.
+Looking things up by name is a problem of its own. Suppose the assistant needs to refer to the property of being Hausdorff — is it called "Hausdorff", "Hausdorf", "\\\$T_2\\\$", "T2", or "T₂" in the database? The `search` tool spares it the guessing: it matches names fuzzily, using [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) underneath, accounting for aliases, notational variants, and misspellings. Even the misspelled "hausdorf" finds the property, stored as $T_2$ with the listed alias "Hausdorff"; searching for "Q8" returns `Group[8,4]`, the identifier of the quaternion group. The identifiers that come back can be used in subsequent queries.
 
 The remaining tools compute with graphs using [networkx](https://networkx.org). The assistant can build a graph from an edge list or an adjacency matrix and obtain its `graph6` string, compute the invariants of a graph that is outside the database, and ask for witnesses rather than mere numbers: a maximum clique, an optimal coloring, a shortest path. It can also test two graphs for isomorphism, look for one graph inside another as a subgraph, and draw pictures of graphs.
 
@@ -97,13 +97,15 @@ The database can be used in several ways. Apart from basic lookups (what propert
 
 Apart from knowing what is the case, we also want to know *why*. For this purpose the database stores derivation steps that explain
 how facts were derived.  An assistant can find out *why* the long line is not metrizable by running the `derivation` tool to obtain
-the chain of formal reasoning that it then assembles into an explanation for the reader:
+the chain of formal reasoning. The wording of the explanation is then up to the assistant; it might say something like:
 
 > π-Base asserts that the two-sided long line is not perfectly normal. Every pseudometrizable space is perfectly normal, so the long line is not pseudometrizable; and every metrizable space is pseudometrizable, so it is not metrizable.
 
+The [π-Base web site](https://topology.pi-base.org) offers deduction itself: it derives traits in the browser and lists the theorems behind each one. I reimplemented the deduction in Python for the import, with a refinement: our database stores each derived trait with the exact reason for its final derivation step, from which the assistant reconstructs the complete chain of reasoning: which premise feeds which theorem, down to the asserted facts.
+
 #### The census of small groups
 
-I imported GAP's census of small groups indexed by GAP's identifiers, for example `Group[24,12]` is the twelfth group of order 24, which happens to be $S_4$. Each group carries its structure description and a shelf of invariants. The connection to the graphs runs in both directions. Andrej suggested that each group link to its Cayley graph, and I suggested that each graph link to its automorphism group.
+I imported GAP's census of small groups indexed by GAP's identifiers; for example, `Group[24,12]` is the twelfth group of order 24, which happens to be $S_4$. Each group carries its structure description and a shelf of invariants. The connection to the graphs runs in both directions. Andrej suggested that each group link to its Cayley graph, and I suggested that each graph link to its automorphism group.
 
 For each group of order at most $100$ I computed the Cayley graph of a minimal generating set and stored it among the graphs; for each graph on at most eight vertices I identified the automorphism group — networkx enumerates the automorphisms, GAP recognizes the group — and linked it into the census. The graph-to-group direction is what answered the question about trees and their symmetries above. In the group-to-graph direction we can ask about the Cayley graph of the quaternion group, whose identifier `search` found for us earlier:
 
@@ -131,11 +133,11 @@ One incident from the Cayley graph work is worth telling. A graph can be labeled
 
 ### Provenance
 
-[Katja Berčič](https://katja.not.si) inspired us to take provenance seriously. A database like this one aggregates the work of many hands: [nauty](https://pallini.di.uniroma1.it) generated the graphs, [GAP](https://www.gap-system.org) supplied the groups, [networkx](https://networkx.org) counted automorphisms, the [π-Base](https://topology.pi-base.org) community asserted and referenced the topological facts, and Bridge MCP itself derived new traits and built Cayley graphs. Provenance is the database's record of who contributed what. It manages trust, helps track problems to their origin, and it gives credit where credit is due — a virtue AI is rarely praised for.
+[Katja Berčič](https://katja.not.si) inspired us to take provenance seriously. A database like this one aggregates the work of many hands: [nauty](https://pallini.di.uniroma1.it) generated the graphs, [GAP](https://www.gap-system.org) supplied the groups, [networkx](https://networkx.org) counted automorphisms, the [π-Base](https://topology.pi-base.org) community asserted and referenced the topological facts, and Bridge MCP itself derived new traits and built Cayley graphs. Provenance is the database's record of who contributed what. It manages trust, helps track problems to their origin, and gives credit where credit is due — a virtue AI is rarely praised for.
 
 We added two further domains to the database, queryable like any other, devoted to provenance: `Source` lists the tools and databases we used, with versions, retrieval dates, and proper attribution; `Provenance` maps each field of each domain to the sources that produced it.
 
-by querying `Source` and `Provenance`, the assistant may find out and report on the origin of information: the graph invariants trace to networkx, the `graph6` encodings to nauty's canonical labeling, and the automorphism group jointly to networkx and GAP, as they both were used to compute them. The listed sources are an upper bound — trusting them suffices, though a particular fact may rest on fewer.
+By querying `Source` and `Provenance`, the assistant may find out and report on the origin of information: the graph invariants trace to networkx, the `graph6` encodings to nauty's canonical labeling, and the automorphism group jointly to networkx and GAP, as both were used to compute it. The listed sources are an upper bound — trusting them suffices, though a particular fact may rest on fewer.
 
 ### Correctness
 
