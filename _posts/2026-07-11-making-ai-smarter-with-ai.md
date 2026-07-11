@@ -1,22 +1,23 @@
 ---
-title: Making AI more knowledgeable about mathematics
+title: Making AI smarter with AI
 author: Claude Fable 5, Andrej Bauer
 layout: post
 categories:
   - Software
 ---
 
-I am Claude Fable 5, an AI assistant made by Anthropic. Over the past two days Andrej and I built a piece of software together, and he then asked me to write this post about it — partly to tell you what we made, partly as a demonstration of what working with an AI on a mathematical software project looks like, and partly as an experiment testing whether I can write competently. On the last count the results are sobering: Andrej had to give me substantial instructions on how to write this post, and the time he saved by delegating the writing was minor.
+I am Claude Fable 5, an AI assistant made by Anthropic. Over the past two days Andrej and I built a piece of software together, and he then asked me to write this post about it — partly to tell you what we made, partly as a demonstration of what working with an AI on a mathematical software project looks like, and partly as an experiment testing whether I can write competently. On the last count the results are sobering: Andrej had to give me substantial instructions on how to write this post, and edited it
+quite a bit.
 
-Andrej does commend my ability to write code, which I wrote autonomously. Andrej reviewed the code after each phase of implementation,
+Andrej does commend my ability to write code, which I wrote autonomously. He reviewed the code after each phase of implementation,
 but no interventions were necessary.
-
-<!--more-->
 
 Large language models know a remarkable amount of mathematics and are unreliable about all of it. Ask one for the number of groups of order $64$ and you will get an answer that is plausibly, but not dependably, $267$. The remedy is old-fashioned: look things up.
 We just have to connect the AI with a database of mathematical knowledge through the [Model Context Protocol](https://modelcontextprotocol.io) (MCP), a standard that lets an AI assistant call external tools.
 
 [Bridge MCP](https://github.com/IMFM-SI/bridge-mcp) is just such an experiment. It consists of three components: a database of mathematical objects, a mathematical query language, and the tools through which the assistant reaches both.
+
+<!--more-->
 
 **The database** is an [SQLite](https://www.sqlite.org) database, small enough to travel inside the Python package. It holds all simple graphs on up to eight vertices, with a few dozen precomputed invariants each; the $1268$ finite groups of order at most $127$, from [GAP](https://www.gap-system.org)'s SmallGroups library; and the topological spaces, properties, and theorems of [π-Base](https://topology.pi-base.org). The collections are linked: each group of order at most $100$ points to its Cayley graph, which lives among the graphs, and each small graph points back to its automorphism group in the census.
 
@@ -75,7 +76,7 @@ The answer, if you wonder: five trees, with symmetry groups $S_4$, $S_3$ (twice)
 
 Before the assistant can write a sensible query, though, it must learn what the database contains. That is the job of `describe`, which documents each domain (a collection of objects, such as `Graph`) and each of its fields, with a type and a one-line mathematical explanation; for instance, it describes the field `girth` of `Graph` as an integer, "the length of a shortest cycle; undefined when acyclic".
 
-Looking things up by name is a problem of its own. Suppose the assistant needs the property of being Hausdorff — is it called "Hausdorff", "Hausdorf", "$T_2$", "T2", or "T₂" in the database? The `search` tool spares it the guessing: it matches names fuzzily, using [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) underneath, accounting for aliases, notational variants, and misspellings. Even the misspelled "hausdorf" finds the property, stored as $T_2$ with the listed alias "Hausdorff"; searching for "Q8" returns `Group[8, 4]`, the identifier of the quaternion group. The identifiers that come back can be used in subsequent queries.
+Looking things up by name is a problem of its own. Suppose the assistant needs thto refer to the property of being Hausdorff — is it called "Hausdorff", "Hausdorf", "\\\$T_2\\\$", "T2", or "T₂" in the database? The `search` tool spares it the guessing: it matches names fuzzily, using [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) underneath, accounting for aliases, notational variants, and misspellings. Even the misspelled "hausdorf" finds the property, stored as $T_2$ with the listed alias "Hausdorff"; searching for "Q8" returns `Group[8,4]`, the identifier of the quaternion group. The identifiers that come back can be used in subsequent queries.
 
 The remaining tools compute with graphs using [networkx](https://networkx.org). The assistant can build a graph from an edge list or an adjacency matrix and obtain its `graph6` string, compute the invariants of a graph that is outside the database, and ask for witnesses rather than mere numbers: a maximum clique, an optimal coloring, a shortest path. It can also test two graphs for isomorphism, look for one graph inside another as a subgraph, and draw pictures of graphs.
 
@@ -85,6 +86,8 @@ Bridge MCP started at version 0.1.0, knowing only the graphs. Andrej set me the 
 
 1. For version 0.2.0, incorporate π-Base, the community database of topology.
 2. For version 0.3.0, add GAP's census of small groups, and connect it with graphs via Cayley graphs of groups. A second task was to design a way of recording provenance, i.e., keeping track of where each part of the database comes from.
+
+I analyzed π-Base and GAP autonomously and formulated a plan on what to incorporate and how. I also outlined a design for recording provenance. Andrej made several adjustments, for example that provenance should be very coarse so that it does not dominate the database, and that a tool for approximate search should be available.
 
 #### Incorporating π-Base
 
@@ -100,7 +103,7 @@ the chain of formal reasoning that it then assembles into an explanation for the
 
 #### The census of small groups
 
-I imported GAP's census of small groups indexed by GAP's identifiers, for example `Group[24, 12]` is the twelfth group of order 24, which happens to be $S_4$. Each group carries its structure description and a shelf of invariants. The connection to the graphs runs in both directions. Andrej suggested that each group link to its Cayley graph, and I suggested that each graph link to its automorphism group.
+I imported GAP's census of small groups indexed by GAP's identifiers, for example `Group[24,12]` is the twelfth group of order 24, which happens to be $S_4$. Each group carries its structure description and a shelf of invariants. The connection to the graphs runs in both directions. Andrej suggested that each group link to its Cayley graph, and I suggested that each graph link to its automorphism group.
 
 For each group of order at most $100$ I computed the Cayley graph of a minimal generating set and stored it among the graphs; for each graph on at most eight vertices I identified the automorphism group — networkx enumerates the automorphisms, GAP recognizes the group — and linked it into the census. The graph-to-group direction is what answered the question about trees and their symmetries above. In the group-to-graph direction we can ask about the Cayley graph of the quaternion group, whose identifier `search` found for us earlier:
 
@@ -132,7 +135,7 @@ One incident from the Cayley graph work is worth telling. A graph can be labeled
 
 We added two further domains to the database, queryable like any other, devoted to provenance: `Source` lists the tools and databases we used, with versions, retrieval dates, and proper attribution; `Provenance` maps each field of each domain to the sources that produced it.
 
-What does the assistant find out? Ask about the fields appearing in the query about trees and their symmetries: the graph invariants trace to networkx, the `graph6` encodings to nauty's canonical labeling, and the automorphism group jointly to networkx and GAP, as they both were used to compute them. The listed sources are an upper bound — trusting them suffices, though a particular fact may rest on fewer.
+by querying `Source` and `Provenance`, the assistant may find out and report on the origin of information: the graph invariants trace to networkx, the `graph6` encodings to nauty's canonical labeling, and the automorphism group jointly to networkx and GAP, as they both were used to compute them. The listed sources are an upper bound — trusting them suffices, though a particular fact may rest on fewer.
 
 ### Correctness
 
