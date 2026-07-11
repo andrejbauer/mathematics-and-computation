@@ -464,3 +464,52 @@ footer img {
     font-size: 0.85em;
   }
 }
+
+/* ── Code syntax highlighting (rouge) ──────────────────────── */
+/*
+   Ascetic theme in the site palette: keywords in the maroon accent,
+   literals (strings and numbers) in muted olive, comments in warm
+   grey italic; every other token keeps the body-text colour.
+   Scoped to .highlight so inline `code` spans are untouched.
+*/
+
+div.highlight {
+  background: #faf8f2;
+  border: 1px solid var(--border);
+  margin: 0 0 1rem;
+}
+
+pre.highlight {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  overflow-x: auto;
+}
+
+/* Comments */
+.highlight .c,  .highlight .ch, .highlight .cd, .highlight .cm,
+.highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #9a927e;
+  font-style: italic;
+}
+
+/* Keywords, keyword operators, tag names, object keys */
+.highlight .k,  .highlight .kc, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kt,
+.highlight .nt, .highlight .nl, .highlight .ow {
+  color: var(--accent);
+}
+
+/* Literals: strings, characters, regexes, numbers */
+.highlight .s,  .highlight .sa, .highlight .sb, .highlight .sc,
+.highlight .dl, .highlight .sd, .highlight .s2, .highlight .se,
+.highlight .sh, .highlight .si, .highlight .sx, .highlight .sr,
+.highlight .s1, .highlight .ss,
+.highlight .m,  .highlight .mb, .highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .mo, .highlight .il {
+  color: #5c6b30;
+}
+
+.highlight .err {
+  color: inherit;
+  background: none;
+}
